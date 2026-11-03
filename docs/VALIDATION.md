@@ -4,8 +4,8 @@
 
 - TypeScript strict: bez chýb.
 - ESLint: bez chýb a upozornení po úprave testovacieho setupu.
-- Doménové a databázové testy: 25 úspešných, 0 preskočených.
-- React Native komponentové testy: 6 úspešných, 0 preskočených.
+- Doménové a databázové testy: 39 úspešných, 0 preskočených.
+- React Native komponentové testy: 15 úspešných, 0 preskočených.
 - Metro server: spustený, lokálny HTTP stav a Android manifest READY/SDK 58 overené. Server bol po kontrole zastavený.
 - Export Android + iOS cez Metro/Hermes: úspešný. Nie je to APK/IPA ani dôkaz spustenia na telefóne.
 - Expo kompatibilita: verzie sedia s lokálnym manifestom Expo SDK 58. Online kontrola Expo API bola blokovaná; podpora aktuálne distribuovaného Expo Go sa musí potvrdiť na telefóne.
@@ -13,6 +13,12 @@
 Databázové testy používajú **skutočnú SQLite** z Node 24 a rovnaké SQL/repozitárové funkcie ako aplikácia. Kontrolujú CRUD, seed iba raz, trvanie všetkých dát po zatvorení/otvorení súboru, export/import, zamietnutie chybných údajov a rollback po SQL chybe uprostred importu. Nie sú náhradou za overenie natívneho `expo-sqlite` na zariadení.
 
 Komponentové testy renderujú skutočné React Native obrazovky cez Expo Jest preset; natívne služby a store sú nahradené testovacími adaptérmi. Kontrolujú validáciu onboardingu, oddelené metriky a neznáme kcal na Domove, formulár novej zásoby, vyhľadávanie a potvrdenie mazania, prázdnu obrazovku krytov a potvrdenie vytáčania. Nepredstierajú systémové zdieľanie ani vytáčanie skutočného čísla.
+
+## Rozšírenie 1.1
+
+Automatické testy navyše overujú obsah, vyhľadávanie a záložky Akadémie, neznáme ID zo starších importov, explicitné YouTube vyhľadávacie odkazy, postup medzi krokmi návodu, výpočty a zvrátenie pokroku misií, správne/chybné odpovede kvízu, import kompatibilného stavu, súkromie zdieľanej karty a núdzový dialóg bez požiadavky na profil.
+
+Vizuálny QA harness vykreslil skutočné komponenty Home, Academy a Missions s výslovne oddelenými testovacími dátami v Chromium: 390 a 320 px, svetlý a tmavý režim. Snímky sú v `docs/screenshots`, podrobnosti v `review.json`. Horizontálne police filtrov sa posúvajú zámerne; dekoratívne presahy zostávajú orezané. Tieto snímky **nie sú** dôkazom natívneho renderovania, SQLite ani systémových dialógov na telefóne.
 
 ## Ručný scenár pre Android aj iPhone — zatiaľ nevykonaný
 
@@ -25,7 +31,7 @@ Komponentové testy renderujú skutočné React Native obrazovky cez Expo Jest p
 7. Zmeňte cieľ a počet osôb. Domov aj deficity sa musia prepočítať. Vytvorte nákupný návrh, upravte množstvo, označte kúpené, pridajte vlastnú položku a jednu vymažte. Označenie kúpeného nesmie potichu zvýšiť zásoby.
 8. Odškrtnite úlohu, pridajte a premenujte vlastnú, zmeňte miesto stretnutia, pridajte a upravte kontakt.
 9. Aplikáciu úplne ukončite (nie iba minimalizujte) a znovu otvorte. Onboarding sa nesmie opakovať; profil, zásoby, nákupy, úlohy, kontakty a miesto stretnutia musia zostať.
-10. Otvorte všetkých šesť návodov. Sekcia krytov musí byť prázdna. Pri 112 iba overte zobrazenie potvrdzovacieho dialógu a zrušte ho; netestujte tiesňové volanie.
+10. Otvorte pôvodné scenáre aj nové návody Akadémie, prejdite kroky dopredu/dozadu, uložte záložku a overte ju po reštarte. Sekcia krytov musí byť prázdna. Pri 112 iba overte zobrazenie potvrdzovacieho dialógu a zrušte ho; netestujte tiesňové volanie.
 11. Exportujte JSON do súborov. Zmeňte údaje, importujte zálohu a najprv zrušte potvrdenie — nič sa nesmie zmeniť. Import zopakujte a potvrďte — obnoví sa pôvodný stav. Overte aj po reštarte.
 12. Skúste chybný JSON, neplatnú verziu a duplicitné ID. Import musí zlyhať bez poškodenia aktuálnych údajov. Skúste zrušenie výberu súboru a zdieľania.
 13. Zapnite tmavý režim a väčšie systémové písmo, skontrolujte malý displej, klávesnicu, rolovanie a čítačku obrazovky.
@@ -38,3 +44,11 @@ Komponentové testy renderujú skutočné React Native obrazovky cez Expo Jest p
 - Úplný test: vytvorte a nainštalujte samostatný natívny build, vypnite Wi-Fi aj mobilné dáta, aplikáciu ukončite a spustite znova; zopakujte CRUD, checklisty, návody a lokálny export/import. **Tento test nebol v cloude vykonaný.**
 
 Bez fyzického telefónu/emulátora neboli overené natívne dialógy súborov, dostupnosť úložísk, núdzový dialer, prístupnosť na zariadení ani natívna perzistencia po ukončení procesu. Publikovanie do obchodov ani odoslanie na GitHub neprebehlo.
+
+## Ručné doplnenie pre 1.1 — zatiaľ nevykonané na telefóne
+
+1. Označte misiu ako hotovú, zrušte dokončenie, skúste správnu aj nesprávnu odpoveď kvízu. Po reštarte musí zostať uložený stav misie. Odpovede kvízu sú iba lokálny stav aktuálnej obrazovky, neoznačujú misiu automaticky za hotovú.
+2. Otvorte YouTube tému a potvrďte, že ide o vyhľadávanie na cudzej online službe. Bez internetu musia návody fungovať, YouTube nie.
+3. Na núdzovej karte sú osobné údaje spočiatku skryté. Zapnite ich vedome, skontrolujte textový náhľad a zdieľanie zrušte. Skutočnú tiesňovú linku netestujte.
+4. Pri prvom spustení pred vyplnením profilu musí byť dostupná Rýchla pomoc. Pri chybe DB má chybová obrazovka samostatný potvrdený vstup do vytáčania 112; nejde o opravu poškodenej DB.
+5. Importujte starú zálohu verzie 1. Zásoby a profil sa musia načítať; misie a záložky bez záznamov začínajú prázdne. Naopak nová záloha obsahuje aj nový pokrok.

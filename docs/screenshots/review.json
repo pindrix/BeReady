@@ -1,0 +1,137 @@
+{
+  "notice": "React Native Web rendering with development fixtures. Not native device screenshots or end-to-end validation.",
+  "reports": [
+    {
+      "screen": "home",
+      "colorScheme": "light",
+      "width": 390,
+      "errors": [],
+      "viewport": 390,
+      "documentWidth": 390,
+      "height": 2415,
+      "bodyText": 1317,
+      "visibleOverflow": []
+    },
+    {
+      "screen": "academy",
+      "colorScheme": "light",
+      "width": 390,
+      "errors": [],
+      "viewport": 390,
+      "documentWidth": 390,
+      "height": 4816,
+      "bodyText": 2705,
+      "visibleOverflow": []
+    },
+    {
+      "screen": "missions",
+      "colorScheme": "light",
+      "width": 390,
+      "errors": [],
+      "viewport": 390,
+      "documentWidth": 390,
+      "height": 3404,
+      "bodyText": 1993,
+      "visibleOverflow": []
+    },
+    {
+      "screen": "home",
+      "colorScheme": "light",
+      "width": 320,
+      "errors": [],
+      "viewport": 320,
+      "documentWidth": 320,
+      "height": 2974,
+      "bodyText": 1309,
+      "visibleOverflow": []
+    },
+    {
+      "screen": "academy",
+      "colorScheme": "light",
+      "width": 320,
+      "errors": [],
+      "viewport": 320,
+      "documentWidth": 320,
+      "height": 7408,
+      "bodyText": 2705,
+      "visibleOverflow": []
+    },
+    {
+      "screen": "missions",
+      "colorScheme": "light",
+      "width": 320,
+      "errors": [],
+      "viewport": 320,
+      "documentWidth": 320,
+      "height": 3927,
+      "bodyText": 1993,
+      "visibleOverflow": []
+    },
+    {
+      "screen": "home",
+      "colorScheme": "dark",
+      "width": 390,
+      "errors": [],
+      "viewport": 390,
+      "documentWidth": 390,
+      "height": 2415,
+      "bodyText": 1317,
+      "visibleOverflow": []
+    },
+    {
+      "screen": "academy",
+      "colorScheme": "dark",
+      "width": 390,
+      "errors": [],
+      "viewport": 390,
+      "documentWidth": 390,
+      "height": 4816,
+      "bodyText": 2705,
+      "visibleOverflow": []
+    },
+    {
+      "screen": "missions",
+      "colorScheme": "dark",
+      "width": 390,
+      "errors": [],
+      "viewport": 390,
+      "documentWidth": 390,
+      "height": 3404,
+      "bodyText": 1993,
+      "visibleOverflow": []
+    },
+    {
+      "screen": "home",
+      "colorScheme": "dark",
+      "width": 320,
+      "errors": [],
+      "viewport": 320,
+      "documentWidth": 320,
+      "height": 2974,
+      "bodyText": 1309,
+      "visibleOverflow": []
+    },
+    {
+      "screen": "academy",
+      "colorScheme": "dark",
+      "width": 320,
+      "errors": [],
+      "viewport": 320,
+      "documentWidth": 320,
+      "height": 7408,
+      "bodyText": 2705,
+      "visibleOverflow": []
+    },
+    {
+      "screen": "missions",
+      "colorScheme": "dark",
+      "width": 320,
+      "errors": [],
+      "viewport": 320,
+      "documentWidth": 320,
+      "height": 3927,
+      "bodyText": 1993,
+      "visibleOverflow": []
+    }
+  ]
+}

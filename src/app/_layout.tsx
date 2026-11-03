@@ -1,3 +1,4 @@
+import { Alert, Linking } from "react-native";
 import { SQLiteProvider } from "expo-sqlite";
 import {
   Stack,
@@ -21,6 +22,30 @@ export function ErrorBoundary({ error, retry }: ErrorBoundaryProps) {
             Existujúce údaje sa automaticky nemažú. Skúste aplikáciu načítať
             znova.
           </T>
+          <Button
+            title="Tiesňová linka 112"
+            secondary
+            onPress={() =>
+              Alert.alert(
+                "Vytočiť 112?",
+                "Otvorí sa systémové vytáčanie. Volajte pri skutočnej núdzi.",
+                [
+                  { text: "Zrušiť", style: "cancel" },
+                  {
+                    text: "Otvoriť vytáčanie",
+                    onPress: () => {
+                      void Linking.openURL("tel:112").catch(() =>
+                        Alert.alert(
+                          "Vytáčanie nie je dostupné",
+                          "Použite telefónnu aplikáciu zariadenia.",
+                        ),
+                      );
+                    },
+                  },
+                ],
+              )
+            }
+          />
           <Button title="Skúsiť znova" onPress={() => void retry()} />
         </Card>
       </Screen>
@@ -31,7 +56,8 @@ function Gate() {
   const { data, error, reload, busy } = useStore(),
     segments = useSegments(),
     c = useTheme();
-  if (!data)
+  const immediate = segments[0] === "now";
+  if (!data && !immediate)
     return error ? (
       <Screen title="Chyba načítania">
         <ErrorText message={error} />
@@ -41,8 +67,9 @@ function Gate() {
       <Loading />
     );
   const onboarding = segments[0] === "onboarding";
-  if (!data.household && !onboarding) return <Redirect href="/onboarding" />;
-  if (data.household && onboarding) return <Redirect href="/" />;
+  if (!data?.household && !onboarding && !immediate)
+    return <Redirect href="/onboarding" />;
+  if (data?.household && onboarding) return <Redirect href="/" />;
   return (
     <>
       <StatusBar style={c.dark ? "light" : "dark"} />
@@ -59,6 +86,12 @@ function Gate() {
         <Stack.Screen name="item" options={{ presentation: "modal" }} />
         <Stack.Screen name="shopping" />
         <Stack.Screen name="safe-places" />
+        <Stack.Screen name="guide" />
+        <Stack.Screen name="videos" />
+        <Stack.Screen name="missions" />
+        <Stack.Screen name="plus" />
+        <Stack.Screen name="household-card" />
+        <Stack.Screen name="now" options={{ presentation: "modal" }} />
       </Stack>
     </>
   );

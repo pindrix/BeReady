@@ -1,3 +1,7 @@
+import { router } from "expo-router";
+import { View } from "react-native";
+import { useTheme } from "../../theme/theme";
+import { Badge, Icon, Tile } from "../../components/visual";
 import { useState } from "react";
 import * as DocumentPicker from "expo-document-picker";
 import { File, Paths } from "expo-file-system";
@@ -19,17 +23,66 @@ import {
   MAX_BACKUP_BYTES,
 } from "../../domain/backup";
 export default function SettingsScreen() {
-  const s = useStore(),
+  const c = useTheme(),
+    [editProfile, setEditProfile] = useState(false),
+    s = useStore(),
     a = useAction(),
     [note, setNote] = useState("");
   if (!s.data?.household) return null;
   return (
     <Screen title="Vaše nastavenia">
-      <ProfileForm
-        key={JSON.stringify(s.data.household)}
-        initial={s.data.household}
-        onSave={s.profile}
-      />
+      <Card>
+        <View style={{ flexDirection: "row", alignItems: "center", gap: 16 }}>
+          <View
+            style={{
+              height: 62,
+              width: 62,
+              borderRadius: 22,
+              backgroundColor: c.sage,
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <Icon name="home-outline" size={30} />
+          </View>
+          <View style={{ flex: 1, gap: 5 }}>
+            <T large>{s.data.household.name || "Vaša domácnosť"}</T>
+            <T muted>
+              {s.data.household.people} osôb · cieľ {s.data.household.goal} dní
+            </T>
+          </View>
+        </View>
+        <Badge label="LOKÁLNE · BEZ ÚČTU" />
+        <Button
+          title={
+            editProfile ? "Zavrieť úpravu profilu" : "Upraviť profil domácnosti"
+          }
+          secondary
+          onPress={() => setEditProfile(!editProfile)}
+        />
+      </Card>
+      {editProfile ? (
+        <ProfileForm
+          key={JSON.stringify(s.data.household)}
+          initial={s.data.household}
+          onSave={s.profile}
+        />
+      ) : null}
+      <View style={{ flexDirection: "row", gap: 12, flexWrap: "wrap" }}>
+        <Tile
+          icon="id-card-outline"
+          title="Karta domácnosti"
+          subtitle="Váš plán pripravený na zdieľanie"
+          onPress={() => router.push("/household-card")}
+        />
+        <Tile
+          icon="sparkles-outline"
+          title="READY Plus"
+          subtitle="Kam sa môže aplikácia posunúť"
+          tone="purple"
+          onPress={() => router.push("/plus")}
+        />
+      </View>
       <Card>
         <T large>Súkromie a lokálne dáta</T>
         <T>

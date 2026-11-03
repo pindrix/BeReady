@@ -4,6 +4,7 @@ import {
   fireEvent,
   waitFor,
 } from "@testing-library/react-native";
+import { router } from "expo-router";
 import { Alert } from "react-native";
 import { ProfileForm } from "../src/components/profile-form";
 import Home from "../src/app/(tabs)/index";
@@ -179,6 +180,9 @@ test("núdzové volanie potrebuje výslovné potvrdenie a návod je dostupný be
   await fireEvent.press(
     screen.getByRole("button", { name: "Otvoriť: Výpadok elektriny" }),
   );
-  expect(screen.getByText(/Generátor, gril/)).toBeTruthy();
+  expect(router.push).toHaveBeenCalledWith({
+    pathname: "/guide",
+    params: { id: "blackout" },
+  });
   alert.mockRestore();
 });

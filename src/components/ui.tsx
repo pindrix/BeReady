@@ -11,6 +11,8 @@ import {
   TextInput,
   View,
   type KeyboardTypeOptions,
+  type StyleProp,
+  type ViewStyle,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useTheme } from "../theme/theme";
@@ -39,7 +41,13 @@ export function T({
     </Text>
   );
 }
-export function Card({ children }: { children: ReactNode }) {
+export function Card({
+  children,
+  style,
+}: {
+  children: ReactNode;
+  style?: StyleProp<ViewStyle>;
+}) {
   const c = useTheme();
   return (
     <View
@@ -47,9 +55,11 @@ export function Card({ children }: { children: ReactNode }) {
         backgroundColor: c.card,
         borderColor: c.border,
         borderWidth: 1,
-        borderRadius: 20,
-        padding: 18,
-        gap: 12,
+        borderRadius: 25,
+        padding: 20,
+        gap: 14,
+        boxShadow: c.dark ? undefined : "0px 4px 22px rgba(34, 62, 48, 0.035)",
+        ...StyleSheet.flatten(style),
       }}
     >
       {children}
@@ -94,9 +104,9 @@ export function Button({
       onPress={onPress}
       style={({ pressed }) => ({
         minHeight: 48,
-        paddingVertical: 12,
+        paddingVertical: 15,
         paddingHorizontal: 16,
-        borderRadius: 13,
+        borderRadius: 18,
         backgroundColor: secondary ? c.card : color,
         borderColor: color,
         borderWidth: 1,
@@ -122,9 +132,13 @@ export function Screen({
   title,
   subtitle,
   children,
+  eyebrow = "VÁŠ PRIESTOR PRE POKOJ",
+  headerRight,
 }: {
   title: string;
   subtitle?: string;
+  eyebrow?: string;
+  headerRight?: ReactNode;
   children: ReactNode;
 }) {
   const c = useTheme();
@@ -142,27 +156,50 @@ export function Screen({
           contentContainerStyle={{
             padding: 20,
             paddingBottom: 48,
-            gap: 18,
+            gap: 20,
             width: "100%",
-            maxWidth: 720,
+            maxWidth: 760,
             alignSelf: "center",
           }}
         >
-          <Text
+          <View
             style={{
-              fontSize: 12,
-              letterSpacing: 3,
-              fontWeight: "800",
-              color: c.primary,
+              flexDirection: "row",
+              justifyContent: "space-between",
+              alignItems: "center",
+              gap: 12,
             }}
           >
-            READY / KRÍZOVÁ PRIPRAVENOSŤ
-          </Text>
+            <View style={{ gap: 5 }}>
+              <Text
+                style={{
+                  fontSize: 21,
+                  fontWeight: "900",
+                  letterSpacing: 3,
+                  color: c.primary,
+                }}
+              >
+                READY<Text style={{ color: c.warning }}>·</Text>
+              </Text>
+              <Text
+                style={{
+                  fontSize: 9,
+                  letterSpacing: 1.8,
+                  fontWeight: "700",
+                  color: c.muted,
+                }}
+              >
+                {eyebrow}
+              </Text>
+            </View>
+            {headerRight}
+          </View>
           <Text
             accessibilityRole="header"
             style={{
-              fontSize: 32,
-              lineHeight: 39,
+              fontSize: 34,
+              lineHeight: 40,
+              letterSpacing: -1.3,
               fontWeight: "800",
               color: c.navy,
             }}
@@ -207,7 +244,7 @@ export function Field({
         style={{
           fontSize: 17,
           color: c.text,
-          backgroundColor: c.bg,
+          backgroundColor: c.card,
           borderColor: c.border,
           borderWidth: 1,
           borderRadius: 12,

@@ -1,44 +1,310 @@
 import { useState } from "react";
-import { Alert, Linking } from "react-native";
-import { router, useLocalSearchParams } from "expo-router";
+import {
+  Alert,
+  Linking,
+  Pressable,
+  ScrollView,
+  Text,
+  View,
+} from "react-native";
+import { router } from "expo-router";
 import {
   Button,
-  Card,
   ErrorText,
+  Field,
   Screen,
   T,
   useAction,
 } from "../../components/ui";
-import { disclaimer, emergencyNumbers, guides } from "../../data/content";
+import {
+  Badge,
+  Callout,
+  Icon,
+  IconButton,
+  SectionTitle,
+  Tile,
+} from "../../components/visual";
+import { AcademyArt } from "../../components/academy-art";
+import { disclaimer, emergencyNumbers } from "../../data/content";
+import {
+  academyCategories,
+  academyGuides,
+  guideBookmark,
+  savedGuideIds,
+  searchAcademy,
+  type AcademyFilter,
+} from "../../data/academy";
+import { useStore } from "../../state/store";
+import { useTheme } from "../../theme/theme";
+
 export default function HelpScreen() {
-  const { topic } = useLocalSearchParams<{ topic?: string }>(),
-    [selected, setSelected] = useState<string | null>(null),
-    a = useAction();
-  const active = selected ?? topic;
+  const c = useTheme(),
+    s = useStore(),
+    a = useAction(),
+    [query, setQuery] = useState(""),
+    [category, setCategory] = useState<AcademyFilter>("Všetko");
+  const saved = savedGuideIds(s.data?.checklists ?? []),
+    results = searchAcademy(query, category, saved);
   return (
     <Screen
-      title="Pomoc vždy poruke"
-      subtitle="Základné postupy sú uložené v aplikácii a dostupné offline."
+      title="Vedieť znamená viac."
+      subtitle="Malé zručnosti. Väčší pokoj."
+      eyebrow="READY AKADÉMIA"
+      headerRight={
+        <IconButton
+          name="call-outline"
+          label="Tiesňová linka 112"
+          onPress={() =>
+            Alert.alert("Vytočiť 112?", "Integrovaný záchranný systém", [
+              { text: "Zrušiť", style: "cancel" },
+              {
+                text: "Otvoriť vytáčanie",
+                onPress: () =>
+                  void a.run(async () => {
+                    await Linking.openURL("tel:112");
+                  }),
+              },
+            ])
+          }
+        />
+      }
     >
-      <Card>
-        <T>{disclaimer}</T>
-      </Card>
-      <Button
-        title="Bezpečné miesta / Kryty"
-        secondary
-        onPress={() => router.push("/safe-places")}
+      <View
+        style={{
+          backgroundColor: c.hero,
+          borderRadius: 28,
+          padding: 22,
+          overflow: "hidden",
+          gap: 18,
+        }}
+      >
+        <View
+          style={{
+            flexDirection: "row",
+            alignItems: "center",
+            justifyContent: "space-between",
+          }}
+        >
+          <Text
+            style={{
+              fontSize: 11,
+              fontWeight: "800",
+              letterSpacing: 2,
+              color: "#D1EB9A",
+            }}
+          >
+            VŽDY PO RUKE
+          </Text>
+          <Icon name="cloud-offline-outline" color="#D1EB9A" size={23} />
+        </View>
+        <Text
+          style={{
+            fontSize: 28,
+            lineHeight: 34,
+            fontWeight: "800",
+            color: "#FFF9EC",
+            letterSpacing: -0.7,
+          }}
+        >
+          Príprava sa začína{`\n`}jedným krokom.
+        </Text>
+        <AcademyArt kind="bag" color="#C6D6A9" height={156} />
+        <Text style={{ fontSize: 14, lineHeight: 21, color: "#D4E1D8" }}>
+          {academyGuides.length} ilustrovaných sprievodcov. Bez registrácie,
+          pripravené aj bez internetu.
+        </Text>
+        <Button
+          title="Začnite 72-hodinovým batohom"
+          onPress={() =>
+            router.push({ pathname: "/guide", params: { id: "go-bag" } })
+          }
+        />
+      </View>
+      <View style={{ flexDirection: "row", flexWrap: "wrap", gap: 12 }}>
+        <Tile
+          icon="play-circle-outline"
+          title="Video zručnosti"
+          subtitle="Témy a organizácie na YouTube"
+          tone="orange"
+          onPress={() => router.push("/videos")}
+        />
+        <Tile
+          icon="location-outline"
+          title="Bezpečné miesta"
+          subtitle="Stav adresára a zdroje"
+          tone="blue"
+          onPress={() => router.push("/safe-places")}
+        />
+      </View>
+      <SectionTitle
+        title="Vaša offline knižnica"
+        subtitle="Otvorte si tému a prejdite postup krok za krokom."
       />
-      <Card>
-        <T large>Núdzové kontakty na Slovensku</T>
-        <T muted>
-          Volajte pri skutočnej núdzi. Vytáčanie sa otvorí až po vašom
-          potvrdení.
-        </T>
+      <Field
+        label="Vyhľadať návod"
+        value={query}
+        onChange={setQuery}
+        placeholder="Voda, výpadok, prvá pomoc…"
+      />
+      <ScrollView
+        horizontal
+        showsHorizontalScrollIndicator={false}
+        contentContainerStyle={{ gap: 8, paddingVertical: 2 }}
+      >
+        {academyCategories.map((item) => (
+          <Pressable
+            key={item}
+            accessibilityRole="radio"
+            accessibilityLabel={item}
+            accessibilityState={{ checked: item === category }}
+            onPress={() => setCategory(item)}
+            style={{
+              minHeight: 46,
+              paddingHorizontal: 16,
+              justifyContent: "center",
+              borderRadius: 24,
+              backgroundColor: item === category ? c.primary : c.card,
+              borderWidth: 1,
+              borderColor: item === category ? c.primary : c.border,
+            }}
+          >
+            <Text
+              style={{
+                color:
+                  item === category ? (c.dark ? "#15392F" : "#FFFFFF") : c.text,
+                fontSize: 14,
+                fontWeight: "700",
+              }}
+            >
+              {item}
+              {item === "Uložené" ? ` · ${saved.length}` : ""}
+            </Text>
+          </Pressable>
+        ))}
+      </ScrollView>
+      <ErrorText message={a.error} />
+      {!results.length ? (
+        <Callout icon="search-outline" title="Táto polička je zatiaľ prázdna">
+          <T muted>
+            {category === "Uložené"
+              ? "Uložte si návod ikonou záložky. Zostane tu aj po reštarte."
+              : "Skúste kratší názov alebo inú kategóriu."}
+          </T>
+        </Callout>
+      ) : null}
+      <View style={{ flexDirection: "row", flexWrap: "wrap", gap: 12 }}>
+        {results.map((g) => (
+          <View
+            key={g.id}
+            style={{
+              flexBasis: "46%",
+              flexGrow: 1,
+              minWidth: 140,
+              backgroundColor: c.card,
+              borderWidth: 1,
+              borderColor: c.border,
+              borderRadius: 23,
+              overflow: "hidden",
+            }}
+          >
+            <Pressable
+              accessibilityRole="button"
+              accessibilityLabel={`Otvoriť: ${g.title}`}
+              onPress={() =>
+                router.push({ pathname: "/guide", params: { id: g.id } })
+              }
+              style={({ pressed }) => ({
+                padding: 9,
+                gap: 10,
+                opacity: pressed ? 0.75 : 1,
+              })}
+            >
+              <AcademyArt kind={g.art} color={g.color} height={120} />
+              <View style={{ paddingHorizontal: 5, gap: 6 }}>
+                <Text
+                  style={{
+                    fontSize: 10,
+                    fontWeight: "800",
+                    letterSpacing: 0.8,
+                    color: c.primary,
+                  }}
+                >
+                  {g.category.toLocaleUpperCase("sk-SK")}
+                </Text>
+                <Text
+                  style={{
+                    fontSize: 18,
+                    lineHeight: 23,
+                    fontWeight: "800",
+                    letterSpacing: -0.4,
+                    color: c.text,
+                  }}
+                >
+                  {g.title}
+                </Text>
+                <Text
+                  numberOfLines={3}
+                  style={{ fontSize: 12, lineHeight: 18, color: c.muted }}
+                >
+                  {g.summary}
+                </Text>
+              </View>
+            </Pressable>
+            <View
+              style={{
+                paddingHorizontal: 14,
+                paddingBottom: 8,
+                flexDirection: "row",
+                alignItems: "center",
+                justifyContent: "space-between",
+                gap: 6,
+              }}
+            >
+              <Text style={{ fontSize: 11, color: c.muted }}>
+                {g.minutes} min · offline
+              </Text>
+              <Pressable
+                accessibilityRole="button"
+                accessibilityLabel={`${saved.includes(g.id) ? "Odložiť záložku" : "Uložiť návod"}: ${g.title}`}
+                accessibilityState={{
+                  selected: saved.includes(g.id),
+                  disabled: s.busy,
+                }}
+                disabled={s.busy || a.busy}
+                onPress={() =>
+                  void a.run(() =>
+                    s.save(
+                      "checklists",
+                      guideBookmark(g, !saved.includes(g.id)),
+                    ),
+                  )
+                }
+                style={{
+                  width: 46,
+                  height: 46,
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <Icon
+                  name={saved.includes(g.id) ? "bookmark" : "bookmark-outline"}
+                  size={22}
+                />
+              </Pressable>
+            </View>
+          </View>
+        ))}
+      </View>
+      <SectionTitle
+        title="Pomoc v skutočnej núdzi"
+        subtitle="Slovenské tiesňové linky. Vytáčanie otvoríme až po potvrdení."
+      />
+      <View style={{ flexDirection: "row", flexWrap: "wrap", gap: 10 }}>
         {emergencyNumbers.map((x) => (
-          <Button
+          <Pressable
             key={x.number}
-            title={`${x.number} — ${x.name}`}
-            secondary
+            accessibilityRole="button"
+            accessibilityLabel={`${x.number} — ${x.name}`}
             onPress={() =>
               Alert.alert(`Vytočiť ${x.number}?`, x.name, [
                 { text: "Zrušiť", style: "cancel" },
@@ -51,44 +317,35 @@ export default function HelpScreen() {
                 },
               ])
             }
-          />
+            style={{
+              flexBasis: "45%",
+              flexGrow: 1,
+              backgroundColor: c.card,
+              borderRadius: 20,
+              padding: 16,
+              gap: 5,
+              borderWidth: 1,
+              borderColor: c.border,
+              minHeight: 110,
+            }}
+          >
+            <Icon name="call-outline" size={20} />
+            <Text style={{ color: c.text, fontSize: 28, fontWeight: "800" }}>
+              {x.number}
+            </Text>
+            <Text style={{ color: c.muted, fontSize: 12, lineHeight: 17 }}>
+              {x.name}
+            </Text>
+          </Pressable>
         ))}
-      </Card>
-      <ErrorText message={a.error} />
-      {guides.map((g) => (
-        <Card key={g.id}>
-          <Button
-            title={`${active === g.id ? "Zavrieť" : "Otvoriť"}: ${g.title}`}
-            secondary
-            onPress={() => setSelected(active === g.id ? "" : g.id)}
-          />
-          {active === g.id ? (
-            <>
-              <T large>{g.title}</T>
-              {g.steps.map((text, i) => (
-                <T key={i}>
-                  {i + 1}. {text}
-                </T>
-              ))}
-              <T muted>
-                Redakčná kontrola textu: {g.reviewed}. Všeobecné informácie
-                nenahrádzajú miestne pokyny úradov. Aktuálnosť externého zdroja
-                v tomto prostredí nebola overená.
-              </T>
-              <T muted>Zdroj: {g.source}</T>
-              <Button
-                title={`Otvoriť oficiálny zdroj: ${g.title} (online)`}
-                secondary
-                onPress={() =>
-                  void a.run(async () => {
-                    await Linking.openURL(g.source);
-                  })
-                }
-              />
-            </>
-          ) : null}
-        </Card>
-      ))}
+      </View>
+      <Callout
+        icon="information-circle-outline"
+        title="Všeobecná pomoc, žiadne živé výstrahy"
+      >
+        <T muted>{disclaimer}</T>
+      </Callout>
+      <Badge label="TEXTY A ILUSTRÁCIE DOSTUPNÉ OFFLINE" />
     </Screen>
   );
 }

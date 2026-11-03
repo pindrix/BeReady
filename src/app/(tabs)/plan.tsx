@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { IconButton, Badge, Tile } from "../../components/visual";
+import { View } from "react-native";
 import { router } from "expo-router";
 import {
   Button,
@@ -105,7 +107,12 @@ export default function PlanScreen() {
     [taskEdit, setTaskEdit] = useState<Checklist | null>(null),
     [edit, setEdit] = useState<Contact | null>(null);
   if (!s.data?.household) return null;
-  const tasks = s.data.checklists.filter((x) => x.topic === topic);
+  const tasks = s.data.checklists.filter(
+    (x) =>
+      x.topic === topic &&
+      !x.id.startsWith("mission-") &&
+      !x.id.startsWith("bookmark-"),
+  );
   return (
     <Screen
       title="Môj krízový plán"
@@ -116,6 +123,21 @@ export default function PlanScreen() {
         secondary
         onPress={() => router.push("/shopping")}
       />
+      <View style={{ flexDirection: "row", gap: 12, flexWrap: "wrap" }}>
+        <Tile
+          icon="trail-sign-outline"
+          title="7 krokov prípravy"
+          subtitle="Malé misie a praktické kvízy"
+          onPress={() => router.push("/missions")}
+        />
+        <Tile
+          icon="id-card-outline"
+          title="Karta domácnosti"
+          subtitle="Kontakty a plán na jednom mieste"
+          tone="blue"
+          onPress={() => router.push("/household-card")}
+        />
+      </View>
       <Meeting
         key={s.data.household.meeting}
         initial={s.data.household.meeting}
@@ -131,11 +153,19 @@ export default function PlanScreen() {
         }}
       />
       <Card>
-        <T large>
-          {tasks.filter((x) => x.done).length} / {tasks.length} úloh splnených
-        </T>
+        <Badge
+          label={`${tasks.filter((x) => x.done).length} / ${tasks.length} ÚLOH SPLNENÝCH`}
+        />
         {tasks.map((x) => (
-          <Row key={x.id}>
+          <View
+            key={x.id}
+            style={{
+              borderBottomWidth: 1,
+              borderColor: "#DFE7DE",
+              paddingVertical: 10,
+              gap: 4,
+            }}
+          >
             <Check
               label={x.name}
               done={x.done}
@@ -144,26 +174,33 @@ export default function PlanScreen() {
                 void a.run(() => s.save("checklists", { ...x, done: !x.done }))
               }
             />
-            <Button
-              title={`Upraviť úlohu: ${x.name}`}
-              secondary
-              onPress={() => {
-                setTaskEdit(x);
-                setTask(x.name);
+            <View
+              style={{
+                flexDirection: "row",
+                gap: 8,
+                justifyContent: "flex-end",
               }}
-            />
-            <Button
-              title={`Odstrániť úlohu: ${x.name}`}
-              secondary
-              danger
-              disabled={s.busy}
-              onPress={() =>
-                confirm("Odstrániť úlohu?", x.name, () =>
-                  s.remove("checklists", x.id),
-                )
-              }
-            />
-          </Row>
+            >
+              <IconButton
+                name="create-outline"
+                label={`Upraviť úlohu: ${x.name}`}
+                onPress={() => {
+                  setTaskEdit(x);
+                  setTask(x.name);
+                }}
+              />
+              <IconButton
+                name="trash-outline"
+                label={`Odstrániť úlohu: ${x.name}`}
+                disabled={s.busy}
+                onPress={() =>
+                  confirm("Odstrániť úlohu?", x.name, () =>
+                    s.remove("checklists", x.id),
+                  )
+                }
+              />
+            </View>
+          </View>
         ))}
         {!tasks.length ? (
           <T>V tejto téme zatiaľ nie sú úlohy. Pridajte si vlastnú.</T>

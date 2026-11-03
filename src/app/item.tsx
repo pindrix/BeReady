@@ -129,15 +129,18 @@ function Form({ initial }: { initial: Inventory }) {
   );
 }
 export default function ItemScreen() {
-  const { id } = useLocalSearchParams<{ id?: string }>(),
+  const { id, category } = useLocalSearchParams<{
+      id?: string;
+      category?: string;
+    }>(),
     s = useStore();
   const existing = s.data?.inventory.find((x) => x.id === id);
   const initial: Inventory = existing ?? {
     id: newId(),
     name: "",
-    category: "jedlo",
+    category: category === "voda" ? "voda" : "jedlo",
     quantity: 1,
-    unit: "kg",
+    unit: category === "voda" ? "l" : "kg",
     kcal: null,
     expiry: null,
     expiryType: "spotreba",

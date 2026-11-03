@@ -10,8 +10,12 @@ export default function Layout() {
         headerShown: false,
         tabBarActiveTintColor: c.primary,
         tabBarInactiveTintColor: c.muted,
-        tabBarStyle: { backgroundColor: c.card, borderTopColor: c.border },
-        tabBarLabelStyle: { fontSize: 12 },
+        tabBarStyle: {
+          backgroundColor: c.card,
+          borderTopColor: c.border,
+          paddingTop: 8,
+        },
+        tabBarLabelStyle: { fontSize: 11, fontWeight: "700", marginTop: 3 },
       }}
     >
       <Tabs.Screen

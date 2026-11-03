@@ -1,6 +1,26 @@
-# READY — Krízová pripravenosť
+# READY 1.1 — Domácnosť pripravená krok za krokom
 
 Mobilné MVP pre slovenskú domácnosť. Expo SDK 58, React Native, striktný TypeScript, Expo Router a SQLite. Bez účtu, aplikačného backendu, platených API a vzdialeného sledovania.
+
+## Čo prináša vizuálna verzia 1.1
+
+- Nový ilustrovaný domov, tri samostatné kruhové ukazovatele, kontextový ďalší krok, farebné karty a kompaktnejšie zásoby. Zobrazené metriky používajú skutočné lokálne údaje, nie demo skóre.
+- **Akadémia: 18 offline sprievodcov** s ôsmimi druhmi lokálnych SVG ilustrácií. Vyhľadávanie, kategórie, uložené návody a čítačka krok za krokom s prehľadom všetkých krokov.
+- **Video zručnosti: 8 tematických vstupov na YouTube.** Otvárajú konkrétne vyhľadávanie až po stlačení. Nejde o redakčne overené jednotlivé videá ani prehrávač offline; výsledky a reklamy spravuje YouTube.
+- **Sedem krokov prípravy:** praktické misie, malé kvízy s vysvetlením, priebežný pokrok a vratné označenie dokončenia. Bez trestania za vynechané dni a bez garancie bezpečnosti.
+- **Rodinná núdzová karta:** grafický prehľad, voliteľné osobné údaje a presný textový náhľad pred potvrdeným systémovým zdieľaním.
+- **Rýchla pomoc:** veľké tiesňové tlačidlá, potvrdenie pred vytáčaním a okamžitý vstup do základných scenárov. Dostupná aj z onboardingu.
+- **READY Plus:** vizuálny návrh budúceho rozšírenia; žiadna aktívna platba, reklama alebo uzamknutá núdzová funkcia. Možnosti podnikania sú v [docs/MONETIZATION.md](docs/MONETIZATION.md).
+
+Dizajn vychádza z aktuálnych oficiálnych materiálov M3 Expressive a zásad prístupnosti React Native; dôkazy a hranice overenia sú v [docs/DESIGN_RESEARCH.md](docs/DESIGN_RESEARCH.md). Ilustrácia domácnosti je vygenerovaná pre READY a pribalená lokálne (55 kB WebP), nejde o externý obrázok s požiadavkou na sieť. Ukážky [Domov](docs/screenshots/home.png), [Akadémia](docs/screenshots/academy.png) a [Misie](docs/screenshots/missions.png) sú renderované skutočnými komponentmi s označenými testovacími údajmi v prehliadačovom QA prostredí, nie snímky fyzického telefónu.
+
+Ak už máte klon predchádzajúcej verzie, v jeho priečinku spustite:
+
+```powershell
+git pull --ff-only
+npm.cmd ci
+npm.cmd start -- --lan
+```
 
 ## Spustenie na Windows (PowerShell)
 
@@ -104,9 +124,22 @@ Množstvo = deficit × podiel / hustota, zaokrúhlené nahor na 0,01 kg. Voda sa
 
 Profil má pevný identifikátor `main`. Ostatné záznamy používajú lokálne textové identifikátory; duplicity pri importe sa odmietajú. Dátumy na obale a dátum overenia miesta sú `RRRR-MM-DD`, export a migrácie používajú UTC ISO timestamp. Jednotky, kategórie a typy sú v schémach. Kryt obsahuje HTTPS zdroj, typ, dátum overenia, stav a poznámku; neobsahuje automatické tvrdenie o dostupnosti. Aktuálny MVP nemá verejný import adresára ani mapu.
 
+Dokončenia misií a záložky používajú vo verzii 1.1 menné priestory `mission-<id>` a `bookmark-<id>` v existujúcej tabuľke checklistov. Bežný Plán ich nezobrazuje; progress a záložky počítajú iba aktuálne známe ID. Tým sa zachováva schéma aj kompatibilita starších záloh verzie 1. Export obsahuje aj tieto nové záznamy. V budúcej migrácii ich možno presunúť do samostatnej tabuľky pri zachovaní údajov.
+
 Migrácia a seed úloh sa vykonajú iba raz. Import neobnovuje používateľom odstránené úlohy. Novšia neznáma schéma sa odmietne bez mazania. Ďalšie migrácie musia byť aditívne alebo zachovať dáta v transakcii; nezvyšujte verziu spôsobom, ktorý databázu resetuje.
 
 JSON záloha má tvar `{ "version": 1, "exportedAt": "UTC ISO dátum", "data": { "household": ..., "inventory": [], "shopping": [], "checklists": [], "contacts": [], "safePlaces": [] } }`. Autoritatívna schéma je `backupSchema` v `src/types/model.ts`.
+
+## Vizuálna kontrola pre vývojárov
+
+```powershell
+npm.cmd run visual:preview
+# Voliteľné snímky; prvýkrát nainštalujte Chromium pre Playwright:
+npx.cmd playwright install chromium
+npm.cmd run visual:capture
+```
+
+Tento nástroj renderuje skutočné komponenty Home, Academy a Missions cez React Native Web s výslovne oddeleným testovacím store. Natívne služby nahrádzajú testovacie adaptéry. Nie je to produkčný web ani náhrada spustenia na telefóne. Snímky pokrývajú 390/320 px, svetlý/tmavý režim a kontrolu horizontálneho pretečenia. Server počúva iba na loopbacku; voliteľná premenná `READY_CHROMIUM_PATH` vyberie vlastný Chromium. Vizuálny harness vyžaduje lokálny prehliadač a neposiela údaje domácnosti.
 
 ## Kontroly a obmedzenia
 
