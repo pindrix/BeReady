@@ -1,4 +1,5 @@
 import { router } from "expo-router";
+import { LanguagePicker } from "../components/language-picker";
 import { Image } from "expo-image";
 import { Badge } from "../components/visual";
 import { Screen, T, Button } from "../components/ui";
@@ -12,6 +13,7 @@ export default function Onboarding() {
       title="Pokoj začína prípravou."
       subtitle="Malé kroky pre lepšie pripravenú domácnosť."
     >
+      <LanguagePicker />
       <Image
         source={require("../../assets/images/ready-world.webp")}
         style={{ width: "100%", height: 210, borderRadius: 28 }}

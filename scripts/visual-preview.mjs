@@ -18,6 +18,7 @@ const mock = (name) => join(root, "tests/visual/mocks", name);
 const aliases = [
   [/^react-native$/, require.resolve("react-native-web")],
   [/state\/store$/, mock("state.tsx")],
+  [/state\/license$/, mock("license.ts")],
   [/^expo-router$/, mock("router.ts")],
   [/^react-native-safe-area-context$/, mock("safe-area.tsx")],
   [/^@expo\/vector-icons(?:\/Ionicons)?$/, mock("icons.tsx")],

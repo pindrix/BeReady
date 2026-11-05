@@ -34,33 +34,45 @@ export function householdCard(
   };
 }
 
-export function householdCardText(card: HouseholdCard): string {
+export function householdCardText(
+  card: HouseholdCard,
+  translate: (value: string) => string = (value) => value,
+): string {
   const lines = [
-    "READY / RODINNÁ NÚDZOVÁ KARTA",
-    card.household,
+    translate("READY / RODINNÁ NÚDZOVÁ KARTA"),
+    card.personal ? card.household : translate(card.household),
     "",
-    "TIESŇOVÉ LINKY NA SLOVENSKU",
-    ...emergencyNumbers.map(({ number, name }) => `${number} — ${name}`),
+    translate("TIESŇOVÉ LINKY NA SLOVENSKU"),
+    ...emergencyNumbers.map(
+      ({ number, name }) => `${number} — ${translate(name)}`,
+    ),
     "",
-    "MIESTO STRETNUTIA",
-    card.meeting,
+    translate("MIESTO STRETNUTIA"),
+    card.personal ? card.meeting : translate(card.meeting),
   ];
   if (card.personal) {
-    lines.push("", "BLÍZKE OSOBY");
-    if (!card.contacts.length) lines.push("Kontakty ešte nie sú vyplnené.");
+    lines.push("", translate("BLÍZKE OSOBY"));
+    if (!card.contacts.length)
+      lines.push(translate("Kontakty ešte nie sú vyplnené."));
     else
       card.contacts.forEach(({ name, details }) =>
         lines.push(`${name}: ${details}`),
       );
     if (card.omittedContacts)
       lines.push(
-        `Na karte nie je uvedených ďalších ${card.omittedContacts} kontaktov. Všetky sú v aplikácii.`,
+        translate(
+          `Na karte nie je uvedených ďalších ${card.omittedContacts} kontaktov. Všetky sú v aplikácii.`,
+        ),
       );
   }
   lines.push(
     "",
-    "Pri núdzovom volaní povedzte, čo sa stalo, kde ste a kto potrebuje pomoc. Riaďte sa operátorom.",
-    "READY nie je oficiálna výstražná služba. Riaďte sa pokynmi záchranných zložiek a úradov.",
+    translate(
+      "Pri núdzovom volaní povedzte, čo sa stalo, kde ste a kto potrebuje pomoc. Riaďte sa operátorom.",
+    ),
+    translate(
+      "READY nie je oficiálna výstražná služba. Riaďte sa pokynmi záchranných zložiek a úradov.",
+    ),
   );
   return lines.join("\n");
 }

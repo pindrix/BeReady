@@ -1,8 +1,10 @@
-import { messages } from "../../i18n";
+import { translateText as t, messages } from "../../i18n";
+import { useLocale } from "../../components/localized-text";
 import { Tabs } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
 import { useTheme } from "../../theme/theme";
 export default function Layout() {
+  useLocale();
   const c = useTheme();
   return (
     <Tabs
@@ -21,7 +23,7 @@ export default function Layout() {
       <Tabs.Screen
         name="index"
         options={{
-          title: messages.tabs.home,
+          title: t(messages.tabs.home),
           tabBarIcon: ({ focused, size }) => (
             <Ionicons
               name="home-outline"
@@ -34,7 +36,7 @@ export default function Layout() {
       <Tabs.Screen
         name="inventory"
         options={{
-          title: messages.tabs.inventory,
+          title: t(messages.tabs.inventory),
           tabBarIcon: ({ focused, size }) => (
             <Ionicons
               name="cube-outline"
@@ -47,7 +49,7 @@ export default function Layout() {
       <Tabs.Screen
         name="plan"
         options={{
-          title: messages.tabs.plan,
+          title: t(messages.tabs.plan),
           tabBarIcon: ({ focused, size }) => (
             <Ionicons
               name="checkbox-outline"
@@ -60,7 +62,7 @@ export default function Layout() {
       <Tabs.Screen
         name="help"
         options={{
-          title: messages.tabs.help,
+          title: t(messages.tabs.help),
           tabBarIcon: ({ focused, size }) => (
             <Ionicons
               name="help-buoy-outline"
@@ -73,7 +75,7 @@ export default function Layout() {
       <Tabs.Screen
         name="settings"
         options={{
-          title: messages.tabs.settings,
+          title: t(messages.tabs.settings),
           tabBarIcon: ({ focused, size }) => (
             <Ionicons
               name="settings-outline"

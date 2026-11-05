@@ -1,3 +1,4 @@
+import { initialChecklists } from "../../data/content";
 import { useState } from "react";
 import { IconButton, Badge, Tile } from "../../components/visual";
 import { View } from "react-native";
@@ -111,7 +112,9 @@ export default function PlanScreen() {
     (x) =>
       x.topic === topic &&
       !x.id.startsWith("mission-") &&
-      !x.id.startsWith("bookmark-"),
+      !x.id.startsWith("bookmark-") &&
+      !x.id.startsWith("kit-") &&
+      !x.id.startsWith("drill-"),
   );
   return (
     <Screen
@@ -168,6 +171,9 @@ export default function PlanScreen() {
           >
             <Check
               label={x.name}
+              translateLabel={initialChecklists.some(
+                (seed) => seed.id === x.id && seed.name === x.name,
+              )}
               done={x.done}
               disabled={s.busy || a.busy}
               onPress={() =>
@@ -249,8 +255,10 @@ export default function PlanScreen() {
         ) : null}
         {s.data.contacts.map((x) => (
           <Card key={x.id}>
-            <T large>{x.name}</T>
-            <T>{x.details}</T>
+            <T large translate={false}>
+              {x.name}
+            </T>
+            <T translate={false}>{x.details}</T>
             <Row>
               <Button
                 title={`Upraviť kontakt: ${x.name}`}

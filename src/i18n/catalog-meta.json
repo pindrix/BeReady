@@ -1,0 +1,2396 @@
+{
+  "count": 1263,
+  "templates": [
+    "Chýba {0} kcal a {1} l vody.",
+    "Chýbajúci krok: {0}",
+    "Cieľ zásob {0} dní. Vonkajší kruh jedlo, stredný voda, vnútorný checklist.",
+    "Cyklus: {0}",
+    "Do cieľa chýba {0} kcal.",
+    "Do cieľa chýba {0} l. Pridajte to, čo už doma máte.",
+    "Duplicitná odpoveď: {0}",
+    "Duplicitné identifikátory: {0}.",
+    "Dátum na obale: {0}",
+    "Dátum uvedeného overenia: {0}",
+    "Energia: {0} kcal/{1}. {2}",
+    "Krok {0}",
+    "Krok {0} z {1}",
+    "Na karte nie je uvedených ďalších {0} kontaktov. Všetky sú v aplikácii.",
+    "Nedostupný krok: {0}",
+    "Neznáme kcal: {0} položiek. Nie sú započítané.",
+    "Neznámy návod: {0}",
+    "Nácvik: {0}",
+    "Nákup: {0}",
+    "Návod: {0}",
+    "OTÁZKA {0}",
+    "Odstrániť úlohu: {0}",
+    "Otvoriť vyhľadávanie: {0}",
+    "Otvoriť: {0}",
+    "Po dátume: {0} položiek, nezapočítavajú sa do krytia.",
+    "Potrebná voda {0} litrov",
+    "Počet odpovedí: {0}",
+    "Počet osôb: {0}",
+    "Prázdny výsledok: {0}",
+    "Redakčná kontrola pribaleného textu: {0}. Aktuálnosť externého zdroja nebola v tomto prostredí overená. Pri konkrétnej udalosti majú prednosť miestne pokyny úradov.",
+    "Samotná vypočítaná voda váži približne {0} kg, bez obalov. Na presun voľte prenosnú výbavu, zohľadnite ľudí a dohodnite bezpečné doplnenie. Odchod podľa úradov neodkladajte balením.",
+    "Skontrolovať: {0}",
+    "Spustiť nácvik: {0}",
+    "Uložený návod: {0}",
+    "Upraviť kontakt: {0}",
+    "Upraviť nákup: {0}",
+    "Upraviť úlohu: {0}",
+    "Upraviť: {0}",
+    "Vymazať kontakt: {0}",
+    "Vymazať nákup: {0}",
+    "Vymazať: {0}",
+    "Vytočiť {0}?",
+    "Zdroj miesta: {0} (online)",
+    "Zo skúšobného obdobia zostáva {0} dní.",
+    "Záloha obsahuje {0} zásob, {1} nákupov, {2} úloh a {3} kontaktov. Súčasné údaje budú prepísané.",
+    "^[a-fA-F0-9]{{0}}$",
+    "bookmark-{0}",
+    "kcal na 1 {0} (voliteľné)",
+    "kit-{0}",
+    "ready-backup-{0}.json",
+    "seed-{0}-{1}",
+    "{0} / {1} ÚLOH SPLNENÝCH",
+    "{0} / {1} úloh",
+    "{0} Ide iba o predpoklady návrhu. Množstvá sa zaokrúhľujú nahor na 0,01 kg/l.",
+    "{0} MIN · OFFLINE",
+    "{0} Návrh používa zjednodušenú šablónu, nepozná ceny a nie je nutrične kompletný. Množstvá upravte podľa obalov a potrieb domácnosti. Nákupný zoznam sa zatiaľ nezapočítava do zásob.",
+    "{0} POLOŽIEK",
+    "{0} detail: {1}",
+    "{0} dní jedla",
+    "{0} dní pitnej vody",
+    "{0} ilustrovaných sprievodcov. Bez registrácie, pripravené aj bez internetu.",
+    "{0} kcal",
+    "{0} krok: {1}",
+    "{0} min · offline",
+    "{0} osôb · cieľ {1} dní",
+    "{0} osôb × {1} l × {2} dní",
+    "{0} položiek v domácnosti",
+    "{0} z {1} modulov",
+    "{0} z {1} nácvikov označených ako absolvované",
+    "{0} zo 7 krokov hotových · Pokračovať",
+    "{0} · OFFLINE",
+    "{0} · YOUTUBE",
+    "{0}, {1} z {2} pripravené",
+    "Ďalších {0} kontaktov nájdete v aplikácii."
+  ],
+  "references": {
+    ". Aktuálnosť externého zdroja nebola v tomto prostredí overená. Pri konkrétnej udalosti majú prednosť miestne pokyny úradov.": [
+      "src/app/guide.tsx:165"
+    ],
+    "· bez započítania do krytia": ["src/app/(tabs)/inventory.tsx:307"],
+    "{0} · OFFLINE": ["src/app/scenarios.tsx:516"],
+    "{0} · YOUTUBE": ["src/app/videos.tsx:163"],
+    "{0} / {1} úloh": ["src/app/(tabs)/index.tsx:194"],
+    "{0} / {1} ÚLOH SPLNENÝCH": ["src/app/(tabs)/plan.tsx:160"],
+    "{0} detail: {1}": ["src/app/(tabs)/inventory.tsx:251"],
+    "{0} dní jedla": ["src/app/(tabs)/index.tsx:182"],
+    "{0} dní pitnej vody": ["src/app/(tabs)/index.tsx:188"],
+    "{0} Ide iba o predpoklady návrhu. Množstvá sa zaokrúhľujú nahor na 0,01 kg/l.": [
+      "src/app/shopping.tsx:110"
+    ],
+    "{0} ilustrovaných sprievodcov. Bez registrácie, pripravené aj bez internetu.": [
+      "src/app/(tabs)/help.tsx:124"
+    ],
+    "{0} kcal": ["src/app/(tabs)/inventory.tsx:232"],
+    "{0} krok: {1}": ["src/app/missions.tsx:85"],
+    "{0} min · offline": ["src/app/(tabs)/help.tsx:275"],
+    "{0} MIN · OFFLINE": ["src/app/guide.tsx:60"],
+    "{0} Návrh používa zjednodušenú šablónu, nepozná ceny a nie je nutrične kompletný. Množstvá upravte podľa obalov a potrieb domácnosti. Nákupný zoznam sa zatiaľ nezapočítava do zásob.": [
+      "src/app/shopping.tsx:102"
+    ],
+    "{0} osôb · cieľ {1} dní": ["src/app/(tabs)/settings.tsx:74"],
+    "{0} osôb × {1} l × {2} dní": ["src/app/field-kit.tsx:410"],
+    "{0} POLOŽIEK": ["src/app/(tabs)/inventory.tsx:150"],
+    "{0} položiek v domácnosti": ["src/app/(tabs)/index.tsx:350"],
+    "{0} z {1} modulov": ["src/app/field-kit.tsx:220"],
+    "{0} z {1} nácvikov označených ako absolvované": [
+      "src/app/scenarios.tsx:439"
+    ],
+    "{0} zo 7 krokov hotových · Pokračovať": ["src/app/(tabs)/index.tsx:428"],
+    "{0}, {1} z {2} pripravené": ["src/app/field-kit.tsx:270"],
+    "^[a-fA-F0-9]{{0}}$": ["src/domain/signed-license.ts:42"],
+    "1–2 min": ["src/data/scenarios.ts:435"],
+    "10 min": ["src/data/missions.ts:166"],
+    "112 — Integrovaný záchranný systém": ["src/app/now.tsx:30"],
+    "14 dní na vyskúšanie": ["src/app/plus.tsx:153"],
+    "14 DNÍ ONLINE · POTOM ROČNÁ LICENCIA": [
+      "src/components/access-panel.tsx:33"
+    ],
+    "14 dní online skúšania. Potom jednorazová licencia na 12 mesiacov — bez automatického obnovenia.": [
+      "src/app/plus.tsx:26"
+    ],
+    "15 min": ["src/data/missions.ts:88"],
+    "2 min": [
+      "src/data/scenarios.ts:143",
+      "src/data/scenarios.ts:246",
+      "src/data/scenarios.ts:349"
+    ],
+    "2–3 min": ["src/data/scenarios.ts:40"],
+    "3 500 kcal/kg": ["src/data/missions.ts:156"],
+    "3 min": ["src/data/missions.ts:61"],
+    "35 kcal/kg": ["src/data/missions.ts:156"],
+    "350 kcal/kg": ["src/data/missions.ts:156"],
+    "5 min": [
+      "src/data/missions.ts:34",
+      "src/data/missions.ts:115",
+      "src/data/missions.ts:193"
+    ],
+    "7 krokov k lepšiemu plánu": ["src/app/missions.tsx:272"],
+    "7 krokov prípravy": ["src/app/(tabs)/plan.tsx:132"],
+    "7 malých krokov k plánu": ["src/app/(tabs)/index.tsx:398"],
+    "7 min": ["src/data/missions.ts:143"],
+    "72-hodinový batoh": ["src/data/content.ts:18"],
+    "Aj ich výbava má svoje miesto.": ["src/data/field-kit.ts:214"],
+    "Aj odhad vody v potravinách": ["src/data/missions.ts:50"],
+    "Ak energiu nepoznáte, nechajte pole prázdne. Rozlišujte „spotrebujte do“ a minimálnu trvanlivosť.": [
+      "src/data/missions.ts:151"
+    ],
+    "Ak ide o bezprostredné ohrozenie, vyhľadajte bezpečné miesto podľa charakteru udalosti a pokynov úradov.": [
+      "src/data/content.ts:108"
+    ],
+    "Ak je budova ohrozená požiarom, povodňou alebo poškodením, riaďte sa pokynmi záchranných zložiek.": [
+      "src/data/scenarios.ts:397"
+    ],
+    "Ak je presun bezpečný, vyhľadajte pevnú uzavretú budovu a rešpektujte miestne pokyny.": [
+      "src/data/scenarios.ts:407"
+    ],
+    "Ak je to bezpečné, vzdiaľte sa z ohrozeného miesta. Nezdržiavajte sa balením.": [
+      "src/data/scenarios.ts:207"
+    ],
+    "Ak je to bezpečné, zostaňte so zraneným, upokojujte ho a sledujte zmeny. Dodržujte pokyny operátora až do príchodu pomoci. Pripravte prístup pre záchranárov.": [
+      "src/data/academy.ts:269"
+    ],
+    "Ak je to možné, použite krátku textovú správu namiesto dlhého hovoru. Nezahlcujte siete opakovaným volaním. Pri bezprostrednom ohrození volajte tiesňovú linku.": [
+      "src/data/academy.ts:231"
+    ],
+    "Ak je únik zablokovaný, uzavrite dvere medzi sebou a požiarom a oznámte operátorovi svoju presnú polohu.": [
+      "src/data/content.ts:98"
+    ],
+    "Ak je voda z vodovodu označená za nevhodnú na pitie, riaďte sa konkrétnymi pokynmi dodávateľa a úradu verejného zdravotníctva. Číry vzhľad vody nie je dôkaz bezpečnosti.": [
+      "src/data/academy.ts:167"
+    ],
+    "Ak môže byť zdravie bezprostredne ohrozené, volajte 155 alebo 112. Pri pochybnostiach konzultujte zdravotnícku pomoc.": [
+      "src/data/scenarios.ts:105"
+    ],
+    "Ak môžete bezpečne uniknúť, okamžite opustite budovu. Nezdržujte sa zbieraním vecí a nepoužívajte výťah.": [
+      "src/data/content.ts:95"
+    ],
+    "Ak sa dá bezpečne odísť, opustite ohrozené miesto. Nevracajte sa po veci.": [
+      "src/data/scenarios.ts:92"
+    ],
+    "Ak sa ocitnete v bezprostrednom nebezpečenstve alebo niekto potrebuje pomoc, volajte 112 a riaďte sa operátorom.": [
+      "src/data/scenarios.ts:421"
+    ],
+    "Ak úrady nariadia ukrytie, vstúpte do vhodnej budovy, zatvorte okná a dvere a vypnite vetranie podľa pokynov.": [
+      "src/data/content.ts:119"
+    ],
+    "Akadémia READY": ["src/app/(tabs)/index.tsx:369"],
+    "Aké ukrytie máte na dosah?": ["src/data/scenarios.ts:373"],
+    "Ako evidovať, skladovať a pravidelne obmieňať pitnú vodu.": [
+      "src/data/academy.ts:139"
+    ],
+    "Ako funguje licencia": ["src/app/plus.tsx:185", "src/app/plus.tsx:194"],
+    "ako pripravené": ["src/app/field-kit.tsx:209"],
+    "Ako si dohodnúť kontakty, stretnutie a postup pri odlúčení.": [
+      "src/data/academy.ts:626"
+    ],
+    "Akú rezervu pripravujete?": ["src/data/scenarios.ts:276"],
+    "Aký zdroj svetla pripravíte?": ["src/data/scenarios.ts:70"],
+    "American Red Cross": [
+      "src/data/academy.ts:250",
+      "src/data/academy.ts:627"
+    ],
+    "American Red Cross family emergency communication plan": [
+      "src/data/academy.ts:628"
+    ],
+    "Angličtina": [
+      "src/app/videos.tsx:23",
+      "src/app/videos.tsx:102",
+      "src/data/academy.ts:579",
+      "src/data/academy.ts:589",
+      "src/data/academy.ts:619",
+      "src/data/academy.ts:629",
+      "src/i18n/locales.ts:33"
+    ],
+    "Ani ukrytie nie je dôvod ignorovať ďalšie varovania.": [
+      "src/data/scenarios.ts:393"
+    ],
+    "Áno, aby sme si to overili": ["src/data/missions.ts:180"],
+    "Áno, ak hovor rýchlo ukončíme": ["src/data/missions.ts:182"],
+    "Áno, evakuácia je nariadená": ["src/data/scenarios.ts:153"],
+    "Áno, vždy": ["src/data/missions.ts:130"],
+    "Aplikácia nevie vyšetriť človeka ani vylúčiť zhoršovanie stavu.": [
+      "src/data/scenarios.ts:479"
+    ],
+    "Arabčina": ["src/i18n/locales.ts:40"],
+    "Bahasa Indonesia": ["src/i18n/locales.ts:50"],
+    "Baterka alebo čelovka": ["src/data/missions.ts:75"],
+    "Baterka alebo čelovka poskytne svetlo bez otvoreného ohňa. Spaľovacie zariadenia v uzavretých priestoroch môžu spôsobiť požiar aj otravu oxidom uhoľnatým.": [
+      "src/data/missions.ts:81"
+    ],
+    "Baterku alebo čelovku": ["src/data/scenarios.ts:75"],
+    "Batoh má byť prenosný. Základná výbava nie je dôvod odložiť okamžitý bezpečný odchod.": [
+      "src/data/academy.ts:110"
+    ],
+    "Batoh na prvých 72 hodín": ["src/data/academy.ts:98"],
+    "Batoh označte, uložte na dostupné miesto a skúste ho krátko niesť. Pravidelne kontrolujte lieky, batérie a dátumy. Dohodnite si, kto berie čo.": [
+      "src/data/academy.ts:130"
+    ],
+    "Batoh, kontakty a miesto stretnutia": ["src/app/(tabs)/index.tsx:356"],
+    "Bengálčina": ["src/i18n/locales.ts:45"],
+    "Bez možnosti varenia: návrh používa potraviny pripravené na konzumáciu.": [
+      "src/app/shopping.tsx:105"
+    ],
+    "BEZ PRIPOJENIA": ["src/app/plus.tsx:106"],
+    "Bez série dní. Bez výčitiek.": ["src/app/missions.tsx:330"],
+    "Bez tlaku. Vlastným tempom.": ["src/app/(tabs)/index.tsx:400"],
+    "Bez účtu, backendu a vzdialeného sledovania. Údaje sú uložené v SQLite v tomto zariadení. Odinštalovaním môžete o dáta prísť; pravidelne si vytvárajte zálohu.": [
+      "src/app/(tabs)/settings.tsx:114"
+    ],
+    "Bez viditeľného ohrozenia sa sústreďte na dostupnú výbavu a spoľahlivé informácie.": [
+      "src/data/scenarios.ts:114"
+    ],
+    "BEZPEČIE → POMOC → POKYNY": ["src/data/academy.ts:243"],
+    "Bezpečne do hôr": ["src/data/academy.ts:605"],
+    "Bezpečné miesta": ["src/app/(tabs)/help.tsx:145"],
+    "Bezpečné miesta / Kryty": ["src/app/safe-places.tsx:18"],
+    "Bezpečne sa presuňte do vhodného ukrytia": ["src/data/scenarios.ts:404"],
+    "Bezpečný odchod alebo pomoc nemôžu čakať.": ["src/data/scenarios.ts:160"],
+    "Bezpečný odchod má prednosť": ["src/data/scenarios.ts:204"],
+    "BEZPEČNÝ PRESUN": ["src/data/academy.ts:40"],
+    "Bezpečný presun a označenie": ["src/data/field-kit.ts:228"],
+    "Bezpečný zdroj, prenosné balenie.": ["src/data/field-kit.ts:18"],
+    "blackout": ["src/i18n/sk.ts"],
+    "Blízke osoby": ["src/app/(tabs)/plan.tsx:249"],
+    "BLÍZKE OSOBY": [
+      "src/app/household-card.tsx:185",
+      "src/domain/household-card.ts:54"
+    ],
+    "bn-BD": ["src/i18n/locales.ts:45"],
+    "bookmark-{0}": ["src/data/academy.ts:528", "src/data/academy.ts:539"],
+    "Búrka bez zbytočného rizika": ["src/data/academy.ts:308"],
+    "Búrka nás zastihla vonku": ["src/data/scenarios.ts:345"],
+    "CELÁ DOMÁCNOSŤ": ["src/data/academy.ts:371"],
+    "Celková energia = množstvo × kcal na zvolenú jednotku. Ak obal uvádza kcal/100 g a evidujete kg, vynásobte hodnotu desiatimi. Pri zmene jednotky zadajte energiu znova.": [
+      "src/app/item.tsx:80"
+    ],
+    "Cestoviny": ["src/data/content.ts:8"],
+    "Cieľ v dňoch": ["src/app/shopping.tsx:92"],
+    "Cieľ vody v dňoch": ["src/app/field-kit.tsx:417"],
+    "Cieľ zásob {0} dní. Vonkajší kruh jedlo, stredný voda, vnútorný checklist.": [
+      "src/components/visual.tsx:241"
+    ],
+    "Cieľ zásob v dňoch": [
+      "src/app/(tabs)/index.tsx:47",
+      "src/components/profile-form.tsx:51"
+    ],
+    "Cieľom je svetlo bez ďalšieho rizika v domácnosti.": [
+      "src/data/scenarios.ts:71"
+    ],
+    "Cieľová cena je 10 USD za ročné obdobie. Konečnú cenu v miestnej mene a prípadné dane musí pred potvrdením zobraziť Google Play. Zobrazená suma nie je aktívna ponuka obchodu.": [
+      "src/app/plus.tsx:144"
+    ],
+    "cs-CZ": ["src/i18n/locales.ts:58"],
+    "Cvičenie, nie núdzová triáž": ["src/app/scenarios.tsx:446"],
+    "Cyklus: {0}": ["src/domain/scenarios.ts:72"],
+    "Čeština": ["src/i18n/locales.ts:58"],
+    "Čínština": ["src/i18n/locales.ts:34"],
+    "Číra voda ani improvizovaný filter nie sú potvrdením bezpečnosti.": [
+      "src/data/scenarios.ts:308"
+    ],
+    "Čítanie vlastných údajov a export zostávajú dostupné aj bez aktívnej licencie.": [
+      "src/app/data-vault.tsx:10"
+    ],
+    "Človek nereaguje, ťažko dýcha alebo silno krváca": [
+      "src/data/scenarios.ts:445"
+    ],
+    "Čo ak sa to stane?": ["src/app/(tabs)/index.tsx:336"],
+    "Čo dnes pripravíme?": ["src/app/(tabs)/index.tsx:343"],
+    "Čo do evakuačného batoha": ["src/data/academy.ts:575"],
+    "Čo je vhodná prvá voľba svetla pri výpadku elektriny?": [
+      "src/data/missions.ts:73"
+    ],
+    "Čo má určovať obsah batoha?": ["src/data/missions.ts:100"],
+    "Čo najvyššia hmotnosť": ["src/data/missions.ts:102"],
+    "Čo platí pre JSON zálohu READY?": ["src/data/missions.ts:205"],
+    "Čo sa automaticky počíta do dní pitnej vody?": ["src/data/missions.ts:46"],
+    "Čo sa deje okolo vás?": ["src/data/scenarios.ts:45"],
+    "Čo sa deje?": ["src/app/now.tsx:100"],
+    "Čo sa chcete naučiť?": ["src/app/videos.tsx:86"],
+    "Čo sa stalo a kde ste — miesto, adresa alebo orientačný bod.": [
+      "src/app/now.tsx:86"
+    ],
+    "Čo urobím ako prvé?": ["src/app/scenarios.tsx:375"],
+    "Čo vziať, koho kontaktovať a ako odísť podľa oficiálnych pokynov.": [
+      "src/data/academy.ts:78"
+    ],
+    "Dajte zásobám druhý pohľad": ["src/app/(tabs)/index.tsx:483"],
+    "Ďalší krok": ["src/app/guide.tsx:119"],
+    "Ďalších": ["src/app/household-card.tsx:203"],
+    "Ďalších {0} kontaktov nájdete v aplikácii.": [
+      "src/app/household-card.tsx:202"
+    ],
+    "Databáza je novšia než aplikácia. Aktualizujte READY.": [
+      "src/db/repository.ts:52"
+    ],
+    "DÁTUM": ["src/app/(tabs)/inventory.tsx:238"],
+    "Dátum na obale (RRRR-MM-DD, voliteľné)": ["src/app/item.tsx:94"],
+    "Dátum na obale:": ["src/app/data-vault.tsx:38"],
+    "Dátum na obale: {0}": ["src/app/data-vault.tsx:38"],
+    "Dátum nákupu (RRRR-MM-DD, voliteľné)": ["src/app/item.tsx:100"],
+    "Dátum neexistuje.": ["src/types/model.ts:25"],
+    "Dátum uvedeného overenia:": ["src/app/safe-places.tsx:49"],
+    "Dátum uvedeného overenia: {0}": ["src/app/safe-places.tsx:49"],
+    "de-DE": ["src/i18n/locales.ts:54"],
+    "Deutsch": ["src/i18n/locales.ts:54"],
+    "Dialóg zdieľania bol zatvorený. Skontrolujte, či ste súbor uložili na zvolené miesto.": [
+      "src/app/(tabs)/settings.tsx:151"
+    ],
+    "dní": ["src/app/(tabs)/settings.tsx:75", "src/app/field-kit.tsx:412"],
+    "DNÍ · CIEĽ": ["src/components/visual.tsx:275"],
+    "Do cieľa chýba": ["src/app/(tabs)/index.tsx:529"],
+    "Do cieľa chýba {0} kcal.": ["src/app/(tabs)/index.tsx:529"],
+    "Do cieľa chýba {0} l. Pridajte to, čo už doma máte.": [
+      "src/app/(tabs)/index.tsx:293"
+    ],
+    "Do dní jedla sa počíta iba kategória Jedlo.": [
+      "src/app/(tabs)/inventory.tsx:299"
+    ],
+    "Do ohrozeného miesta sa nevracajte bez povolenia zodpovedných orgánov.": [
+      "src/data/scenarios.ts:209"
+    ],
+    "Do výbavy patria aj domáce zvieratá": ["src/app/field-kit.tsx:320"],
+    "Do zaplavenej cesty nevstupujte pešo ani autom.": [
+      "src/data/academy.ts:45"
+    ],
+    "Do zásob zadajte skutočné množstvo v litroch alebo mililitroch a dátum na obale.": [
+      "src/data/scenarios.ts:323"
+    ],
+    "Dobrá dohoda je zrozumiteľná aj bez telefónu a bez tejto aplikácie.": [
+      "src/data/scenarios.ts:217"
+    ],
+    "Dobrá práca. Plán žije ďalej.": ["src/app/missions.tsx:375"],
+    "Dobré zásoby. Menej starostí.": ["src/app/(tabs)/inventory.tsx:42"],
+    "Dodávateľ či úrad oznámil problém s vodou.": ["src/data/scenarios.ts:257"],
+    "Dodržte presné pokyny dodávateľa a úradu verejného zdravotníctva vrátane obmedzení použitia.": [
+      "src/data/scenarios.ts:298"
+    ],
+    "Dohoda domácnosti": ["src/app/field-kit.tsx:482"],
+    "Dohodnite aspoň jednu dôveryhodnú osobu a záložný kontakt. Jasne si povedzte, kto pomôže, ako sa spojíte a čo sa stane, keď vypadne telefón.": [
+      "src/data/academy.ts:487"
+    ],
+    "Dohodnite hlavné a záložné miesto stretnutia podľa miestnych podmienok.": [
+      "src/data/missions.ts:121"
+    ],
+    "Dohodnite hlavné aj záložné miesto a kontaktnú osobu. Nekonajte v rozpore s evakuačnými pokynmi.": [
+      "src/data/field-kit.ts:145"
+    ],
+    "Dohodnite jeden jasný rodinný plán": ["src/data/scenarios.ts:228"],
+    "Dohodnite jednu vec, ktorú zlepšíte. Skutočné núdzové linky pri cvičení nevytáčajte.": [
+      "src/data/missions.ts:174"
+    ],
+    "Dohodnite kontaktnú osobu": ["src/data/academy.ts:222"],
+    "Dohodnite miesto v okolí domova a záložné miesto mimo bezprostredného okolia. Uistite sa, že všetci rozumejú, kedy sa má použiť ktoré miesto. Miesto nikdy nevoľte v rozpore s pokynmi úradov.": [
+      "src/data/academy.ts:227"
+    ],
+    "Dohodnite pomocníkov": ["src/data/academy.ts:486"],
+    "Dohodnite sa s dôveryhodnou osobou, ktorá vie pomôcť, ak nie ste doma. Overte pravidlá cieľového ubytovania alebo evakuačného miesta.": [
+      "src/data/academy.ts:392"
+    ],
+    "Dohodnite sa vopred. Údaje sa nikam automaticky neposielajú.": [
+      "src/app/(tabs)/plan.tsx:122"
+    ],
+    "Dohodnite si spojenie": ["src/data/missions.ts:113"],
+    "Dohodnite si, kde budete počúvať oficiálne informácie. Uložené návody nie sú živá výstražná služba.": [
+      "src/data/field-kit.ts:95"
+    ],
+    "Dohodnite záložnú pomoc": ["src/data/academy.ts:391"],
+    "Dohodnúť kontakt s blízkymi": ["src/data/content.ts:46"],
+    "Dohodnuté doplnenie vody": ["src/data/field-kit.ts:37"],
+    "Dohodnuté miesto stretnutia": ["src/data/content.ts:27"],
+    "Doklady a dohoda": ["src/data/field-kit.ts:129"],
+    "Doklady a ich kópie": ["src/data/content.ts:19"],
+    "Doklady a kontakty po ruke": ["src/data/academy.ts:402"],
+    "Doklady alebo bezpečné kópie": ["src/data/field-kit.ts:137"],
+    "Dokončené kroky výpravy": ["src/app/missions.tsx:354"],
+    "Doma": [
+      "src/data/academy.ts:4",
+      "src/data/academy.ts:30",
+      "src/data/academy.ts:39",
+      "src/data/academy.ts:48",
+      "src/data/academy.ts:57",
+      "src/data/academy.ts:65",
+      "src/data/academy.ts:338",
+      "src/data/academy.ts:503"
+    ],
+    "Doma pripravení.": ["src/app/(tabs)/index.tsx:46"],
+    "DOMÁCA ŠPAJZA": ["src/app/(tabs)/inventory.tsx:44"],
+    "Domáca zásoba ≠ hmotnosť batoha": ["src/app/field-kit.tsx:443"],
+    "Domáce zvieratá": ["src/data/field-kit.ts:213"],
+    "Domáce zvieratá sú súčasťou našej výbavy": ["src/domain/field-kit.ts:25"],
+    "Domácnosť": ["src/app/data-vault.tsx:23"],
+    "Domácnosť bez elektriny": ["src/data/academy.ts:615"],
+    "Domov": ["src/i18n/sk.ts:4"],
+    "Doplniť kontakty a miesto": ["src/data/missions.ts:125"],
+    "Doplniť pitnú vodu": ["src/app/(tabs)/index.tsx:244"],
+    "Doplňte potreby detí, zvierat a ľudí, ktorí potrebujú pomoc. Hmotnosť prispôsobte svojim možnostiam.": [
+      "src/data/missions.ts:96"
+    ],
+    "Doplňte svetlo bez otvoreného ohňa": ["src/data/scenarios.ts:125"],
+    "Dostupné platidlo a potrebné kľúče": ["src/data/field-kit.ts:149"],
+    "Dôležité čísla a dohoda domácnosti na jednom mieste.": [
+      "src/app/household-card.tsx:65"
+    ],
+    "Dôležité informácie aj na papieri.": ["src/data/field-kit.ts:130"],
+    "Dôležité údaje si zapíšte aj na papier a skontrolujte potreby detí, seniorov či zvierat.": [
+      "src/data/scenarios.ts:220"
+    ],
+    "Dôveryhodnej osobe povedzte trasu a čas očakávaného návratu. Dohodnite si, čo má urobiť, ak sa neozvete. Dôležité kontakty si pripravte pred cestou.": [
+      "src/data/academy.ts:453"
+    ],
+    "Držte sa ďalej od okien a dodržte pokyny pre používanie zariadení počas búrky.": [
+      "src/data/scenarios.ts:396"
+    ],
+    "Duplicitná odpoveď: {0}": ["src/domain/scenarios.ts:87"],
+    "Duplicitné identifikátory: {0}.": ["src/types/model.ts:113"],
+    "Dym, požiar alebo iskrenie": ["src/data/scenarios.ts:50"],
+    "el-GR": ["src/i18n/locales.ts:62"],
+    "en-US": ["src/i18n/locales.ts:33"],
+    "Energetické zásoby": ["src/app/(tabs)/index.tsx:183"],
+    "Energia a svetlo": ["src/i18n/sk.ts:15"],
+    "Energia: {0} kcal/{1}. {2}": ["src/app/(tabs)/inventory.tsx:299"],
+    "Energia: neznáme — nezapočítava sa do energetického súčtu.": [
+      "src/app/(tabs)/inventory.tsx:298"
+    ],
+    "Energiu zadávajte na zvolenú jednotku. Pri kcal/100 g a evidencii v kg treba hodnotu vynásobiť desiatimi.": [
+      "src/data/missions.ts:150"
+    ],
+    "English": ["src/i18n/locales.ts:33"],
+    "es-ES": ["src/i18n/locales.ts:36"],
+    "Español": ["src/i18n/locales.ts:36"],
+    "Ešte chýba": ["src/app/field-kit.tsx:432"],
+    "Ešte sa potrebujeme dohodnúť": ["src/data/scenarios.ts:184"],
+    "evakuácia": [
+      "src/app/(tabs)/index.tsx:32",
+      "src/app/(tabs)/plan.tsx:106",
+      "src/domain/field-kit.ts:18",
+      "src/domain/field-kit.ts:26",
+      "src/types/model.ts:15"
+    ],
+    "Evakuácia": ["src/app/now.tsx:124", "src/data/content.ts:128"],
+    "Evakuačný batoh": ["src/app/(tabs)/index.tsx:195"],
+    "Evakuačný plán": ["src/app/(tabs)/index.tsx:355"],
+    "Evidovaná pitná voda voči tomuto cieľu": ["src/app/field-kit.tsx:423"],
+    "Evidované": ["src/app/field-kit.tsx:428"],
+    "Existujúce údaje sa automaticky nemažú. Skúste aplikáciu načítať znova.": [
+      "src/app/_layout.tsx:30"
+    ],
+    "Existujúci zoznam zostane zachovaný. Opakované pridanie môže vytvoriť ďalšie rovnaké položky.": [
+      "src/app/shopping.tsx:123"
+    ],
+    "Exportovať JSON zálohu": ["src/app/(tabs)/settings.tsx:130"],
+    "Fazuľa": ["src/data/content.ts:10"],
+    "FEMA / Ready.gov": [
+      "src/data/academy.ts:577",
+      "src/data/academy.ts:587",
+      "src/data/academy.ts:617"
+    ],
+    "FEMA Ready emergency supply kit": ["src/data/academy.ts:578"],
+    "FEMA Ready emergency water storage": ["src/data/academy.ts:588"],
+    "FEMA Ready power outage preparedness generator safety": [
+      "src/data/academy.ts:618"
+    ],
+    "fr-FR": ["src/i18n/locales.ts:44"],
+    "Français": ["src/i18n/locales.ts:44"],
+    "Francúzština": ["src/i18n/locales.ts:44"],
+    "Funkčná baterka alebo čelovka": ["src/data/field-kit.ts:81"],
+    "Funkčné svetlo, ktoré v tme nájdete, je užitočnejšie než zoznam výbavy v hlave.": [
+      "src/data/missions.ts:65"
+    ],
+    "Generátor používať iba vonku, ďaleko od otvorov budovy": [
+      "src/data/content.ts:34"
+    ],
+    "Generátor, gril ani spaľovacie zariadenie nepoužívajte v byte, garáži alebo inom uzavretom priestore.": [
+      "src/data/scenarios.ts:118"
+    ],
+    "Generátor, gril ani spaľovacie zariadenie nikdy nepoužívajte v byte, garáži či uzavretom priestore. Hrozí otrava oxidom uhoľnatým.": [
+      "src/data/content.ts:73"
+    ],
+    "GPS sa nevyžaduje. Najbližšie miesto nemusí byť najbezpečnejšie a jeho prístupnosť nie je zaručená.": [
+      "src/app/safe-places.tsx:28"
+    ],
+    "Gréčtina": ["src/i18n/locales.ts:62"],
+    "Gril ani vonkajší varič nepoužívajte vo vnútri. Zásoba kalórií sama osebe nie je vyvážený jedálniček.": [
+      "src/data/academy.ts:185"
+    ],
+    "Gril v uzavretej miestnosti": ["src/data/missions.ts:77"],
+    "Hasiči": ["src/data/content.ts:141"],
+    "Hasičský a záchranný zbor": ["src/data/academy.ts:597"],
+    "Hasičský a záchranný zbor požiar prevencia evakuácia": [
+      "src/data/academy.ts:598"
+    ],
+    "hi-IN": ["src/i18n/locales.ts:35"],
+    "Hindčina": ["src/i18n/locales.ts:35"],
+    "Hľadajte vhodné ukrytie podľa situácie bez vstupu do vody alebo iného ohrozeného priestoru.": [
+      "src/data/scenarios.ts:420"
+    ],
+    "Hľadať jazyk": [
+      "src/components/language-picker.tsx:114",
+      "src/components/language-picker.tsx:115"
+    ],
+    "Hodnoty 2 200 kcal a 3,8 l sú orientačné a upraviteľné. Nejde o zdravotné odporúčanie pre konkrétnu osobu.": [
+      "src/components/profile-form.tsx:74"
+    ],
+    "Holandčina": ["src/i18n/locales.ts:60"],
+    "Horská záchranná služba": [
+      "src/data/academy.ts:442",
+      "src/data/academy.ts:607"
+    ],
+    "Horská záchranná služba bezpečnosť v horách": ["src/data/academy.ts:608"],
+    "Horúčava: spomaľte včas": ["src/data/academy.ts:275"],
+    "hu-HU": ["src/i18n/locales.ts:59"],
+    "Hygiena": ["src/data/field-kit.ts:185", "src/i18n/sk.ts:13"],
+    "Chcem si pripraviť najbližšie kroky.": ["src/data/scenarios.ts:63"],
+    "Chcem vidieť celý postup": ["src/app/guide.tsx:141"],
+    "Chcem vytvoriť rezervu domácnosti": ["src/data/scenarios.ts:268"],
+    "Chcem znížiť ďalšie riziká a zostať informovaný.": [
+      "src/data/scenarios.ts:366"
+    ],
+    "Chceme si vopred rozdeliť úlohy.": ["src/data/scenarios.ts:166"],
+    "Chladničku a mrazničku otvárajte čo najmenej. Bezpečnosť potravín posudzujte podľa teploty a pokynov úradov.": [
+      "src/data/content.ts:72"
+    ],
+    "Chladničku a mrazničku otvárajte čo najmenej. Sledujte oficiálne informácie.": [
+      "src/data/scenarios.ts:117"
+    ],
+    "Chránené funkcie vyžadujú pripojenie počas skúšky alebo platnú offline licenciu. Čítanie a export vašich údajov zostávajú dostupné.": [
+      "src/app/(tabs)/settings.tsx:43"
+    ],
+    "Chýba": ["src/app/shopping.tsx:98"],
+    "Chýba {0} kcal a {1} l vody.": ["src/app/shopping.tsx:97"],
+    "Chýba databázový kontext.": ["src/state/store.tsx:113"],
+    "Chýba konfigurácia licencie.": ["src/domain/license.ts:148"],
+    "Chýba kontext licencie.": ["src/state/license.tsx:168"],
+    "Chýba lokálny záznam skúšobného obdobia.": ["src/db/license-store.ts:38"],
+    "Chyba načítania": ["src/app/_layout.tsx:99"],
+    "Chýba platný doklad o nákupe.": ["src/domain/license.ts:105"],
+    "Chýba téma vyhľadávania.": ["src/data/academy.ts:635"],
+    "Chýba záznam inštalácie.": ["src/domain/license.ts:45"],
+    "Chýbajúci krok: {0}": ["src/domain/scenarios.ts:78"],
+    "IBA ČÍTANIE · ÚDAJE SA NEMAŽÚ": ["src/app/data-vault.tsx:21"],
+    "Iba pitná voda evidovaná v l alebo ml": ["src/data/missions.ts:49"],
+    "Iba počas výpadku elektriny": ["src/data/missions.ts:132"],
+    "Iba univerzálny zoznam na internete": ["src/data/missions.ts:104"],
+    "id-ID": ["src/i18n/locales.ts:52"],
+    "Ide iba o predpoklady návrhu. Množstvá sa zaokrúhľujú nahor na 0,01 kg/l.": [
+      "src/app/shopping.tsx:114"
+    ],
+    "Ide o drobný úraz bez viditeľného vážneho ohrozenia": [
+      "src/data/scenarios.ts:457"
+    ],
+    "ilustrovaných sprievodcov. Bez registrácie, pripravené aj bez internetu.": [
+      "src/app/(tabs)/help.tsx:125"
+    ],
+    "Import kontroluje verziu, typy, povinné polia, dátumy aj duplicitné identifikátory. Obnovenie prebehne v jednej transakcii.": [
+      "src/app/(tabs)/settings.tsx:192"
+    ],
+    "Importovať JSON zálohu": ["src/app/(tabs)/settings.tsx:160"],
+    "Indonézština": ["src/i18n/locales.ts:51"],
+    "iné": ["src/types/model.ts:86"],
+    "Informujte sa u dodávateľa alebo príslušného úradu. Pri zdravotných ťažkostiach vyhľadajte zdravotnícku pomoc.": [
+      "src/data/scenarios.ts:311"
+    ],
+    "Integrovaný záchranný systém": [
+      "src/app/(tabs)/help.tsx:70",
+      "src/data/content.ts:140"
+    ],
+    "Interaktívne scenáre, misie a rodinný plán": ["src/app/plus.tsx:81"],
+    "it-IT": ["src/i18n/locales.ts:55"],
+    "Italiano": ["src/i18n/locales.ts:55"],
+    "Jasné podmienky, žiadne prekvapenia": ["src/app/plus.tsx:148"],
+    "Jazyk aplikácie": ["src/components/language-picker.tsx:57"],
+    "Jazyk sa nepodarilo uložiť. Skúste to znova.": [
+      "src/components/language-picker.tsx:30"
+    ],
+    "Je niekto vážne ohrozený alebo si nie ste istí?": [
+      "src/data/scenarios.ts:440"
+    ],
+    "Je to skutočná núdza? Otvoriť rýchlu pomoc": ["src/app/scenarios.tsx:102"],
+    "Je vždy automaticky bezpečne zašifrovaná": ["src/data/missions.ts:207"],
+    "Jeden dohodnutý kontakt a dve miesta stretnutia môžu znížiť chaos.": [
+      "src/data/academy.ts:211"
+    ],
+    "Jeden plán. Celý rok.": ["src/app/plus.tsx:25"],
+    "Jedlo": ["src/data/field-kit.ts:45", "src/i18n/sk.ts:11"],
+    "Jedlo pripravené na konzumáciu": ["src/data/content.ts:25"],
+    "Jedlo vhodné na priamu konzumáciu": ["src/data/field-kit.ts:53"],
+    "Jedlo, keď sa nedá variť": ["src/data/academy.ts:173"],
+    "jedna platba · 12 mesiacov prístupu": ["src/app/plus.tsx:74"],
+    "Jedna spoločná dohoda môže ušetriť veľa neistoty. Zapíšte kontakty aj miesto stretnutia.": [
+      "src/data/missions.ts:119"
+    ],
+    "JEDNODUCHÝ JEDÁLNIČEK": ["src/data/academy.ts:175"],
+    "Jednotka": ["src/app/item.tsx:64"],
+    "Jednotka nákupu": ["src/app/shopping.tsx:48"],
+    "jedným krokom.": ["src/app/(tabs)/help.tsx:121"],
+    "JSON nie je šifrovaný. Obsahuje vaše údaje, preto zvoľte dôveryhodné miesto a zdieľajte ho iba vedome.": [
+      "src/data/missions.ts:213"
+    ],
+    "JSON záloha obsahuje aj vaše kontakty a miesto stretnutia. Nie je šifrovaná. Uložte ju na dôveryhodnom mieste. Zdieľanie alebo cloudová záloha zariadenia môžu údaje preniesť mimo zariadenia podľa vašej voľby a nastavení systému.": [
+      "src/app/(tabs)/settings.tsx:119"
+    ],
+    "Kalkulačka domácej zásoby. Nie pokyn naložiť všetko do batoha.": [
+      "src/app/field-kit.tsx:390"
+    ],
+    "Kalórie nie sú zárukou vyváženej výživy. Ide o orientačný výpočet, nie zdravotné odporúčanie. Neznáme energetické hodnoty sa nezapočítavajú; odhad môže byť podhodnotený.": [
+      "src/data/content.ts:5"
+    ],
+    "Kalórie zadávajte podľa obalu na zvolenú jednotku. Neznáme hodnoty neodhadujeme.": [
+      "src/app/(tabs)/inventory.tsx:329"
+    ],
+    "Kam sa môže aplikácia posunúť": ["src/app/(tabs)/settings.tsx:106"],
+    "Karta domácnosti": [
+      "src/app/(tabs)/plan.tsx:138",
+      "src/app/(tabs)/settings.tsx:99"
+    ],
+    "Karta, ktorú máte poruke": ["src/app/household-card.tsx:64"],
+    "Kategória": ["src/app/item.tsx:45"],
+    "Každá dokončená úloha je konkrétny krok, nie percentuálna šanca na prežitie.": [
+      "src/app/missions.tsx:349"
+    ],
+    "Každá karta otvorí vyhľadávanie s názvom organizácie.": [
+      "src/app/videos.tsx:99"
+    ],
+    "Každá má tri praktické kroky. Stav zostane uložený aj po reštarte.": [
+      "src/app/field-kit.tsx:263"
+    ],
+    "Každá voľba vedie k ďalšiemu kroku alebo konkrétnemu vysvetleniu.": [
+      "src/app/scenarios.tsx:460"
+    ],
+    "kcal a": ["src/app/shopping.tsx:98"],
+    "kcal na 1 {0} (voliteľné)": ["src/app/item.tsx:73"],
+    "kcal na osobu a deň": ["src/components/profile-form.tsx:57"],
+    "kcal neznáme": ["src/app/(tabs)/inventory.tsx:231"],
+    "Kde hľadať pokyny, keď počujete sirénu alebo dostanete výstrahu.": [
+      "src/data/academy.ts:59"
+    ],
+    "Kde sa počas búrky nachádzate?": ["src/data/scenarios.ts:354"],
+    "Kde sa stretneme a záložné miesto": ["src/app/(tabs)/plan.tsx:78"],
+    "Keď doma zhasne svetlo": ["src/data/scenarios.ts:36"],
+    "KEĎ IDE O POMOC": ["src/app/household-card.tsx:128"],
+    "keď ich vidíte.": ["src/app/videos.tsx:70"],
+    "Keď niekto potrebuje viac pomoci": ["src/data/academy.ts:467"],
+    "keď si ho vyskúšate.": ["src/app/scenarios.tsx:422"],
+    "KEĎ ZHASNE SVETLO": ["src/data/academy.ts:31"],
+    "kg, bez obalov. Na presun voľte prenosnú výbavu, zohľadnite ľudí a dohodnite bezpečné doplnenie. Odchod podľa úradov neodkladajte balením.": [
+      "src/app/field-kit.tsx:447"
+    ],
+    "Kilogram obsahuje desať porcií po 100 g, preto 350 × 10 = 3 500 kcal/kg. Kalórie však nie sú zárukou vyváženej výživy.": [
+      "src/data/missions.ts:159"
+    ],
+    "kit-{0}": [
+      "src/domain/field-kit.ts:16",
+      "src/domain/field-kit.ts:37",
+      "src/domain/field-kit.ts:42"
+    ],
+    "Koľko ľudí potrebuje pomoc a aké ohrozenie vidíte.": [
+      "src/app/now.tsx:87"
+    ],
+    "Koľko vody patrí do rezervy?": ["src/app/field-kit.tsx:389"],
+    "kontaktov nájdete v aplikácii.": ["src/app/household-card.tsx:203"],
+    "Kontakty": ["src/app/data-vault.tsx:47"],
+    "Kontakty a miesto stretnutia": ["src/app/field-kit.tsx:483"],
+    "Kontakty a miesto stretnutia na papieri": ["src/data/field-kit.ts:143"],
+    "Kontakty a plán na jednom mieste": ["src/app/(tabs)/plan.tsx:139"],
+    "Kontakty ešte nie sú vyplnené.": ["src/domain/household-card.ts:56"],
+    "Kontakty na papieri": ["src/data/content.ts:21"],
+    "Kontakty zapisujete ručne, bez prístupu k adresáru.": [
+      "src/app/(tabs)/plan.tsx:250"
+    ],
+    "Konzervy pripravené na jedenie (overte obal)": [
+      "src/domain/readiness.ts:92"
+    ],
+    "Kópie uchovajte na vhodnom chránenom mieste. Pri digitálnych dokumentoch používajte ochranu zariadenia a dôveryhodné zabezpečené úložisko. Nezdieľajte verejne citlivé údaje.": [
+      "src/data/academy.ts:420"
+    ],
+    "Krok {0}": ["src/data/academy.ts:91"],
+    "Krok {0} z {1}": ["src/app/guide.tsx:66"],
+    "Krok nácviku neexistuje.": ["src/domain/scenarios.ts:25"],
+    "Kroky aj ich dokončenie zostávajú v zariadení a sú súčasťou JSON zálohy. Poradie je odporúčané, žiadny krok nie je zamknutý.": [
+      "src/app/missions.tsx:401"
+    ],
+    "Kruhy porovnávajú evidované zásoby s vaším cieľom. Nie sú skóre bezpečnosti ani zárukou pripravenosti.": [
+      "src/app/(tabs)/index.tsx:237"
+    ],
+    "ktoré sa nedajú naplánovať.": ["src/app/(tabs)/index.tsx:105"],
+    "Kúpiť ročnú licenciu — 10 USD": ["src/app/plus.tsx:133"],
+    "l ×": ["src/app/field-kit.tsx:411"],
+    "l vody.": ["src/app/shopping.tsx:100"],
+    "Lekárnička s použitelným obsahom": ["src/data/field-kit.ts:121"],
+    "Len strom, stan či otvorený prístrešok": ["src/data/scenarios.ts:384"],
+    "LETNÁ PRIPRAVENOSŤ": ["src/data/academy.ts:277"],
+    "LICENCIA AKTÍVNA": ["src/app/plus.tsx:104"],
+    "Licencia na 12 mesiacov": ["src/app/plus.tsx:163"],
+    "Lieky / prvá pomoc": ["src/i18n/sk.ts:14"],
+    "Lieky a výbava podľa vašich potrieb.": ["src/data/field-kit.ts:102"],
+    "Lieky, pomôcky, presun a dohodnutá podpora bez zbytočných predpokladov.": [
+      "src/data/academy.ts:471"
+    ],
+    "Litrov pitnej vody na osobu a deň": ["src/components/profile-form.tsx:63"],
+    "LOKÁLNE": ["src/app/(tabs)/index.tsx:159"],
+    "LOKÁLNE · BEZ ÚČTU": ["src/app/(tabs)/settings.tsx:79"],
+    "M106 111V140M135 111V140": ["src/app/field-kit.tsx:83"],
+    "M110 64V145M212 64V145": ["src/components/academy-art.tsx:189"],
+    "M114 87H204M154 81V94": ["src/components/academy-art.tsx:215"],
+    "M119 101H131M125 94V111M187 101H199M193 94V111": [
+      "src/components/academy-art.tsx:147"
+    ],
+    "M148 89V105M169 89V105": ["src/components/academy-art.tsx:75"],
+    "M164 111H210M164 120H210M164 129H200": [
+      "src/components/academy-art.tsx:219"
+    ],
+    "M190 105H211M190 113H205M190 121H210": [
+      "src/components/academy-art.tsx:336"
+    ],
+    "M243 55H257M250 48V62": ["src/components/academy-art.tsx:195"],
+    "M35 54H57M34 63H48": ["src/app/field-kit.tsx:124"],
+    "M56 93Q28 94 29 132L33 210 58 214M181 93Q208 94 208 132L204 210 179 214": [
+      "src/app/field-kit.tsx:60"
+    ],
+    "M57 148V104M37 130 57 99 77 130Z": ["src/components/academy-art.tsx:298"],
+    "M68 75Q52 91 68 107M53 63Q27 91 53 120": [
+      "src/components/academy-art.tsx:225"
+    ],
+    "M78 149V117M65 131H91": ["src/components/academy-art.tsx:160"],
+    "Maďarčina": ["src/i18n/locales.ts:59"],
+    "Magyar": ["src/i18n/locales.ts:59"],
+    "Majte aj papierovú možnosť": ["src/data/academy.ts:423"],
+    "Majte dostupnú pitnú vodu": ["src/data/academy.ts:293"],
+    "Majte pitnú vodu, primerané jedlo, svetlo, ochranu pred počasím a nabitý telefón. Pripravte si mapu dostupnú bez internetu a vedzte, ako ju používať.": [
+      "src/data/academy.ts:457"
+    ],
+    "Majte plán v čitateľnej alebo inak prístupnej forme. Overte, že potrebné veci dokáže daný človek alebo dohodnutý pomocník rýchlo nájsť a preniesť.": [
+      "src/data/academy.ts:495"
+    ],
+    "MALÁ ZÁLOHA, VEĽKÝ ROZDIEL": ["src/data/academy.ts:404"],
+    "Malé kroky pre lepšie pripravenú domácnosť.": [
+      "src/app/onboarding.tsx:14"
+    ],
+    "Malé kroky.": ["src/app/(tabs)/index.tsx:96"],
+    "Malé misie a praktické kvízy": ["src/app/(tabs)/plan.tsx:133"],
+    "Malé veci, ktoré zvyšujú pohodlie.": ["src/data/field-kit.ts:186"],
+    "Malé zručnosti. Väčší pokoj.": ["src/app/(tabs)/help.tsx:63"],
+    "MALÝ KROK 01": ["src/data/missions.ts:33"],
+    "MALÝ KROK 02": ["src/data/missions.ts:60"],
+    "MALÝ KROK 03": ["src/data/missions.ts:87"],
+    "MALÝ KROK 04": ["src/data/missions.ts:114"],
+    "MALÝ KROK 05": ["src/data/missions.ts:142"],
+    "MALÝ KROK 06": ["src/data/missions.ts:165"],
+    "MALÝ KROK 07": ["src/data/missions.ts:192"],
+    "Mám ju dostupnú a viem skontrolovať napájanie.": [
+      "src/data/scenarios.ts:76"
+    ],
+    "Mám poruke len sviečky": ["src/data/scenarios.ts:81"],
+    "Máme miesto aj záložnú dohodu": ["src/data/scenarios.ts:178"],
+    "Máme možnosť núdzového varenia": ["src/components/profile-form.tsx:69"],
+    "Máme oficiálny zákaz alebo upozornenie": ["src/data/scenarios.ts:256"],
+    "Máte možnosť varenia.": ["src/app/shopping.tsx:104"],
+    "Máte pokyn na evakuáciu?": ["src/data/scenarios.ts:148"],
+    "Máte pri domácom nácviku skúšobne volať 112?": [
+      "src/data/missions.ts:178"
+    ],
+    "Mäsové konzervy": ["src/data/content.ts:12"],
+    "Menej čítania.": ["src/app/(tabs)/index.tsx:473"],
+    "MENEJ OBÁV. VIAC PLÁNU.": ["src/app/(tabs)/index.tsx:85"],
+    "Meno kontaktu": ["src/app/(tabs)/plan.tsx:42"],
+    "Miesto alebo kontaktná osoba nie sú jasné.": ["src/data/scenarios.ts:185"],
+    "Miesto bolo uložené.": ["src/app/(tabs)/plan.tsx:87"],
+    "Miesto stretnutia": [
+      "src/app/(tabs)/plan.tsx:76",
+      "src/app/data-vault.tsx:26"
+    ],
+    "MIESTO STRETNUTIA": [
+      "src/app/household-card.tsx:172",
+      "src/domain/household-card.ts:50"
+    ],
+    "Miesto stretnutia ešte nie je vyplnené.": [
+      "src/domain/household-card.ts:27"
+    ],
+    "min · offline": ["src/app/(tabs)/help.tsx:276"],
+    "Minimálna trvanlivosť": [
+      "src/app/(tabs)/inventory.tsx:305",
+      "src/app/item.tsx:90"
+    ],
+    "Ministerstvo vnútra SR": ["src/data/academy.ts:89"],
+    "Množstvo": ["src/app/item.tsx:58"],
+    "Množstvo a potreby určujte podľa zvieraťa; výpočet vody pre ľudí nezahŕňa zvieratá.": [
+      "src/data/field-kit.ts:224"
+    ],
+    "Množstvo nákupu": ["src/app/shopping.tsx:42"],
+    "Moja domácnosť": ["src/domain/household-card.ts:24"],
+    "Moje dáta a export": ["src/components/access-panel.tsx:56"],
+    "Moje uložené údaje": [
+      "src/app/(tabs)/settings.tsx:48",
+      "src/app/data-vault.tsx:9"
+    ],
+    "Moje zásoby": ["src/app/(tabs)/index.tsx:349"],
+    "Možnosť prijatia zvieraťa v cieľovom mieste si overte vopred. Aplikácia ju negarantuje.": [
+      "src/data/academy.ts:380"
+    ],
+    "Môj 72-hodinový batoh": ["src/app/(tabs)/index.tsx:330"],
+    "Môj krízový plán": ["src/app/(tabs)/plan.tsx:121"],
+    "Môj prvý krok": ["src/app/(tabs)/index.tsx:124"],
+    "Môže ísť o život ohrozujúci stav.": ["src/data/scenarios.ts:446"],
+    "Môžem sa do nej bezpečne presunúť.": ["src/data/scenarios.ts:379"],
+    "Musíme odísť z domu": ["src/data/scenarios.ts:139"],
+    "Myslite aj na situáciu, keď sa nedovoláte všetkým členom domácnosti.": [
+      "src/data/scenarios.ts:174"
+    ],
+    "Myslite na otvorenie a hygienu": ["src/data/academy.ts:192"],
+    "Na karte nie je uvedených ďalších {0} kontaktov. Všetky sú v aplikácii.": [
+      "src/domain/household-card.ts:64"
+    ],
+    "na kontrolu dátumu": ["src/app/(tabs)/inventory.tsx:63"],
+    "Na pitie a prípravu jedla zvoľte potvrdený bezpečný zdroj podľa dostupných oficiálnych pokynov.": [
+      "src/data/scenarios.ts:310"
+    ],
+    "Na vlastné plnenie používajte čisté nádoby určené na potraviny a vodu. Nikdy nepoužívajte obaly po chemikáliách. Označte dátum naplnenia a pôvod vody.": [
+      "src/data/academy.ts:155"
+    ],
+    "Na výlet s plánom návratu": ["src/data/academy.ts:434"],
+    "Nabiť telefón a powerbanku": ["src/data/content.ts:30"],
+    "Nabitá powerbanka a správny kábel": ["src/data/field-kit.ts:87"],
+    "Nacvičte bezpečný presun": ["src/data/academy.ts:395"],
+    "NACVIČTE SI ROZHODNUTIE": ["src/app/scenarios.tsx:409"],
+    "Nacvičte si voľbu úkrytu a sledovanie oficiálnych informácií.": [
+      "src/data/scenarios.ts:346"
+    ],
+    "Nácvik je uložený": ["src/app/scenarios.tsx:338"],
+    "Nácvik sa učí na kurze. V núdzi sa riaďte operátorom 155 / 112.": [
+      "src/data/academy.ts:566"
+    ],
+    "NÁCVIK ULOŽENÝ": ["src/app/scenarios.tsx:518"],
+    "Nácvik: {0}": ["src/domain/scenarios.ts:57"],
+    "nácvikov označených ako absolvované": ["src/app/scenarios.tsx:440"],
+    "Načítavam lokálne údaje…": ["src/components/ui.tsx:412"],
+    "Náhľad nižšie obsahuje názov domácnosti, miesto stretnutia a kontakty. V systémovom dialógu sami vyberiete príjemcu alebo miesto uloženia.": [
+      "src/app/household-card.tsx:40"
+    ],
+    "Nahradiť všetky údaje?": ["src/app/(tabs)/settings.tsx:178"],
+    "Nahrádza nabitý telefón a papierový plán": ["src/data/missions.ts:209"],
+    "Nájdite baterku, čelovku alebo bezpečné batériové svietidlo a skontrolujte ich.": [
+      "src/data/scenarios.ts:128"
+    ],
+    "Nájdite ukážky výbavy a porovnajte ich s potrebami domácnosti.": [
+      "src/data/academy.ts:576"
+    ],
+    "Najdôležitejšie kontakty vytlačte alebo napíšte. Telefón sa môže vybiť, poškodiť alebo stratiť. Do rodinného plánu pridajte dohodnuté miesto stretnutia.": [
+      "src/data/academy.ts:424"
+    ],
+    "Najjednoduchšia rezerva je originálne uzavretá pitná voda. Sledujte pokyny na obale a odporúčania miestnych úradov. Množstvo prispôsobte domácnosti, teplu, zdravotným potrebám a zvieratám.": [
+      "src/data/academy.ts:151"
+    ],
+    "Najprv bezpečné miesto": ["src/data/academy.ts:256"],
+    "Najprv bezpečný odstup a pomoc": ["src/data/scenarios.ts:89"],
+    "Najprv dbajte na vlastnú bezpečnosť a bezpečnosť okolia.": [
+      "src/data/scenarios.ts:469"
+    ],
+    "Najprv nastavte počet osôb a dennú potrebu vody v profile domácnosti.": [
+      "src/app/field-kit.tsx:462"
+    ],
+    "Nájsť súvisiace videá na YouTube": ["src/app/guide.tsx:155"],
+    "Nákup licencie nebol overený.": [
+      "src/billing/adapter.ts:10",
+      "src/billing/adapter.ts:13",
+      "src/domain/license.ts:117",
+      "src/state/license.tsx:83"
+    ],
+    "Nákup:": ["src/app/(tabs)/inventory.tsx:316"],
+    "Nákup: {0}": ["src/app/(tabs)/inventory.tsx:316"],
+    "Nákupný zoznam": [
+      "src/app/(tabs)/index.tsx:362",
+      "src/app/(tabs)/plan.tsx:125",
+      "src/app/data-vault.tsx:60",
+      "src/app/shopping.tsx:88"
+    ],
+    "Nákupný zoznam je prázdny. Vytvorte návrh alebo pridajte vlastnú položku.": [
+      "src/app/shopping.tsx:161"
+    ],
+    "Nakúpte to, čo naozaj chýba": ["src/app/(tabs)/index.tsx:363"],
+    "Naplánovať cestu do vyššej polohy": ["src/data/content.ts:39"],
+    "Napríklad: prvá pomoc Červený kríž": ["src/app/videos.tsx:89"],
+    "Nariadenú evakuáciu neodkladajte kvôli baleniu vecí.": [
+      "src/data/academy.ts:81"
+    ],
+    "Náročnú aktivitu presuňte na chladnejšiu časť dňa, ak to môžete ovplyvniť. Vyhľadávajte tieň a primerane chladné priestory. Sledujte oficiálne výstrahy pred horúčavou.": [
+      "src/data/academy.ts:290"
+    ],
+    "Nasledujte určenú trasu a cieľ. Nevoľte skratku cez ohrozené územie.": [
+      "src/data/scenarios.ts:195"
+    ],
+    "Nastavenia": ["src/i18n/sk.ts:8"],
+    "Nastavenia a export dát": ["src/app/plus.tsx:212"],
+    "Nastavenia domácnosti": ["src/app/(tabs)/index.tsx:53"],
+    "Naučte sa včas rozpoznať potrebu pomoci, nie nahradiť zdravotníka.": [
+      "src/data/scenarios.ts:432"
+    ],
+    "Návod k batohu": ["src/app/field-kit.tsx:474"],
+    "Návod sa nenašiel": ["src/app/guide.tsx:189"],
+    "Návod: {0}": ["src/app/field-kit.tsx:378"],
+    "Návody aj otázky sú pribalené v aplikácii. Internet potrebujete iba na otvorenie externých zdrojov; tento tréning si nič nenačítava zo siete.": [
+      "src/app/scenarios.tsx:524"
+    ],
+    "Návrh bol pridaný.": ["src/app/shopping.tsx:129"],
+    "Návrh používa zjednodušenú šablónu, nepozná ceny a nie je nutrične kompletný. Množstvá upravte podľa obalov a potrieb domácnosti. Nákupný zoznam sa zatiaľ nezapočítava do zásob.": [
+      "src/app/shopping.tsx:106"
+    ],
+    "Návrhy názvov — bez odhadovaných kcal": ["src/app/item.tsx:38"],
+    "Názov": ["src/app/item.tsx:35"],
+    "Názov alebo poznámka": ["src/app/(tabs)/inventory.tsx:97"],
+    "Názov domácnosti (voliteľné)": ["src/components/profile-form.tsx:40"],
+    "Názov nákupu": ["src/app/shopping.tsx:40"],
+    "Nederlands": ["src/i18n/locales.ts:60"],
+    "nedostupné": ["src/types/model.ts:88"],
+    "Nedostupný krok: {0}": ["src/domain/scenarios.ts:98"],
+    "Nedotýkajte sa poškodených elektrických zariadení. Z bezpečného miesta volajte 112 alebo 150.": [
+      "src/data/scenarios.ts:93"
+    ],
+    "Neistotu vyriešte odbornou pomocou": ["src/data/scenarios.ts:478"],
+    "Nemám poruke spoľahlivé ukrytie.": ["src/data/scenarios.ts:385"],
+    "Nemám potvrdené, že je vhodná na pitie.": ["src/data/scenarios.ts:263"],
+    "Nemčina": ["src/i18n/locales.ts:54"],
+    "neoverené": ["src/types/model.ts:88"],
+    "Neplánujte potraviny, ktoré vyžadujú nedostupné chladenie. Kalórie nie sú záruka vyváženej výživy.": [
+      "src/data/field-kit.ts:67"
+    ],
+    "Neplatná cesta nácviku.": ["src/domain/scenarios.ts:16"],
+    "Neplatná cesta.": ["src/domain/scenarios.ts:45"],
+    "Neplatné cieľové obdobie.": ["src/domain/readiness.ts:33"],
+    "Neplatný čas licencie.": ["src/domain/license.ts:39"],
+    "Neplatný podpis licencie.": ["src/domain/signed-license.ts:43"],
+    "Neplatný rozsah funkcie.": ["src/domain/license.ts:213"],
+    "Neplatný stav pripojenia.": ["src/domain/license.ts:211"],
+    "Nepodávajte lieky alebo nerobte odborné zákroky len podľa všeobecného internetového návodu.": [
+      "src/data/scenarios.ts:483"
+    ],
+    "Nepodporovaný jazyk.": ["src/i18n/index.ts:53"],
+    "Nepoužívajte improvizované kúrenie": ["src/data/academy.ts:354"],
+    "Nepribližujte sa k miestu úniku a nedotýkajte sa neznámej látky.": [
+      "src/data/content.ts:118"
+    ],
+    "Nepribližujte sa k úniku. Ďalší postup závisí od konkrétnej látky.": [
+      "src/data/academy.ts:68"
+    ],
+    "Nespoliehajte sa na chuť": ["src/data/academy.ts:196"],
+    "Nestrácajte čas prechádzaním prípravného scenára. Tento text nenahrádza pokyny operátora.": [
+      "src/data/scenarios.ts:467"
+    ],
+    "Nevracajte sa k aktivite iba preto, že dážď zoslabol. Sledujte oficiálne odporúčania a vývoj búrky. Vyhnite sa popadaným vodičom a poškodeným stromom.": [
+      "src/data/academy.ts:331"
+    ],
+    "Nevstupovať do povodňovej vody": ["src/data/content.ts:40"],
+    "Nevstupujte ani nevchádzajte autom do zaplavenej cesty. Hĺbka, prúd a poškodenie podkladu nemusia byť viditeľné.": [
+      "src/data/content.ts:84"
+    ],
+    "Nevstupujte pritom do zaplavenej cesty ani iného zjavne nebezpečného miesta.": [
+      "src/data/scenarios.ts:405"
+    ],
+    "Nevyhľadávajte ukrytie pod osamelým stromom ani pri vodnej ploche.": [
+      "src/data/scenarios.ts:408"
+    ],
+    "Nevychádzajte z domnienky, že varenie odstráni všetky chemické alebo rádioaktívne látky.": [
+      "src/data/scenarios.ts:300"
+    ],
+    "Neznáme kcal:": ["src/app/(tabs)/index.tsx:521"],
+    "Neznáme kcal: {0} položiek. Nie sú započítané.": [
+      "src/app/(tabs)/index.tsx:521"
+    ],
+    "Neznámy návod: {0}": ["src/domain/scenarios.ts:91"],
+    "Neznámy zdroj neoznačujte za pitný": ["src/data/scenarios.ts:307"],
+    "Nič sme nenašli.": ["src/app/(tabs)/inventory.tsx:168"],
+    "Nie je to doživotná licencia ani automaticky obnovované predplatné.": [
+      "src/app/plus.tsx:164"
+    ],
+    "Nie som si istý závažnosťou": ["src/data/scenarios.ts:451"],
+    "Nie, teraz iba pripravujeme plán": ["src/data/scenarios.ts:165"],
+    "Nie, tiesňová linka je pre skutočnú núdzu": ["src/data/missions.ts:181"],
+    "Nie, údaje zostávajú lokálne": ["src/data/missions.ts:131"],
+    "Niekto potrebuje elektrický zdravotnícky prístroj": [
+      "src/data/scenarios.ts:56"
+    ],
+    "Niekto sa zranil": ["src/data/scenarios.ts:430"],
+    "nl-NL": ["src/i18n/locales.ts:60"],
+    "Nová zásoba": ["src/app/item.tsx:151"],
+    "Obal uvádza 350 kcal/100 g. Koľko zadáte pri jednotke kg?": [
+      "src/data/missions.ts:155"
+    ],
+    "Obaly po chemikáliách sa na pitnú vodu nehodia ani po opláchnutí.": [
+      "src/data/scenarios.ts:332"
+    ],
+    "Občas skontrolujte zásoby, potreby domácnosti a kontakty. Ku ktorémukoľvek kroku sa môžete vrátiť.": [
+      "src/app/missions.tsx:377"
+    ],
+    "Oblečenie a teplo": ["src/data/field-kit.ts:157"],
+    "Oblečte si suché vrstvy a použite prikrývky. Zvážte pobyt v jednej vhodnej miestnosti a obmedzte zbytočné úniky tepla bez blokovania potrebného vetrania a únikových ciest.": [
+      "src/data/academy.ts:351"
+    ],
+    "Obmedziť otváranie chladničky": ["src/data/content.ts:32"],
+    "Obmieňajte a zapisujte": ["src/data/academy.ts:162"],
+    "Obnoviť overený nákup": ["src/app/plus.tsx:138"],
+    "Obsah a ilustrácie sú súčasťou aplikácie. Na túto baliacu stanicu ani jej výpočty sa nevolá sieť. V konkrétnej udalosti majú prednosť pokyny záchranných zložiek a úradov.": [
+      "src/app/field-kit.tsx:489"
+    ],
+    "Obsahuje lokálne údaje a treba ju uložiť dôveryhodne": [
+      "src/data/missions.ts:208"
+    ],
+    "Odložiť záložku": ["src/app/(tabs)/help.tsx:280"],
+    "Odošle READY uložený kontakt alebo miesto stretnutia blízkym automaticky?": [
+      "src/data/missions.ts:128"
+    ],
+    "ODPORÚČANÝ ĎALŠÍ KROK": ["src/app/(tabs)/index.tsx:284"],
+    "Odpoveď nepatrí k tejto otázke.": ["src/domain/scenarios.ts:21"],
+    "Odpovedajte na otázky a nezaveste, kým vás operátor nevyzve.": [
+      "src/app/now.tsx:88"
+    ],
+    "Odstrániť úlohu: {0}": ["src/app/(tabs)/plan.tsx:198"],
+    "Odstrániť úlohu?": ["src/app/(tabs)/plan.tsx:201"],
+    "Odstrániť záložku": ["src/app/guide.tsx:44"],
+    "Odškrtnutie je vaša evidencia. Nie je to záruka bezpečnosti ani potvrdenie, že sa všetko zmestí do batoha.": [
+      "src/app/field-kit.tsx:256"
+    ],
+    "OFFLINE · BEZ ÚČTU · VO VAŠICH RUKÁCH": ["src/app/onboarding.tsx:22"],
+    "Offline až po zaplatení": ["src/app/plus.tsx:158"],
+    "Offline nástroje a pribalené návody sa odomknú až po overení zaplatenej ročnej licencie.": [
+      "src/components/access-panel.tsx:17",
+      "src/components/language-picker.tsx:111"
+    ],
+    "Offline návody a ilustrácie priamo v telefóne": ["src/app/plus.tsx:79"],
+    "Offline režim je odomknutý.": ["src/app/plus.tsx:112"],
+    "Offline režim patrí k licencii.": ["src/components/access-panel.tsx:37"],
+    "OFFLINE VÝBAVA / 72 HODÍN": ["src/app/field-kit.tsx:155"],
+    "Ochrana pred dažďom": ["src/data/field-kit.ts:171"],
+    "Olej": ["src/data/content.ts:14"],
+    "Online doplnok k offline knižnici": ["src/app/videos.tsx:78"],
+    "ONLINE SKÚŠKA": ["src/app/plus.tsx:107"],
+    "Operácia sa nepodarila": ["src/components/ui.tsx:428"],
+    "Operácia sa nepodarila. Skúste to znova.": ["src/types/model.ts:176"],
+    "Operátor vám pomôže zhodnotiť vedomie a dýchanie a dá pokyny k potrebným úkonom. Nečakajte na návod z videa. Ak ste svedkami, požiadajte konkrétnu osobu o pomoc alebo prinesenie AED.": [
+      "src/data/academy.ts:265"
+    ],
+    "Operátorovi povedzte:": ["src/app/now.tsx:84"],
+    "Originálne uzavretú pitnú vodu": ["src/data/scenarios.ts:281"],
+    "Osamelý strom ani otvorený turistický prístrešok nie sú spoľahlivé ukrytie pred bleskom.": [
+      "src/data/academy.ts:319"
+    ],
+    "Osamelý strom, stan a otvorený prístrešok nepovažujte za bezpečný úkryt pred bleskom.": [
+      "src/data/scenarios.ts:419"
+    ],
+    "Osobné hygienické potreby": ["src/data/field-kit.ts:199"],
+    "Osobné lieky a lekárnička": ["src/data/content.ts:20"],
+    "Osobné lieky podľa predpisu": ["src/data/field-kit.ts:109"],
+    "Osobné potreby": ["src/data/field-kit.ts:101"],
+    "Osobné údaje sú predvolene skryté. Zapnutím zahrniete aj názov domácnosti, miesto stretnutia a najviac 6 kontaktov. READY ich nikam automaticky neodosiela.": [
+      "src/app/household-card.tsx:223"
+    ],
+    "Osobné údaje sú skryté.": ["src/domain/household-card.ts:28"],
+    "osôb · cieľ": ["src/app/(tabs)/settings.tsx:75"],
+    "osôb ×": ["src/app/field-kit.tsx:411"],
+    "ostatné": ["src/types/model.ts:10"],
+    "Ostatné": ["src/i18n/sk.ts:16"],
+    "OTÁZKA {0}": ["src/app/scenarios.tsx:76"],
+    "Otázky pomáhajú s prípravou. Pri skutočnom ohrození nečakajte na výsledok aplikácie.": [
+      "src/app/scenarios.tsx:449"
+    ],
+    "Otvorený oheň zvyšuje riziko požiaru. Zariaďte domácnosti dostupné svetlo bez plameňa.": [
+      "src/data/scenarios.ts:129"
+    ],
+    "Otvorený plameň pri závesoch": ["src/data/missions.ts:76"],
+    "Otvorený prístrešok alebo osamelý strom nie sú náhradou bezpečného ukrytia.": [
+      "src/data/scenarios.ts:374"
+    ],
+    "Otvorí sa systémové vytáčanie. Volajte pri skutočnej núdzi.": [
+      "src/app/_layout.tsx:39"
+    ],
+    "Otvoriť": ["src/app/missions.tsx:85"],
+    "Otvoriť evakuačný checklist": ["src/data/missions.ts:98"],
+    "Otvoriť nákupný zoznam": ["src/data/missions.ts:71"],
+    "Otvoriť nastavenia domácnosti": ["src/app/field-kit.tsx:466"],
+    "Otvoriť offline postup": ["src/app/now.tsx:132"],
+    "Otvoriť oficiálny zdroj (online)": ["src/app/guide.tsx:171"],
+    "Otvoriť rýchlu pomoc": ["src/app/scenarios.tsx:296"],
+    "Otvoriť súvisiaci offline návod": ["src/app/scenarios.tsx:301"],
+    "Otvoriť video akadémiu": ["src/app/(tabs)/index.tsx:438"],
+    "Otvoriť vyhľadávanie: {0}": ["src/app/videos.tsx:187"],
+    "Otvoriť vytáčanie": [
+      "src/app/(tabs)/help.tsx:73",
+      "src/app/(tabs)/help.tsx:324",
+      "src/app/_layout.tsx:43",
+      "src/app/now.tsx:38",
+      "src/app/now.tsx:150"
+    ],
+    "Otvoriť zálohy v Nastaveniach": ["src/data/missions.ts:203"],
+    "Otvoriť zdieľanie": ["src/app/household-card.tsx:45"],
+    "Otvoriť: {0}": ["src/app/(tabs)/help.tsx:224"],
+    "Otvorte si tému a prejdite postup krok za krokom.": [
+      "src/app/(tabs)/help.tsx:153"
+    ],
+    "Otvorte tematické vyhľadávanie na YouTube. Bez automatického prehrávania a bez videí načítaných na pozadí.": [
+      "src/app/videos.tsx:74"
+    ],
+    "Overená licencia nemá platné ročné obdobie.": [
+      "src/domain/license.ts:125"
+    ],
+    "overené": ["src/types/model.ts:88"],
+    "OVERENÉ INFORMÁCIE": ["src/data/academy.ts:58"],
+    "Overené údaje zatiaľ nie sú dostupné.": ["src/app/safe-places.tsx:21"],
+    "Overujeme pripojenie.": ["src/components/access-panel.tsx:36"],
+    "Ovsené vločky": ["src/data/content.ts:13"],
+    "Ovsené vločky (overte obal)": ["src/domain/readiness.ts:78"],
+    "Označená výbava": ["src/app/field-kit.tsx:234"],
+    "Označenie je vaše vlastné potvrdenie vykonanej úlohy. Aplikácia nekontroluje fyzickú výbavu ani nezaručuje bezpečnosť.": [
+      "src/app/missions.tsx:253"
+    ],
+    "Označte pôvod vody a dátum naplnenia. Skladujte ju v chlade a tme mimo chemikálií.": [
+      "src/data/scenarios.ts:335"
+    ],
+    "Oznámte plán návratu": ["src/data/academy.ts:452"],
+    "Papierový zoznam a bezpečne uložené kópie dôležitých údajov.": [
+      "src/data/academy.ts:405"
+    ],
+    "Päť situácií. Niekoľko rozhodnutí. Pokojný nácvik v bezpečných podmienkach — aj bez internetu.": [
+      "src/app/scenarios.tsx:376"
+    ],
+    "Pevnú uzavretú budovu": ["src/data/scenarios.ts:378"],
+    "Pite primerane potrebám a podmienkam. Pri zdravotných obmedzeniach príjmu tekutín rešpektujte individuálne pokyny lekára. Nečakajte iba na pocit smädu u osôb, ktoré potrebujú pomoc.": [
+      "src/data/academy.ts:294"
+    ],
+    "Pitná voda": [
+      "src/app/(tabs)/index.tsx:189",
+      "src/data/content.ts:24",
+      "src/data/field-kit.ts:17",
+      "src/domain/readiness.ts:127",
+      "src/i18n/sk.ts:12"
+    ],
+    "Pitná voda bez improvizácie": ["src/data/academy.ts:136"],
+    "Pitná voda v prenosnej nádobe": ["src/data/field-kit.ts:25"],
+    "Pitnú vodu evidujte v litroch alebo mililitroch.": [
+      "src/types/model.ts:61"
+    ],
+    "pl-PL": ["src/i18n/locales.ts:56"],
+    "Plán": ["src/i18n/sk.ts:6"],
+    "PLÁN AJ BEZ SIGNÁLU": ["src/data/academy.ts:209"],
+    "Plán aj pre zvieratá": ["src/data/academy.ts:369"],
+    "Plán je lepší,": ["src/app/scenarios.tsx:422"],
+    "PLÁN NA ODCHOD": ["src/data/academy.ts:76"],
+    "PLÁN PRE KAŽDÉHO": ["src/data/academy.ts:469"],
+    "Plánovanie energie a zásob pri výpadku elektriny.": [
+      "src/data/academy.ts:616"
+    ],
+    "Plánujte chladnejšie hodiny": ["src/data/academy.ts:289"],
+    "Platby ešte nie sú pripojené": ["src/app/plus.tsx:122"],
+    "Platný nákup musí overiť obchod alebo dôveryhodná podpisová služba. Samotná zmena dátumu, import zálohy alebo stlačenie tlačidla licenciu neaktivuje.": [
+      "src/app/plus.tsx:200"
+    ],
+    "PO DÁTUME": ["src/app/(tabs)/inventory.tsx:238"],
+    "Po dátume:": ["src/app/(tabs)/index.tsx:525"],
+    "Po dátume: {0} položiek, nezapočítavajú sa do krytia.": [
+      "src/app/(tabs)/index.tsx:524"
+    ],
+    "Po minimálnej trvanlivosti nemusí byť potravina nebezpečná. Skontrolujte obal, skladovanie a stav podľa pokynov výrobcu.": [
+      "src/app/(tabs)/inventory.tsx:312"
+    ],
+    "Po overení zaplatenej licencie zostávajú návody, výbava a údaje v zariadení. YouTube zostáva online služba.": [
+      "src/app/plus.tsx:159"
+    ],
+    "Po skončení licencie sa údaje automaticky nemažú. Nastavenia, čítanie vlastných údajov, export a tiesňové čísla zostávajú dostupné.": [
+      "src/app/plus.tsx:169"
+    ],
+    "Po ukrytí sledujte oficiálne informácie; návrat von prispôsobte aktuálnej situácii.": [
+      "src/data/scenarios.ts:409"
+    ],
+    "po uvedenom dátume": ["src/app/(tabs)/index.tsx:507"],
+    "Po výsledku už nemožno vybrať ďalšiu odpoveď.": [
+      "src/domain/scenarios.ts:19"
+    ],
+    "Počas skúšania sa pripojte na internet. Po zaplatení a overení licencie budete môcť používať pribalené návody aj nástroje bez siete.": [
+      "src/components/access-panel.tsx:40"
+    ],
+    "Počas skúšobného obdobia je pri používaní funkcií potrebný internet.": [
+      "src/app/plus.tsx:154"
+    ],
+    "POČASIE SA MENÍ": ["src/data/academy.ts:310"],
+    "Počet odpovedí: {0}": ["src/domain/scenarios.ts:85"],
+    "Počet osôb (1–10)": ["src/components/profile-form.tsx:45"],
+    "Počet osôb:": ["src/app/data-vault.tsx:25"],
+    "Počet osôb: {0}": [
+      "src/app/(tabs)/index.tsx:47",
+      "src/app/data-vault.tsx:25"
+    ],
+    "Počkajte na bezpečný návrat": ["src/data/academy.ts:330"],
+    "Počkajte na uloženie predchádzajúcej zmeny.": ["src/state/store.tsx:77"],
+    "Podiel energie: hotové konzervy 60 % (1 200 kcal/kg), trvanlivé pečivo 40 % (3 500 kcal/kg).": [
+      "src/app/shopping.tsx:113"
+    ],
+    "Podiel energie: ryža 40 % (3 600 kcal/kg), vločky 30 % (3 700 kcal/kg), suché strukoviny 30 % (3 300 kcal/kg).": [
+      "src/app/shopping.tsx:112"
+    ],
+    "Podľa evidencie nič nechýba.": ["src/app/shopping.tsx:130"],
+    "PODĽA VÁŠHO PROFILU": ["src/app/field-kit.tsx:397"],
+    "Podmienky sa menia, vrstvy pomôžu.": ["src/data/field-kit.ts:158"],
+    "Podozrivú vodu nezapočítavajte do rezervy pitnej vody len preto, že vyzerá čisto.": [
+      "src/data/scenarios.ts:312"
+    ],
+    "Podrobnosti": ["src/app/(tabs)/inventory.tsx:263"],
+    "Pohodlie a hygiena": ["src/data/academy.ts:125"],
+    "POKOJ SA ZAČÍNA PRÍPRAVOU": ["src/app/(tabs)/index.tsx:49"],
+    "Pokoj začína prípravou.": ["src/app/onboarding.tsx:13"],
+    "Pokračovať v 7 krokoch": ["src/app/(tabs)/index.tsx:419"],
+    "Pokračovať v príprave": ["src/app/(tabs)/index.tsx:244"],
+    "Pokyny zodpovedných úradov a bezprostredná situácia majú prednosť pred domácim zoznamom.": [
+      "src/data/scenarios.ts:149"
+    ],
+    "Polícia": ["src/data/content.ts:143"],
+    "položiek doma": ["src/app/(tabs)/inventory.tsx:57"],
+    "položiek označených": ["src/app/field-kit.tsx:209"],
+    "položiek, nezapočítavajú sa do krytia.": ["src/app/(tabs)/index.tsx:525"],
+    "položiek. Nie sú započítané.": ["src/app/(tabs)/index.tsx:521"],
+    "Položka už neexistuje.": ["src/app/item.tsx:154"],
+    "Polski": ["src/i18n/locales.ts:56"],
+    "Poľština": ["src/i18n/locales.ts:56"],
+    "Pomoc": ["src/i18n/sk.ts:7"],
+    "Pomoc v skutočnej núdzi": ["src/app/(tabs)/help.tsx:311"],
+    "Pomôžte ľuďom, ktorí potrebujú podporu, a riaďte sa organizáciou evakuácie.": [
+      "src/data/scenarios.ts:197"
+    ],
+    "Porovnajte dni vody s cieľom domácnosti. Hodnota v profile je orientačná; prispôsobte ju svojim potrebám.": [
+      "src/data/missions.ts:42"
+    ],
+    "Portugalčina": ["src/i18n/locales.ts:46"],
+    "Português": ["src/i18n/locales.ts:46"],
+    "Postup závisí od prístroja a individuálneho zdravotného plánu. READY nevie posúdiť zostávajúci čas ani zdravotné riziko.": [
+      "src/data/scenarios.ts:102"
+    ],
+    "Postupujte podľa nariadenej evakuácie": ["src/data/scenarios.ts:192"],
+    "Postupujte podľa pokynov úradov, určenej trasy a cieľa. Dajte blízkym vedieť, kam idete, ak to situácia dovolí.": [
+      "src/data/content.ts:130"
+    ],
+    "Posvieťte si na pripravenosť": ["src/data/missions.ts:59"],
+    "Pošlite stručnú informáciu": ["src/data/academy.ts:230"],
+    "Potrebná voda {0} litrov": ["src/app/field-kit.tsx:399"],
+    "Potrebné záznamy a osobné lieky zvieraťa": ["src/data/field-kit.ts:234"],
+    "Potrebujem nájsť bezpečnejšiu alternatívu.": ["src/data/scenarios.ts:82"],
+    "Potrebujem odbornú radu o ďalšom postupe.": ["src/data/scenarios.ts:452"],
+    "Potrebujem pomoc teraz": [
+      "src/app/(tabs)/index.tsx:301",
+      "src/app/(tabs)/index.tsx:323",
+      "src/app/onboarding.tsx:28"
+    ],
+    "Potrebujem pomoc.": ["src/app/now.tsx:17"],
+    "Potrebujem skutočnú pomoc teraz": [
+      "src/app/scenarios.tsx:84",
+      "src/app/scenarios.tsx:453"
+    ],
+    "Potrebujem zvážiť dostupné možnosti ukrytia.": [
+      "src/data/scenarios.ts:360"
+    ],
+    "Potrebujem zvoliť vhodné nádoby a označenie.": [
+      "src/data/scenarios.ts:288"
+    ],
+    "Potreby domácich zvierat": ["src/data/content.ts:26"],
+    "Potreby domácnosti, možnosti presunu a pokyny úradov": [
+      "src/data/missions.ts:103"
+    ],
+    "Potreby na hygienu rúk": ["src/data/field-kit.ts:193"],
+    "Potvrdiť": ["src/components/ui.tsx:424"],
+    "Použite baterku. S otvoreným ohňom hrozí požiar; sviečky radšej nahraďte bezpečným svetlom.": [
+      "src/data/content.ts:71"
+    ],
+    "Použite dátum RRRR-MM-DD.": ["src/types/model.ts:21"],
+    "Použite nádoby určené na vodu a potraviny": ["src/data/scenarios.ts:331"],
+    "Použite telefónnu aplikáciu zariadenia.": ["src/app/_layout.tsx:48"],
+    "Použite vopred dohodnutý záložný plán a pokyny k prístroju.": [
+      "src/data/scenarios.ts:104"
+    ],
+    "Používajte iba zariadenie určené výrobcom na vykurovanie daného priestoru. Dodržte odstupy od horľavín a požiadavky na vetranie. Gril, rúru ani generátor na vykurovanie nepoužívajte.": [
+      "src/data/academy.ts:355"
+    ],
+    "Používajte len zariadenie určené výrobcom pre dané miesto a podmienky. Grily a vonkajšie variče nepatria do bytu, pivnice ani garáže. Palivá skladujte bezpečne podľa výrobcu.": [
+      "src/data/academy.ts:201"
+    ],
+    "Používajte nimi odporúčaný bezpečný zdroj alebo náhradné zásobovanie.": [
+      "src/data/scenarios.ts:299"
+    ],
+    "Povedzte ostatným, kde plán nájdu. Zápis v aplikácii žiadnu správu automaticky neodošle.": [
+      "src/data/missions.ts:123"
+    ],
+    "povodeň": ["src/types/model.ts:15"],
+    "Povodeň": ["src/app/now.tsx:118", "src/data/content.ts:81"],
+    "Povodňovú vodu nepovažujte za pitnú. Riaďte sa informáciami o bezpečnosti miestnej vody.": [
+      "src/data/content.ts:86"
+    ],
+    "Poznámka": ["src/app/item.tsx:105"],
+    "Poznať spôsob vypnutia vetrania": ["src/data/content.ts:45"],
+    "Pozrieť. Pochopiť. Vyskúšať.": ["src/app/videos.tsx:35"],
+    "Pozrite si batoh a rozdeľte úlohy. Cvičenie nepripravujte ako skutočné tiesňové volanie.": [
+      "src/data/scenarios.ts:221"
+    ],
+    "Pozrite si plán rozšírení. Offline režim s ročnou licenciou.": [
+      "src/app/(tabs)/index.tsx:550"
+    ],
+    "Pozrite si prípravu zásoby vody podľa oficiálnych zdrojov.": [
+      "src/data/academy.ts:586"
+    ],
+    "POZRITE SI TO V PRAXI": ["src/app/(tabs)/index.tsx:470"],
+    "Pozrite uzáver, stav nádoby a pokyny výrobcu. Poškodený alebo neznámy zdroj neoznačujte za pitný.": [
+      "src/data/field-kit.ts:33"
+    ],
+    "Pozrite výstrahy pred odchodom": ["src/data/academy.ts:322"],
+    "Požiar": ["src/app/now.tsx:112", "src/data/content.ts:93"],
+    "Požiar a bezpečný únik": ["src/data/academy.ts:595"],
+    "Praktická rezerva bez závislosti od sporáka a bez rizikového varenia v interiéri.": [
+      "src/data/academy.ts:177"
+    ],
+    "Praktické návody krok za krokom": ["src/app/(tabs)/index.tsx:370"],
+    "Pravidelne kontrolujte stav a obmieňanie podľa odporúčaní k vode a nádobám.": [
+      "src/data/scenarios.ts:336"
+    ],
+    "Prázdne = neznáme": ["src/app/item.tsx:77"],
+    "Prázdny výsledok: {0}": ["src/domain/scenarios.ts:92"],
+    "Pre ďalšiu prípravu zapíšte záložné napájanie a kontakty podľa odporúčania poskytovateľa zdravotnej starostlivosti.": [
+      "src/data/scenarios.ts:106"
+    ],
+    "Pre domácnosť je užitočný praktický kurz prvej pomoci; mobilná aplikácia ho nenahrádza.": [
+      "src/data/scenarios.ts:495"
+    ],
+    "PRE VAŠU DOMÁCNOSŤ": ["src/domain/household-card.ts:25"],
+    "Precvičte si plán s domácnosťou a overte výbavu.": [
+      "src/app/(tabs)/index.tsx:294"
+    ],
+    "Precvičte si rozhodnutia v scenároch": ["src/app/(tabs)/index.tsx:337"],
+    "Prečítajte tri etikety": ["src/data/missions.ts:141"],
+    "Prečo riešite pitnú vodu?": ["src/data/scenarios.ts:251"],
+    "Pred cestou sledujte predpoveď a výstrahy. Zvážte možnosť bezpečne sa vrátiť alebo ukryť. V horách môže vhodný úkryt chýbať; plán prispôsobte vopred.": [
+      "src/data/academy.ts:323"
+    ],
+    "Pred priblížením zhodnoťte premávku, elektrinu, oheň, dym alebo iné riziko. Nevystavujte seba ani ďalších ľudí nebezpečenstvu. Ak miesto nie je bezpečné, privolajte záchranné zložky.": [
+      "src/data/academy.ts:257"
+    ],
+    "Predchádzajúca otázka": ["src/app/scenarios.tsx:315"],
+    "Predchádzajúci krok": ["src/app/guide.tsx:113"],
+    "Predstavte si výpadok elektriny doma. Najprv zhodnoťte viditeľné ohrozenie, nie stav batérie telefónu.": [
+      "src/data/scenarios.ts:46"
+    ],
+    "Prehľadná výbava pre odchod z domu. Prispôsobte ju ľuďom, nie obrázku na internete.": [
+      "src/data/academy.ts:102"
+    ],
+    "Prehľadný postup aj bez internetu": ["src/app/field-kit.tsx:475"],
+    "Prejdite si bezpečný odchod z domácnosti a zohľadnite osoby potrebujúce pomoc. Neblokujte únikové cesty.": [
+      "src/data/missions.ts:173"
+    ],
+    "Prejdite si doma jednoduchú modelovú situáciu. Bez nebezpečných pokusov a bez tiesňových volaní.": [
+      "src/data/missions.ts:170"
+    ],
+    "Prejdite si miesto stretnutia, záložnú možnosť a kontaktnú osobu.": [
+      "src/data/scenarios.ts:219"
+    ],
+    "Prejsť na export JSON": ["src/app/data-vault.tsx:68"],
+    "Prepravka, krmivo, lieky a kontakt, ktorý pomôže pri odchode.": [
+      "src/data/academy.ts:372"
+    ],
+    "Presné množstvá a jednotky majú väčšiu hodnotu než optimistický odhad zásob.": [
+      "src/data/missions.ts:147"
+    ],
+    "Presne tak.": ["src/app/missions.tsx:230"],
+    "Presný text na zdieľanie": ["src/app/household-card.tsx:234"],
+    "Presuňte sa na bezpečné vyššie miesto. Nedotýkajte sa elektrických zariadení vo vode.": [
+      "src/data/content.ts:85"
+    ],
+    "Pri bezprostrednom ohrození volajte 112 alebo 155. Praktické zdravotné zručnosti sa učte aj na kvalifikovanom kurze a riaďte sa operátorom.": [
+      "src/app/videos.tsx:197"
+    ],
+    "Pri bezprostrednom ohrození volajte tiesňovú linku. READY nesleduje aktuálne výstrahy.": [
+      "src/app/now.tsx:18"
+    ],
+    "Pri dyme sa držte nízko. Zatvorte za sebou dvere, ak to nebráni úniku.": [
+      "src/data/content.ts:96"
+    ],
+    "Pri hromoch hľadajte bezpečie": ["src/data/academy.ts:326"],
+    "Pri kolapse, zmätenosti, poruche vedomia alebo podozrení na závažné prehriatie volajte 112 alebo 155. Presuňte sa do bezpečného chladnejšieho prostredia, ak je to možné, a riaďte sa operátorom.": [
+      "src/data/academy.ts:302"
+    ],
+    "Pri možnom závažnom stave kontaktujte 155 alebo 112 a pravdivo popíšte situáciu.": [
+      "src/data/scenarios.ts:481"
+    ],
+    "Pri núdzovom volaní povedzte, čo sa stalo, kde ste a kto potrebuje pomoc. Riaďte sa operátorom.": [
+      "src/domain/household-card.ts:71"
+    ],
+    "Pri ohrození volajte 112. Neužívajte preventívne lieky ani jód bez pokynu príslušných orgánov.": [
+      "src/data/content.ts:121"
+    ],
+    "Pri ohrození zdravia privolajte pomoc": ["src/data/academy.ts:362"],
+    "Pri pomôckach závislých od elektriny si s poskytovateľom a zdravotníkom pripravte individuálny bezpečný plán. Zistite potreby nabíjania, zásob a presunu.": [
+      "src/data/academy.ts:491"
+    ],
+    "Pri reálnej udalosti majú prednosť aktuálne pokyny úradov a záchranných zložiek. Na ďalšie rozhodnutie nemusíte dokončiť tento nácvik.": [
+      "src/app/scenarios.tsx:350"
+    ],
+    "PRI SKUTOČNOM OHROZENÍ KONAJTE TERAZ": ["src/app/scenarios.tsx:263"],
+    "Pri vážnom úraze alebo poruche vedomia volajte 112 alebo 155. Povedzte presné miesto, čo sa stalo, počet zranených a ich stav. Ak môžete, zapnite hlasitý odposluch.": [
+      "src/data/academy.ts:261"
+    ],
+    "Pri vážnych príznakoch volajte": ["src/data/academy.ts:301"],
+    "Pri volaní povedzte, čo sa stalo, kde ste a kto potrebuje pomoc. Riaďte sa operátorom.": [
+      "src/app/household-card.tsx:209"
+    ],
+    "Pri výpadku chladenia sa riaďte bezpečnostnými pokynmi k času a teplote. Potraviny neskúšajte ochutnávaním na overenie bezpečnosti. Podozrivý výrobok nekonzumujte.": [
+      "src/data/academy.ts:197"
+    ],
+    "Pri výstrahe neodhadujte": ["src/data/academy.ts:166"],
+    "Pri zhoršení počasia, neistote o trase alebo únave sa bezpečne vráťte alebo zvoľte vhodný postup podľa situácie. Pri núdzi volajte 112 a oznámte čo najpresnejšiu polohu.": [
+      "src/data/academy.ts:461"
+    ],
+    "Pri zmätenosti, výraznej ospalosti, poruche vedomia alebo podozrení na otravu oxidom uhoľnatým sa dostaňte do bezpečia a volajte 112 alebo 155. Riaďte sa operátorom.": [
+      "src/data/academy.ts:363"
+    ],
+    "Pridajte baterku, rádio, vhodné batérie, nabitú powerbanku a kábel. Jednu sadu kontaktov uložte na papier, aby ste sa nespoliehali iba na telefón.": [
+      "src/data/academy.ts:122"
+    ],
+    "Pridajte svetlo a vhodné batérie do zoznamu výbavy. Telefónu šetrite energiu pre spojenie.": [
+      "src/data/scenarios.ts:130"
+    ],
+    "Pridať kontakt": ["src/app/(tabs)/plan.tsx:281"],
+    "Pridať návrh podľa deficitu": ["src/app/shopping.tsx:118"],
+    "Pridať návrh?": ["src/app/shopping.tsx:122"],
+    "Pridať úlohu": ["src/app/(tabs)/plan.tsx:218"],
+    "Pridať vlastný nákup": ["src/app/shopping.tsx:140"],
+    "Pridať zásobu": ["src/app/(tabs)/inventory.tsx:48"],
+    "Priehradka": ["src/app/field-kit.tsx:351"],
+    "Priestor pre viac. READY Plus.": ["src/app/(tabs)/index.tsx:547"],
+    "Primeraná prikrývka a pevná obuv": ["src/data/field-kit.ts:177"],
+    "Príprava": [
+      "src/data/academy.ts:4",
+      "src/data/academy.ts:75",
+      "src/data/academy.ts:99",
+      "src/data/academy.ts:137",
+      "src/data/academy.ts:174",
+      "src/data/academy.ts:208",
+      "src/data/academy.ts:370",
+      "src/data/academy.ts:403",
+      "src/data/academy.ts:468",
+      "src/data/academy.ts:502"
+    ],
+    "Príprava je viac než zásoby.": ["src/app/(tabs)/index.tsx:289"],
+    "Príprava sa začína": ["src/app/(tabs)/help.tsx:121"],
+    "Príprava výletu, výbava a rozhodovanie podľa podmienok.": [
+      "src/data/academy.ts:606"
+    ],
+    "PRIPRAVENÍ AJ MIMO DOMU": ["src/data/academy.ts:436"],
+    "Pripravenosť nie je pretek. Vyberte si jeden malý krok na dnes.": [
+      "src/app/missions.tsx:274"
+    ],
+    "Pripravenosť sa dá naučiť": ["src/app/(tabs)/index.tsx:376"],
+    "Pripraviť baterku a rádio": ["src/data/content.ts:31"],
+    "Pripraviť doklady a lieky": ["src/data/content.ts:38"],
+    "Pripraviť pitnú vodu": ["src/data/content.ts:33"],
+    "Pripraviť rádio, vodu a telefón": ["src/data/content.ts:44"],
+    "Pripravte bezpečný presun domácich zvierat. Nezdržujte odchod úkonmi, ktoré by vás ohrozili.": [
+      "src/data/content.ts:132"
+    ],
+    "Pripravte čitateľný zoznam, náhradné okuliare či iné potrebné pomôcky. Chráňte osobné údaje.": [
+      "src/data/field-kit.ts:117"
+    ],
+    "Pripravte doklady alebo kópie, osobné lieky podľa predpisu, vodu, svetlo a kontakty na papieri.": [
+      "src/data/missions.ts:95"
+    ],
+    "Pripravte identifikáciu": ["src/data/academy.ts:383"],
+    "Pripravte krmivo, pitnú vodu, misky, vhodnú prepravku alebo vôdzku, hygienické potreby a lieky podľa veterinára. Zohľadnite hmotnosť pri transporte.": [
+      "src/data/academy.ts:388"
+    ],
+    "Pripravte potrebné lieky, zoznam liekov a dávkovania, doklady alebo ich bezpečné kópie, náhradné okuliare a kontakty na papieri. Berte do úvahy deti, seniorov a zdravotné potreby.": [
+      "src/data/academy.ts:114"
+    ],
+    "Pripravte použiteľný pršiplášť alebo inú vhodnú ochranu a chráňte citlivé veci pred vodou.": [
+      "src/data/field-kit.ts:173"
+    ],
+    "Pripravte primerané drobné platidlo podľa vlastných možností a skontrolujte prístup ku kľúčom.": [
+      "src/data/field-kit.ts:151"
+    ],
+    "Pripravte rodinnú núdzovú kartu a skontrolujte ju spoločne.": [
+      "src/data/scenarios.ts:233"
+    ],
+    "Pripravte ručný otvárač, čistý príbor, nádoby a hygienické potreby. Rozdeľte rezervu na praktické porcie; po otvorení dodržte pokyny na uchovanie potraviny.": [
+      "src/data/academy.ts:193"
+    ],
+    "Pripravte sa včas. Povodňová voda môže skrývať prúd aj poškodenú cestu.": [
+      "src/data/academy.ts:42"
+    ],
+    "Pripravte si domov na dni,": ["src/app/(tabs)/index.tsx:105"],
+    "Pripravte si pokojný plán na prvé hodiny": ["src/data/scenarios.ts:113"],
+    "Pripravte si výbavu a kontakt na pomoc": ["src/data/scenarios.ts:490"],
+    "Pripravte si základ batoha": ["src/data/missions.ts:86"],
+    "Pripravte stručnú papierovú kópiu dôležitých kontaktov a dohody. Zálohu aktualizujte po podstatnej zmene.": [
+      "src/data/missions.ts:201"
+    ],
+    "Pripravte vhodnú prepravku alebo výbavu na presun a kontaktné označenie.": [
+      "src/data/field-kit.ts:230"
+    ],
+    "Pripravte záložné možnosti": ["src/data/academy.ts:490"],
+    "Prispôsobte ich počasiu, ročnému obdobiu a schopnostiam ľudí v domácnosti.": [
+      "src/data/field-kit.ts:167"
+    ],
+    "Prístup k aplikácii": ["src/components/access-panel.tsx:15"],
+    "Privolajte zdravotnícku pomoc, povedzte presné miesto a čo vidíte. Ak je s vami ďalší človek, rozdeľte si úlohy.": [
+      "src/data/scenarios.ts:470"
+    ],
+    "Profil": ["src/app/(tabs)/index.tsx:132"],
+    "Profil bol uložený.": ["src/components/profile-form.tsx:78"],
+    "Profil domácnosti": ["src/components/profile-form.tsx:38"],
+    "Prvá pomoc": [
+      "src/data/academy.ts:4",
+      "src/data/academy.ts:242",
+      "src/data/academy.ts:505"
+    ],
+    "Prvá pomoc v praxi": ["src/data/academy.ts:555"],
+    "Prvé minúty pri úraze": ["src/data/academy.ts:241"],
+    "PRVÉ ROZHODNUTIA": ["src/data/academy.ts:49"],
+    "Prvú pomoc poskytujte podľa osvojeného výcviku. Pri pochybnostiach alebo zhoršovaní vyhľadajte zdravotnícku pomoc.": [
+      "src/data/scenarios.ts:494"
+    ],
+    "pt-PT": ["src/i18n/locales.ts:46"],
+    "Rádio a náhradné batérie": ["src/data/content.ts:22"],
+    "Rádio a vhodné náhradné batérie": ["src/data/field-kit.ts:93"],
+    "READY · ROČNÁ LICENCIA": ["src/app/plus.tsx:27"],
+    "READY / RODINNÁ NÚDZOVÁ KARTA": ["src/domain/household-card.ts:42"],
+    "READY / VÁŠ ROK PRÍPRAVY": ["src/app/plus.tsx:57"],
+    "READY / VŽDY PORUKE": ["src/app/household-card.tsx:100"],
+    "READY 1.0 · Rozhranie sa prispôsobuje svetlému a tmavému režimu zariadenia.": [
+      "src/app/(tabs)/settings.tsx:196"
+    ],
+    "READY AKADÉMIA": ["src/app/(tabs)/help.tsx:64"],
+    "READY funguje bez účtu. Vaše zásoby, kontakty a plán sa ukladajú iba v tomto zariadení.": [
+      "src/app/onboarding.tsx:24"
+    ],
+    "READY nedokáže na diaľku rozhodnúť, či je trasa priechodná. Pri ohrození postupujte podľa záchranných zložiek.": [
+      "src/data/scenarios.ts:205"
+    ],
+    "READY nedokáže z vašej polohy určiť bezpečnú trasu. Nejde o navigáciu v búrke.": [
+      "src/data/scenarios.ts:417"
+    ],
+    "READY neobsahuje vstavaný adresár ani mapu krytov. Informácie o dostupných miestach a aktuálnych pokynoch získajte od obce a príslušných úradov.": [
+      "src/app/safe-places.tsx:23"
+    ],
+    "READY neposiela živé výstrahy. Rozhodujú pokyny úradov.": [
+      "src/data/academy.ts:62"
+    ],
+    "READY nie je oficiálna výstražná služba. Riaďte sa pokynmi záchranných zložiek a úradov.": [
+      "src/domain/household-card.ts:74"
+    ],
+    "READY nie je oficiálna výstražná služba. V kríze sa riaď pokynmi záchranných zložiek a úradov.": [
+      "src/data/content.ts:3"
+    ],
+    "READY nie je zdravotnícka triáž. Pri pochybnostiach volajte odbornú pomoc a riaďte sa operátorom.": [
+      "src/data/scenarios.ts:441"
+    ],
+    "READY Plus": ["src/app/(tabs)/settings.tsx:105"],
+    "READY počíta iba evidovanú pitnú vodu v l/ml. Vodu v jedle, technickú vodu ani neznáme tekutiny automaticky nepripočítava.": [
+      "src/data/missions.ts:54"
+    ],
+    "READY údaje automaticky neposiela. Dohodu treba odkomunikovať; zdieľanie karty otvoríte iba vlastným krokom.": [
+      "src/data/missions.ts:136"
+    ],
+    "READY vaše kontakty automaticky nekontaktuje a nezdieľa vašu polohu.": [
+      "src/data/academy.ts:219"
+    ],
+    "ready-backup-{0}.json": ["src/app/(tabs)/settings.tsx:140"],
+    "Ready.gov / FEMA": [
+      "src/data/academy.ts:90",
+      "src/data/academy.ts:107",
+      "src/data/academy.ts:144",
+      "src/data/academy.ts:182",
+      "src/data/academy.ts:216",
+      "src/data/academy.ts:283",
+      "src/data/academy.ts:316",
+      "src/data/academy.ts:345",
+      "src/data/academy.ts:377",
+      "src/data/academy.ts:410",
+      "src/data/academy.ts:476"
+    ],
+    "Redakčná kontrola pribaleného textu:": ["src/app/guide.tsx:165"],
+    "Redakčná kontrola pribaleného textu: {0}. Aktuálnosť externého zdroja nebola v tomto prostredí overená. Pri konkrétnej udalosti majú prednosť miestne pokyny úradov.": [
+      "src/app/guide.tsx:164"
+    ],
+    "Resuscitácia a AED": ["src/data/academy.ts:565"],
+    "Rezervu prispôsobte domácnosti, zdravotným potrebám, počasiu a zvieratám.": [
+      "src/data/scenarios.ts:324"
+    ],
+    "Riaďte sa obalom, alergiami a osobnými potrebami. Uprednostnite jedlá, ktoré bežne poznáte.": [
+      "src/data/field-kit.ts:55"
+    ],
+    "Riaďte sa operátorom a pokynmi záchranných zložiek.": [
+      "src/data/scenarios.ts:94"
+    ],
+    "Riaďte sa operátorom. Úkony prvej pomoci vykonávajte podľa jeho pokynov alebo absolvovaného výcviku.": [
+      "src/data/scenarios.ts:471"
+    ],
+    "Riešte zásobu, skladovanie a prípadné chladenie s lekárom alebo lekárnikom. Nemeňte liečbu podľa aplikácie.": [
+      "src/data/field-kit.ts:111"
+    ],
+    "ro-RO": ["src/i18n/locales.ts:61"],
+    "Rodina v spojení": ["src/data/academy.ts:207"],
+    "Rodinná núdzová karta": ["src/domain/household-card.ts:22"],
+    "Rodinný núdzový plán": ["src/data/academy.ts:625"],
+    "Română": ["src/i18n/locales.ts:61"],
+    "ROZHODNITE SA NANEČISTO": ["src/app/scenarios.tsx:53"],
+    "Rozhodnite sa podľa oficiálnych pokynov a dohody domácnosti.": [
+      "src/data/scenarios.ts:140"
+    ],
+    "Rozhodovací nácvik — nie živé vyhodnotenie núdzovej udalosti.": [
+      "src/app/scenarios.tsx:52"
+    ],
+    "Rozhoduje konkrétne upozornenie": ["src/data/scenarios.ts:295"],
+    "Rozlíšte bezprostredné nebezpečenstvo od prípravy na výpadok.": [
+      "src/data/scenarios.ts:37"
+    ],
+    "Rozpoznajte čas na návrat a vyhľadajte vhodné ukrytie.": [
+      "src/data/academy.ts:311"
+    ],
+    "ru-RU": ["src/i18n/locales.ts:47"],
+    "Ručne uložte kontakty blízkych a vytvorte aj papierovú kópiu.": [
+      "src/data/missions.ts:122"
+    ],
+    "Ručný otvárač a čistý príbor": ["src/data/field-kit.ts:59"],
+    "Rumunčina": ["src/i18n/locales.ts:61"],
+    "Rúra, gril alebo generátor nie sú náhradné kúrenie v byte.": [
+      "src/data/academy.ts:347"
+    ],
+    "Ruština": ["src/i18n/locales.ts:47"],
+    "Rybie konzervy": ["src/data/content.ts:11"],
+    "RÝCHLA POMOC": ["src/app/now.tsx:19"],
+    "Ryža": ["src/data/content.ts:7"],
+    "Ryža (overte energiu na obale)": ["src/domain/readiness.ts:72"],
+    "Ryža v skrinke, voda v komore, baterka v zásuvke. Aj malý začiatok sa počíta.": [
+      "src/app/(tabs)/inventory.tsx:173"
+    ],
+    "S človekom, ktorého sa plán týka, prejdite lieky, zdravotné pomôcky, komunikáciu, prístupnosť a pomoc pri presune. Nepredpokladajte, čo dokáže alebo potrebuje.": [
+      "src/data/academy.ts:483"
+    ],
+    "Samotná vypočítaná voda váži približne": ["src/app/field-kit.tsx:446"],
+    "Samotná vypočítaná voda váži približne {0} kg, bez obalov. Na presun voľte prenosnú výbavu, zohľadnite ľudí a dohodnite bezpečné doplnenie. Odchod podľa úradov neodkladajte balením.": [
+      "src/app/field-kit.tsx:445"
+    ],
+    "seed-{0}-{1}": ["src/data/content.ts:52"],
+    "Siréna / výstraha": ["src/data/content.ts:105"],
+    "sk-SK": [
+      "src/app/(tabs)/help.tsx:244",
+      "src/app/shopping.tsx:98",
+      "src/app/shopping.tsx:99",
+      "src/app/videos.tsx:163",
+      "src/data/academy.ts:514",
+      "src/data/academy.ts:522",
+      "src/i18n/locales.ts:32",
+      "src/i18n/sk.ts:2"
+    ],
+    "Skladovanie pitnej vody a reakcia na upozornenie dodávateľa.": [
+      "src/data/scenarios.ts:243"
+    ],
+    "Skladujte podľa obalu, mimo slnka a chemikálií. Skontrolujte neporušenosť uzáverov.": [
+      "src/data/scenarios.ts:322"
+    ],
+    "Skladujte s rozumom": ["src/data/academy.ts:158"],
+    "Skontrolované skladovanie a dátumy": ["src/data/field-kit.ts:65"],
+    "Skontrolovaný obal a dátum": ["src/data/field-kit.ts:31"],
+    "Skontrolovať evidenciu zásob": ["src/data/missions.ts:153"],
+    "Skontrolovať: {0}": ["src/app/(tabs)/index.tsx:488"],
+    "Skontrolujte aktuálne kontakty pri identifikácii zvieraťa. Pripravte fotografiu, potrebné veterinárne záznamy a zoznam liekov. Kópie majte dostupné aj bez internetu.": [
+      "src/data/academy.ts:384"
+    ],
+    "Skontrolujte baterku, rádio, powerbanku a potrebné káble.": [
+      "src/data/scenarios.ts:116"
+    ],
+    "Skontrolujte blízkych": ["src/data/academy.ts:297"],
+    "Skontrolujte dostupnosť čistej a doplnenej lekárničky a návodu k jej obsahu.": [
+      "src/data/scenarios.ts:493"
+    ],
+    "Skontrolujte kompatibilitu s telefónom a stav podľa pokynov výrobcu.": [
+      "src/data/field-kit.ts:89"
+    ],
+    "Skontrolujte obaly a dátumy; naučte sa používať výbavu na odbornom kurze prvej pomoci.": [
+      "src/data/field-kit.ts:123"
+    ],
+    "Skontrolujte obaly a dátumy. Poškodené alebo podozrivé zásoby nepovažujte automaticky za pitné. Do Zásob zapíšte len pitnú vodu v litroch alebo mililitroch.": [
+      "src/data/academy.ts:163"
+    ],
+    "Skontrolujte potreby domácnosti": ["src/data/academy.ts:358"],
+    "Skontrolujte powerbanku a bezpečné nabíjanie. Zásobu alebo chýbajúce batérie si zapíšte.": [
+      "src/data/missions.ts:69"
+    ],
+    "Skontrolujte, že viete jedlo otvoriť a bezpečne zjesť aj bez elektriny.": [
+      "src/data/field-kit.ts:61"
+    ],
+    "Skryť": ["src/app/(tabs)/inventory.tsx:251"],
+    "Skúsiť znova": ["src/app/_layout.tsx:57", "src/app/_layout.tsx:101"],
+    "Skúsme sa na to pozrieť spolu.": ["src/app/missions.tsx:231"],
+    "Skúste iný názov alebo kategóriu.": ["src/app/(tabs)/inventory.tsx:172"],
+    "Skúste kratší názov alebo inú kategóriu.": ["src/app/(tabs)/help.tsx:203"],
+    "SKÚSTE SI JEDNU OTÁZKU": ["src/app/missions.tsx:178"],
+    "Skúška trvá 14 dní od prvého spustenia. Offline funkcie sú dostupné až po overenej platbe. Na prvý nákup a obnovenie nákupu je potrebné pripojenie.": [
+      "src/app/plus.tsx:116"
+    ],
+    "Sledovať oficiálne výstrahy": ["src/data/content.ts:37"],
+    "Sledujte človeka, zaistite bezpečie a neodkladajte pomoc pri zhoršovaní stavu.": [
+      "src/data/scenarios.ts:482"
+    ],
+    "Sledujte deti, seniorov a ľudí so zdravotnými potrebami. Ak prostredie nedokážete bezpečne udržať, zistite možnosti presunu na vykurované miesto podľa pokynov obce.": [
+      "src/data/academy.ts:359"
+    ],
+    "Sledujte oficiálne výstrahy a nevychádzajte len kvôli pozorovaniu búrky.": [
+      "src/data/scenarios.ts:395"
+    ],
+    "Sledujte pokyny na ukrytie alebo evakuáciu. Táto aplikácia neprijíma živé výstrahy ani nerozpoznáva signály sirén.": [
+      "src/data/content.ts:109"
+    ],
+    "Sledujte pokyny operátora": ["src/data/academy.ts:264"],
+    "Sledujte výstrahy a pokyny obce. Pri nariadenej evakuácii odíďte určenou trasou.": [
+      "src/data/content.ts:83"
+    ],
+    "Slovenčina": [
+      "src/app/videos.tsx:23",
+      "src/app/videos.tsx:102",
+      "src/data/academy.ts:559",
+      "src/data/academy.ts:569",
+      "src/data/academy.ts:599",
+      "src/data/academy.ts:609",
+      "src/i18n/locales.ts:32"
+    ],
+    "Slovenské tiesňové linky. Vytáčanie otvoríme až po potvrdení.": [
+      "src/app/(tabs)/help.tsx:312"
+    ],
+    "Slovenský Červený kríž": [
+      "src/data/academy.ts:557",
+      "src/data/academy.ts:567"
+    ],
+    "Slovenský Červený kríž prvá pomoc": ["src/data/academy.ts:558"],
+    "Slovenský Červený kríž resuscitácia AED": ["src/data/academy.ts:568"],
+    "Smer presunu a miesto ukrytia neurčujte podľa všeobecnej internetovej rady.": [
+      "src/data/academy.ts:72"
+    ],
+    "Spaľovacie zariadenia a generátory nepatria do uzavretých priestorov.": [
+      "src/data/academy.ts:36"
+    ],
+    "Späť": [
+      "src/app/guide.tsx:191",
+      "src/app/household-card.tsx:67",
+      "src/app/item.tsx:152",
+      "src/app/missions.tsx:278",
+      "src/app/safe-places.tsx:19",
+      "src/app/shopping.tsx:89",
+      "src/app/videos.tsx:39"
+    ],
+    "Späť do knižnice": ["src/app/guide.tsx:56"],
+    "Späť do knižnice po dočítaní": ["src/app/guide.tsx:119"],
+    "Späť z nácvikov": ["src/app/scenarios.tsx:381"],
+    "Spíšte konkrétne potreby": ["src/data/academy.ts:482"],
+    "Spíšte kontakty, základné zdravotné informácie potrebné pri pomoci a prehľad dôležitých dokumentov. Zhromažďujte len údaje, ktoré skutočne potrebujete.": [
+      "src/data/academy.ts:416"
+    ],
+    "splnené": ["src/app/missions.tsx:115"],
+    "Spočítajte pitnú vodu a skontrolujte stav obalov aj údaje výrobcu.": [
+      "src/data/missions.ts:40"
+    ],
+    "Spoločne si povedzte, kde je svetlo, lekárnička a pripravená taška.": [
+      "src/data/missions.ts:172"
+    ],
+    "Spotrebujte do": [
+      "src/app/(tabs)/inventory.tsx:304",
+      "src/app/item.tsx:90"
+    ],
+    "Spoznajte svoju vodnú rezervu": ["src/data/missions.ts:32"],
+    "Spoznať smerovanie READY Plus": ["src/app/(tabs)/index.tsx:535"],
+    "Spustiť nácvik: {0}": ["src/app/scenarios.tsx:466"],
+    "Stav adresára a zdroje": ["src/app/(tabs)/help.tsx:146"],
+    "Stav licencie alebo siete sa nepodarilo načítať.": [
+      "src/state/license.tsx:74",
+      "src/state/license.tsx:132"
+    ],
+    "Strukoviny suché (overte obal)": ["src/domain/readiness.ts:84"],
+    "Súkromie a lokálne dáta": ["src/app/(tabs)/settings.tsx:112"],
+    "sv-SE": ["src/i18n/locales.ts:63"],
+    "Svenska": ["src/i18n/locales.ts:63"],
+    "Svetlo / baterka": ["src/data/content.ts:23"],
+    "Svetlo a spojenie": [
+      "src/data/academy.ts:121",
+      "src/data/field-kit.ts:73"
+    ],
+    "Svetlo, energia a pokojný plán na prvé hodiny bez elektriny.": [
+      "src/data/academy.ts:32"
+    ],
+    "Systémový dialóg bol dokončený. Skontrolujte zvoleného príjemcu alebo uloženie.": [
+      "src/app/household-card.tsx:55"
+    ],
+    "Šetrite batériu telefónu a sledujte oficiálne informácie.": [
+      "src/data/content.ts:74"
+    ],
+    "Šošovica": ["src/data/content.ts:9"],
+    "Španielčina": ["src/i18n/locales.ts:36"],
+    "Špecifické potreby a lieky riešte s veterinárom. Overte prijatie zvierat v cieľovom mieste.": [
+      "src/data/field-kit.ts:236"
+    ],
+    "Švédčina": ["src/i18n/locales.ts:63"],
+    "T12:00:00Z": [
+      "src/domain/readiness.ts:20",
+      "src/domain/readiness.ts:21",
+      "src/types/model.ts:23"
+    ],
+    "Taliančina": ["src/i18n/locales.ts:55"],
+    "Táto možnosť neposkytuje spoľahlivé ukrytie": [
+      "src/data/scenarios.ts:416"
+    ],
+    "Táto polička je zatiaľ prázdna": ["src/app/(tabs)/help.tsx:199"],
+    "Táto téma nie je súčasťou aktuálnej offline knižnice.": [
+      "src/app/guide.tsx:190"
+    ],
+    "Táto vetva je kontrola pripravenosti, nie potvrdenie, že je človek zdravotne v poriadku.": [
+      "src/data/scenarios.ts:491"
+    ],
+    "Táto vývojová verzia nič neúčtuje. Nákup ani overený offline prístup tu zatiaľ nie je možné aktivovať. Online náhľad zostáva dostupný aj po konci skúšky; produkčné obmedzenie sa zapne po pripojení Google Play Billing.": [
+      "src/app/plus.tsx:124"
+    ],
+    "Telefón / textové údaje": ["src/app/(tabs)/plan.tsx:44"],
+    "Tematický checklist": ["src/app/(tabs)/plan.tsx:149"],
+    "Témy a organizácie na YouTube": ["src/app/(tabs)/help.tsx:139"],
+    "Témy a vyhľadávanie na YouTube · online": ["src/app/(tabs)/index.tsx:476"],
+    "Témy na učenie od organizácií, ktoré sa venujú bezpečnosti a prvej pomoci.": [
+      "src/app/videos.tsx:36"
+    ],
+    "Tento krok som urobil/a": ["src/app/missions.tsx:242"],
+    "Tento návod nie je navigácia ani aktuálna informácia o podmienkach na trase.": [
+      "src/data/academy.ts:445"
+    ],
+    "Tento výsledok nie je odporúčanie improvizovať so spaľovacím zariadením. Vyberte vhodné batériové svetlo.": [
+      "src/data/scenarios.ts:126"
+    ],
+    "TEPLO BEZ RIZIKA": ["src/data/academy.ts:339"],
+    "Teraz chcem preveriť pripravenosť lekárničky a plán pomoci.": [
+      "src/data/scenarios.ts:459"
+    ],
+    "Teraz plánujem v bezpečných podmienkach.": ["src/data/scenarios.ts:269"],
+    "Text môžete skopírovať do dokumentu a vytlačiť. PDF export zatiaľ nie je súčasťou aplikácie.": [
+      "src/app/household-card.tsx:236"
+    ],
+    "Text nenahrádza kurz prvej pomoci. Pri ohrození života volajte 112 alebo 155 a riaďte sa operátorom.": [
+      "src/data/academy.ts:253"
+    ],
+    "TEXTY A ILUSTRÁCIE DOSTUPNÉ OFFLINE": ["src/app/(tabs)/help.tsx:360"],
+    "Tieň, pitná voda a pozornosť k deťom, starším ľuďom a zvieratám.": [
+      "src/data/academy.ts:278"
+    ],
+    "Tiesňová linka · otvoriť vytáčanie": ["src/app/now.tsx:78"],
+    "Tiesňová linka 112": [
+      "src/app/(tabs)/help.tsx:68",
+      "src/app/_layout.tsx:34"
+    ],
+    "Tiesňové čísla": ["src/components/access-panel.tsx:61"],
+    "TIESŇOVÉ LINKY NA SLOVENSKU": ["src/domain/household-card.ts:45"],
+    "Tiesňové linky neblokujte skúšobnými hovormi. Postup si precvičte slovne a pozrite si potvrdenie vytáčania bez uskutočnenia hovoru.": [
+      "src/data/missions.ts:186"
+    ],
+    "Tma bez viditeľného nebezpečenstva": ["src/data/scenarios.ts:62"],
+    "To najdôležitejšie": ["src/app/guide.tsx:124"],
+    "Toto je prípravný nácvik. Pri skutočnom ohrození riaďte postup miestnymi pokynmi a možnosťami bezpečného presunu.": [
+      "src/data/scenarios.ts:355"
+    ],
+    "Toto už nie je bežný nácvik výpadku. Pri skutočnom ohrození neodkladajte privolanie pomoci kvôli aplikácii.": [
+      "src/data/scenarios.ts:90"
+    ],
+    "Trasa, počasie a kontakt, ktorý vie, kedy sa máte vrátiť.": [
+      "src/data/academy.ts:437"
+    ],
+    "TRÉNING ROZHODOVANIA": ["src/app/scenarios.tsx:377"],
+    "Trvanlivé pečivo (overte obal)": ["src/domain/readiness.ts:98"],
+    "trvanlivosť": [
+      "src/app/(tabs)/inventory.tsx:310",
+      "src/app/item.tsx:86",
+      "src/types/model.ts:55"
+    ],
+    "Tu sú pripravené témy a vyhľadávacie odkazy, nie overené konkrétne videá. YouTube môže zobraziť reklamy aj obsah iných autorov; overte si skutočného vydavateľa a aktuálnosť. Prehrávanie vyžaduje internet.": [
+      "src/app/videos.tsx:80"
+    ],
+    "Typ dátumu": ["src/app/item.tsx:85"],
+    "Údaj z importovanej zálohy — READY negarantuje aktuálnosť ani prístupnosť.": [
+      "src/domain/safe-places.ts:8"
+    ],
+    "Údaje sa nepodarilo otvoriť": ["src/app/_layout.tsx:26"],
+    "Udržte teplo rozumne": ["src/data/academy.ts:350"],
+    "Udržujte jedlo, pitnú vodu a znečistené veci oddelene. Miestne pokyny majú prednosť.": [
+      "src/data/field-kit.ts:207"
+    ],
+    "uk-UA": ["src/i18n/locales.ts:57"],
+    "Ukladám…": ["src/app/_layout.tsx:118"],
+    "Ukrajinčina": ["src/i18n/locales.ts:57"],
+    "úkryt": ["src/types/model.ts:86"],
+    "ukrytie": ["src/i18n/sk.ts"],
+    "UKRYTIE A POKYNY": ["src/data/academy.ts:66"],
+    "Uložené": [
+      "src/app/(tabs)/help.tsx:192",
+      "src/app/(tabs)/help.tsx:201",
+      "src/data/academy.ts:506",
+      "src/data/academy.ts:518"
+    ],
+    "Uloženie znamená iba to, že ste prešli nácvikom. Nehodnotí správnosť každej voľby a nie je dôkazom pripravenosti ani zdravotného stavu.": [
+      "src/app/scenarios.tsx:333"
+    ],
+    "Uložený návod: {0}": ["src/data/academy.ts:529"],
+    "Uložiť absolvovaný nácvik": ["src/app/scenarios.tsx:338"],
+    "Uložiť kontakt": ["src/app/(tabs)/plan.tsx:52"],
+    "Uložiť miesto stretnutia": ["src/app/(tabs)/plan.tsx:89"],
+    "Uložiť návod": ["src/app/(tabs)/help.tsx:280", "src/app/guide.tsx:44"],
+    "Uložiť položku zoznamu": ["src/app/shopping.tsx:56"],
+    "Uložiť profil": ["src/components/profile-form.tsx:81"],
+    "Uložiť úlohu": ["src/app/(tabs)/plan.tsx:218"],
+    "Uložiť zálohu READY": ["src/app/(tabs)/settings.tsx:148"],
+    "Uložiť zásobu": ["src/app/item.tsx:112"],
+    "Uložte ich primerane chránené pred vodou a neoprávneným prístupom.": [
+      "src/data/field-kit.ts:139"
+    ],
+    "Uložte si návod ikonou záložky. Zostane tu aj po reštarte.": [
+      "src/app/(tabs)/help.tsx:202"
+    ],
+    "Uložte si plán aj mimo aplikácie": ["src/data/missions.ts:191"],
+    "Uložte svetlo na dostupné miesto, ktoré poznajú členovia domácnosti.": [
+      "src/data/missions.ts:68"
+    ],
+    "Únik nebezpečnej látky": ["src/data/content.ts:116"],
+    "Univerzálna rada o prevarení nemusí riešiť dané znečistenie. READY neurčuje kvalitu miestnej vody.": [
+      "src/data/scenarios.ts:296"
+    ],
+    "Úprava úlohy": ["src/app/(tabs)/plan.tsx:213"],
+    "Upraviť kontakt: {0}": ["src/app/(tabs)/plan.tsx:262"],
+    "Upraviť miesto a kontakty v Pláne": ["src/app/household-card.tsx:228"],
+    "Upraviť nákup: {0}": ["src/app/shopping.tsx:178"],
+    "Upraviť profil domácnosti": ["src/app/(tabs)/settings.tsx:83"],
+    "Upraviť úlohu: {0}": ["src/app/(tabs)/plan.tsx:190"],
+    "Upraviť zásobu": ["src/app/item.tsx:151"],
+    "Upraviť: {0}": ["src/app/(tabs)/inventory.tsx:270"],
+    "Úrady určili ďalší postup alebo miesto.": ["src/data/scenarios.ts:154"],
+    "Určite dve miesta": ["src/data/academy.ts:226"],
+    "Určite kontaktnú osobu, miesto v okolí domova a záložné miesto mimo bezprostredného okolia.": [
+      "src/data/scenarios.ts:231"
+    ],
+    "Urobte bezpečné kópie": ["src/data/academy.ts:419"],
+    "USD": ["src/app/plus.tsx:71"],
+    "v najbližších 30 dňoch": ["src/app/(tabs)/index.tsx:508"],
+    "V Nastaveniach exportujte JSON zálohu a overte, že sa skutočne uložila na vybrané miesto.": [
+      "src/data/missions.ts:199"
+    ],
+    "V Nastaveniach vytvorte JSON zálohu. Obsahuje aj kontakty a miesto stretnutia, preto ju uložte bezpečne. Po zmene údajov zálohu obnovte novým exportom.": [
+      "src/data/academy.ts:428"
+    ],
+    "V núdzi nečakajte na video": ["src/app/videos.tsx:195"],
+    "V okolí vidím známky bezprostredného nebezpečenstva.": [
+      "src/data/scenarios.ts:51"
+    ],
+    "V pevnej uzavretej budove": ["src/data/scenarios.ts:365"],
+    "V tejto téme zatiaľ nie sú úlohy. Pridajte si vlastnú.": [
+      "src/app/(tabs)/plan.tsx:210"
+    ],
+    "V tejto verzii je pripravená politika prístupu a lokálna evidencia skúšky. Bez prepojenia s obchodom nevznikne doklad o platbe ani aktívna licencia.": [
+      "src/app/plus.tsx:205"
+    ],
+    "V Zásobách zapíšte množstvo v litroch alebo mililitroch do kategórie Pitná voda.": [
+      "src/data/missions.ts:41"
+    ],
+    "Varenie neodstráni všetky chemické alebo rádioaktívne znečistenia. Pri pochybnostiach používajte odporúčaný bezpečný zdroj.": [
+      "src/data/academy.ts:147"
+    ],
+    "VÁŠ DOMÁCI PLÁN": ["src/app/(tabs)/index.tsx:85"],
+    "Váš domov v číslach": ["src/app/(tabs)/index.tsx:131"],
+    "VÁŠ EVAKUAČNÝ BATOH": ["src/app/field-kit.tsx:190"],
+    "Váš plán aj bez signálu.": ["src/components/access-panel.tsx:14"],
+    "Váš plán pripravený na zdieľanie": ["src/app/(tabs)/settings.tsx:100"],
+    "VÁŠ PRIESTOR PRE POKOJ": ["src/components/ui.tsx:142"],
+    "VAŠA CESTA": ["src/app/scenarios.tsx:116"],
+    "Vaša domácnosť": [
+      "src/app/(tabs)/index.tsx:47",
+      "src/app/(tabs)/settings.tsx:72",
+      "src/components/profile-form.tsx:38"
+    ],
+    "Vaša evidencia": ["src/app/(tabs)/inventory.tsx:148"],
+    "VAŠA MALÁ VÝPRAVA": [
+      "src/app/missions.tsx:273",
+      "src/app/missions.tsx:327"
+    ],
+    "Vaša offline knižnica": ["src/app/(tabs)/help.tsx:152"],
+    "Vaše dáta zostávajú vaše": ["src/app/plus.tsx:168"],
+    "Vaše každodenné nástroje, vždy poruke.": ["src/app/(tabs)/index.tsx:344"],
+    "Vaše nastavenia": ["src/app/(tabs)/settings.tsx:39"],
+    "Veci sa dajú nahradiť. Do horiacej budovy sa nevracajte.": [
+      "src/data/academy.ts:54"
+    ],
+    "Vedieť znamená viac.": ["src/app/(tabs)/help.tsx:62"],
+    "Veľký pokoj.": ["src/app/(tabs)/index.tsx:96"],
+    "Venujte pozornosť deťom, seniorom a chronicky chorým. Nikoho ani zviera nenechávajte v zaparkovanom aute, ani na krátko.": [
+      "src/data/academy.ts:298"
+    ],
+    "Vezmite doklady, lieky, vodu, telefón a pripravený batoh. Pomôžte deťom a ľuďom, ktorí potrebujú pomoc.": [
+      "src/data/content.ts:131"
+    ],
+    "Vezmite dostupné doklady, potrebné lieky, telefón a pripravený batoh, ak to neodkladá bezpečný odchod.": [
+      "src/data/scenarios.ts:196"
+    ],
+    "Vhodné vrstvy a náhradné ponožky": ["src/data/field-kit.ts:165"],
+    "Viac porozumenia.": ["src/app/(tabs)/index.tsx:473"],
+    "Video zručnosti": ["src/app/(tabs)/help.tsx:138"],
+    "VIDEO ZRUČNOSTI": ["src/app/videos.tsx:37"],
+    "Vidieť, počuť a vedieť sa ozvať.": ["src/data/field-kit.ts:74"],
+    "Vidím bezprostredné ohrozenie": ["src/data/scenarios.ts:159"],
+    "Viem skontrolovať obal a skladovanie.": ["src/data/scenarios.ts:282"],
+    "Viete, čo máte. Doplníte, čo chýba.": ["src/app/(tabs)/inventory.tsx:43"],
+    "Viete, kde sa stretnete?": ["src/data/scenarios.ts:173"],
+    "Vizuálna baliaca stanica. Začnite výbavou, ktorú už doma máte.": [
+      "src/app/field-kit.tsx:154"
+    ],
+    "Vizuálne balenie a vlastný pokrok": ["src/app/(tabs)/index.tsx:331"],
+    "Vlastná úloha": ["src/app/(tabs)/plan.tsx:213"],
+    "Vlastné plnenie do nádob": ["src/data/scenarios.ts:287"],
+    "vlastným tempom": ["src/app/missions.tsx:115"],
+    "Voda a bežné krmivo pre zviera": ["src/data/field-kit.ts:222"],
+    "Voda a domáce zásoby": ["src/data/academy.ts:585"],
+    "Voda a jedlo": ["src/data/academy.ts:117"],
+    "Voda je podozrivá alebo nepoznám jej pôvod": ["src/data/scenarios.ts:262"],
+    "Voda má slúžiť domácnosti, nie iba vytvárať pekné číslo v aplikácii.": [
+      "src/data/scenarios.ts:320"
+    ],
+    "Voda nie je samozrejmosť": ["src/data/scenarios.ts:242"],
+    "Voda, výpadok, prvá pomoc…": ["src/app/(tabs)/help.tsx:159"],
+    "Vodu držte v chlade, tme a mimo chemikálií, palív alebo priameho slnka. Uzávery nechajte chránené pred znečistením. Dodržujte pokyny výrobcu nádoby a vody.": [
+      "src/data/academy.ts:159"
+    ],
+    "Volajte 155 alebo 112": ["src/data/scenarios.ts:466"],
+    "Volajte pri skutočnej núdzi. Otvorí sa systémové vytáčanie.": [
+      "src/app/now.tsx:34"
+    ],
+    "Voľba miestnosti a smer bezpečného presunu závisia od látky a situácie. Riaďte sa záchrannými zložkami.": [
+      "src/data/content.ts:120"
+    ],
+    "Voľná úniková cesta, bezpečný odchod a správne privolanie pomoci.": [
+      "src/data/academy.ts:51"
+    ],
+    "Vonku": [
+      "src/data/academy.ts:4",
+      "src/data/academy.ts:276",
+      "src/data/academy.ts:309",
+      "src/data/academy.ts:435",
+      "src/data/academy.ts:504"
+    ],
+    "Vonku, mimo pevnej budovy": ["src/data/scenarios.ts:359"],
+    "Vrátiť krok medzi nesplnené": ["src/app/missions.tsx:241"],
+    "Vráťte sa až po povolení zodpovedných orgánov.": [
+      "src/data/content.ts:133"
+    ],
+    "Vrecká na odpad a čisté pomôcky": ["src/data/field-kit.ts:205"],
+    "Vrstvy, vhodný priestor a bezpečná záložná možnosť vykurovania.": [
+      "src/data/academy.ts:340"
+    ],
+    "Všeobecná pomoc, žiadne živé výstrahy": ["src/app/(tabs)/help.tsx:356"],
+    "Všetci vedia, ako sa podľa situácie rozhodnúť.": [
+      "src/data/scenarios.ts:179"
+    ],
+    "Všetka tekutina v domácnosti": ["src/data/missions.ts:48"],
+    "všetko": [
+      "src/app/(tabs)/inventory.tsx:29",
+      "src/app/(tabs)/inventory.tsx:34",
+      "src/app/(tabs)/inventory.tsx:104",
+      "src/app/(tabs)/inventory.tsx:110",
+      "src/app/(tabs)/inventory.tsx:133"
+    ],
+    "Všetko": [
+      "src/app/(tabs)/help.tsx:48",
+      "src/app/(tabs)/inventory.tsx:111",
+      "src/app/(tabs)/inventory.tsx:134",
+      "src/data/academy.ts:501",
+      "src/data/academy.ts:511",
+      "src/data/academy.ts:517"
+    ],
+    "Všetko má svoje miesto.": ["src/app/field-kit.tsx:153"],
+    "VŠETKO PRIBALENÉ · OFFLINE": ["src/app/scenarios.tsx:71"],
+    "Všetky": [
+      "src/app/videos.tsx:23",
+      "src/app/videos.tsx:24",
+      "src/app/videos.tsx:27",
+      "src/app/videos.tsx:102"
+    ],
+    "Všetky kroky": ["src/app/(tabs)/index.tsx:377"],
+    "Všímajte si okolie, privolajte pomoc a postupujte podľa operátora.": [
+      "src/data/academy.ts:245"
+    ],
+    "Výbava má byť prenosná a praktická. Pri nariadenej evakuácii neodkladajte odchod balením.": [
+      "src/data/field-kit.ts:179"
+    ],
+    "Výbava patrí na správne miesto": ["src/data/academy.ts:200"],
+    "Vyberte blízku osobu, ktorej môžete podať krátku správu. Dohodnite si, kto kontaktuje koho, ak ste od seba. Dôležité čísla zapíšte aj na papier.": [
+      "src/data/academy.ts:223"
+    ],
+    "Vyberte čisté nádoby určené na pitnú vodu alebo potraviny a dodržte pokyny k čisteniu a plneniu.": [
+      "src/data/scenarios.ts:334"
+    ],
+    "Vyberte dostupnú tašku a skontrolujte evakuačný checklist v Pláne.": [
+      "src/data/missions.ts:94"
+    ],
+    "Vyberte dôležité informácie": ["src/data/academy.ts:415"],
+    "Vyberte jazyk": ["src/components/language-picker.tsx:92"],
+    "Vyberte jedlo na priamu konzumáciu": ["src/data/academy.ts:188"],
+    "Vyberte jednu z dostupných odpovedí.": ["src/domain/missions.ts:40"],
+    "Vyberte jednu zo zobrazených možností.": ["src/domain/scenarios.ts:35"],
+    "Vyberte nádoby a pokyny vhodné pre pitnú vodu.": [
+      "src/data/scenarios.ts:277"
+    ],
+    "Vyberte podporovaný počet dní.": ["src/domain/field-kit.ts:62"],
+    "Vyberte primeranú trasu": ["src/data/academy.ts:448"],
+    "Vyberte si priehradku": ["src/app/field-kit.tsx:262"],
+    "Vyberte si smer": ["src/app/videos.tsx:98"],
+    "Vyberte situáciu": ["src/app/scenarios.tsx:459"],
+    "Vyberte správne nádoby": ["src/data/academy.ts:154"],
+    "Vyberte tri potraviny a zapíšte ich množstvo aj dátum uvedený na obale.": [
+      "src/data/missions.ts:149"
+    ],
+    "Vyberte výbavu vhodnú pre domácnosť a dodržiavajte pokyny výrobcu.": [
+      "src/data/field-kit.ts:195"
+    ],
+    "Vybrať iný scenár": ["src/app/scenarios.tsx:346"],
+    "Vybrať vnútornú miestnosť podľa pokynov úradov": [
+      "src/data/content.ts:43"
+    ],
+    "Vyhľadajte prevenciu požiarov a ukážky bezpečného postupu.": [
+      "src/data/academy.ts:596"
+    ],
+    "Vyhľadajte ukážky od organizácie, ktorá učí prvú pomoc.": [
+      "src/data/academy.ts:556"
+    ],
+    "Vyhľadajte vhodnú uzavretú budovu alebo uzavreté vozidlo podľa situácie. Nezostávajte na otvorenom priestranstve, pri vode alebo pod osamelým stromom.": [
+      "src/data/academy.ts:327"
+    ],
+    "Vyhľadať návod": ["src/app/(tabs)/help.tsx:156"],
+    "Vyhľadať tému na YouTube": ["src/app/videos.tsx:92"],
+    "Vyhľadávanie zásob": ["src/app/(tabs)/inventory.tsx:94"],
+    "Vychádzame z vašich nastaviteľných predpokladov, nie z osobného zdravotného odporúčania. Voda pre zvieratá ani voda v potravinách nie sú automaticky započítané.": [
+      "src/app/field-kit.tsx:437"
+    ],
+    "Vymazať kontakt: {0}": ["src/app/(tabs)/plan.tsx:267"],
+    "Vymazať kontakt?": ["src/app/(tabs)/plan.tsx:272"],
+    "Vymazať nákup: {0}": ["src/app/shopping.tsx:183"],
+    "Vymazať nákup?": ["src/app/shopping.tsx:188"],
+    "Vymazať zásobu?": ["src/app/(tabs)/inventory.tsx:280"],
+    "Vymazať: {0}": ["src/app/(tabs)/inventory.tsx:277"],
+    "Výpadok elektriny": ["src/data/content.ts:69"],
+    "Výpadok môže ovplyvniť zdravotný stav človeka.": [
+      "src/data/scenarios.ts:57"
+    ],
+    "Výpadok prúdu": ["src/app/now.tsx:106"],
+    "Vyplňte názov.": ["src/types/model.ts:18"],
+    "Vyskúšajte baterku alebo čelovku a skontrolujte náhradné batérie.": [
+      "src/data/missions.ts:67"
+    ],
+    "Vyskúšajte dohodu nanečisto": ["src/data/scenarios.ts:216"],
+    "Vyskúšajte dostupnosť plánu": ["src/data/academy.ts:494"],
+    "Vyskúšajte ho": ["src/data/academy.ts:129"],
+    "Vyskúšajte plán nanečisto": ["src/data/academy.ts:234"],
+    "Vyskúšajte pokojný nácvik": ["src/data/missions.ts:164"],
+    "Vyskúšajte zapnutie. Otvorený oheň nenahrádza bezpečné svetlo.": [
+      "src/data/field-kit.ts:83"
+    ],
+    "VÝSLEDOK NÁCVIKU": ["src/app/scenarios.tsx:75"],
+    "Vytáčanie nie je dostupné": ["src/app/_layout.tsx:47"],
+    "Vytočiť {0}?": ["src/app/(tabs)/help.tsx:321", "src/app/now.tsx:147"],
+    "Vytočiť 112?": [
+      "src/app/(tabs)/help.tsx:70",
+      "src/app/_layout.tsx:38",
+      "src/app/now.tsx:33"
+    ],
+    "Vytvoriť nákupný zoznam": ["src/app/(tabs)/inventory.tsx:324"],
+    "Vytvoriť rodinnú krízovú kartu": ["src/app/missions.tsx:381"],
+    "Vzhľad, vôňa alebo chuť nedokazujú bezpečnosť vody.": [
+      "src/data/scenarios.ts:252"
+    ],
+    "VŽDY PO RUKE": ["src/app/(tabs)/help.tsx:108"],
+    "Z bezpečného miesta volajte 112 a popíšte situáciu aj presnú polohu.": [
+      "src/data/scenarios.ts:208"
+    ],
+    "Z bezpečného miesta volajte 112 alebo 150. Do budovy sa nevracajte.": [
+      "src/data/content.ts:97"
+    ],
+    "Zabaľte primeranú vrstvu oblečenia, ochranu pred dažďom, hygienické potreby a jednoduchú lekárničku. Zvážte potreby zvierat a podmienky ročného obdobia.": [
+      "src/data/academy.ts:126"
+    ],
+    "Začať 7 krokov prípravy": ["src/app/(tabs)/index.tsx:110"],
+    "Začať nácvik odznova": ["src/app/scenarios.tsx:321"],
+    "Začať s prípravou": ["src/components/profile-form.tsx:81"],
+    "Začnime pitnou vodou.": ["src/app/(tabs)/index.tsx:288"],
+    "Začnite 72-hodinovým batohom": ["src/app/(tabs)/help.tsx:129"],
+    "Začnite bezpečným zdrojom": ["src/data/academy.ts:150"],
+    "Začnite jednoduchou dohodou, ktorú vie zopakovať každý člen domácnosti.": [
+      "src/data/scenarios.ts:229"
+    ],
+    "Začnite tým osobným": ["src/data/academy.ts:113"],
+    "Začnite tým, čo už máte.": ["src/app/(tabs)/inventory.tsx:168"],
+    "Začnite vecami, ktoré vaša domácnosť reálne potrebuje. Dokonalý batoh nemusí vzniknúť za jeden deň.": [
+      "src/data/missions.ts:92"
+    ],
+    "Zaevidovať pitnú vodu": [
+      "src/app/field-kit.tsx:453",
+      "src/data/missions.ts:44"
+    ],
+    "Zaevidovať prvú položku": ["src/app/(tabs)/inventory.tsx:176"],
+    "Záchranná zdravotná služba": ["src/data/content.ts:142"],
+    "ZÁKLAD DOMÁCNOSTI": ["src/data/academy.ts:138"],
+    "Záloha a papierová karta pomôžu, keď vymeníte telefón alebo sa vybije batéria.": [
+      "src/data/missions.ts:197"
+    ],
+    "Záloha bola obnovená.": ["src/app/(tabs)/settings.tsx:182"],
+    "Záloha domácnosti": ["src/app/(tabs)/settings.tsx:126"],
+    "Záloha je príliš veľká (limit 10 MB).": [
+      "src/app/(tabs)/settings.tsx:175",
+      "src/domain/backup.ts:16"
+    ],
+    "Záloha obsahuje {0} zásob, {1} nákupov, {2} úloh a {3} kontaktov. Súčasné údaje budú prepísané.": [
+      "src/app/(tabs)/settings.tsx:179"
+    ],
+    "Záloha obsahuje osobné kontakty a miesto stretnutia, nie je šifrovaná. Chráňte ju pred cudzím prístupom.": [
+      "src/data/missions.ts:200"
+    ],
+    "Záloha READY nie je šifrovaná. Chráňte ju ako osobné údaje.": [
+      "src/data/academy.ts:412"
+    ],
+    "Zálohujte READY": ["src/data/academy.ts:427"],
+    "Zapamätajte si užitočný krok.": ["src/app/scenarios.tsx:330"],
+    "Zapísať vlastnú úlohu do Plánu": ["src/data/missions.ts:176"],
+    "Zapíšte dohodu do Plánu a na papier. Miesto vždy prispôsobte aktuálnym pokynom úradov.": [
+      "src/data/scenarios.ts:232"
+    ],
+    "Zapíšte miesto a kontakty do sekcie Plán. Skontrolujte nabitie powerbanky a dohodnite pravidelnú spoločnú kontrolu údajov.": [
+      "src/data/academy.ts:235"
+    ],
+    "Zásobu evidujte a pravidelne kontrolujte": ["src/data/scenarios.ts:319"],
+    "Zásoby": ["src/app/data-vault.tsx:30", "src/i18n/sk.ts:5"],
+    "ZÁSOBY A PRÍPRAVA": ["src/app/(tabs)/index.tsx:155"],
+    "Zásoby, výpočty a vizuálny evakuačný batoh": ["src/app/plus.tsx:80"],
+    "Zatiaľ nemáte uložené kontakty.": ["src/app/data-vault.tsx:56"],
+    "Zatiaľ nemáte uložené zásoby.": ["src/app/data-vault.tsx:43"],
+    "Zatiaľ nemáte žiadne kontakty.": ["src/app/(tabs)/plan.tsx:252"],
+    "Zavolajte pomoc": ["src/data/academy.ts:260"],
+    "Zavrieť": ["src/app/missions.tsx:85"],
+    "Zavrieť baliacu stanicu": ["src/app/field-kit.tsx:159"],
+    "Zavrieť celý postup": ["src/app/guide.tsx:130", "src/app/guide.tsx:141"],
+    "Zavrieť licenciu": ["src/app/plus.tsx:31"],
+    "Zavrieť rýchlu pomoc": ["src/app/now.tsx:23"],
+    "Zavrieť údaje": ["src/app/data-vault.tsx:14"],
+    "Zavrieť úpravu profilu": ["src/app/(tabs)/settings.tsx:83"],
+    "Zavrieť výber jazyka": ["src/components/language-picker.tsx:96"],
+    "Záznam inštalácie obsahuje neplatné poradie časov.": [
+      "src/domain/license.ts:49"
+    ],
+    "ZBAĽTE SI POKOJ": ["src/data/academy.ts:100"],
+    "Zbaľte výbavu podľa podmienok": ["src/data/academy.ts:456"],
+    "Zbaľte základné potreby": ["src/data/academy.ts:387"],
+    "Zdieľa sa presný text náhľadu nižšie, bez vašich kontaktov a miesta stretnutia. Príjemcu si zvolíte v systémovom dialógu.": [
+      "src/app/household-card.tsx:41"
+    ],
+    "Zdieľanie bolo zrušené.": ["src/app/household-card.tsx:54"],
+    "Zdieľanie súboru nie je na tomto zariadení dostupné.": [
+      "src/app/(tabs)/settings.tsx:136"
+    ],
+    "Zdieľať aj osobné údaje?": ["src/app/household-card.tsx:38"],
+    "Zdieľať kartu bez osobných údajov": ["src/app/household-card.tsx:256"],
+    "Zdieľať kartu s osobnými údajmi": ["src/app/household-card.tsx:255"],
+    "Zdieľať núdzovú kartu?": ["src/app/household-card.tsx:38"],
+    "Zdravotné potreby a rezervy liekov konzultujte s ošetrujúcim odborníkom.": [
+      "src/data/academy.ts:479"
+    ],
+    "Zdravotné potreby majú prednosť": ["src/data/scenarios.ts:101"],
+    "ZDROJ A KONTROLA": ["src/app/guide.tsx:162"],
+    "Zdroj miesta: {0} (online)": ["src/app/safe-places.tsx:53"],
+    "Zdroj musí byť HTTPS.": ["src/types/model.ts:85"],
+    "zh-CN": ["src/i18n/locales.ts:34"],
+    "Zima a výpadok kúrenia": ["src/data/academy.ts:337"],
+    "Zistite oficiálny dôvod výstrahy z rozhlasu, rádia alebo oznamov obce. Nespoliehajte sa na neoverené správy.": [
+      "src/data/content.ts:107"
+    ],
+    "Zistite si oficiálne informácie o bezpečných zdrojoch. Výpočet domácej zásoby nie je požiadavka niesť všetku vodu v batohu.": [
+      "src/data/field-kit.ts:39"
+    ],
+    "Zistite, koľko pitnej vody doma skutočne máte. Dnes stačí začať presným prehľadom.": [
+      "src/data/missions.ts:38"
+    ],
+    "Zmätenosť, kolaps alebo porucha vedomia pri horúčave sú dôvodom okamžite privolať odbornú pomoc.": [
+      "src/data/academy.ts:286"
+    ],
+    "Zmeniť jazyk": ["src/components/language-picker.tsx:39"],
+    "Zmeniť scenár": ["src/app/scenarios.tsx:57"],
+    "Zmeňte plán včas": ["src/data/academy.ts:460"],
+    "Známe potraviny, jednoduchá príprava.": ["src/data/field-kit.ts:46"],
+    "Znova overiť pripojenie": ["src/components/access-panel.tsx:51"],
+    "zo 7 krokov hotových · Pokračovať": ["src/app/(tabs)/index.tsx:431"],
+    "Zo skúšobného obdobia zostáva {0} dní.": ["src/app/plus.tsx:113"],
+    "Zobraziť": ["src/app/(tabs)/inventory.tsx:251"],
+    "Zobraziť a zahrnúť osobné údaje": ["src/app/household-card.tsx:215"],
+    "Zobraziť celý postup": ["src/app/guide.tsx:130"],
+    "Zobraziť licenciu — 10 USD / 12 mesiacov": [
+      "src/components/access-panel.tsx:47"
+    ],
+    "Zohľadnite alergie, diéty, deti a obmedzenia domácnosti. Vyberajte bežne používané výrobky, ktoré podľa obalu nevyžadujú varenie a majú vhodné skladovanie.": [
+      "src/data/academy.ts:189"
+    ],
+    "Zohľadnite kondíciu, skúsenosti, denný čas, ročné obdobie a počasie. Aktuálne obmedzenia a výstrahy overte z oficiálnych zdrojov pred odchodom.": [
+      "src/data/academy.ts:449"
+    ],
+    "Zohľadnite menštruačné potreby, deti a ďalšie individuálne požiadavky.": [
+      "src/data/field-kit.ts:201"
+    ],
+    "Zostaňte chránení a sledujte situáciu": ["src/data/scenarios.ts:392"],
+    "Zostaňte pri človeku": ["src/data/academy.ts:268"],
+    "Zoznam je východisko. Obsah prispôsobte konkrétnym osobám, zdravotným potrebám, zvieratám a bezpečnému presunu.": [
+      "src/data/missions.ts:108"
+    ],
+    "Zoznam liekov a dôležitých potrieb": ["src/data/field-kit.ts:115"],
+    "Zoznam vecí nesmie oddialiť potrebný odchod.": [
+      "src/data/scenarios.ts:193"
+    ],
+    "Zoznámte zviera s prepravkou a uložením výbavy. Pri skutočnej udalosti sa riaďte pokynmi záchranných zložiek a nevracajte sa do nebezpečia.": [
+      "src/data/academy.ts:396"
+    ],
+    "Zručnosti sú lepšie,": ["src/app/videos.tsx:70"],
+    "Zrušiť": [
+      "src/app/(tabs)/help.tsx:71",
+      "src/app/(tabs)/help.tsx:322",
+      "src/app/_layout.tsx:41",
+      "src/app/household-card.tsx:43",
+      "src/app/now.tsx:36",
+      "src/app/now.tsx:148",
+      "src/components/ui.tsx:422"
+    ],
+    "Zrušiť úpravu": ["src/app/shopping.tsx:73"],
+    "Zrušiť úpravu kontaktu": ["src/app/(tabs)/plan.tsx:64"],
+    "Zrušiť úpravu úlohy": ["src/app/(tabs)/plan.tsx:238"],
+    "Zvoľte bezpečnú pitnú vodu a vhodnú potravinársku nádobu. Množstvo prispôsobte možnostiam presunu.": [
+      "src/data/field-kit.ts:27"
+    ],
+    "Zvoľte prenosnú pitnú vodu a trvanlivé jedlo, ktoré viete pripraviť alebo zjesť v danej situácii. Celkovú zásobu domácnosti plánujte oddelene; ťažký batoh nesmie brániť presunu.": [
+      "src/data/academy.ts:118"
+    ],
+    "Žiadne automatické strhávanie ďalší rok. Po uplynutí licencie sa sami rozhodnete, či si kúpite ďalšie obdobie.": [
+      "src/app/plus.tsx:96"
+    ],
+    "Žiadne uložené miesta. Nezobrazujeme vymyslené lokality ani demo kryty.": [
+      "src/app/safe-places.tsx:35"
+    ],
+    "Ελληνικά": ["src/i18n/locales.ts:62"],
+    "Русский": ["src/i18n/locales.ts:47"],
+    "Українська": ["src/i18n/locales.ts:57"],
+    "العربية": ["src/i18n/locales.ts:39"],
+    "हिन्दी": ["src/i18n/locales.ts:35"],
+    "বাংলা": ["src/i18n/locales.ts:45"],
+    "简体中文": ["src/i18n/locales.ts:34"]
+  }
+}

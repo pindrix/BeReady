@@ -1,14 +1,17 @@
+import {
+  LocalizedAlert as Alert,
+  LocalizedPressable as Pressable,
+  LocalizedTextInput as TextInput,
+} from "./localized-native";
+import { LocalizedText as Text, useLocale } from "./localized-text";
+import { isRTL, translateText as t } from "../i18n";
 import { useState, type ReactNode } from "react";
 import {
   ActivityIndicator,
-  Alert,
   KeyboardAvoidingView,
   Platform,
-  Pressable,
   ScrollView,
   StyleSheet,
-  Text,
-  TextInput,
   View,
   type KeyboardTypeOptions,
   type StyleProp,
@@ -21,14 +24,17 @@ export function T({
   children,
   muted = false,
   large = false,
+  translate = true,
 }: {
   children: ReactNode;
   muted?: boolean;
   large?: boolean;
+  translate?: boolean;
 }) {
   const c = useTheme();
   return (
     <Text
+      translate={translate}
       style={{
         color: muted ? c.muted : c.text,
         fontSize: large ? 23 : 16,
@@ -131,21 +137,28 @@ export function Button({
 export function Screen({
   title,
   subtitle,
+  subtitleTranslate = true,
   children,
   eyebrow = "VÁŠ PRIESTOR PRE POKOJ",
   headerRight,
 }: {
   title: string;
   subtitle?: string;
+  subtitleTranslate?: boolean;
   eyebrow?: string;
   headerRight?: ReactNode;
   children: ReactNode;
 }) {
-  const c = useTheme();
+  const c = useTheme(),
+    locale = useLocale();
   return (
     <SafeAreaView
       edges={["top", "left", "right"]}
-      style={{ flex: 1, backgroundColor: c.bg }}
+      style={{
+        flex: 1,
+        backgroundColor: c.bg,
+        direction: isRTL(locale) ? "rtl" : "ltr",
+      }}
     >
       <KeyboardAvoidingView
         behavior={Platform.OS === "ios" ? "padding" : undefined}
@@ -206,7 +219,11 @@ export function Screen({
           >
             {title}
           </Text>
-          {subtitle ? <T muted>{subtitle}</T> : null}
+          {subtitle ? (
+            <T muted translate={subtitleTranslate}>
+              {subtitle}
+            </T>
+          ) : null}
           {children}
         </ScrollView>
       </KeyboardAvoidingView>
@@ -310,17 +327,20 @@ export function Check({
   done,
   onPress,
   disabled = false,
+  translateLabel = true,
 }: {
   label: string;
   done: boolean;
   onPress: () => void;
   disabled?: boolean;
+  translateLabel?: boolean;
 }) {
   const c = useTheme();
   return (
     <Pressable
       accessibilityRole="checkbox"
       accessibilityLabel={label}
+      translateLabel={translateLabel}
       accessibilityState={{ checked: done, disabled }}
       disabled={disabled}
       onPress={onPress}
@@ -334,6 +354,7 @@ export function Check({
     >
       <Text style={{ fontSize: 26, color: c.primary }}>{done ? "☑" : "☐"}</Text>
       <Text
+        translate={translateLabel}
         style={{
           flex: 1,
           fontSize: 17,
@@ -358,7 +379,7 @@ export function Progress({ value, label }: { value: number; label: string }) {
       <View
         accessibilityRole="progressbar"
         accessibilityValue={{ min: 0, max: 100, now: Math.round(pct) }}
-        accessibilityLabel={label}
+        accessibilityLabel={t(label)}
         style={{
           height: 8,
           borderRadius: 4,

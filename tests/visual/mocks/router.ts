@@ -1,6 +1,8 @@
 type Destination =
   string | { pathname: string; params?: Record<string, string> };
 export const router = {
+  canGoBack: () => true,
+  replace: () => {},
   push: (destination: Destination) => {
     const path =
       typeof destination === "string" ? destination : destination.pathname;

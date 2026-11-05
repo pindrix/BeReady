@@ -1,0 +1,239 @@
+{
+  "notice": "Real components with development fixtures. Not native-device, payment or professional linguistic validation.",
+  "reports": [
+    {
+      "screen": "home",
+      "locale": "sk",
+      "errors": [],
+      "viewport": 390,
+      "documentWidth": 390,
+      "bodyText": 1437,
+      "visibleOverflow": []
+    },
+    {
+      "screen": "home",
+      "locale": "en",
+      "errors": [],
+      "viewport": 390,
+      "documentWidth": 390,
+      "bodyText": 1483,
+      "visibleOverflow": []
+    },
+    {
+      "screen": "home",
+      "locale": "zh",
+      "errors": [],
+      "viewport": 390,
+      "documentWidth": 390,
+      "bodyText": 559,
+      "visibleOverflow": []
+    },
+    {
+      "screen": "home",
+      "locale": "hi",
+      "errors": [],
+      "viewport": 390,
+      "documentWidth": 390,
+      "bodyText": 1380,
+      "visibleOverflow": []
+    },
+    {
+      "screen": "home",
+      "locale": "es",
+      "errors": [],
+      "viewport": 390,
+      "documentWidth": 390,
+      "bodyText": 1683,
+      "visibleOverflow": []
+    },
+    {
+      "screen": "home",
+      "locale": "ar",
+      "errors": [],
+      "viewport": 390,
+      "documentWidth": 390,
+      "bodyText": 1305,
+      "visibleOverflow": []
+    },
+    {
+      "screen": "home",
+      "locale": "fr",
+      "errors": [],
+      "viewport": 390,
+      "documentWidth": 390,
+      "bodyText": 1794,
+      "visibleOverflow": []
+    },
+    {
+      "screen": "home",
+      "locale": "bn",
+      "errors": [],
+      "viewport": 390,
+      "documentWidth": 390,
+      "bodyText": 1471,
+      "visibleOverflow": []
+    },
+    {
+      "screen": "home",
+      "locale": "pt",
+      "errors": [],
+      "viewport": 390,
+      "documentWidth": 390,
+      "bodyText": 1709,
+      "visibleOverflow": []
+    },
+    {
+      "screen": "home",
+      "locale": "ru",
+      "errors": [],
+      "viewport": 390,
+      "documentWidth": 390,
+      "bodyText": 1559,
+      "visibleOverflow": []
+    },
+    {
+      "screen": "home",
+      "locale": "id",
+      "errors": [],
+      "viewport": 390,
+      "documentWidth": 390,
+      "bodyText": 1707,
+      "visibleOverflow": []
+    },
+    {
+      "screen": "home",
+      "locale": "de",
+      "errors": [],
+      "viewport": 390,
+      "documentWidth": 390,
+      "bodyText": 1676,
+      "visibleOverflow": []
+    },
+    {
+      "screen": "home",
+      "locale": "it",
+      "errors": [],
+      "viewport": 390,
+      "documentWidth": 390,
+      "bodyText": 1729,
+      "visibleOverflow": []
+    },
+    {
+      "screen": "home",
+      "locale": "pl",
+      "errors": [],
+      "viewport": 390,
+      "documentWidth": 390,
+      "bodyText": 1552,
+      "visibleOverflow": []
+    },
+    {
+      "screen": "home",
+      "locale": "uk",
+      "errors": [],
+      "viewport": 390,
+      "documentWidth": 390,
+      "bodyText": 1500,
+      "visibleOverflow": []
+    },
+    {
+      "screen": "home",
+      "locale": "cs",
+      "errors": [],
+      "viewport": 390,
+      "documentWidth": 390,
+      "bodyText": 1421,
+      "visibleOverflow": []
+    },
+    {
+      "screen": "home",
+      "locale": "hu",
+      "errors": [],
+      "viewport": 390,
+      "documentWidth": 390,
+      "bodyText": 1593,
+      "visibleOverflow": []
+    },
+    {
+      "screen": "home",
+      "locale": "nl",
+      "errors": [],
+      "viewport": 390,
+      "documentWidth": 390,
+      "bodyText": 1563,
+      "visibleOverflow": []
+    },
+    {
+      "screen": "home",
+      "locale": "ro",
+      "errors": [],
+      "viewport": 390,
+      "documentWidth": 390,
+      "bodyText": 1672,
+      "visibleOverflow": []
+    },
+    {
+      "screen": "home",
+      "locale": "el",
+      "errors": [],
+      "viewport": 390,
+      "documentWidth": 390,
+      "bodyText": 1703,
+      "visibleOverflow": []
+    },
+    {
+      "screen": "home",
+      "locale": "sv",
+      "errors": [],
+      "viewport": 390,
+      "documentWidth": 390,
+      "bodyText": 1470,
+      "visibleOverflow": []
+    },
+    {
+      "screen": "kit",
+      "locale": "sk",
+      "errors": [],
+      "viewport": 390,
+      "documentWidth": 390,
+      "bodyText": 1907,
+      "visibleOverflow": []
+    },
+    {
+      "screen": "scenarios",
+      "locale": "sk",
+      "errors": [],
+      "viewport": 390,
+      "documentWidth": 390,
+      "bodyText": 1112,
+      "visibleOverflow": []
+    },
+    {
+      "screen": "plus",
+      "locale": "sk",
+      "errors": [],
+      "viewport": 390,
+      "documentWidth": 390,
+      "bodyText": 1667,
+      "visibleOverflow": []
+    },
+    {
+      "screen": "kit",
+      "locale": "ar",
+      "errors": [],
+      "viewport": 390,
+      "documentWidth": 390,
+      "bodyText": 1772,
+      "visibleOverflow": []
+    },
+    {
+      "screen": "plus",
+      "locale": "de",
+      "errors": [],
+      "viewport": 390,
+      "documentWidth": 390,
+      "bodyText": 1965,
+      "visibleOverflow": []
+    }
+  ]
+}

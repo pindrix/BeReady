@@ -1,5 +1,7 @@
+import { LocalizedPressable as Pressable } from "../../components/localized-native";
+import { LocalizedText as Text } from "../../components/localized-text";
 import { useState } from "react";
-import { Pressable, ScrollView, Text, View } from "react-native";
+import { ScrollView, View } from "react-native";
 import { router } from "expo-router";
 import { Button, Card, Field, Screen, T, confirm } from "../../components/ui";
 import {
@@ -207,6 +209,7 @@ export default function InventoryScreen() {
               <View style={{ flex: 1, gap: 5 }}>
                 <Text
                   style={{ fontSize: 18, fontWeight: "800", color: c.text }}
+                  translate={false}
                 >
                   {item.name}
                 </Text>
@@ -311,7 +314,7 @@ export default function InventoryScreen() {
                   </T>
                 ) : null}
                 {item.purchased ? <T muted>Nákup: {item.purchased}</T> : null}
-                {item.note ? <T>{item.note}</T> : null}
+                {item.note ? <T translate={false}>{item.note}</T> : null}
               </View>
             ) : null}
           </Card>

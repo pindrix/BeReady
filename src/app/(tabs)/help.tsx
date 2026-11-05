@@ -1,12 +1,14 @@
-import { useState } from "react";
 import {
-  Alert,
-  Linking,
-  Pressable,
-  ScrollView,
-  Text,
-  View,
-} from "react-native";
+  LocalizedAlert as Alert,
+  LocalizedPressable as Pressable,
+} from "../../components/localized-native";
+import {
+  LocalizedText as Text,
+  useLocale,
+} from "../../components/localized-text";
+import { translateText as t } from "../../i18n";
+import { useState } from "react";
+import { Linking, ScrollView, View } from "react-native";
 import { router } from "expo-router";
 import {
   Button,
@@ -38,13 +40,23 @@ import { useStore } from "../../state/store";
 import { useTheme } from "../../theme/theme";
 
 export default function HelpScreen() {
+  useLocale();
   const c = useTheme(),
     s = useStore(),
     a = useAction(),
     [query, setQuery] = useState(""),
     [category, setCategory] = useState<AcademyFilter>("Všetko");
   const saved = savedGuideIds(s.data?.checklists ?? []),
-    results = searchAcademy(query, category, saved);
+    results = searchAcademy("", category, saved).filter((g) => {
+      const fold = (v: string) =>
+        v
+          .normalize("NFD")
+          .replace(/[\u0300-\u036f]/g, "")
+          .toLocaleLowerCase();
+      return fold(
+        [g.title, g.summary, t(g.title), t(g.summary), t(g.eyebrow)].join(" "),
+      ).includes(fold(query));
+    });
   return (
     <Screen
       title="Vedieť znamená viac."

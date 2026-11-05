@@ -1,13 +1,15 @@
+import { LocalizedPressable as Pressable } from "../components/localized-native";
+import { LocalizedText as Text } from "../components/localized-text";
 import { useState } from "react";
-import { Pressable, Share, Text, View } from "react-native";
+import { View } from "react-native";
+import { LinearGradient } from "expo-linear-gradient";
 import { router } from "expo-router";
 import {
   Button,
   Card,
-  ErrorText,
-  Row,
   Screen,
   T,
+  ErrorText,
   useAction,
 } from "../components/ui";
 import {
@@ -16,284 +18,208 @@ import {
   Icon,
   IconButton,
   SectionTitle,
-  Tile,
-  type IconName,
 } from "../components/visual";
-import { useTheme } from "../theme/theme";
+import { useLicense, BILLING_CONFIGURATION } from "../state/license";
+import { LICENSE_TERMS } from "../domain/license";
 
-const roadmap: {
-  id: string;
-  icon: IconName;
-  title: string;
-  summary: string;
-  detail: string;
-}[] = [
-  {
-    id: "households",
-    icon: "home-outline",
-    title: "Viac miest, jeden prehľad",
-    summary: "Domov, chata alebo pomoc rodičom.",
-    detail:
-      "Plánovaný komfortný modul pre samostatné profily domácností a rýchle prepínanie lokálnych zásob. Základný profil aj jeho dáta by zostali bezplatné. Zatiaľ nie je implementovaný.",
-  },
-  {
-    id: "packs",
-    icon: "map-outline",
-    title: "Tematické výpravy",
-    summary: "Praktické učenie v širších súvislostiach.",
-    detail:
-      "Nápad na autorské ilustrované balíky a cvičenia pripravené s odborníkmi: sezónna pripravenosť, domácnosť so zvieratami alebo víkend mimo mesta. Základné núdzové postupy by zostali zadarmo. Zatiaľ nie sú v predaji.",
-  },
-  {
-    id: "reports",
-    icon: "pie-chart-outline",
-    title: "Prehľad, ktorý ide do hĺbky",
-    summary: "Trend zásob a pohodlnejšie plánovanie.",
-    detail:
-      "Plánované rozšírené prehľady, vlastné organizačné šablóny a exporty pre domácnosť. Nejde o odhad šance na prežitie ani zdravotnú analýzu. Zatiaľ nie je implementované.",
-  },
-];
-const freeFeatures = [
-  "Offline krízové postupy a núdzové kontakty",
-  "Profil, zásoby a výpočty jedla a vody",
-  "Nákupný zoznam a osobný krízový plán",
-  "Základné misie a rodinná krízová karta",
-  "Export aj import vlastných údajov",
-];
 export default function PlusScreen() {
-  const c = useTheme(),
-    a = useAction(),
-    [expanded, setExpanded] = useState<string | null>("households"),
-    [showFree, setShowFree] = useState(false);
+  const action = useAction(),
+    l = useLicense(),
+    [details, setDetails] = useState(false);
+  const active = l.state?.status === "licensed";
   return (
     <Screen
-      title="Viac pokoja. Viac možností."
-      eyebrow="BUDÚCNOSŤ READY"
-      subtitle="Dobrý produkt môže rásť. Základná pomoc má zostať pre každého."
+      title="Jeden plán. Celý rok."
+      subtitle="14 dní online skúšania. Potom jednorazová licencia na 12 mesiacov — bez automatického obnovenia."
+      eyebrow="READY · ROČNÁ LICENCIA"
       headerRight={
         <IconButton
-          name="arrow-back"
-          label="Späť"
-          onPress={() => router.back()}
+          name="close-outline"
+          label="Zavrieť licenciu"
+          onPress={() =>
+            router.canGoBack() ? router.back() : router.replace("/")
+          }
         />
       }
     >
-      <View
-        style={{
-          backgroundColor: c.hero,
-          borderRadius: 30,
-          padding: 24,
-          gap: 18,
-          overflow: "hidden",
-        }}
+      <LinearGradient
+        colors={["#214B40", "#132E30"]}
+        style={{ borderRadius: 30, padding: 27, gap: 22, overflow: "hidden" }}
       >
-        <View
-          pointerEvents="none"
-          style={{
-            height: 180,
-            width: 180,
-            borderRadius: 90,
-            borderColor: "#396558",
-            borderWidth: 35,
-            position: "absolute",
-            right: -65,
-            top: -55,
-          }}
-        />
         <View
           style={{
             flexDirection: "row",
             alignItems: "center",
             justifyContent: "space-between",
-            gap: 12,
           }}
         >
-          <View
-            style={{
-              width: 54,
-              height: 54,
-              borderRadius: 18,
-              backgroundColor: "#345E4E",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            <Icon name="sparkles-outline" color="#D3E3B0" size={30} />
-          </View>
           <Text
             style={{
-              fontSize: 10,
-              letterSpacing: 1.8,
+              fontSize: 12,
               fontWeight: "800",
-              color: "#D3E3B0",
+              letterSpacing: 2,
+              color: "#D1EB9A",
             }}
           >
-            KONCEPT · NIE JE V PREDAJI
+            READY / VÁŠ ROK PRÍPRAVY
           </Text>
+          <Icon name="shield-checkmark-outline" size={30} color="#D1EB9A" />
         </View>
-        <Text
-          style={{
-            fontSize: 38,
-            fontWeight: "800",
-            color: "#FFF9EC",
-            letterSpacing: -1,
-          }}
-        >
-          READY Plus
-        </Text>
-        <Text style={{ fontSize: 17, lineHeight: 25, color: "#D9E6D8" }}>
-          Pohodlnejšie plánovanie a premyslené rozšírenia. Bez reklamy vo
-          chvíli, keď potrebujete pomoc.
-        </Text>
-        <View
-          style={{
-            backgroundColor: "#284C3F",
-            borderRadius: 16,
-            padding: 15,
-            flexDirection: "row",
-            gap: 10,
-            alignItems: "center",
-          }}
-        >
-          <Icon name="lock-open-outline" size={22} color="#D3E3B0" />
+        <View>
           <Text
-            style={{ fontSize: 14, lineHeight: 21, color: "#F0F2DE", flex: 1 }}
+            style={{
+              fontSize: 61,
+              lineHeight: 70,
+              fontWeight: "800",
+              color: "white",
+              letterSpacing: -3,
+            }}
           >
-            Všetky dnešné funkcie READY sú dostupné zadarmo.
+            10 <Text style={{ fontSize: 23, letterSpacing: 0 }}>USD</Text>
+          </Text>
+          <Text style={{ fontSize: 15, color: "#C7DBCE" }}>
+            jedna platba · 12 mesiacov prístupu
           </Text>
         </View>
-      </View>
-      <Callout icon="heart-outline" title="Pomoc bez platobnej brány">
-        <T muted>
-          Núdzové kontakty, základné offline návody a vaše vlastné údaje
-          nepatria za predplatné.
-        </T>
-      </Callout>
-      <SectionTitle
-        title="Čo môže prísť ďalej"
-        subtitle="Smerovanie produktu. Tieto rozšírenia dnes nie sú aktívne."
-      />
-      {roadmap.map((feature) => (
-        <Card key={feature.id}>
-          <Pressable
-            accessibilityRole="button"
-            accessibilityLabel={`${expanded === feature.id ? "Zavrieť" : "Preskúmať"}: ${feature.title}`}
-            accessibilityState={{ expanded: expanded === feature.id }}
-            onPress={() =>
-              setExpanded(expanded === feature.id ? null : feature.id)
-            }
-            style={{ minHeight: 82, gap: 12 }}
+        <View style={{ height: 1, backgroundColor: "#3C5C50" }} />
+        {[
+          "Offline návody a ilustrácie priamo v telefóne",
+          "Zásoby, výpočty a vizuálny evakuačný batoh",
+          "Interaktívne scenáre, misie a rodinný plán",
+        ].map((label) => (
+          <View
+            key={label}
+            style={{ flexDirection: "row", alignItems: "center", gap: 12 }}
           >
-            <Row>
-              <View
-                style={{
-                  width: 46,
-                  height: 46,
-                  borderRadius: 15,
-                  backgroundColor: c.sage,
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-              >
-                <Icon name={feature.icon} size={25} />
-              </View>
-              <View style={{ flex: 1, gap: 4 }}>
-                <Text
-                  style={{ fontSize: 17, fontWeight: "800", color: c.text }}
-                >
-                  {feature.title}
-                </Text>
-                <Text style={{ fontSize: 13, lineHeight: 19, color: c.muted }}>
-                  {feature.summary}
-                </Text>
-              </View>
-              <Icon
-                name={expanded === feature.id ? "chevron-up" : "chevron-down"}
-                size={20}
-              />
-            </Row>
-          </Pressable>
-          {expanded === feature.id ? (
-            <View style={{ gap: 10 }}>
-              <Badge label="PLÁNOVANÉ" tone="orange" />
-              <T muted>{feature.detail}</T>
-            </View>
-          ) : null}
-        </Card>
-      ))}
+            <Icon name="checkmark-circle" size={22} color="#D1EB9A" />
+            <Text
+              style={{ flex: 1, color: "white", fontSize: 14, lineHeight: 21 }}
+            >
+              {label}
+            </Text>
+          </View>
+        ))}
+        <Text style={{ color: "#BDCEC5", fontSize: 11, lineHeight: 17 }}>
+          Žiadne automatické strhávanie ďalší rok. Po uplynutí licencie sa sami
+          rozhodnete, či si kúpite ďalšie obdobie.
+        </Text>
+      </LinearGradient>
       <Card>
-        <Row>
-          <Icon name="shield-checkmark-outline" size={28} />
-          <View style={{ flex: 1 }}>
-            <T large>Základ zostáva otvorený</T>
-          </View>
-        </Row>
-        <T muted>
-          Žiadna aktivácia predplatného, žiadne inkaso a žiadne skryté skúšobné
-          obdobie. Platené funkcie v tejto verzii nie sú zapnuté a cena nie je
-          stanovená.
-        </T>
-        <Button
-          title={
-            showFree ? "Skryť bezplatné funkcie" : "Pozrieť bezplatné funkcie"
+        <Badge
+          label={
+            active
+              ? "LICENCIA AKTÍVNA"
+              : l.connectivity === "offline"
+                ? "BEZ PRIPOJENIA"
+                : "ONLINE SKÚŠKA"
           }
-          secondary
-          onPress={() => setShowFree(!showFree)}
         />
-        {showFree ? (
-          <View style={{ gap: 12 }}>
-            {freeFeatures.map((feature) => (
-              <View key={feature} style={{ flexDirection: "row", gap: 10 }}>
-                <Icon name="checkmark-circle" size={20} />
-                <View style={{ flex: 1 }}>
-                  <T>{feature}</T>
-                </View>
-              </View>
-            ))}
-          </View>
-        ) : null}
+        <T large>
+          {active
+            ? "Offline režim je odomknutý."
+            : `Zo skúšobného obdobia zostáva ${l.state?.remainingTrialDays ?? LICENSE_TERMS.trialDays} dní.`}
+        </T>
+        <T muted>
+          Skúška trvá 14 dní od prvého spustenia. Offline funkcie sú dostupné až
+          po overenej platbe. Na prvý nákup a obnovenie nákupu je potrebné
+          pripojenie.
+        </T>
       </Card>
-      <SectionTitle
-        title="Užitočné už dnes"
-        subtitle="Skutočné nástroje, ktoré si môžete otvoriť hneď."
+      {!BILLING_CONFIGURATION.configured ? (
+        <Callout icon="construct-outline" title="Platby ešte nie sú pripojené">
+          <T muted>
+            Táto vývojová verzia nič neúčtuje. Nákup ani overený offline prístup
+            tu zatiaľ nie je možné aktivovať. Online náhľad zostáva dostupný aj
+            po konci skúšky; produkčné obmedzenie sa zapne po pripojení Google
+            Play Billing.
+          </T>
+        </Callout>
+      ) : null}
+      <ErrorText message={action.error} />
+      <Button
+        title="Kúpiť ročnú licenciu — 10 USD"
+        disabled={!BILLING_CONFIGURATION.configured}
+        onPress={() => void action.run(l.purchase)}
       />
-      <Row>
-        <Tile
-          icon="trail-sign-outline"
-          title="Malé kroky"
-          subtitle="Sedem praktických misií bez časového tlaku."
-          tone="green"
-          onPress={() => router.push("/missions")}
-        />
-        <Tile
-          icon="card-outline"
-          title="Rodinná karta"
-          subtitle="Dôležité kontakty a miesto stretnutia poruke."
-          tone="blue"
-          onPress={() => router.push("/household-card")}
-        />
-      </Row>
-      <Card>
-        <T large>Povedzte o READY ďalej</T>
-        <T muted>
-          Ak vám projekt pomáha, môžete odkaz vedome zdieľať. Žiadne kontakty
-          domácnosti sa k nemu nepridávajú.
-        </T>
-        <ErrorText message={a.error} />
-        <Button
-          title="Zdieľať odkaz na projekt"
-          secondary
-          onPress={() =>
-            void a.run(async () => {
-              await Share.share({
-                title: "READY — Krízová pripravenosť",
-                message:
-                  "READY — lokálny plán, zásoby a praktická pripravenosť domácnosti. Projekt: https://github.com/pindrix/BeReady",
-              });
-            })
-          }
-        />
-      </Card>
+      <Button
+        title="Obnoviť overený nákup"
+        secondary
+        disabled={!BILLING_CONFIGURATION.configured}
+        onPress={() => void action.run(l.restorePurchase)}
+      />
+      <T muted>
+        Cieľová cena je 10 USD za ročné obdobie. Konečnú cenu v miestnej mene a
+        prípadné dane musí pred potvrdením zobraziť Google Play. Zobrazená suma
+        nie je aktívna ponuka obchodu.
+      </T>
+      <SectionTitle title="Jasné podmienky, žiadne prekvapenia" />
+      <View style={{ gap: 12 }}>
+        {[
+          {
+            icon: "wifi-outline" as const,
+            title: "14 dní na vyskúšanie",
+            text: "Počas skúšobného obdobia je pri používaní funkcií potrebný internet.",
+          },
+          {
+            icon: "cloud-offline-outline" as const,
+            title: "Offline až po zaplatení",
+            text: "Po overení zaplatenej licencie zostávajú návody, výbava a údaje v zariadení. YouTube zostáva online služba.",
+          },
+          {
+            icon: "calendar-outline" as const,
+            title: "Licencia na 12 mesiacov",
+            text: "Nie je to doživotná licencia ani automaticky obnovované predplatné.",
+          },
+          {
+            icon: "lock-closed-outline" as const,
+            title: "Vaše dáta zostávajú vaše",
+            text: "Po skončení licencie sa údaje automaticky nemažú. Nastavenia, čítanie vlastných údajov, export a tiesňové čísla zostávajú dostupné.",
+          },
+        ].map((x) => (
+          <Card key={x.title}>
+            <View style={{ flexDirection: "row", gap: 14 }}>
+              <Icon name={x.icon} />
+              <View style={{ flex: 1, gap: 6 }}>
+                <T large>{x.title}</T>
+                <T muted>{x.text}</T>
+              </View>
+            </View>
+          </Card>
+        ))}
+      </View>
+      <Pressable
+        accessibilityRole="button"
+        accessibilityLabel="Ako funguje licencia"
+        onPress={() => setDetails(!details)}
+        style={{
+          minHeight: 52,
+          flexDirection: "row",
+          justifyContent: "space-between",
+          alignItems: "center",
+        }}
+      >
+        <T>Ako funguje licencia</T>
+        <Icon name={details ? "chevron-up" : "chevron-down"} size={18} />
+      </Pressable>
+      {details ? (
+        <Card>
+          <T>
+            Platný nákup musí overiť obchod alebo dôveryhodná podpisová služba.
+            Samotná zmena dátumu, import zálohy alebo stlačenie tlačidla
+            licenciu neaktivuje.
+          </T>
+          <T muted>
+            V tejto verzii je pripravená politika prístupu a lokálna evidencia
+            skúšky. Bez prepojenia s obchodom nevznikne doklad o platbe ani
+            aktívna licencia.
+          </T>
+        </Card>
+      ) : null}
+      <Button
+        title="Nastavenia a export dát"
+        secondary
+        onPress={() => router.push("/settings")}
+      />
     </Screen>
   );
 }

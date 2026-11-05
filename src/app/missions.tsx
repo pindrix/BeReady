@@ -1,5 +1,7 @@
+import { LocalizedPressable as Pressable } from "../components/localized-native";
+import { LocalizedText as Text } from "../components/localized-text";
 import { useState } from "react";
-import { Pressable, Text, View } from "react-native";
+import { View } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { router } from "expo-router";
 import {

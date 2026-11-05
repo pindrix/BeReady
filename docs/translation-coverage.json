@@ -1,0 +1,185 @@
+{
+  "notice": "Structural coverage only, not professional linguistic or medical review.",
+  "reports": [
+    {
+      "code": "en",
+      "translated": 1263,
+      "total": 1263,
+      "missing": 0,
+      "extra": 0,
+      "invalidPlaceholders": 0,
+      "suspicious": 0
+    },
+    {
+      "code": "zh",
+      "translated": 1263,
+      "total": 1263,
+      "missing": 0,
+      "extra": 0,
+      "invalidPlaceholders": 0,
+      "suspicious": 0
+    },
+    {
+      "code": "hi",
+      "translated": 1263,
+      "total": 1263,
+      "missing": 0,
+      "extra": 0,
+      "invalidPlaceholders": 0,
+      "suspicious": 0
+    },
+    {
+      "code": "es",
+      "translated": 1263,
+      "total": 1263,
+      "missing": 0,
+      "extra": 0,
+      "invalidPlaceholders": 0,
+      "suspicious": 0
+    },
+    {
+      "code": "ar",
+      "translated": 1263,
+      "total": 1263,
+      "missing": 0,
+      "extra": 0,
+      "invalidPlaceholders": 0,
+      "suspicious": 0
+    },
+    {
+      "code": "fr",
+      "translated": 1263,
+      "total": 1263,
+      "missing": 0,
+      "extra": 0,
+      "invalidPlaceholders": 0,
+      "suspicious": 0
+    },
+    {
+      "code": "bn",
+      "translated": 1263,
+      "total": 1263,
+      "missing": 0,
+      "extra": 0,
+      "invalidPlaceholders": 0,
+      "suspicious": 0
+    },
+    {
+      "code": "pt",
+      "translated": 1263,
+      "total": 1263,
+      "missing": 0,
+      "extra": 0,
+      "invalidPlaceholders": 0,
+      "suspicious": 0
+    },
+    {
+      "code": "ru",
+      "translated": 1263,
+      "total": 1263,
+      "missing": 0,
+      "extra": 0,
+      "invalidPlaceholders": 0,
+      "suspicious": 0
+    },
+    {
+      "code": "id",
+      "translated": 1263,
+      "total": 1263,
+      "missing": 0,
+      "extra": 0,
+      "invalidPlaceholders": 0,
+      "suspicious": 0
+    },
+    {
+      "code": "de",
+      "translated": 1263,
+      "total": 1263,
+      "missing": 0,
+      "extra": 0,
+      "invalidPlaceholders": 0,
+      "suspicious": 0
+    },
+    {
+      "code": "it",
+      "translated": 1263,
+      "total": 1263,
+      "missing": 0,
+      "extra": 0,
+      "invalidPlaceholders": 0,
+      "suspicious": 0
+    },
+    {
+      "code": "pl",
+      "translated": 1263,
+      "total": 1263,
+      "missing": 0,
+      "extra": 0,
+      "invalidPlaceholders": 0,
+      "suspicious": 0
+    },
+    {
+      "code": "uk",
+      "translated": 1263,
+      "total": 1263,
+      "missing": 0,
+      "extra": 0,
+      "invalidPlaceholders": 0,
+      "suspicious": 0
+    },
+    {
+      "code": "cs",
+      "translated": 1263,
+      "total": 1263,
+      "missing": 0,
+      "extra": 0,
+      "invalidPlaceholders": 0,
+      "suspicious": 0
+    },
+    {
+      "code": "hu",
+      "translated": 1263,
+      "total": 1263,
+      "missing": 0,
+      "extra": 0,
+      "invalidPlaceholders": 0,
+      "suspicious": 0
+    },
+    {
+      "code": "nl",
+      "translated": 1263,
+      "total": 1263,
+      "missing": 0,
+      "extra": 0,
+      "invalidPlaceholders": 0,
+      "suspicious": 0
+    },
+    {
+      "code": "ro",
+      "translated": 1263,
+      "total": 1263,
+      "missing": 0,
+      "extra": 0,
+      "invalidPlaceholders": 0,
+      "suspicious": 0
+    },
+    {
+      "code": "el",
+      "translated": 1263,
+      "total": 1263,
+      "missing": 0,
+      "extra": 0,
+      "invalidPlaceholders": 0,
+      "suspicious": 0
+    },
+    {
+      "code": "sv",
+      "translated": 1263,
+      "total": 1263,
+      "missing": 0,
+      "extra": 0,
+      "invalidPlaceholders": 0,
+      "suspicious": 0
+    }
+  ]
+}

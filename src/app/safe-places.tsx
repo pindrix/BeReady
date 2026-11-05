@@ -39,13 +39,15 @@ export default function SafePlaces() {
       ) : null}
       {view.places.map((p) => (
         <Card key={p.id}>
-          <T large>{p.name}</T>
+          <T large translate={false}>
+            {p.name}
+          </T>
           <T>{p.label}</T>
           <T>
             {p.type} · {p.status}
           </T>
           <T>Dátum uvedeného overenia: {p.verified}</T>
-          <T>{p.note}</T>
+          <T translate={false}>{p.note}</T>
           <T muted>{p.sourceUrl}</T>
           <Button
             title={`Zdroj miesta: ${p.name} (online)`}

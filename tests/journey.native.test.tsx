@@ -1,8 +1,10 @@
+import { setLocale, translateText } from "../src/i18n";
 import {
   render,
   screen,
   fireEvent,
   waitFor,
+  act,
 } from "@testing-library/react-native";
 import MissionsScreen from "../src/app/missions";
 import PlusScreen from "../src/app/plus";
@@ -10,6 +12,15 @@ import HouseholdCardScreen from "../src/app/household-card";
 import { useStore } from "../src/state/store";
 import { defaultHousehold, type State } from "../src/types/model";
 
+jest.mock("../src/state/license", () => ({
+  useLicense: () => ({
+    state: { status: "trial", remainingTrialDays: 14 },
+    connectivity: "online",
+    error: "",
+    refresh: jest.fn(),
+  }),
+  BILLING_CONFIGURATION: { configured: false },
+}));
 jest.mock("../src/state/store", () => ({ useStore: jest.fn() }));
 const mockStore = jest.mocked(useStore);
 const state: State = {
@@ -86,19 +97,47 @@ test("dokončenie misie je možné vrátiť medzi nesplnené", async () => {
     ),
   );
 });
-test("Plus jasne označuje koncept a bezplatné nástroje sa dajú rozbaliť", async () => {
+test("ročná licencia jasne ukazuje podmienky a bez pripojeného obchodu neponúka falošnú platbu", async () => {
   await render(<PlusScreen />);
-  expect(screen.getByText("KONCEPT · NIE JE V PREDAJI")).toBeTruthy();
-  await fireEvent.press(
-    screen.getByRole("button", { name: "Pozrieť bezplatné funkcie" }),
-  );
+  expect(screen.getByText("Platby ešte nie sú pripojené")).toBeTruthy();
   expect(
-    screen.getByText("Offline krízové postupy a núdzové kontakty"),
-  ).toBeTruthy();
-  expect(screen.getByRole("button", { name: "Rodinná karta" })).toBeTruthy();
+    screen.getByRole("button", { name: "Kúpiť ročnú licenciu — 10 USD" }).props
+      .accessibilityState.disabled,
+  ).toBe(true);
+  expect(
+    screen.getByRole("button", { name: "Obnoviť overený nákup" }).props
+      .accessibilityState.disabled,
+  ).toBe(true);
+  await fireEvent.press(
+    screen.getByRole("button", { name: "Ako funguje licencia" }),
+  );
+  expect(screen.getByText(/Platný nákup musí overiť/)).toBeTruthy();
 });
 test("rodinná karta pred odhalením nevykreslí súkromný kontakt ani miesto", async () => {
   await render(<HouseholdCardScreen />);
   expect(screen.queryByText("Súkromný kontakt")).toBeNull();
   expect(screen.queryByText("Súkromné miesto")).toBeNull();
+});
+
+test("osobný kontakt zostáva pôvodný aj pri arabskom rozhraní a známom názve zo slovníka", async () => {
+  await setLocale("ar");
+  try {
+    mockStore.mockReturnValue({
+      ...mockStore(),
+      data: {
+        ...state,
+        contacts: [{ id: "c", name: "Pomoc", details: "Pitná voda" }],
+      },
+    });
+    await render(<HouseholdCardScreen />);
+    await fireEvent.press(
+      screen.getByRole("checkbox", {
+        name: translateText("Zobraziť a zahrnúť osobné údaje", "ar"),
+      }),
+    );
+    expect(screen.getByText("Pomoc")).toBeTruthy();
+    expect(screen.getByText("Pitná voda")).toBeTruthy();
+  } finally {
+    await act(() => setLocale("sk"));
+  }
 });

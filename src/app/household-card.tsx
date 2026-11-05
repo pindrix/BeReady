@@ -1,5 +1,8 @@
+import { LocalizedAlert as Alert } from "../components/localized-native";
+import { LocalizedText as Text, useLocale } from "../components/localized-text";
+import { translateText as t } from "../i18n";
 import { useState } from "react";
-import { Alert, Share, Text, View } from "react-native";
+import { Share, View } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { router } from "expo-router";
 import {
@@ -18,6 +21,7 @@ import { useStore } from "../state/store";
 import { useTheme } from "../theme/theme";
 
 export default function HouseholdCardScreen() {
+  useLocale();
   const { data } = useStore(),
     c = useTheme(),
     action = useAction();
@@ -28,7 +32,7 @@ export default function HouseholdCardScreen() {
     data?.contacts ?? [],
     personal,
   );
-  const shareText = householdCardText(card);
+  const shareText = householdCardText(card, t);
   function share() {
     Alert.alert(
       personal ? "Zdieľať aj osobné údaje?" : "Zdieľať núdzovú kartu?",
@@ -58,7 +62,7 @@ export default function HouseholdCardScreen() {
   return (
     <Screen
       title="Karta, ktorú máte poruke"
-      subtitle="Dôležité čísla a dohoda domácnosti na jednom mieste. Zadarmo, bez registrácie."
+      subtitle="Dôležité čísla a dohoda domácnosti na jednom mieste."
     >
       <Button title="Späť" secondary onPress={() => router.back()} />
       <View
@@ -106,7 +110,10 @@ export default function HouseholdCardScreen() {
         >
           {card.title}
         </Text>
-        <Text style={{ color: "#B9CBD5", fontSize: 14, fontWeight: "600" }}>
+        <Text
+          style={{ color: "#B9CBD5", fontSize: 14, fontWeight: "600" }}
+          translate={!card.personal}
+        >
           {card.household}
         </Text>
         <View style={{ gap: 10 }}>
@@ -165,7 +172,10 @@ export default function HouseholdCardScreen() {
               MIESTO STRETNUTIA
             </Text>
           </Row>
-          <Text style={{ color: "#FFFFFF", fontSize: 17, lineHeight: 25 }}>
+          <Text
+            style={{ color: "#FFFFFF", fontSize: 17, lineHeight: 25 }}
+            translate={!card.personal}
+          >
             {card.meeting}
           </Text>
         </View>
@@ -178,11 +188,13 @@ export default function HouseholdCardScreen() {
               <View key={i} style={{ gap: 3 }}>
                 <Text
                   style={{ color: "#FFFFFF", fontSize: 16, fontWeight: "700" }}
+                  translate={false}
                 >
                   {contact.name}
                 </Text>
                 <Text
                   style={{ color: "#B9CBD5", fontSize: 15, lineHeight: 22 }}
+                  translate={false}
                 >
                   {contact.details}
                 </Text>

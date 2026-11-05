@@ -1,5 +1,8 @@
+import { LocalizedPressable as Pressable } from "./localized-native";
+import { LocalizedText as Text, useLocale } from "./localized-text";
+import { isRTL, translateText as t } from "../i18n";
 import { type ComponentProps, type ReactNode } from "react";
-import { Pressable, Text, View } from "react-native";
+import { View } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import Svg, { Circle } from "react-native-svg";
 import { useTheme } from "../theme/theme";
@@ -13,10 +16,18 @@ export function Icon({
   size?: number;
   color?: string;
 }) {
-  const c = useTheme();
+  const c = useTheme(),
+    locale = useLocale();
+  const mirror: Partial<Record<IconName, IconName>> = {
+    "arrow-forward": "arrow-back",
+    "arrow-back": "arrow-forward",
+    "chevron-forward": "chevron-back",
+    "chevron-back": "chevron-forward",
+  };
+  const icon = isRTL(locale) ? (mirror[name] ?? name) : name;
   return (
     <Ionicons
-      name={name}
+      name={icon}
       size={size}
       color={color ?? c.primary}
       accessible={false}
@@ -233,7 +244,9 @@ export function Ring({
         alignItems: "center",
         justifyContent: "center",
       }}
-      accessibilityLabel={`Cieľ zásob ${goal} dní. Vonkajší kruh jedlo, stredný voda, vnútorný checklist.`}
+      accessibilityLabel={t(
+        `Cieľ zásob ${goal} dní. Vonkajší kruh jedlo, stredný voda, vnútorný checklist.`,
+      )}
     >
       <Svg
         width={size}

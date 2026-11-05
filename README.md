@@ -1,16 +1,17 @@
-# READY 1.1 — Domácnosť pripravená krok za krokom
+# READY 1.2 — Domácnosť pripravená krok za krokom
 
-Mobilné MVP pre slovenskú domácnosť. Expo SDK 58, React Native, striktný TypeScript, Expo Router a SQLite. Bez účtu, aplikačného backendu, platených API a vzdialeného sledovania.
+Mobilná aplikácia pre pripravenosť domácnosti. Expo SDK 58, React Native, striktný TypeScript, Expo Router a SQLite. Osobné údaje domácnosti zostávajú lokálne. Bez reklamného SDK a vzdialeného sledovania.
 
-## Čo prináša vizuálna verzia 1.1
+## Čo je nové vo verzii 1.2
 
-- Nový ilustrovaný domov, tri samostatné kruhové ukazovatele, kontextový ďalší krok, farebné karty a kompaktnejšie zásoby. Zobrazené metriky používajú skutočné lokálne údaje, nie demo skóre.
-- **Akadémia: 18 offline sprievodcov** s ôsmimi druhmi lokálnych SVG ilustrácií. Vyhľadávanie, kategórie, uložené návody a čítačka krok za krokom s prehľadom všetkých krokov.
-- **Video zručnosti: 8 tematických vstupov na YouTube.** Otvárajú konkrétne vyhľadávanie až po stlačení. Nejde o redakčne overené jednotlivé videá ani prehrávač offline; výsledky a reklamy spravuje YouTube.
-- **Sedem krokov prípravy:** praktické misie, malé kvízy s vysvetlením, priebežný pokrok a vratné označenie dokončenia. Bez trestania za vynechané dni a bez garancie bezpečnosti.
-- **Rodinná núdzová karta:** grafický prehľad, voliteľné osobné údaje a presný textový náhľad pred potvrdeným systémovým zdieľaním.
-- **Rýchla pomoc:** veľké tiesňové tlačidlá, potvrdenie pred vytáčaním a okamžitý vstup do základných scenárov. Dostupná aj z onboardingu.
-- **READY Plus:** vizuálny návrh budúceho rozšírenia; žiadna aktívna platba, reklama alebo uzamknutá núdzová funkcia. Možnosti podnikania sú v [docs/MONETIZATION.md](docs/MONETIZATION.md).
+- **21 jazykov rozhrania a pribaleného obsahu.** Výber v onboardingu a Nastaveniach, uložená preferencia, arabské RTL, lokálne slovníky a čísla. Pracovné preklady nie sú odbornou certifikáciou; pred verejným vydaním potrebujú jazykovú a bezpečnostnú revíziu. Podrobnosti v [docs/LOCALIZATION.md](docs/LOCALIZATION.md).
+- **Vizuálna baliaca stanica:** osem modulov evakuačného batoha, až 24 položiek, voliteľné potreby zvierat, skutočne uložený pokrok a výpočet vody podľa domácnosti. Zásoba domácnosti sa nezamieňa s hmotnosťou prenosného batoha.
+- **Päť interaktívnych scenárov:** blackout, evakuácia, problém s pitnou vodou, búrka a úraz. Voľby vedú k rôznym bezpečným výsledkom, umožňujú návrat a odkazujú na skutočné pribalené návody. Ide o nácvik, nie živé riadenie zásahu.
+- **18 ilustrovaných sprievodcov, sedem misií s kvízmi, prehľad zásob a rodinná karta** zostávajú súčasťou aplikácie. YouTube ponúka 8 tematických vyhľadávaní, nie overené jednotlivé videá ani offline prehrávanie.
+- **Licencia podľa zadania:**14 dní online skúšania, potom jedna platba 10 USD za 12 mesiacov bez automatického obnovenia. Offline funkcie a návody sa odomknú až po overenej platbe. Čítanie/export vlastných údajov a tiesňové čísla zostávajú dostupné.
+- **Overovanie podpisu a offline cache:** klient vie overiť Ed25519 oprávnenie, jeho platnosť a načítať ho po reštarte. Zmena dátumu, lokálny Boolean či import zálohy samy o sebe neaktivujú platený prístup.
+
+**Skutočné platby zatiaľ nie sú pripojené.** Používateľ má Google Play Console, ale repozitár zatiaľ nemá produkčný Play Billing bridge, prepojený produkt, dôveryhodnú podpisovú službu ani produkčný verejný kľúč. Nákupné tlačidlá sú preto neaktívne. Vývojový online náhľad zostáva dostupný aj po uplynutí skúšky; **offline prístup sa tým neodomkne**. Aplikácia nič neúčtuje a nevydáva falošnú licenciu. Presné kroky na dokončenie v [docs/BILLING.md](docs/BILLING.md).
 
 Dizajn vychádza z aktuálnych oficiálnych materiálov M3 Expressive a zásad prístupnosti React Native; dôkazy a hranice overenia sú v [docs/DESIGN_RESEARCH.md](docs/DESIGN_RESEARCH.md). Ilustrácia domácnosti je vygenerovaná pre READY a pribalená lokálne (55 kB WebP), nejde o externý obrázok s požiadavkou na sieť. Ukážky [Domov](docs/screenshots/home.png), [Akadémia](docs/screenshots/academy.png) a [Misie](docs/screenshots/missions.png) sú renderované skutočnými komponentmi s označenými testovacími údajmi v prehliadačovom QA prostredí, nie snímky fyzického telefónu.
 
@@ -79,7 +80,7 @@ Oficiálne návody: [Expo Go](https://docs.expo.dev/get-started/start-developing
 - Oddelené krytie jedla a pitnej vody, upozornenia na dátumy a transparentné deficity.
 - Editovateľné tematické checklisty, vlastné úlohy, kontakty a miesto stretnutia.
 - Trvalý nákupný zoznam: návrh podľa deficitu a varenia, vlastné položky, úprava, označenie nákupu a vymazanie. Označenie „kúpené“ **nepridáva** zásobu; zásobu treba zaevidovať s údajmi z obalu.
-- Šesť offline návodov, oficiálne zdrojové odkazy a potvrdenie pred otvorením núdzového vytáčania.
+- Osemnásť pribalených návodov, oficiálne zdrojové odkazy a potvrdenie pred otvorením núdzového vytáčania. Offline režim vyžaduje platnú licenciu.
 - Kryty: počiatočný zoznam je prázdny, bez GPS, vymyslených miest alebo demo záznamov. Schéma umožňuje budúci import. Prípadné miesta zo zálohy sú označené ako importované, bez garancie.
 - Export JSON cez systémové zdieľanie a import cez výber súboru: kontrola schémy, limit 10 MB, potvrdenie pred prepísaním a transakčné obnovenie.
 
@@ -117,14 +118,14 @@ Množstvo = deficit × podiel / hustota, zaokrúhlené nahor na 0,01 kg. Voda sa
 - `src/domain`: čisté výpočty, zálohy a prezentácia importovaných miest.
 - `src/data/content.ts`: offline návody, katalóg názvov a počiatočné úlohy.
 - `src/theme`: systémový svetlý/tmavý vzhľad.
-- `src/i18n`: slovenské základné popisky a formátovanie; pred úplnou podporou ďalšieho jazyka treba doplniť preklady textov obrazoviek a knižnice. Prepínač jazyka zatiaľ nie je implementovaný.
+- `src/i18n`:21 pribalených jazykov, formátovanie, preferencia a RTL. Osobné údaje sa neprekladajú ani neposielajú prekladovej službe.
 - `tests`: doménové, skutočné SQLite integračné a React Native komponentové testy.
 
 `ready.db` používa WAL. Migračná tabuľka `schema_migrations(version INTEGER PRIMARY KEY, applied_at TEXT NOT NULL)` eviduje verziu 1. Tabuľky `households`, `inventory_items`, `shopping_items`, `checklist_items`, `emergency_contacts`, `safe_places` majú `id TEXT PRIMARY KEY NOT NULL` a `payload TEXT NOT NULL` s validovaným JSON dokumentom. Dokumentové riadky zachovávajú presnosť JS čísel a umožňujú jednotnú schému exportu; nejde o fulltextovo indexovaný skladový systém. Všetky zápisy aj načítanie sa validujú.
 
 Profil má pevný identifikátor `main`. Ostatné záznamy používajú lokálne textové identifikátory; duplicity pri importe sa odmietajú. Dátumy na obale a dátum overenia miesta sú `RRRR-MM-DD`, export a migrácie používajú UTC ISO timestamp. Jednotky, kategórie a typy sú v schémach. Kryt obsahuje HTTPS zdroj, typ, dátum overenia, stav a poznámku; neobsahuje automatické tvrdenie o dostupnosti. Aktuálny MVP nemá verejný import adresára ani mapu.
 
-Dokončenia misií a záložky používajú vo verzii 1.1 menné priestory `mission-<id>` a `bookmark-<id>` v existujúcej tabuľke checklistov. Bežný Plán ich nezobrazuje; progress a záložky počítajú iba aktuálne známe ID. Tým sa zachováva schéma aj kompatibilita starších záloh verzie 1. Export obsahuje aj tieto nové záznamy. V budúcej migrácii ich možno presunúť do samostatnej tabuľky pri zachovaní údajov.
+Dokončenia misií, záložky, balenie a nácviky používajú menné priestory `mission-<id>`, `bookmark-<id>`, `kit-<id>` a `drill-<id>` v existujúcej tabuľke checklistov. Bežný Plán ich nezobrazuje; progress a záložky počítajú iba aktuálne známe ID. Tým sa zachováva schéma aj kompatibilita starších záloh verzie 1. Export obsahuje aj tieto nové záznamy. V budúcej migrácii ich možno presunúť do samostatnej tabuľky pri zachovaní údajov.
 
 Migrácia a seed úloh sa vykonajú iba raz. Import neobnovuje používateľom odstránené úlohy. Novšia neznáma schéma sa odmietne bez mazania. Ďalšie migrácie musia byť aditívne alebo zachovať dáta v transakcii; nezvyšujte verziu spôsobom, ktorý databázu resetuje.
 
@@ -141,12 +142,24 @@ npm.cmd run visual:capture
 
 Tento nástroj renderuje skutočné komponenty Home, Academy a Missions cez React Native Web s výslovne oddeleným testovacím store. Natívne služby nahrádzajú testovacie adaptéry. Nie je to produkčný web ani náhrada spustenia na telefóne. Snímky pokrývajú 390/320 px, svetlý/tmavý režim a kontrolu horizontálneho pretečenia. Server počúva iba na loopbacku; voliteľná premenná `READY_CHROMIUM_PATH` vyberie vlastný Chromium. Vizuálny harness vyžaduje lokálny prehliadač a neposiela údaje domácnosti.
 
+## Prístup a licencia
+
+| Režim                                   | Online nástroje          | Chránené offline funkcie                 |
+| --------------------------------------- | ------------------------ | ---------------------------------------- |
+| 14-dňová skúška v produkcii             | Áno                      | Nie                                      |
+| Platná overená ročná licencia           | Áno                      | Áno, do overeného konca platnosti        |
+| Skončená skúška/licencia                | Vyžaduje nákup           | Nie                                      |
+| Vývojová verzia bez pripojených platieb | Označený vývojový náhľad | Nie, bez platného podpísaného oprávnenia |
+
+Tiesňové čísla, Nastavenia a čítanie/export vlastných údajov sú mimo zámku. Oprávnenie ani začiatok skúšky sa neprenášajú JSON zálohou. Jazyková preferencia je samostatná lokálna voľba.
+
 ## Kontroly a obmedzenia
 
 ```powershell
 npm.cmd run typecheck
 npm.cmd run lint
 npm.cmd test
+npm.cmd run i18n:check
 npm.cmd run format:check
 npm.cmd run export:mobile
 ```

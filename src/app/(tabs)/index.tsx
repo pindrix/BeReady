@@ -1,4 +1,9 @@
-import { Pressable, Text, View, useWindowDimensions } from "react-native";
+import { LocalizedPressable as Pressable } from "../../components/localized-native";
+import {
+  LocalizedText as Text,
+  useLocale,
+} from "../../components/localized-text";
+import { View, useWindowDimensions } from "react-native";
 import { Image } from "expo-image";
 import { router } from "expo-router";
 import { LinearGradient } from "expo-linear-gradient";
@@ -14,10 +19,12 @@ import {
 import { coverage, expiryStatus } from "../../domain/readiness";
 import { useStore } from "../../state/store";
 import { nutritionNote } from "../../data/content";
-import { formatNumber as fmt } from "../../i18n";
+import { formatNumber as fmt, translateText as t, isRTL } from "../../i18n";
 import { missionProgress } from "../../domain/missions";
 import { useTheme } from "../../theme/theme";
 export default function Home() {
+  const locale = useLocale(),
+    rtl = isRTL(locale);
   const { data } = useStore(),
     theme = useTheme(),
     compact = useWindowDimensions().width < 350;
@@ -28,6 +35,8 @@ export default function Home() {
       (x) =>
         x.topic === "evakuácia" &&
         !x.id.startsWith("bookmark-") &&
+        !x.id.startsWith("kit-") &&
+        !x.id.startsWith("drill-") &&
         !x.id.startsWith("mission-"),
     ),
     completed = tasks.filter((x) => x.done).length;
@@ -39,7 +48,8 @@ export default function Home() {
   return (
     <Screen
       title="Doma pripravení."
-      subtitle={`${p.name || "Vaša domácnosť"} · ${p.people} ${p.people === 1 ? "osoba" : p.people < 5 ? "osoby" : "osôb"} · váš plán na ${p.goal} dní`}
+      subtitle={`${p.name || t("Vaša domácnosť")} · ${t(`Počet osôb: ${p.people}`)} · ${t("Cieľ zásob v dňoch")}: ${p.goal}`}
+      subtitleTranslate={false}
       eyebrow="POKOJ SA ZAČÍNA PRÍPRAVOU"
       headerRight={
         <IconButton
@@ -59,14 +69,19 @@ export default function Home() {
       >
         <Image
           source={require("../../../assets/images/ready-world.webp")}
-          style={{ position: "absolute", width: "100%", height: "100%" }}
+          style={{
+            position: "absolute",
+            width: "100%",
+            height: "100%",
+            transform: [{ scaleX: rtl ? -1 : 1 }],
+          }}
           contentFit="cover"
-          accessibilityLabel="Ilustrácia domácnosti, batohu, vody a výbavy"
+          accessible={false}
         />
         <LinearGradient
           colors={["rgba(245,245,235,.95)", "rgba(245,245,235,0)"]}
-          start={{ x: 0, y: 0.5 }}
-          end={{ x: 1, y: 0.5 }}
+          start={{ x: rtl ? 1 : 0, y: 0.5 }}
+          end={{ x: rtl ? 0 : 1, y: 0.5 }}
           style={{
             padding: 23,
             minHeight: 242,
@@ -318,6 +333,21 @@ export default function Home() {
         </Text>
         <Icon name="chevron-forward" size={17} />
       </Pressable>
+      <View style={{ flexDirection: "row", flexWrap: "wrap", gap: 12 }}>
+        <Tile
+          icon="bag-handle-outline"
+          title="Môj 72-hodinový batoh"
+          subtitle="Vizuálne balenie a vlastný pokrok"
+          onPress={() => router.push("/field-kit")}
+        />
+        <Tile
+          icon="git-branch-outline"
+          title="Čo ak sa to stane?"
+          subtitle="Precvičte si rozhodnutia v scenároch"
+          tone="blue"
+          onPress={() => router.push("/scenarios")}
+        />
+      </View>
       <SectionTitle
         title="Čo dnes pripravíme?"
         subtitle="Vaše každodenné nástroje, vždy poruke."
@@ -479,7 +509,7 @@ export default function Home() {
                 >
                   <Icon name="time-outline" color={theme.warning} />
                   <View style={{ flex: 1 }}>
-                    <T>{item.name}</T>
+                    <T translate={false}>{item.name}</T>
                     <T muted>
                       {item.expiry} ·{" "}
                       {expiryStatus(item) === "past"
@@ -526,7 +556,7 @@ export default function Home() {
             Priestor pre viac. READY Plus.
           </Text>
           <Text style={{ fontSize: 12, color: theme.muted, marginTop: 4 }}>
-            Pozrite si plán rozšírení. Základná pomoc zostáva zadarmo.
+            Pozrite si plán rozšírení. Offline režim s ročnou licenciou.
           </Text>
         </View>
         <Icon name="chevron-forward" size={19} />

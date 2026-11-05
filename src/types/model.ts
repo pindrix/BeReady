@@ -155,7 +155,18 @@ export function newId(): string {
   return `${Date.now().toString(36)}-${Math.random().toString(36).slice(2)}-${Math.random().toString(36).slice(2)}`;
 }
 export function numeric(value: string): number {
-  return value.trim() === "" ? NaN : Number(value.trim().replace(",", "."));
+  const normalized = value
+    .trim()
+    .replace(/[٠-٩۰-۹०-९০-৯]/g, (ch) => {
+      const ranges = [0x660, 0x6f0, 0x966, 0x9e6];
+      const code = ch.charCodeAt(0);
+      const start = ranges.find((s) => code >= s && code < s + 10)!;
+      return String(code - start);
+    })
+    .replace(/٬/g, "")
+    .replace(/٫/g, ".")
+    .replace(",", ".");
+  return normalized === "" ? NaN : Number(normalized);
 }
 export function errorMessage(error: unknown): string {
   if (error instanceof z.ZodError)

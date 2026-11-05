@@ -1,5 +1,7 @@
+import { LocalizedPressable as Pressable } from "../components/localized-native";
+import { LocalizedText as Text } from "../components/localized-text";
 import { useState } from "react";
-import { Linking, Pressable, Text, View } from "react-native";
+import { Linking, View } from "react-native";
 import { router, useLocalSearchParams } from "expo-router";
 import { AcademyArt } from "../components/academy-art";
 import {

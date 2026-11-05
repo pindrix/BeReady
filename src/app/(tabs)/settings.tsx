@@ -1,3 +1,7 @@
+import buildPackage from "../../../package.json";
+import { translateText as t } from "../../i18n";
+import { LanguagePicker } from "../../components/language-picker";
+import { useLicense, protectedAccess } from "../../state/license";
 import { router } from "expo-router";
 import { View } from "react-native";
 import { useTheme } from "../../theme/theme";
@@ -23,6 +27,8 @@ import {
   MAX_BACKUP_BYTES,
 } from "../../domain/backup";
 export default function SettingsScreen() {
+  const license = useLicense(),
+    access = protectedAccess(license).allowed;
   const c = useTheme(),
     [editProfile, setEditProfile] = useState(false),
     s = useStore(),
@@ -31,6 +37,18 @@ export default function SettingsScreen() {
   if (!s.data?.household) return null;
   return (
     <Screen title="Vaše nastavenia">
+      <LanguagePicker />
+      {!access ? (
+        <T>
+          Chránené funkcie vyžadujú pripojenie počas skúšky alebo platnú offline
+          licenciu. Čítanie a export vašich údajov zostávajú dostupné.
+        </T>
+      ) : null}
+      <Button
+        title="Moje uložené údaje"
+        secondary
+        onPress={() => router.push("/data-vault")}
+      />
       <Card>
         <View style={{ flexDirection: "row", alignItems: "center", gap: 16 }}>
           <View
@@ -46,7 +64,13 @@ export default function SettingsScreen() {
             <Icon name="home-outline" size={30} />
           </View>
           <View style={{ flex: 1, gap: 5 }}>
-            <T large>{s.data.household.name || "Vaša domácnosť"}</T>
+            {s.data.household.name ? (
+              <T large translate={false}>
+                {s.data.household.name}
+              </T>
+            ) : (
+              <T large>Vaša domácnosť</T>
+            )}
             <T muted>
               {s.data.household.people} osôb · cieľ {s.data.household.goal} dní
             </T>
@@ -54,6 +78,7 @@ export default function SettingsScreen() {
         </View>
         <Badge label="LOKÁLNE · BEZ ÚČTU" />
         <Button
+          disabled={!access}
           title={
             editProfile ? "Zavrieť úpravu profilu" : "Upraviť profil domácnosti"
           }
@@ -61,7 +86,7 @@ export default function SettingsScreen() {
           onPress={() => setEditProfile(!editProfile)}
         />
       </Card>
-      {editProfile ? (
+      {editProfile && access ? (
         <ProfileForm
           key={JSON.stringify(s.data.household)}
           initial={s.data.household}
@@ -134,7 +159,7 @@ export default function SettingsScreen() {
         <Button
           title="Importovať JSON zálohu"
           secondary
-          disabled={a.busy || s.busy}
+          disabled={!access || a.busy || s.busy}
           onPress={() =>
             void a.run(async () => {
               const result = await DocumentPicker.getDocumentAsync({
@@ -168,9 +193,10 @@ export default function SettingsScreen() {
           identifikátory. Obnovenie prebehne v jednej transakcii.
         </T>
       </Card>
-      <T muted>
-        READY 1.0 · Rozhranie sa prispôsobuje svetlému a tmavému režimu
-        zariadenia.
+      <T muted translate={false}>
+        {t(
+          "READY 1.0 · Rozhranie sa prispôsobuje svetlému a tmavému režimu zariadenia.",
+        ).replace("1.0", buildPackage.version)}
       </T>
     </Screen>
   );

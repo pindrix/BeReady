@@ -1,10 +1,11 @@
 {
   "name": "beready",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "main": "expo-router/entry",
   "dependencies": {
     "@expo/ui": "~58.0.27",
     "@expo/vector-icons": "^15.0.2",
+    "@noble/curves": "^2.4.0",
     "expo": "~58.0.23",
     "expo-constants": "~58.0.15",
     "expo-device": "~58.0.5",
@@ -15,6 +16,7 @@
     "expo-image": "~58.0.18",
     "expo-linear-gradient": "~58.0.3",
     "expo-linking": "~58.0.16",
+    "expo-network": "~58.0.4",
     "expo-router": "~58.0.30",
     "expo-sharing": "~58.0.22",
     "expo-splash-screen": "~58.0.13",
@@ -64,7 +66,9 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "visual:preview": "node scripts/visual-preview.mjs",
-    "visual:capture": "node scripts/visual-preview.mjs --capture"
+    "visual:capture": "node scripts/visual-preview.mjs --capture",
+    "i18n:check": "node scripts/check-translations.mjs",
+    "i18n:extract": "node scripts/extract-messages.mjs"
   },
   "private": true,
   "engines": {

@@ -4,8 +4,8 @@
 
 - TypeScript strict: bez chýb.
 - ESLint: bez chýb a upozornení po úprave testovacieho setupu.
-- Doménové a databázové testy: 39 úspešných, 0 preskočených.
-- React Native komponentové testy: 15 úspešných, 0 preskočených.
+- Doménové a databázové testy: 77 úspešných, 0 preskočených.
+- React Native komponentové testy: 29 úspešných, 0 preskočených.
 - Metro server: spustený, lokálny HTTP stav a Android manifest READY/SDK 58 overené. Server bol po kontrole zastavený.
 - Export Android + iOS cez Metro/Hermes: úspešný. Nie je to APK/IPA ani dôkaz spustenia na telefóne.
 - Expo kompatibilita: verzie sedia s lokálnym manifestom Expo SDK 58. Online kontrola Expo API bola blokovaná; podpora aktuálne distribuovaného Expo Go sa musí potvrdiť na telefóne.
@@ -40,15 +40,25 @@ Vizuálny QA harness vykreslil skutočné komponenty Home, Academy a Missions s 
 
 - Čisté výpočty, validácie, pribalené návody a SQL integračné testy nevolajú sieť; táto časť je automaticky overená.
 - Expo Go načítava vývojový bundle z Metro servera. Vypnutie siete môže prerušiť jeho spustenie; nie je to dôkaz chyby offline logiky ani dôkaz fungovania samostatného buildu.
-- V už načítanom Expo Go skúste prácu bez internetu so zachovanou lokálnou Wi-Fi. Všetky lokálne akcie majú fungovať, externé odkazy nie.
-- Úplný test: vytvorte a nainštalujte samostatný natívny build, vypnite Wi-Fi aj mobilné dáta, aplikáciu ukončite a spustite znova; zopakujte CRUD, checklisty, návody a lokálny export/import. **Tento test nebol v cloude vykonaný.**
+- Bez overenej zaplatenej licencie musí vývojová verzia pri strate internetu zablokovať chránené funkcie; tiesňové čísla, čítanie a export ostávajú dostupné. Bežný online náhľad nepredstiera licenciu.
+- Úplný test: vytvorte a nainštalujte samostatný natívny build, najprv získajte reálne overenú testovaciu licenciu, potom vypnite Wi-Fi aj mobilné dáta, aplikáciu ukončite a spustite znova; zopakujte CRUD, checklisty, návody a lokálny export/import. **Tento test nebol v cloude vykonaný.**
 
-Bez fyzického telefónu/emulátora neboli overené natívne dialógy súborov, dostupnosť úložísk, núdzový dialer, prístupnosť na zariadení ani natívna perzistencia po ukončení procesu. Publikovanie do obchodov ani odoslanie na GitHub neprebehlo.
+Bez fyzického telefónu/emulátora neboli overené natívne dialógy súborov, dostupnosť úložísk, núdzový dialer, prístupnosť na zariadení ani natívna perzistencia po ukončení procesu. Publikovanie do obchodov neprebehlo. Stav odoslania zdrojov na GitHub sa uvádza samostatne pri odovzdaní.
 
 ## Ručné doplnenie pre 1.1 — zatiaľ nevykonané na telefóne
 
 1. Označte misiu ako hotovú, zrušte dokončenie, skúste správnu aj nesprávnu odpoveď kvízu. Po reštarte musí zostať uložený stav misie. Odpovede kvízu sú iba lokálny stav aktuálnej obrazovky, neoznačujú misiu automaticky za hotovú.
-2. Otvorte YouTube tému a potvrďte, že ide o vyhľadávanie na cudzej online službe. Bez internetu musia návody fungovať, YouTube nie.
+2. Otvorte YouTube tému a potvrďte, že ide o vyhľadávanie na cudzej online službe. Bez internetu majú pribalené návody fungovať iba s platnou overenou licenciou; YouTube internet potrebuje vždy.
 3. Na núdzovej karte sú osobné údaje spočiatku skryté. Zapnite ich vedome, skontrolujte textový náhľad a zdieľanie zrušte. Skutočnú tiesňovú linku netestujte.
 4. Pri prvom spustení pred vyplnením profilu musí byť dostupná Rýchla pomoc. Pri chybe DB má chybová obrazovka samostatný potvrdený vstup do vytáčania 112; nejde o opravu poškodenej DB.
 5. Importujte starú zálohu verzie 1. Zásoby a profil sa musia načítať; misie a záložky bez záznamov začínajú prázdne. Naopak nová záloha obsahuje aj nový pokrok.
+
+## Rozšírenie1.2
+
+Testy pokrývajú24 položiek batoha, voliteľné zvieratá, výpočet vody, päť acyklických vetvených scenárov a explicitné uloženie nácviku. Licenčné testy zahŕňajú14-dňovú hranicu, časové zmeny, prepaid koniec, pending/revoked doklady, offline politiku, podpis Ed25519, zásah do dátumu, nesprávny kľúč a opätovné načítanie podpísanej cache bez siete. Import domácnosti neresetuje trial, doklad ani jazyk.
+
+Lokalizačné kontroly sledujú21 jazykov, presné pokrytie zdrojových kľúčov, placeholdery, arabské RTL, okamžité prekreslenie a nedotknuté osobné vstupy. Štrukturálna úplnosť nie je odborná jazyková ani medicínska revízia. Reálne nákupy ani produkčné podpisovanie neboli vykonané.
+
+Ručné doplnenie: na telefóne preveriť prvý štart online/offline, zmenu jazyka, RTL, balenie, scenáre, obnovenie pokroku, zamknutie bez licencie a dostupnosť exportu. Po pripojení Billingu samostatne vykonať nákup/obnovu/refundáciu a studený štart bez siete s platným podpísaným oprávnením.
+
+Finálna jazyková vizuálna kontrola vykreslila Domov vo všetkých 21 jazykoch pri 390 px a päť doplnkových kombinácií batoha/scenárov/licencie. Výsledok:26 renderov bez chyby a bez horizontálneho pretečenia. Report je `docs/screenshots/v1.2/locales-review.json`. Ide o prehliadačové testovacie dáta, nie natívne zariadenie. Texty so zalomenými riadkami sa overujú samostatným regresným testom, pretože samotná úplnosť slovníka nezaručuje správne poskladanie JSX textu.

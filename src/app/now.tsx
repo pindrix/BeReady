@@ -1,4 +1,9 @@
-import { Alert, Linking, Pressable, Text, View } from "react-native";
+import {
+  LocalizedAlert as Alert,
+  LocalizedPressable as Pressable,
+} from "../components/localized-native";
+import { LocalizedText as Text } from "../components/localized-text";
+import { Linking, View } from "react-native";
 import { router } from "expo-router";
 import { Screen, Card, T, ErrorText, useAction } from "../components/ui";
 import { Icon, IconButton, Tile } from "../components/visual";
