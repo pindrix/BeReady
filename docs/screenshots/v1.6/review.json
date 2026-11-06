@@ -1,0 +1,5209 @@
+{
+  "notice": "Browser fixture with explicit native-service adapters. Not physical-device validation.",
+  "reports": [
+    {
+      "kind": "tutorial",
+      "id": "flood",
+      "step": 0,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 258,
+          "h": 161
+        },
+        {
+          "w": 73,
+          "h": 73
+        },
+        {
+          "w": 60,
+          "h": 60
+        },
+        {
+          "w": 41,
+          "h": 41
+        },
+        {
+          "w": 74,
+          "h": 74
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "flood",
+      "step": 1,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 258,
+          "h": 161
+        },
+        {
+          "w": 73,
+          "h": 73
+        },
+        {
+          "w": 60,
+          "h": 60
+        },
+        {
+          "w": 41,
+          "h": 41
+        },
+        {
+          "w": 81,
+          "h": 81
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "flood",
+      "step": 2,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 258,
+          "h": 161
+        },
+        {
+          "w": 60,
+          "h": 60
+        },
+        {
+          "w": 73,
+          "h": 73
+        },
+        {
+          "w": 60,
+          "h": 60
+        },
+        {
+          "w": 41,
+          "h": 41
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "flood",
+      "step": 3,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 258,
+          "h": 161
+        },
+        {
+          "w": 73,
+          "h": 73
+        },
+        {
+          "w": 60,
+          "h": 60
+        },
+        {
+          "w": 41,
+          "h": 41
+        },
+        {
+          "w": 81,
+          "h": 81
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "fire",
+      "step": 0,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 258,
+          "h": 161
+        },
+        {
+          "w": 60,
+          "h": 60
+        },
+        {
+          "w": 73,
+          "h": 73
+        },
+        {
+          "w": 41,
+          "h": 41
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "fire",
+      "step": 1,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 258,
+          "h": 161
+        },
+        {
+          "w": 60,
+          "h": 60
+        },
+        {
+          "w": 73,
+          "h": 73
+        },
+        {
+          "w": 60,
+          "h": 60
+        },
+        {
+          "w": 41,
+          "h": 41
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "fire",
+      "step": 2,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 258,
+          "h": 161
+        },
+        {
+          "w": 73,
+          "h": 73
+        },
+        {
+          "w": 60,
+          "h": 60
+        },
+        {
+          "w": 41,
+          "h": 41
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "fire",
+      "step": 3,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 258,
+          "h": 161
+        },
+        {
+          "w": 60,
+          "h": 60
+        },
+        {
+          "w": 73,
+          "h": 73
+        },
+        {
+          "w": 60,
+          "h": 60
+        },
+        {
+          "w": 41,
+          "h": 41
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "alert",
+      "step": 0,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 258,
+          "h": 161
+        },
+        {
+          "w": 73,
+          "h": 73
+        },
+        {
+          "w": 60,
+          "h": 60
+        },
+        {
+          "w": 74,
+          "h": 74
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "alert",
+      "step": 1,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 258,
+          "h": 161
+        },
+        {
+          "w": 60,
+          "h": 60
+        },
+        {
+          "w": 73,
+          "h": 73
+        },
+        {
+          "w": 60,
+          "h": 60
+        },
+        {
+          "w": 41,
+          "h": 41
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "alert",
+      "step": 2,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 258,
+          "h": 161
+        },
+        {
+          "w": 73,
+          "h": 73
+        },
+        {
+          "w": 60,
+          "h": 60
+        },
+        {
+          "w": 41,
+          "h": 41
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "chemical",
+      "step": 0,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 258,
+          "h": 161
+        },
+        {
+          "w": 73,
+          "h": 73
+        },
+        {
+          "w": 60,
+          "h": 60
+        },
+        {
+          "w": 81,
+          "h": 81
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "chemical",
+      "step": 1,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 258,
+          "h": 161
+        },
+        {
+          "w": 60,
+          "h": 60
+        },
+        {
+          "w": 73,
+          "h": 73
+        },
+        {
+          "w": 60,
+          "h": 60
+        },
+        {
+          "w": 41,
+          "h": 41
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "chemical",
+      "step": 2,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 258,
+          "h": 161
+        },
+        {
+          "w": 73,
+          "h": 73
+        },
+        {
+          "w": 60,
+          "h": 60
+        },
+        {
+          "w": 41,
+          "h": 41
+        },
+        {
+          "w": 74,
+          "h": 74
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "chemical",
+      "step": 3,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 258,
+          "h": 161
+        },
+        {
+          "w": 73,
+          "h": 73
+        },
+        {
+          "w": 60,
+          "h": 60
+        },
+        {
+          "w": 41,
+          "h": 41
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "evacuation",
+      "step": 0,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 258,
+          "h": 161
+        },
+        {
+          "w": 73,
+          "h": 73
+        },
+        {
+          "w": 60,
+          "h": 60
+        },
+        {
+          "w": 41,
+          "h": 41
+        },
+        {
+          "w": 74,
+          "h": 74
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "evacuation",
+      "step": 1,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 258,
+          "h": 161
+        },
+        {
+          "w": 60,
+          "h": 60
+        },
+        {
+          "w": 73,
+          "h": 73
+        },
+        {
+          "w": 41,
+          "h": 41
+        },
+        {
+          "w": 41,
+          "h": 41
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "evacuation",
+      "step": 2,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 258,
+          "h": 161
+        },
+        {
+          "w": 73,
+          "h": 73
+        },
+        {
+          "w": 60,
+          "h": 60
+        },
+        {
+          "w": 41,
+          "h": 41
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "evacuation",
+      "step": 3,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 258,
+          "h": 161
+        },
+        {
+          "w": 73,
+          "h": 73
+        },
+        {
+          "w": 60,
+          "h": 60
+        },
+        {
+          "w": 74,
+          "h": 74
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "safe-cooking",
+      "step": 0,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 258,
+          "h": 161
+        },
+        {
+          "w": 73,
+          "h": 73
+        },
+        {
+          "w": 60,
+          "h": 60
+        },
+        {
+          "w": 41,
+          "h": 41
+        },
+        {
+          "w": 74,
+          "h": 74
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "safe-cooking",
+      "step": 1,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 258,
+          "h": 161
+        },
+        {
+          "w": 60,
+          "h": 60
+        },
+        {
+          "w": 73,
+          "h": 73
+        },
+        {
+          "w": 41,
+          "h": 41
+        },
+        {
+          "w": 41,
+          "h": 41
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "safe-cooking",
+      "step": 2,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 258,
+          "h": 161
+        },
+        {
+          "w": 73,
+          "h": 73
+        },
+        {
+          "w": 60,
+          "h": 60
+        },
+        {
+          "w": 41,
+          "h": 41
+        },
+        {
+          "w": 74,
+          "h": 74
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "safe-cooking",
+      "step": 3,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 258,
+          "h": 161
+        },
+        {
+          "w": 73,
+          "h": 73
+        },
+        {
+          "w": 60,
+          "h": 60
+        },
+        {
+          "w": 41,
+          "h": 41
+        },
+        {
+          "w": 81,
+          "h": 81
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "first-aid",
+      "step": 0,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 258,
+          "h": 161
+        },
+        {
+          "w": 73,
+          "h": 73
+        },
+        {
+          "w": 60,
+          "h": 60
+        },
+        {
+          "w": 41,
+          "h": 41
+        },
+        {
+          "w": 81,
+          "h": 81
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "first-aid",
+      "step": 1,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 258,
+          "h": 161
+        },
+        {
+          "w": 60,
+          "h": 60
+        },
+        {
+          "w": 73,
+          "h": 73
+        },
+        {
+          "w": 41,
+          "h": 41
+        },
+        {
+          "w": 41,
+          "h": 41
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "first-aid",
+      "step": 2,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 258,
+          "h": 161
+        },
+        {
+          "w": 73,
+          "h": 73
+        },
+        {
+          "w": 60,
+          "h": 60
+        },
+        {
+          "w": 41,
+          "h": 41
+        },
+        {
+          "w": 74,
+          "h": 74
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "first-aid",
+      "step": 3,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 258,
+          "h": 161
+        },
+        {
+          "w": 73,
+          "h": 73
+        },
+        {
+          "w": 60,
+          "h": 60
+        },
+        {
+          "w": 41,
+          "h": 41
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "heat",
+      "step": 0,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 258,
+          "h": 161
+        },
+        {
+          "w": 73,
+          "h": 73
+        },
+        {
+          "w": 60,
+          "h": 60
+        },
+        {
+          "w": 41,
+          "h": 41
+        },
+        {
+          "w": 81,
+          "h": 81
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "heat",
+      "step": 1,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 258,
+          "h": 161
+        },
+        {
+          "w": 60,
+          "h": 60
+        },
+        {
+          "w": 73,
+          "h": 73
+        },
+        {
+          "w": 41,
+          "h": 41
+        },
+        {
+          "w": 41,
+          "h": 41
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "heat",
+      "step": 2,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 258,
+          "h": 161
+        },
+        {
+          "w": 73,
+          "h": 73
+        },
+        {
+          "w": 60,
+          "h": 60
+        },
+        {
+          "w": 41,
+          "h": 41
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "heat",
+      "step": 3,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 258,
+          "h": 161
+        },
+        {
+          "w": 60,
+          "h": 60
+        },
+        {
+          "w": 73,
+          "h": 73
+        },
+        {
+          "w": 41,
+          "h": 41
+        },
+        {
+          "w": 41,
+          "h": 41
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "storm",
+      "step": 0,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 258,
+          "h": 161
+        },
+        {
+          "w": 73,
+          "h": 73
+        },
+        {
+          "w": 60,
+          "h": 60
+        },
+        {
+          "w": 41,
+          "h": 41
+        },
+        {
+          "w": 74,
+          "h": 74
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "storm",
+      "step": 1,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 258,
+          "h": 161
+        },
+        {
+          "w": 60,
+          "h": 60
+        },
+        {
+          "w": 73,
+          "h": 73
+        },
+        {
+          "w": 60,
+          "h": 60
+        },
+        {
+          "w": 41,
+          "h": 41
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "storm",
+      "step": 2,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 258,
+          "h": 161
+        },
+        {
+          "w": 73,
+          "h": 73
+        },
+        {
+          "w": 60,
+          "h": 60
+        },
+        {
+          "w": 41,
+          "h": 41
+        },
+        {
+          "w": 74,
+          "h": 74
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "winter",
+      "step": 0,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 258,
+          "h": 161
+        },
+        {
+          "w": 60,
+          "h": 60
+        },
+        {
+          "w": 73,
+          "h": 73
+        },
+        {
+          "w": 41,
+          "h": 41
+        },
+        {
+          "w": 41,
+          "h": 41
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "winter",
+      "step": 1,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 258,
+          "h": 161
+        },
+        {
+          "w": 73,
+          "h": 73
+        },
+        {
+          "w": 60,
+          "h": 60
+        },
+        {
+          "w": 41,
+          "h": 41
+        },
+        {
+          "w": 81,
+          "h": 81
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "winter",
+      "step": 2,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 258,
+          "h": 161
+        },
+        {
+          "w": 60,
+          "h": 60
+        },
+        {
+          "w": 73,
+          "h": 73
+        },
+        {
+          "w": 60,
+          "h": 60
+        },
+        {
+          "w": 41,
+          "h": 41
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "winter",
+      "step": 3,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 258,
+          "h": 161
+        },
+        {
+          "w": 60,
+          "h": 60
+        },
+        {
+          "w": 73,
+          "h": 73
+        },
+        {
+          "w": 41,
+          "h": 41
+        },
+        {
+          "w": 41,
+          "h": 41
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "pets",
+      "step": 0,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 258,
+          "h": 161
+        },
+        {
+          "w": 73,
+          "h": 73
+        },
+        {
+          "w": 60,
+          "h": 60
+        },
+        {
+          "w": 41,
+          "h": 41
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "pets",
+      "step": 1,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 258,
+          "h": 161
+        },
+        {
+          "w": 60,
+          "h": 60
+        },
+        {
+          "w": 73,
+          "h": 73
+        },
+        {
+          "w": 41,
+          "h": 41
+        },
+        {
+          "w": 41,
+          "h": 41
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "pets",
+      "step": 2,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 258,
+          "h": 161
+        },
+        {
+          "w": 73,
+          "h": 73
+        },
+        {
+          "w": 60,
+          "h": 60
+        },
+        {
+          "w": 41,
+          "h": 41
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "pets",
+      "step": 3,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 258,
+          "h": 161
+        },
+        {
+          "w": 60,
+          "h": 60
+        },
+        {
+          "w": 73,
+          "h": 73
+        },
+        {
+          "w": 41,
+          "h": 41
+        },
+        {
+          "w": 41,
+          "h": 41
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "digital-kit",
+      "step": 0,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 258,
+          "h": 161
+        },
+        {
+          "w": 60,
+          "h": 60
+        },
+        {
+          "w": 73,
+          "h": 73
+        },
+        {
+          "w": 41,
+          "h": 41
+        },
+        {
+          "w": 41,
+          "h": 41
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "digital-kit",
+      "step": 1,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 258,
+          "h": 161
+        },
+        {
+          "w": 60,
+          "h": 60
+        },
+        {
+          "w": 73,
+          "h": 73
+        },
+        {
+          "w": 41,
+          "h": 41
+        },
+        {
+          "w": 41,
+          "h": 41
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "digital-kit",
+      "step": 2,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 258,
+          "h": 161
+        },
+        {
+          "w": 73,
+          "h": 73
+        },
+        {
+          "w": 60,
+          "h": 60
+        },
+        {
+          "w": 41,
+          "h": 41
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "digital-kit",
+      "step": 3,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 258,
+          "h": 161
+        },
+        {
+          "w": 60,
+          "h": 60
+        },
+        {
+          "w": 73,
+          "h": 73
+        },
+        {
+          "w": 41,
+          "h": 41
+        },
+        {
+          "w": 41,
+          "h": 41
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "hiking",
+      "step": 0,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 258,
+          "h": 161
+        },
+        {
+          "w": 73,
+          "h": 73
+        },
+        {
+          "w": 60,
+          "h": 60
+        },
+        {
+          "w": 41,
+          "h": 41
+        },
+        {
+          "w": 74,
+          "h": 74
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "hiking",
+      "step": 1,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 258,
+          "h": 161
+        },
+        {
+          "w": 73,
+          "h": 73
+        },
+        {
+          "w": 60,
+          "h": 60
+        },
+        {
+          "w": 41,
+          "h": 41
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "hiking",
+      "step": 2,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 258,
+          "h": 161
+        },
+        {
+          "w": 60,
+          "h": 60
+        },
+        {
+          "w": 73,
+          "h": 73
+        },
+        {
+          "w": 41,
+          "h": 41
+        },
+        {
+          "w": 41,
+          "h": 41
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "hiking",
+      "step": 3,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 258,
+          "h": 161
+        },
+        {
+          "w": 73,
+          "h": 73
+        },
+        {
+          "w": 60,
+          "h": 60
+        },
+        {
+          "w": 41,
+          "h": 41
+        },
+        {
+          "w": 81,
+          "h": 81
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "support-needs",
+      "step": 0,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 258,
+          "h": 161
+        },
+        {
+          "w": 73,
+          "h": 73
+        },
+        {
+          "w": 60,
+          "h": 60
+        },
+        {
+          "w": 41,
+          "h": 41
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "support-needs",
+      "step": 1,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 258,
+          "h": 161
+        },
+        {
+          "w": 73,
+          "h": 73
+        },
+        {
+          "w": 60,
+          "h": 60
+        },
+        {
+          "w": 41,
+          "h": 41
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "support-needs",
+      "step": 2,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 258,
+          "h": 161
+        },
+        {
+          "w": 73,
+          "h": 73
+        },
+        {
+          "w": 60,
+          "h": 60
+        },
+        {
+          "w": 41,
+          "h": 41
+        },
+        {
+          "w": 74,
+          "h": 74
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "support-needs",
+      "step": 3,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 258,
+          "h": 161
+        },
+        {
+          "w": 60,
+          "h": 60
+        },
+        {
+          "w": 73,
+          "h": 73
+        },
+        {
+          "w": 41,
+          "h": 41
+        },
+        {
+          "w": 41,
+          "h": 41
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "flood",
+      "step": 0,
+      "width": 390,
+      "errors": [],
+      "documentWidth": 390,
+      "viewport": 390,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 328,
+          "h": 205
+        },
+        {
+          "w": 92,
+          "h": 92
+        },
+        {
+          "w": 76,
+          "h": 76
+        },
+        {
+          "w": 52,
+          "h": 52
+        },
+        {
+          "w": 94,
+          "h": 94
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "flood",
+      "step": 1,
+      "width": 390,
+      "errors": [],
+      "documentWidth": 390,
+      "viewport": 390,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 328,
+          "h": 205
+        },
+        {
+          "w": 92,
+          "h": 92
+        },
+        {
+          "w": 76,
+          "h": 76
+        },
+        {
+          "w": 52,
+          "h": 52
+        },
+        {
+          "w": 102,
+          "h": 103
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "flood",
+      "step": 2,
+      "width": 390,
+      "errors": [],
+      "documentWidth": 390,
+      "viewport": 390,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 328,
+          "h": 205
+        },
+        {
+          "w": 76,
+          "h": 76
+        },
+        {
+          "w": 92,
+          "h": 92
+        },
+        {
+          "w": 76,
+          "h": 76
+        },
+        {
+          "w": 52,
+          "h": 52
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "flood",
+      "step": 3,
+      "width": 390,
+      "errors": [],
+      "documentWidth": 390,
+      "viewport": 390,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 328,
+          "h": 205
+        },
+        {
+          "w": 92,
+          "h": 92
+        },
+        {
+          "w": 76,
+          "h": 76
+        },
+        {
+          "w": 52,
+          "h": 52
+        },
+        {
+          "w": 102,
+          "h": 103
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "fire",
+      "step": 0,
+      "width": 390,
+      "errors": [],
+      "documentWidth": 390,
+      "viewport": 390,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 328,
+          "h": 205
+        },
+        {
+          "w": 76,
+          "h": 76
+        },
+        {
+          "w": 92,
+          "h": 92
+        },
+        {
+          "w": 52,
+          "h": 52
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "fire",
+      "step": 1,
+      "width": 390,
+      "errors": [],
+      "documentWidth": 390,
+      "viewport": 390,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 328,
+          "h": 205
+        },
+        {
+          "w": 76,
+          "h": 76
+        },
+        {
+          "w": 92,
+          "h": 92
+        },
+        {
+          "w": 76,
+          "h": 76
+        },
+        {
+          "w": 52,
+          "h": 52
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "fire",
+      "step": 2,
+      "width": 390,
+      "errors": [],
+      "documentWidth": 390,
+      "viewport": 390,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 328,
+          "h": 205
+        },
+        {
+          "w": 92,
+          "h": 92
+        },
+        {
+          "w": 76,
+          "h": 76
+        },
+        {
+          "w": 52,
+          "h": 52
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "fire",
+      "step": 3,
+      "width": 390,
+      "errors": [],
+      "documentWidth": 390,
+      "viewport": 390,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 328,
+          "h": 205
+        },
+        {
+          "w": 76,
+          "h": 76
+        },
+        {
+          "w": 92,
+          "h": 92
+        },
+        {
+          "w": 76,
+          "h": 76
+        },
+        {
+          "w": 52,
+          "h": 52
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "alert",
+      "step": 0,
+      "width": 390,
+      "errors": [],
+      "documentWidth": 390,
+      "viewport": 390,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 328,
+          "h": 205
+        },
+        {
+          "w": 92,
+          "h": 92
+        },
+        {
+          "w": 76,
+          "h": 76
+        },
+        {
+          "w": 94,
+          "h": 94
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "alert",
+      "step": 1,
+      "width": 390,
+      "errors": [],
+      "documentWidth": 390,
+      "viewport": 390,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 328,
+          "h": 205
+        },
+        {
+          "w": 76,
+          "h": 76
+        },
+        {
+          "w": 92,
+          "h": 92
+        },
+        {
+          "w": 76,
+          "h": 76
+        },
+        {
+          "w": 52,
+          "h": 52
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "alert",
+      "step": 2,
+      "width": 390,
+      "errors": [],
+      "documentWidth": 390,
+      "viewport": 390,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 328,
+          "h": 205
+        },
+        {
+          "w": 92,
+          "h": 92
+        },
+        {
+          "w": 76,
+          "h": 76
+        },
+        {
+          "w": 52,
+          "h": 52
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "chemical",
+      "step": 0,
+      "width": 390,
+      "errors": [],
+      "documentWidth": 390,
+      "viewport": 390,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 328,
+          "h": 205
+        },
+        {
+          "w": 92,
+          "h": 92
+        },
+        {
+          "w": 76,
+          "h": 76
+        },
+        {
+          "w": 102,
+          "h": 103
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "chemical",
+      "step": 1,
+      "width": 390,
+      "errors": [],
+      "documentWidth": 390,
+      "viewport": 390,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 328,
+          "h": 205
+        },
+        {
+          "w": 76,
+          "h": 76
+        },
+        {
+          "w": 92,
+          "h": 92
+        },
+        {
+          "w": 76,
+          "h": 76
+        },
+        {
+          "w": 52,
+          "h": 52
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "chemical",
+      "step": 2,
+      "width": 390,
+      "errors": [],
+      "documentWidth": 390,
+      "viewport": 390,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 328,
+          "h": 205
+        },
+        {
+          "w": 92,
+          "h": 92
+        },
+        {
+          "w": 76,
+          "h": 76
+        },
+        {
+          "w": 52,
+          "h": 52
+        },
+        {
+          "w": 94,
+          "h": 94
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "chemical",
+      "step": 3,
+      "width": 390,
+      "errors": [],
+      "documentWidth": 390,
+      "viewport": 390,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 328,
+          "h": 205
+        },
+        {
+          "w": 92,
+          "h": 92
+        },
+        {
+          "w": 76,
+          "h": 76
+        },
+        {
+          "w": 52,
+          "h": 52
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "evacuation",
+      "step": 0,
+      "width": 390,
+      "errors": [],
+      "documentWidth": 390,
+      "viewport": 390,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 328,
+          "h": 205
+        },
+        {
+          "w": 92,
+          "h": 92
+        },
+        {
+          "w": 76,
+          "h": 76
+        },
+        {
+          "w": 52,
+          "h": 52
+        },
+        {
+          "w": 94,
+          "h": 94
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "evacuation",
+      "step": 1,
+      "width": 390,
+      "errors": [],
+      "documentWidth": 390,
+      "viewport": 390,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 328,
+          "h": 205
+        },
+        {
+          "w": 76,
+          "h": 76
+        },
+        {
+          "w": 92,
+          "h": 92
+        },
+        {
+          "w": 52,
+          "h": 52
+        },
+        {
+          "w": 52,
+          "h": 52
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "evacuation",
+      "step": 2,
+      "width": 390,
+      "errors": [],
+      "documentWidth": 390,
+      "viewport": 390,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 328,
+          "h": 205
+        },
+        {
+          "w": 92,
+          "h": 92
+        },
+        {
+          "w": 76,
+          "h": 76
+        },
+        {
+          "w": 52,
+          "h": 52
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "evacuation",
+      "step": 3,
+      "width": 390,
+      "errors": [],
+      "documentWidth": 390,
+      "viewport": 390,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 328,
+          "h": 205
+        },
+        {
+          "w": 92,
+          "h": 92
+        },
+        {
+          "w": 76,
+          "h": 76
+        },
+        {
+          "w": 94,
+          "h": 94
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "safe-cooking",
+      "step": 0,
+      "width": 390,
+      "errors": [],
+      "documentWidth": 390,
+      "viewport": 390,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 328,
+          "h": 205
+        },
+        {
+          "w": 92,
+          "h": 92
+        },
+        {
+          "w": 76,
+          "h": 76
+        },
+        {
+          "w": 52,
+          "h": 52
+        },
+        {
+          "w": 94,
+          "h": 94
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "safe-cooking",
+      "step": 1,
+      "width": 390,
+      "errors": [],
+      "documentWidth": 390,
+      "viewport": 390,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 328,
+          "h": 205
+        },
+        {
+          "w": 76,
+          "h": 76
+        },
+        {
+          "w": 92,
+          "h": 92
+        },
+        {
+          "w": 52,
+          "h": 52
+        },
+        {
+          "w": 52,
+          "h": 52
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "safe-cooking",
+      "step": 2,
+      "width": 390,
+      "errors": [],
+      "documentWidth": 390,
+      "viewport": 390,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 328,
+          "h": 205
+        },
+        {
+          "w": 92,
+          "h": 92
+        },
+        {
+          "w": 76,
+          "h": 76
+        },
+        {
+          "w": 52,
+          "h": 52
+        },
+        {
+          "w": 94,
+          "h": 94
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "safe-cooking",
+      "step": 3,
+      "width": 390,
+      "errors": [],
+      "documentWidth": 390,
+      "viewport": 390,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 328,
+          "h": 205
+        },
+        {
+          "w": 92,
+          "h": 92
+        },
+        {
+          "w": 76,
+          "h": 76
+        },
+        {
+          "w": 52,
+          "h": 52
+        },
+        {
+          "w": 102,
+          "h": 102
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "first-aid",
+      "step": 0,
+      "width": 390,
+      "errors": [],
+      "documentWidth": 390,
+      "viewport": 390,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 328,
+          "h": 205
+        },
+        {
+          "w": 92,
+          "h": 92
+        },
+        {
+          "w": 76,
+          "h": 76
+        },
+        {
+          "w": 52,
+          "h": 52
+        },
+        {
+          "w": 102,
+          "h": 103
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "first-aid",
+      "step": 1,
+      "width": 390,
+      "errors": [],
+      "documentWidth": 390,
+      "viewport": 390,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 328,
+          "h": 205
+        },
+        {
+          "w": 76,
+          "h": 76
+        },
+        {
+          "w": 92,
+          "h": 92
+        },
+        {
+          "w": 52,
+          "h": 52
+        },
+        {
+          "w": 52,
+          "h": 52
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "first-aid",
+      "step": 2,
+      "width": 390,
+      "errors": [],
+      "documentWidth": 390,
+      "viewport": 390,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 328,
+          "h": 205
+        },
+        {
+          "w": 92,
+          "h": 92
+        },
+        {
+          "w": 76,
+          "h": 76
+        },
+        {
+          "w": 52,
+          "h": 52
+        },
+        {
+          "w": 94,
+          "h": 94
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "first-aid",
+      "step": 3,
+      "width": 390,
+      "errors": [],
+      "documentWidth": 390,
+      "viewport": 390,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 328,
+          "h": 205
+        },
+        {
+          "w": 92,
+          "h": 92
+        },
+        {
+          "w": 76,
+          "h": 76
+        },
+        {
+          "w": 52,
+          "h": 52
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "heat",
+      "step": 0,
+      "width": 390,
+      "errors": [],
+      "documentWidth": 390,
+      "viewport": 390,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 328,
+          "h": 205
+        },
+        {
+          "w": 92,
+          "h": 92
+        },
+        {
+          "w": 76,
+          "h": 76
+        },
+        {
+          "w": 52,
+          "h": 52
+        },
+        {
+          "w": 102,
+          "h": 103
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "heat",
+      "step": 1,
+      "width": 390,
+      "errors": [],
+      "documentWidth": 390,
+      "viewport": 390,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 328,
+          "h": 205
+        },
+        {
+          "w": 76,
+          "h": 76
+        },
+        {
+          "w": 92,
+          "h": 92
+        },
+        {
+          "w": 52,
+          "h": 52
+        },
+        {
+          "w": 52,
+          "h": 52
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "heat",
+      "step": 2,
+      "width": 390,
+      "errors": [],
+      "documentWidth": 390,
+      "viewport": 390,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 328,
+          "h": 205
+        },
+        {
+          "w": 92,
+          "h": 92
+        },
+        {
+          "w": 76,
+          "h": 76
+        },
+        {
+          "w": 52,
+          "h": 52
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "heat",
+      "step": 3,
+      "width": 390,
+      "errors": [],
+      "documentWidth": 390,
+      "viewport": 390,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 328,
+          "h": 205
+        },
+        {
+          "w": 76,
+          "h": 76
+        },
+        {
+          "w": 92,
+          "h": 92
+        },
+        {
+          "w": 52,
+          "h": 52
+        },
+        {
+          "w": 52,
+          "h": 52
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "storm",
+      "step": 0,
+      "width": 390,
+      "errors": [],
+      "documentWidth": 390,
+      "viewport": 390,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 328,
+          "h": 205
+        },
+        {
+          "w": 92,
+          "h": 92
+        },
+        {
+          "w": 76,
+          "h": 76
+        },
+        {
+          "w": 52,
+          "h": 52
+        },
+        {
+          "w": 94,
+          "h": 94
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "storm",
+      "step": 1,
+      "width": 390,
+      "errors": [],
+      "documentWidth": 390,
+      "viewport": 390,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 328,
+          "h": 205
+        },
+        {
+          "w": 76,
+          "h": 76
+        },
+        {
+          "w": 92,
+          "h": 92
+        },
+        {
+          "w": 76,
+          "h": 76
+        },
+        {
+          "w": 52,
+          "h": 52
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "storm",
+      "step": 2,
+      "width": 390,
+      "errors": [],
+      "documentWidth": 390,
+      "viewport": 390,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 328,
+          "h": 205
+        },
+        {
+          "w": 92,
+          "h": 92
+        },
+        {
+          "w": 76,
+          "h": 76
+        },
+        {
+          "w": 52,
+          "h": 52
+        },
+        {
+          "w": 94,
+          "h": 94
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "winter",
+      "step": 0,
+      "width": 390,
+      "errors": [],
+      "documentWidth": 390,
+      "viewport": 390,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 328,
+          "h": 205
+        },
+        {
+          "w": 76,
+          "h": 76
+        },
+        {
+          "w": 92,
+          "h": 92
+        },
+        {
+          "w": 52,
+          "h": 52
+        },
+        {
+          "w": 52,
+          "h": 52
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "winter",
+      "step": 1,
+      "width": 390,
+      "errors": [],
+      "documentWidth": 390,
+      "viewport": 390,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 328,
+          "h": 205
+        },
+        {
+          "w": 92,
+          "h": 92
+        },
+        {
+          "w": 76,
+          "h": 76
+        },
+        {
+          "w": 52,
+          "h": 52
+        },
+        {
+          "w": 102,
+          "h": 103
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "winter",
+      "step": 2,
+      "width": 390,
+      "errors": [],
+      "documentWidth": 390,
+      "viewport": 390,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 328,
+          "h": 205
+        },
+        {
+          "w": 76,
+          "h": 76
+        },
+        {
+          "w": 92,
+          "h": 92
+        },
+        {
+          "w": 76,
+          "h": 76
+        },
+        {
+          "w": 52,
+          "h": 52
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "winter",
+      "step": 3,
+      "width": 390,
+      "errors": [],
+      "documentWidth": 390,
+      "viewport": 390,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 328,
+          "h": 205
+        },
+        {
+          "w": 76,
+          "h": 76
+        },
+        {
+          "w": 92,
+          "h": 92
+        },
+        {
+          "w": 52,
+          "h": 52
+        },
+        {
+          "w": 52,
+          "h": 52
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "pets",
+      "step": 0,
+      "width": 390,
+      "errors": [],
+      "documentWidth": 390,
+      "viewport": 390,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 328,
+          "h": 205
+        },
+        {
+          "w": 92,
+          "h": 92
+        },
+        {
+          "w": 76,
+          "h": 76
+        },
+        {
+          "w": 52,
+          "h": 52
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "pets",
+      "step": 1,
+      "width": 390,
+      "errors": [],
+      "documentWidth": 390,
+      "viewport": 390,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 328,
+          "h": 205
+        },
+        {
+          "w": 76,
+          "h": 76
+        },
+        {
+          "w": 92,
+          "h": 92
+        },
+        {
+          "w": 52,
+          "h": 52
+        },
+        {
+          "w": 52,
+          "h": 52
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "pets",
+      "step": 2,
+      "width": 390,
+      "errors": [],
+      "documentWidth": 390,
+      "viewport": 390,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 328,
+          "h": 205
+        },
+        {
+          "w": 92,
+          "h": 92
+        },
+        {
+          "w": 76,
+          "h": 76
+        },
+        {
+          "w": 52,
+          "h": 52
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "pets",
+      "step": 3,
+      "width": 390,
+      "errors": [],
+      "documentWidth": 390,
+      "viewport": 390,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 328,
+          "h": 205
+        },
+        {
+          "w": 76,
+          "h": 76
+        },
+        {
+          "w": 92,
+          "h": 92
+        },
+        {
+          "w": 52,
+          "h": 52
+        },
+        {
+          "w": 52,
+          "h": 52
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "digital-kit",
+      "step": 0,
+      "width": 390,
+      "errors": [],
+      "documentWidth": 390,
+      "viewport": 390,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 328,
+          "h": 205
+        },
+        {
+          "w": 76,
+          "h": 76
+        },
+        {
+          "w": 92,
+          "h": 92
+        },
+        {
+          "w": 52,
+          "h": 52
+        },
+        {
+          "w": 52,
+          "h": 52
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "digital-kit",
+      "step": 1,
+      "width": 390,
+      "errors": [],
+      "documentWidth": 390,
+      "viewport": 390,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 328,
+          "h": 205
+        },
+        {
+          "w": 76,
+          "h": 76
+        },
+        {
+          "w": 92,
+          "h": 92
+        },
+        {
+          "w": 52,
+          "h": 52
+        },
+        {
+          "w": 52,
+          "h": 52
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "digital-kit",
+      "step": 2,
+      "width": 390,
+      "errors": [],
+      "documentWidth": 390,
+      "viewport": 390,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 328,
+          "h": 205
+        },
+        {
+          "w": 92,
+          "h": 92
+        },
+        {
+          "w": 76,
+          "h": 76
+        },
+        {
+          "w": 52,
+          "h": 52
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "digital-kit",
+      "step": 3,
+      "width": 390,
+      "errors": [],
+      "documentWidth": 390,
+      "viewport": 390,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 328,
+          "h": 205
+        },
+        {
+          "w": 76,
+          "h": 76
+        },
+        {
+          "w": 92,
+          "h": 92
+        },
+        {
+          "w": 52,
+          "h": 52
+        },
+        {
+          "w": 52,
+          "h": 52
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "hiking",
+      "step": 0,
+      "width": 390,
+      "errors": [],
+      "documentWidth": 390,
+      "viewport": 390,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 328,
+          "h": 205
+        },
+        {
+          "w": 92,
+          "h": 92
+        },
+        {
+          "w": 76,
+          "h": 76
+        },
+        {
+          "w": 52,
+          "h": 52
+        },
+        {
+          "w": 94,
+          "h": 94
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "hiking",
+      "step": 1,
+      "width": 390,
+      "errors": [],
+      "documentWidth": 390,
+      "viewport": 390,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 328,
+          "h": 205
+        },
+        {
+          "w": 92,
+          "h": 92
+        },
+        {
+          "w": 76,
+          "h": 76
+        },
+        {
+          "w": 52,
+          "h": 52
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "hiking",
+      "step": 2,
+      "width": 390,
+      "errors": [],
+      "documentWidth": 390,
+      "viewport": 390,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 328,
+          "h": 205
+        },
+        {
+          "w": 76,
+          "h": 76
+        },
+        {
+          "w": 92,
+          "h": 92
+        },
+        {
+          "w": 52,
+          "h": 52
+        },
+        {
+          "w": 52,
+          "h": 52
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "hiking",
+      "step": 3,
+      "width": 390,
+      "errors": [],
+      "documentWidth": 390,
+      "viewport": 390,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 328,
+          "h": 205
+        },
+        {
+          "w": 92,
+          "h": 92
+        },
+        {
+          "w": 76,
+          "h": 76
+        },
+        {
+          "w": 52,
+          "h": 52
+        },
+        {
+          "w": 102,
+          "h": 103
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "support-needs",
+      "step": 0,
+      "width": 390,
+      "errors": [],
+      "documentWidth": 390,
+      "viewport": 390,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 328,
+          "h": 205
+        },
+        {
+          "w": 92,
+          "h": 92
+        },
+        {
+          "w": 76,
+          "h": 76
+        },
+        {
+          "w": 52,
+          "h": 52
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "support-needs",
+      "step": 1,
+      "width": 390,
+      "errors": [],
+      "documentWidth": 390,
+      "viewport": 390,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 328,
+          "h": 205
+        },
+        {
+          "w": 92,
+          "h": 92
+        },
+        {
+          "w": 76,
+          "h": 76
+        },
+        {
+          "w": 52,
+          "h": 52
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "support-needs",
+      "step": 2,
+      "width": 390,
+      "errors": [],
+      "documentWidth": 390,
+      "viewport": 390,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 328,
+          "h": 205
+        },
+        {
+          "w": 92,
+          "h": 92
+        },
+        {
+          "w": 76,
+          "h": 76
+        },
+        {
+          "w": 52,
+          "h": 52
+        },
+        {
+          "w": 94,
+          "h": 94
+        }
+      ]
+    },
+    {
+      "kind": "tutorial",
+      "id": "support-needs",
+      "step": 3,
+      "width": 390,
+      "errors": [],
+      "documentWidth": 390,
+      "viewport": 390,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 328,
+          "h": 205
+        },
+        {
+          "w": 76,
+          "h": 76
+        },
+        {
+          "w": 92,
+          "h": 92
+        },
+        {
+          "w": 52,
+          "h": 52
+        },
+        {
+          "w": 52,
+          "h": 52
+        }
+      ]
+    },
+    {
+      "kind": "explanation",
+      "id": "coverage",
+      "step": 0,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 238,
+          "h": 149
+        },
+        {
+          "w": 67,
+          "h": 67
+        },
+        {
+          "w": 55,
+          "h": 55
+        }
+      ]
+    },
+    {
+      "kind": "explanation",
+      "id": "coverage",
+      "step": 1,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 238,
+          "h": 149
+        },
+        {
+          "w": 67,
+          "h": 67
+        },
+        {
+          "w": 55,
+          "h": 55
+        }
+      ]
+    },
+    {
+      "kind": "explanation",
+      "id": "coverage",
+      "step": 2,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 238,
+          "h": 149
+        },
+        {
+          "w": 67,
+          "h": 67
+        },
+        {
+          "w": 55,
+          "h": 55
+        },
+        {
+          "w": 68,
+          "h": 68
+        }
+      ]
+    },
+    {
+      "kind": "explanation",
+      "id": "inventory",
+      "step": 0,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 238,
+          "h": 149
+        },
+        {
+          "w": 55,
+          "h": 55
+        },
+        {
+          "w": 67,
+          "h": 67
+        },
+        {
+          "w": 37,
+          "h": 37
+        }
+      ]
+    },
+    {
+      "kind": "explanation",
+      "id": "inventory",
+      "step": 1,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 238,
+          "h": 149
+        },
+        {
+          "w": 67,
+          "h": 67
+        },
+        {
+          "w": 55,
+          "h": 55
+        },
+        {
+          "w": 68,
+          "h": 68
+        }
+      ]
+    },
+    {
+      "kind": "explanation",
+      "id": "inventory",
+      "step": 2,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 238,
+          "h": 149
+        },
+        {
+          "w": 67,
+          "h": 67
+        },
+        {
+          "w": 55,
+          "h": 55
+        },
+        {
+          "w": 68,
+          "h": 68
+        }
+      ]
+    },
+    {
+      "kind": "explanation",
+      "id": "shopping",
+      "step": 0,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 238,
+          "h": 149
+        },
+        {
+          "w": 67,
+          "h": 67
+        },
+        {
+          "w": 55,
+          "h": 55
+        }
+      ]
+    },
+    {
+      "kind": "explanation",
+      "id": "shopping",
+      "step": 1,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 238,
+          "h": 149
+        },
+        {
+          "w": 55,
+          "h": 55
+        },
+        {
+          "w": 67,
+          "h": 67
+        },
+        {
+          "w": 37,
+          "h": 37
+        }
+      ]
+    },
+    {
+      "kind": "explanation",
+      "id": "shopping",
+      "step": 2,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 238,
+          "h": 149
+        },
+        {
+          "w": 67,
+          "h": 67
+        },
+        {
+          "w": 55,
+          "h": 55
+        }
+      ]
+    },
+    {
+      "kind": "explanation",
+      "id": "packing",
+      "step": 0,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 238,
+          "h": 149
+        },
+        {
+          "w": 55,
+          "h": 55
+        },
+        {
+          "w": 67,
+          "h": 67
+        },
+        {
+          "w": 37,
+          "h": 37
+        }
+      ]
+    },
+    {
+      "kind": "explanation",
+      "id": "packing",
+      "step": 1,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 238,
+          "h": 149
+        },
+        {
+          "w": 55,
+          "h": 55
+        },
+        {
+          "w": 67,
+          "h": 67
+        },
+        {
+          "w": 37,
+          "h": 37
+        }
+      ]
+    },
+    {
+      "kind": "explanation",
+      "id": "packing",
+      "step": 2,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 238,
+          "h": 149
+        },
+        {
+          "w": 67,
+          "h": 67
+        },
+        {
+          "w": 55,
+          "h": 55
+        }
+      ]
+    },
+    {
+      "kind": "explanation",
+      "id": "plan",
+      "step": 0,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 238,
+          "h": 149
+        },
+        {
+          "w": 55,
+          "h": 55
+        },
+        {
+          "w": 67,
+          "h": 67
+        },
+        {
+          "w": 37,
+          "h": 37
+        }
+      ]
+    },
+    {
+      "kind": "explanation",
+      "id": "plan",
+      "step": 1,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 238,
+          "h": 149
+        },
+        {
+          "w": 67,
+          "h": 67
+        },
+        {
+          "w": 55,
+          "h": 55
+        }
+      ]
+    },
+    {
+      "kind": "explanation",
+      "id": "plan",
+      "step": 2,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 238,
+          "h": 149
+        },
+        {
+          "w": 67,
+          "h": 67
+        },
+        {
+          "w": 55,
+          "h": 55
+        },
+        {
+          "w": 68,
+          "h": 68
+        }
+      ]
+    },
+    {
+      "kind": "explanation",
+      "id": "backup",
+      "step": 0,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 238,
+          "h": 149
+        },
+        {
+          "w": 55,
+          "h": 55
+        },
+        {
+          "w": 67,
+          "h": 67
+        },
+        {
+          "w": 37,
+          "h": 37
+        }
+      ]
+    },
+    {
+      "kind": "explanation",
+      "id": "backup",
+      "step": 1,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 238,
+          "h": 149
+        },
+        {
+          "w": 55,
+          "h": 55
+        },
+        {
+          "w": 67,
+          "h": 67
+        },
+        {
+          "w": 37,
+          "h": 37
+        }
+      ]
+    },
+    {
+      "kind": "explanation",
+      "id": "backup",
+      "step": 2,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 238,
+          "h": 149
+        },
+        {
+          "w": 67,
+          "h": 67
+        },
+        {
+          "w": 55,
+          "h": 55
+        },
+        {
+          "w": 68,
+          "h": 68
+        }
+      ]
+    },
+    {
+      "kind": "explanation",
+      "id": "license",
+      "step": 0,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 238,
+          "h": 149
+        },
+        {
+          "w": 67,
+          "h": 67
+        },
+        {
+          "w": 55,
+          "h": 55
+        }
+      ]
+    },
+    {
+      "kind": "explanation",
+      "id": "license",
+      "step": 1,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 238,
+          "h": 149
+        },
+        {
+          "w": 67,
+          "h": 67
+        },
+        {
+          "w": 55,
+          "h": 55
+        }
+      ]
+    },
+    {
+      "kind": "explanation",
+      "id": "license",
+      "step": 2,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 238,
+          "h": 149
+        },
+        {
+          "w": 67,
+          "h": 67
+        },
+        {
+          "w": 55,
+          "h": 55
+        }
+      ]
+    },
+    {
+      "kind": "explanation",
+      "id": "scenarios",
+      "step": 0,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 238,
+          "h": 149
+        },
+        {
+          "w": 67,
+          "h": 67
+        },
+        {
+          "w": 55,
+          "h": 55
+        },
+        {
+          "w": 68,
+          "h": 68
+        }
+      ]
+    },
+    {
+      "kind": "explanation",
+      "id": "scenarios",
+      "step": 1,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 238,
+          "h": 149
+        },
+        {
+          "w": 67,
+          "h": 67
+        },
+        {
+          "w": 55,
+          "h": 55
+        }
+      ]
+    },
+    {
+      "kind": "explanation",
+      "id": "scenarios",
+      "step": 2,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 238,
+          "h": 149
+        },
+        {
+          "w": 67,
+          "h": 67
+        },
+        {
+          "w": 55,
+          "h": 55
+        }
+      ]
+    },
+    {
+      "kind": "explanation",
+      "id": "missions",
+      "step": 0,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 238,
+          "h": 149
+        },
+        {
+          "w": 67,
+          "h": 67
+        },
+        {
+          "w": 55,
+          "h": 55
+        }
+      ]
+    },
+    {
+      "kind": "explanation",
+      "id": "missions",
+      "step": 1,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 238,
+          "h": 149
+        },
+        {
+          "w": 67,
+          "h": 67
+        },
+        {
+          "w": 55,
+          "h": 55
+        },
+        {
+          "w": 68,
+          "h": 68
+        }
+      ]
+    },
+    {
+      "kind": "explanation",
+      "id": "missions",
+      "step": 2,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 238,
+          "h": 149
+        },
+        {
+          "w": 67,
+          "h": 67
+        },
+        {
+          "w": 55,
+          "h": 55
+        }
+      ]
+    },
+    {
+      "kind": "explanation",
+      "id": "shelters",
+      "step": 0,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 238,
+          "h": 149
+        },
+        {
+          "w": 67,
+          "h": 67
+        },
+        {
+          "w": 55,
+          "h": 55
+        },
+        {
+          "w": 68,
+          "h": 68
+        }
+      ]
+    },
+    {
+      "kind": "explanation",
+      "id": "shelters",
+      "step": 1,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 238,
+          "h": 149
+        },
+        {
+          "w": 67,
+          "h": 67
+        },
+        {
+          "w": 55,
+          "h": 55
+        },
+        {
+          "w": 68,
+          "h": 68
+        }
+      ]
+    },
+    {
+      "kind": "explanation",
+      "id": "profile",
+      "step": 0,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 238,
+          "h": 149
+        },
+        {
+          "w": 67,
+          "h": 67
+        },
+        {
+          "w": 55,
+          "h": 55
+        }
+      ]
+    },
+    {
+      "kind": "explanation",
+      "id": "profile",
+      "step": 1,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 238,
+          "h": 149
+        },
+        {
+          "w": 67,
+          "h": 67
+        },
+        {
+          "w": 55,
+          "h": 55
+        }
+      ]
+    },
+    {
+      "kind": "explanation",
+      "id": "profile",
+      "step": 2,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 238,
+          "h": 149
+        },
+        {
+          "w": 55,
+          "h": 55
+        },
+        {
+          "w": 67,
+          "h": 67
+        },
+        {
+          "w": 37,
+          "h": 37
+        }
+      ]
+    },
+    {
+      "kind": "explanation",
+      "id": "offline",
+      "step": 0,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 238,
+          "h": 149
+        },
+        {
+          "w": 67,
+          "h": 67
+        },
+        {
+          "w": 55,
+          "h": 55
+        }
+      ]
+    },
+    {
+      "kind": "explanation",
+      "id": "offline",
+      "step": 1,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 238,
+          "h": 149
+        },
+        {
+          "w": 67,
+          "h": 67
+        },
+        {
+          "w": 55,
+          "h": 55
+        }
+      ]
+    },
+    {
+      "kind": "reader",
+      "id": "blackout",
+      "step": 0,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": []
+    },
+    {
+      "kind": "reader",
+      "id": "blackout",
+      "step": 3,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": []
+    },
+    {
+      "kind": "reader",
+      "id": "flood",
+      "step": 0,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 238,
+          "h": 149
+        },
+        {
+          "w": 67,
+          "h": 67
+        },
+        {
+          "w": 55,
+          "h": 55
+        },
+        {
+          "w": 38,
+          "h": 38
+        },
+        {
+          "w": 68,
+          "h": 68
+        }
+      ]
+    },
+    {
+      "kind": "reader",
+      "id": "flood",
+      "step": 3,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 238,
+          "h": 149
+        },
+        {
+          "w": 67,
+          "h": 67
+        },
+        {
+          "w": 55,
+          "h": 55
+        },
+        {
+          "w": 38,
+          "h": 38
+        },
+        {
+          "w": 74,
+          "h": 74
+        }
+      ]
+    },
+    {
+      "kind": "reader",
+      "id": "fire",
+      "step": 0,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 238,
+          "h": 149
+        },
+        {
+          "w": 55,
+          "h": 55
+        },
+        {
+          "w": 67,
+          "h": 67
+        },
+        {
+          "w": 37,
+          "h": 37
+        }
+      ]
+    },
+    {
+      "kind": "reader",
+      "id": "fire",
+      "step": 3,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 238,
+          "h": 149
+        },
+        {
+          "w": 55,
+          "h": 55
+        },
+        {
+          "w": 67,
+          "h": 67
+        },
+        {
+          "w": 55,
+          "h": 55
+        },
+        {
+          "w": 38,
+          "h": 38
+        }
+      ]
+    },
+    {
+      "kind": "reader",
+      "id": "alert",
+      "step": 0,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 238,
+          "h": 149
+        },
+        {
+          "w": 67,
+          "h": 67
+        },
+        {
+          "w": 55,
+          "h": 55
+        },
+        {
+          "w": 68,
+          "h": 68
+        }
+      ]
+    },
+    {
+      "kind": "reader",
+      "id": "alert",
+      "step": 2,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 238,
+          "h": 149
+        },
+        {
+          "w": 67,
+          "h": 67
+        },
+        {
+          "w": 55,
+          "h": 55
+        },
+        {
+          "w": 38,
+          "h": 38
+        }
+      ]
+    },
+    {
+      "kind": "reader",
+      "id": "chemical",
+      "step": 0,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 238,
+          "h": 149
+        },
+        {
+          "w": 67,
+          "h": 67
+        },
+        {
+          "w": 55,
+          "h": 55
+        },
+        {
+          "w": 74,
+          "h": 74
+        }
+      ]
+    },
+    {
+      "kind": "reader",
+      "id": "chemical",
+      "step": 3,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 238,
+          "h": 149
+        },
+        {
+          "w": 67,
+          "h": 67
+        },
+        {
+          "w": 55,
+          "h": 55
+        },
+        {
+          "w": 38,
+          "h": 38
+        }
+      ]
+    },
+    {
+      "kind": "reader",
+      "id": "evacuation",
+      "step": 0,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 238,
+          "h": 149
+        },
+        {
+          "w": 67,
+          "h": 67
+        },
+        {
+          "w": 55,
+          "h": 55
+        },
+        {
+          "w": 38,
+          "h": 38
+        },
+        {
+          "w": 68,
+          "h": 68
+        }
+      ]
+    },
+    {
+      "kind": "reader",
+      "id": "evacuation",
+      "step": 3,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 238,
+          "h": 149
+        },
+        {
+          "w": 67,
+          "h": 67
+        },
+        {
+          "w": 55,
+          "h": 55
+        },
+        {
+          "w": 68,
+          "h": 68
+        }
+      ]
+    },
+    {
+      "kind": "reader",
+      "id": "armed-conflict",
+      "step": 0,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": []
+    },
+    {
+      "kind": "reader",
+      "id": "armed-conflict",
+      "step": 4,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": []
+    },
+    {
+      "kind": "reader",
+      "id": "nuclear-explosion",
+      "step": 0,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": []
+    },
+    {
+      "kind": "reader",
+      "id": "nuclear-explosion",
+      "step": 5,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": []
+    },
+    {
+      "kind": "reader",
+      "id": "go-bag",
+      "step": 0,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": []
+    },
+    {
+      "kind": "reader",
+      "id": "go-bag",
+      "step": 4,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": []
+    },
+    {
+      "kind": "reader",
+      "id": "water-storage",
+      "step": 0,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": []
+    },
+    {
+      "kind": "reader",
+      "id": "water-storage",
+      "step": 4,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": []
+    },
+    {
+      "kind": "reader",
+      "id": "safe-cooking",
+      "step": 0,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 238,
+          "h": 149
+        },
+        {
+          "w": 67,
+          "h": 67
+        },
+        {
+          "w": 55,
+          "h": 55
+        },
+        {
+          "w": 38,
+          "h": 38
+        },
+        {
+          "w": 68,
+          "h": 68
+        }
+      ]
+    },
+    {
+      "kind": "reader",
+      "id": "safe-cooking",
+      "step": 3,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 238,
+          "h": 149
+        },
+        {
+          "w": 67,
+          "h": 67
+        },
+        {
+          "w": 55,
+          "h": 55
+        },
+        {
+          "w": 38,
+          "h": 38
+        },
+        {
+          "w": 74,
+          "h": 74
+        }
+      ]
+    },
+    {
+      "kind": "reader",
+      "id": "communication",
+      "step": 0,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": []
+    },
+    {
+      "kind": "reader",
+      "id": "communication",
+      "step": 3,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": []
+    },
+    {
+      "kind": "reader",
+      "id": "first-aid",
+      "step": 0,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 238,
+          "h": 149
+        },
+        {
+          "w": 67,
+          "h": 67
+        },
+        {
+          "w": 55,
+          "h": 55
+        },
+        {
+          "w": 38,
+          "h": 38
+        },
+        {
+          "w": 74,
+          "h": 74
+        }
+      ]
+    },
+    {
+      "kind": "reader",
+      "id": "first-aid",
+      "step": 3,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 238,
+          "h": 149
+        },
+        {
+          "w": 67,
+          "h": 67
+        },
+        {
+          "w": 55,
+          "h": 55
+        },
+        {
+          "w": 38,
+          "h": 38
+        }
+      ]
+    },
+    {
+      "kind": "reader",
+      "id": "heat",
+      "step": 0,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 238,
+          "h": 149
+        },
+        {
+          "w": 67,
+          "h": 67
+        },
+        {
+          "w": 55,
+          "h": 55
+        },
+        {
+          "w": 38,
+          "h": 38
+        },
+        {
+          "w": 74,
+          "h": 74
+        }
+      ]
+    },
+    {
+      "kind": "reader",
+      "id": "heat",
+      "step": 3,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 238,
+          "h": 149
+        },
+        {
+          "w": 55,
+          "h": 55
+        },
+        {
+          "w": 67,
+          "h": 67
+        },
+        {
+          "w": 37,
+          "h": 37
+        },
+        {
+          "w": 38,
+          "h": 38
+        }
+      ]
+    },
+    {
+      "kind": "reader",
+      "id": "storm",
+      "step": 0,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 238,
+          "h": 149
+        },
+        {
+          "w": 67,
+          "h": 67
+        },
+        {
+          "w": 55,
+          "h": 55
+        },
+        {
+          "w": 38,
+          "h": 38
+        },
+        {
+          "w": 68,
+          "h": 68
+        }
+      ]
+    },
+    {
+      "kind": "reader",
+      "id": "storm",
+      "step": 2,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 238,
+          "h": 149
+        },
+        {
+          "w": 67,
+          "h": 67
+        },
+        {
+          "w": 55,
+          "h": 55
+        },
+        {
+          "w": 38,
+          "h": 38
+        },
+        {
+          "w": 68,
+          "h": 68
+        }
+      ]
+    },
+    {
+      "kind": "reader",
+      "id": "winter",
+      "step": 0,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 238,
+          "h": 149
+        },
+        {
+          "w": 55,
+          "h": 55
+        },
+        {
+          "w": 67,
+          "h": 67
+        },
+        {
+          "w": 37,
+          "h": 37
+        },
+        {
+          "w": 38,
+          "h": 38
+        }
+      ]
+    },
+    {
+      "kind": "reader",
+      "id": "winter",
+      "step": 3,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 238,
+          "h": 149
+        },
+        {
+          "w": 55,
+          "h": 55
+        },
+        {
+          "w": 67,
+          "h": 67
+        },
+        {
+          "w": 37,
+          "h": 37
+        },
+        {
+          "w": 38,
+          "h": 38
+        }
+      ]
+    },
+    {
+      "kind": "reader",
+      "id": "pets",
+      "step": 0,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 238,
+          "h": 149
+        },
+        {
+          "w": 67,
+          "h": 67
+        },
+        {
+          "w": 55,
+          "h": 55
+        },
+        {
+          "w": 38,
+          "h": 38
+        }
+      ]
+    },
+    {
+      "kind": "reader",
+      "id": "pets",
+      "step": 3,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 238,
+          "h": 149
+        },
+        {
+          "w": 55,
+          "h": 55
+        },
+        {
+          "w": 67,
+          "h": 67
+        },
+        {
+          "w": 37,
+          "h": 37
+        },
+        {
+          "w": 38,
+          "h": 38
+        }
+      ]
+    },
+    {
+      "kind": "reader",
+      "id": "digital-kit",
+      "step": 0,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 238,
+          "h": 149
+        },
+        {
+          "w": 55,
+          "h": 55
+        },
+        {
+          "w": 67,
+          "h": 67
+        },
+        {
+          "w": 37,
+          "h": 37
+        },
+        {
+          "w": 38,
+          "h": 38
+        }
+      ]
+    },
+    {
+      "kind": "reader",
+      "id": "digital-kit",
+      "step": 3,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 238,
+          "h": 149
+        },
+        {
+          "w": 55,
+          "h": 55
+        },
+        {
+          "w": 67,
+          "h": 67
+        },
+        {
+          "w": 37,
+          "h": 37
+        },
+        {
+          "w": 38,
+          "h": 38
+        }
+      ]
+    },
+    {
+      "kind": "reader",
+      "id": "hiking",
+      "step": 0,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 238,
+          "h": 149
+        },
+        {
+          "w": 67,
+          "h": 67
+        },
+        {
+          "w": 55,
+          "h": 55
+        },
+        {
+          "w": 38,
+          "h": 38
+        },
+        {
+          "w": 68,
+          "h": 68
+        }
+      ]
+    },
+    {
+      "kind": "reader",
+      "id": "hiking",
+      "step": 3,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 238,
+          "h": 149
+        },
+        {
+          "w": 67,
+          "h": 67
+        },
+        {
+          "w": 55,
+          "h": 55
+        },
+        {
+          "w": 38,
+          "h": 38
+        },
+        {
+          "w": 74,
+          "h": 74
+        }
+      ]
+    },
+    {
+      "kind": "reader",
+      "id": "support-needs",
+      "step": 0,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 238,
+          "h": 149
+        },
+        {
+          "w": 67,
+          "h": 67
+        },
+        {
+          "w": 55,
+          "h": 55
+        },
+        {
+          "w": 38,
+          "h": 38
+        }
+      ]
+    },
+    {
+      "kind": "reader",
+      "id": "support-needs",
+      "step": 3,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320,
+      "overflow": [],
+      "svgSizes": [
+        {
+          "w": 238,
+          "h": 149
+        },
+        {
+          "w": 55,
+          "h": 55
+        },
+        {
+          "w": 67,
+          "h": 67
+        },
+        {
+          "w": 37,
+          "h": 37
+        },
+        {
+          "w": 38,
+          "h": 38
+        }
+      ]
+    }
+  ]
+}

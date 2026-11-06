@@ -1,10 +1,13 @@
-import { CivilScene } from "../components/civil-scene";
-import { memo, useCallback, useRef, useState } from "react";
+import {
+  AnimationScene as Scene,
+  animationKindArt as kinds,
+} from "../components/animation-scene";
+import { useCallback, useRef, useState } from "react";
 import { View } from "react-native";
 import { router, useFocusEffect, useLocalSearchParams } from "expo-router";
 import { LocalizedPressable as Pressable } from "../components/localized-native";
 import { LocalizedText as Text, useLocale } from "../components/localized-text";
-import { Screen, Card, Button, T, Row } from "../components/ui";
+import { Screen, Card, Button, T, Row, Field } from "../components/ui";
 import {
   Badge,
   Callout,
@@ -13,57 +16,15 @@ import {
   SectionTitle,
 } from "../components/visual";
 import { AcademyArt } from "../components/academy-art";
-import { TutorialScene } from "../components/tutorial-scene";
-import { PracticalScene } from "../components/practical-scene";
 import {
   animationTutorials,
   getTutorial,
   type Tutorial,
-  type TutorialKind,
 } from "../data/tutorials";
 import { useTutorialPlayer } from "../hooks/use-tutorial-player";
-import { academyGuides, type AcademyArtKind } from "../data/academy";
-import { isRTL } from "../i18n";
+import { academyGuides } from "../data/academy";
+import { translateText as t, isRTL } from "../i18n";
 import { useTheme } from "../theme/theme";
-const kinds: Record<TutorialKind, { art: AcademyArtKind; color: string }> = {
-  bag: { art: "bag", color: "#DDE8C6" },
-  water: { art: "water", color: "#D6ECF2" },
-  power: { art: "power", color: "#F9E5BE" },
-  communication: { art: "radio", color: "#E4DDF4" },
-  "adult-cpr": { art: "medical", color: "#F6E0D8" },
-  bleeding: { art: "medical", color: "#ECDCE4" },
-  burns: { art: "medical", color: "#DAECF0" },
-  campfire: { art: "outdoor", color: "#F4DFBF" },
-  "armed-conflict": { art: "bag", color: "#C4D6F4" },
-  "nuclear-explosion": { art: "home", color: "#D9CDF3" },
-};
-const Scene = memo(function Scene({
-  tutorial,
-  step,
-  progress,
-}: {
-  tutorial: Tutorial;
-  step: number;
-  progress: ReturnType<typeof useTutorialPlayer>["progress"];
-}) {
-  if (
-    tutorial.kind === "bag" ||
-    tutorial.kind === "water" ||
-    tutorial.kind === "power" ||
-    tutorial.kind === "communication"
-  )
-    return (
-      <TutorialScene kind={tutorial.kind} step={step} progress={progress} />
-    );
-  if (
-    tutorial.kind === "armed-conflict" ||
-    tutorial.kind === "nuclear-explosion"
-  )
-    return <CivilScene kind={tutorial.kind} step={step} progress={progress} />;
-  return (
-    <PracticalScene kind={tutorial.kind} step={step} progress={progress} />
-  );
-});
 function clock(ms: number) {
   const seconds = Math.floor(ms / 1000);
   return `${Math.floor(seconds / 60)}:${String(seconds % 60).padStart(2, "0")}`;
@@ -215,8 +176,7 @@ function Player({ tutorial }: { tutorial: Tutorial }) {
           </Row>
           <Button title="Od začiatku" secondary onPress={player.restart} />
           <T muted>
-            {tutorial.kind === "armed-conflict" ||
-            tutorial.kind === "nuclear-explosion"
+            {!["adult-cpr", "bleeding", "burns"].includes(tutorial.kind)
               ? "Animácia znázorňuje postup, nie rýchlosť skutočného zásahu."
               : "Čas patrí animácii, nie trvaniu ošetrenia."}
           </T>
@@ -303,7 +263,19 @@ function Player({ tutorial }: { tutorial: Tutorial }) {
 export default function AnimationsScreen() {
   const { id } = useLocalSearchParams<{ id?: string }>(),
     tutorial = id ? getTutorial(id) : undefined,
-    c = useTheme();
+    c = useTheme(),
+    [query, setQuery] = useState("");
+  useLocale();
+  const fold = (value: string) =>
+    value
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .toLocaleLowerCase();
+  const visible = animationTutorials.filter((item) =>
+    fold(item.title + " " + t(item.title) + " " + t(item.summary)).includes(
+      fold(query),
+    ),
+  );
   if (id && !tutorial)
     return (
       <Screen title="Postup sa nenašiel">
@@ -336,8 +308,10 @@ export default function AnimationsScreen() {
           licenciou.
         </T>
       </Callout>
+      <Field label="Vyhľadať návod" value={query} onChange={setQuery} />
+      {visible.length === 0 ? <T>Postup sa nenašiel</T> : null}
       <View style={{ flexDirection: "row", flexWrap: "wrap", gap: 12 }}>
-        {animationTutorials.map((item) => (
+        {visible.map((item) => (
           <Pressable
             key={item.id}
             accessibilityRole="button"
@@ -359,8 +333,14 @@ export default function AnimationsScreen() {
           >
             <View>
               <AcademyArt
-                kind={kinds[item.kind].art}
-                color={kinds[item.kind].color}
+                kind={
+                  academyGuides.find((g) => g.id === item.guideId)?.art ??
+                  kinds[item.kind].art
+                }
+                color={
+                  academyGuides.find((g) => g.id === item.guideId)?.color ??
+                  kinds[item.kind].color
+                }
                 height={125}
               />
               <View

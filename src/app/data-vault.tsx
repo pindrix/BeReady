@@ -1,3 +1,4 @@
+import { ExplanationCard } from "../components/explanation";
 import { router } from "expo-router";
 import { Card, Screen, T, Button } from "../components/ui";
 import { useStore } from "../state/store";
@@ -18,6 +19,7 @@ export default function DataVault() {
         />
       }
     >
+      <ExplanationCard topic="backup" />
       <Badge label="IBA ČÍTANIE · ÚDAJE SA NEMAŽÚ" />
       <Card>
         <T large>Domácnosť</T>

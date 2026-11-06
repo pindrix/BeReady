@@ -1,11 +1,11 @@
+import { AnimatedStep } from "../components/explanation";
 import { LocalizedPressable as Pressable } from "../components/localized-native";
 import { LocalizedText as Text, useLocale } from "../components/localized-text";
 import { translateText as t } from "../i18n";
-import { getTutorialsForGuide } from "../data/tutorials";
+import { getTutorialsForGuide, getTutorial } from "../data/tutorials";
 import { useState } from "react";
 import { Linking, View } from "react-native";
 import { router, useLocalSearchParams } from "expo-router";
-import { AcademyArt } from "../components/academy-art";
 import {
   Button,
   Card,
@@ -62,7 +62,6 @@ function Reader({ guide }: { guide: AcademyGuide }) {
         />
         <Badge label={`${guide.minutes} MIN · OFFLINE`} />
       </Row>
-      <AcademyArt kind={guide.art} color={guide.color} height={210} />
       {getTutorialsForGuide(guide.id).map((item) => (
         <Button
           key={item.id}
@@ -77,36 +76,50 @@ function Reader({ guide }: { guide: AcademyGuide }) {
         value={((index + 1) / guide.steps.length) * 100}
         label={`Krok ${index + 1} z ${guide.steps.length}`}
       />
+      {guide.category === "Prvá pomoc" ? (
+        <Callout icon="medical-outline" title="Tréningová ukážka">
+          <T>{guide.takeaway}</T>
+          <Button
+            title="Potrebujem pomoc teraz"
+            secondary
+            onPress={() => router.push("/now")}
+          />
+        </Callout>
+      ) : null}
       <Card>
-        <View style={{ flexDirection: "row", alignItems: "center", gap: 12 }}>
-          <View
-            style={{
-              width: 47,
-              height: 47,
-              borderRadius: 16,
-              backgroundColor: c.tint,
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            <Text style={{ fontSize: 24, fontWeight: "800", color: c.primary }}>
-              {String(index + 1).padStart(2, "0")}
+        <AnimatedStep tutorial={getTutorial(guide.id)!} index={index}>
+          <View style={{ flexDirection: "row", alignItems: "center", gap: 12 }}>
+            <View
+              style={{
+                width: 47,
+                height: 47,
+                borderRadius: 16,
+                backgroundColor: c.tint,
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <Text
+                style={{ fontSize: 24, fontWeight: "800", color: c.primary }}
+              >
+                {String(index + 1).padStart(2, "0")}
+              </Text>
+            </View>
+            <Text
+              style={{
+                flex: 1,
+                fontSize: 22,
+                lineHeight: 29,
+                fontWeight: "800",
+                color: c.text,
+                letterSpacing: -0.4,
+              }}
+            >
+              {step.title}
             </Text>
           </View>
-          <Text
-            style={{
-              flex: 1,
-              fontSize: 22,
-              lineHeight: 29,
-              fontWeight: "800",
-              color: c.text,
-              letterSpacing: -0.4,
-            }}
-          >
-            {step.title}
-          </Text>
-        </View>
-        <T>{step.body}</T>
+          <T>{step.body}</T>
+        </AnimatedStep>
         <View style={{ flexDirection: "row", gap: 7, paddingVertical: 4 }}>
           {guide.steps.map((_, i) => (
             <View

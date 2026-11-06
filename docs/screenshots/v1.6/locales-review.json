@@ -1,0 +1,47 @@
+{
+  "notice": "Browser fixture; US country with English/Arabic language.",
+  "reports": [
+    {
+      "locale": "en",
+      "screen": "home",
+      "errors": [],
+      "width": 320,
+      "viewport": 320
+    },
+    {
+      "locale": "en",
+      "screen": "explain",
+      "errors": [],
+      "width": 320,
+      "viewport": 320
+    },
+    {
+      "locale": "en",
+      "screen": "guide",
+      "errors": [],
+      "width": 320,
+      "viewport": 320
+    },
+    {
+      "locale": "ar",
+      "screen": "home",
+      "errors": [],
+      "width": 320,
+      "viewport": 320
+    },
+    {
+      "locale": "ar",
+      "screen": "explain",
+      "errors": [],
+      "width": 320,
+      "viewport": 320
+    },
+    {
+      "locale": "ar",
+      "screen": "guide",
+      "errors": [],
+      "width": 320,
+      "viewport": 320
+    }
+  ]
+}

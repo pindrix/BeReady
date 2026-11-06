@@ -1,3 +1,4 @@
+import { ExplanationCard } from "../../components/explanation";
 import { initialChecklists } from "../../data/content";
 import { useState } from "react";
 import { IconButton, Badge, Tile } from "../../components/visual";
@@ -121,6 +122,7 @@ export default function PlanScreen() {
       title="Môj krízový plán"
       subtitle="Dohodnite sa vopred. Údaje sa nikam automaticky neposielajú."
     >
+      <ExplanationCard topic="plan" />
       <Button
         title="Nákupný zoznam"
         secondary

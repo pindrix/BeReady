@@ -4,7 +4,7 @@ import {
   fireEvent,
   waitFor,
 } from "@testing-library/react-native";
-import { Linking } from "react-native";
+import { Linking, AppState, Animated, AccessibilityInfo } from "react-native";
 import { useLocalSearchParams } from "expo-router";
 import GuideScreen from "../src/app/guide";
 import VideosScreen from "../src/app/videos";
@@ -13,6 +13,7 @@ import { defaultHousehold } from "../src/types/model";
 jest.mock("../src/state/store", () => ({ useStore: jest.fn() }));
 jest.mock("expo-router", () => ({
   router: { push: jest.fn(), back: jest.fn() },
+  useFocusEffect: jest.fn(),
   useLocalSearchParams: jest.fn(),
 }));
 const mockStore = jest.mocked(useStore),
@@ -82,4 +83,41 @@ test("video knižnica nič neprehráva automaticky a otvorí explicitný YouTube
     "Slovenský Červený kríž prvá pomoc",
   );
   open.mockRestore();
+});
+
+test("changing a guide step pauses the animation and never writes checklist progress", async () => {
+  const previous = AppState.currentState;
+  AppState.currentState = "active";
+  const preference = jest
+    .spyOn(AccessibilityInfo, "isReduceMotionEnabled")
+    .mockResolvedValue(false);
+  const timing = jest
+    .spyOn(Animated, "timing")
+    .mockReturnValue({ start: jest.fn(), stop: jest.fn(), reset: jest.fn() });
+  mockParams.mockReturnValue({ id: "flood" });
+  try {
+    await render(<GuideScreen />);
+    await waitFor(() =>
+      expect(
+        screen.getByRole("button", { name: "Prehrať" }).props.accessibilityState
+          .disabled,
+      ).toBe(false),
+    );
+    await fireEvent.press(screen.getByRole("button", { name: "Prehrať" }));
+    expect(screen.getByRole("button", { name: "Pozastaviť" })).toBeTruthy();
+    await fireEvent.press(screen.getByRole("button", { name: "Ďalší krok" }));
+    await waitFor(() =>
+      expect(screen.queryByRole("button", { name: "Pozastaviť" })).toBeNull(),
+    );
+    expect(
+      screen.getByText(
+        /Nevstupujte ani nevchádzajte autom do zaplavenej cesty/,
+      ),
+    ).toBeTruthy();
+    expect(mockStore().save).not.toHaveBeenCalled();
+  } finally {
+    AppState.currentState = previous;
+    preference.mockRestore();
+    timing.mockRestore();
+  }
 });

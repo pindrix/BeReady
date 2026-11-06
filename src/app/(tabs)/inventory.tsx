@@ -1,3 +1,4 @@
+import { ExplanationCard } from "../../components/explanation";
 import { LocalizedPressable as Pressable } from "../../components/localized-native";
 import { LocalizedText as Text } from "../../components/localized-text";
 import { useState } from "react";
@@ -50,6 +51,7 @@ export default function InventoryScreen() {
         />
       }
     >
+      <ExplanationCard topic="inventory" />
       <View style={{ flexDirection: "row", gap: 12 }}>
         {[
           {

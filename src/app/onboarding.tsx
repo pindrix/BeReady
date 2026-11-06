@@ -1,3 +1,4 @@
+import { ExplanationCard } from "../components/explanation";
 import { router } from "expo-router";
 import { LanguagePicker } from "../components/language-picker";
 import { Image } from "expo-image";
@@ -29,6 +30,7 @@ export default function Onboarding() {
         secondary
         onPress={() => router.push("/now")}
       />
+      <ExplanationCard topic="profile" />
       <ProfileForm initial={defaultHousehold} onSave={s.profile} first />
     </Screen>
   );

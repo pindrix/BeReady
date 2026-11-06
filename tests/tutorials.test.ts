@@ -28,7 +28,7 @@ test("animované návody zachovávajú všetky kroky a prekladové texty pôvodn
       ["communication", "communication", 4],
     ],
   );
-  assert.equal(new Set(animationTutorials.map((item) => item.id)).size, 10);
+  assert.equal(new Set(animationTutorials.map((item) => item.id)).size, 24);
   for (const tutorial of animationTutorials.slice(0, 4)) {
     const guide = academyGuides.find((item) => item.id === tutorial.guideId);
     assert.ok(guide);
@@ -48,7 +48,7 @@ test("animované návody zachovávajú všetky kroky a prekladové texty pôvodn
 });
 
 test("praktické ukážky majú vlastné zdroje a zdieľaný návod vracia všetky súvisiace ukážky", () => {
-  assert.equal(animationTutorials.length, 10);
+  assert.equal(animationTutorials.length, 24);
   assert.deepEqual(
     animationTutorials
       .slice(4, 8)
@@ -78,7 +78,7 @@ test("praktické ukážky majú vlastné zdroje a zdieľaný návod vracia všet
   }
   assert.deepEqual(
     getTutorialsForGuide("first-aid").map((tutorial) => tutorial.id),
-    ["adult-cpr", "bleeding", "burns"],
+    ["first-aid", "adult-cpr", "bleeding", "burns"],
   );
 });
 

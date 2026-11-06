@@ -11,6 +11,7 @@ import { defaultHousehold } from "../src/types/model";
 jest.mock("../src/state/store", () => ({ useStore: jest.fn() }));
 jest.mock("expo-router", () => ({
   router: { push: jest.fn(), back: jest.fn() },
+  useFocusEffect: jest.fn(),
   useLocalSearchParams: jest.fn(),
 }));
 const mockStore = jest.mocked(useStore),

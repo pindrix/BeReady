@@ -1,8 +1,18 @@
-# READY 1.5 — Domácnosť pripravená krok za krokom
+# READY 1.6 — Domácnosť pripravená krok za krokom
 
 Mobilná aplikácia pre pripravenosť domácnosti. Expo SDK 58, React Native, striktný TypeScript, Expo Router a SQLite. Osobné údaje domácnosti zostávajú lokálne. Bez reklamného SDK a vzdialeného sledovania.
 
-## Čo je nové vo verzii 1.5
+## Čo je nové vo verzii 1.6
+
+- **Animácia v každom z 20 sprievodcov:** priamo pri aktuálnom kroku, s popisom tesne pod scénou. Pri zmene kroku sa ukážka zastaví a pripraví nový obrázok. Rozšírená knižnica obsahuje 24 postupov so 101 krokmi vrátane špecializovanej prvej pomoci, ohňa a civilnej ochrany.
+- **54 nových názorných diagramov:** povodeň, požiar, výstrahy, chemický únik, evakuácia, jedlo bez varenia, prvé minúty pri úraze, horúčava, búrka, zima, zvieratá, digitálne doklady, turistika a pomoc ľuďom so špecifickými potrebami. Pohyb znázorňuje presun do úkrytu, odchod od rizika, kontrolu informácií alebo pridanie predmetu do výbavy. Nie je to navigácia po skutočnej bezpečnej trase.
+- **12 vizuálnych vysvetlení v 15 pracovných obrazovkách:** profil, cieľ zásob, evidencia, deficit nákupu, balenie, rodinný plán, zálohy, licencia, scenáre, misie, kryty a offline obsah. Kompaktná ilustrovaná karta sa rozbalí na požiadanie. Nemá vplyv na údaje, uložený pokrok, nákup ani platnosť licencie.
+- **Ovládanie pre malý displej:** prehrávanie, pauza, ručný výber kroku, opakovanie a statické scény pri obmedzenom pohybe. Zatvorené vysvetlenia nemajú časovače; scény sa pri každom posune časovej osi zbytočne neprekresľujú. Text je dostupný vždy.
+- **Vyhľadávanie animácií aj v preklade**, všetkých 21 jazykov a pribalené grafické prvky. Nepribudol natívny balík ani potreba sťahovať video. Offline prístup naďalej určuje existujúca licencia.
+
+[Animované vysvetlenie výpočtu](docs/screenshots/v1.6/coverage-demo.gif) · [Nové scény](docs/screenshots/v1.6/scenes.jpg) · [Vložená animácia v návode](docs/screenshots/v1.6/reader-flood.png). Ide o prehliadačový QA fixture, nie záznam fyzického telefónu. Podrobný rozsah v [docs/EXPLANATORY_ANIMATIONS.md](docs/EXPLANATORY_ANIMATIONS.md).
+
+## Základ z verzie 1.5
 
 - **Dva nové animované postupy civilnej ochrany:** vojnový konflikt (5 krokov) a jadrový výbuch/spad (6 krokov). Celkom 10 animovaných návodov a 47 krokov.
 - **Vlastné scény pre každý úkon:** rodinný plán, ukrytie, evakuácia podľa úradov, odstup od neznámych predmetov, rádio; pri jadrovom výbuchu ochrana hlavy za krytom, presun do pevnej budovy, suterén, kontaminovaný odev a umytie, pobyt vnútri, uzavreté zásoby a lieky len podľa úradov.

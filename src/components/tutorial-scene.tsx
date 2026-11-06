@@ -16,7 +16,7 @@ type Props = {
   /** Controlled by the player, including pause and reduced-motion behaviour. */
   progress: Animated.Value;
 };
-type GlyphName =
+export type GlyphName =
   | "bag"
   | "bottle"
   | "documents"
@@ -39,7 +39,20 @@ type GlyphName =
   | "candle"
   | "guidance"
   | "chemical"
-  | "plan";
+  | "plan"
+  | "crouch"
+  | "flame"
+  | "waves"
+  | "storm"
+  | "sun"
+  | "snow"
+  | "pet"
+  | "lock"
+  | "storage"
+  | "clock"
+  | "map"
+  | "door"
+  | "calculator";
 
 const INK = "#23463E";
 const PAPER = "#FFF9EB";
@@ -66,7 +79,7 @@ function useScenePalette() {
 }
 
 /** All art is bundled SVG. Animated native wrappers keep it usable offline. */
-function Glyph({ name, size = 80 }: { name: GlyphName; size?: number }) {
+export function Glyph({ name, size = 80 }: { name: GlyphName; size?: number }) {
   let drawing: ReactNode;
   switch (name) {
     case "bag":
@@ -349,6 +362,158 @@ function Glyph({ name, size = 80 }: { name: GlyphName; size?: number }) {
           <Path d="M29 24V12h25v12M53 34h8v14h-8z" fill={PAPER} />
           <Path d="m40 41 13 13-13 13-13-13z" fill={PAPER} />
           <Path d="M40 46v10m0 5v1" strokeWidth={3} />
+        </>
+      );
+      break;
+    case "crouch":
+      drawing = (
+        <>
+          <Circle cx={53} cy={36} r={10} fill="#E8BD99" />
+          <Path d="M43 42L24 54L19 66H48L37 59L57 52L65 64" fill={GREEN} />
+          <Path d="M23 69H55M59 48L65 62" strokeWidth={4} fill="none" />
+        </>
+      );
+      break;
+    case "flame":
+      drawing = (
+        <>
+          <Path
+            d="M40 5Q48 30 59 38Q76 62 53 73Q32 85 17 66Q5 49 28 31Q23 48 35 45Q48 35 40 5Z"
+            fill={ORANGE}
+          />
+          <Path d="M42 44Q60 64 43 73Q23 70 34 55Z" fill={PAPER} />
+        </>
+      );
+      break;
+    case "waves":
+      drawing = (
+        <>
+          <Path
+            d="M4 28Q14 15 26 28T49 28T75 28M4 46Q14 33 26 46T49 46T75 46M4 64Q14 51 26 64T49 64T75 64"
+            fill="none"
+            stroke={WATER}
+            strokeWidth={7}
+          />
+        </>
+      );
+      break;
+    case "storm":
+      drawing = (
+        <>
+          <Path
+            d="M15 42Q2 27 18 22Q26 2 43 15Q64 9 68 28Q80 42 63 47H17Z"
+            fill={WATER}
+          />
+          <Path d="M42 43L28 61H42L34 76L57 53H44L50 43" fill={ORANGE} />
+        </>
+      );
+      break;
+    case "sun":
+      drawing = (
+        <>
+          <Circle cx={40} cy={40} r={18} fill={ORANGE} />
+          <Path
+            d="M40 4V14M40 66V76M4 40H14M66 40H76M14 14L22 22M58 58L66 66M14 66L22 58M58 22L66 14"
+            strokeWidth={4}
+          />
+        </>
+      );
+      break;
+    case "snow":
+      drawing = (
+        <>
+          <Path
+            d="M40 7V73M11 23L69 57M11 57L69 23M29 12L40 23L51 12M29 68L40 57L51 68M11 36L26 32L22 17M58 63L54 48L69 44M11 44L26 48L22 63M58 17L54 32L69 36"
+            fill="none"
+            stroke={WATER}
+            strokeWidth={3}
+          />
+        </>
+      );
+      break;
+    case "pet":
+      drawing = (
+        <>
+          <Rect x={8} y={28} width={65} height={45} rx={9} fill={GREEN} />
+          <Path d="M25 28V18Q40 7 55 18V28" fill="none" strokeWidth={4} />
+          <Rect x={17} y={36} width={45} height={29} rx={6} fill={PAPER} />
+          <Circle cx={40} cy={48} r={7} fill={ORANGE} />
+          <Path
+            d="M33 44L32 37L38 42M44 42L49 37L48 45M23 38V64M56 38V64"
+            fill="none"
+          />
+        </>
+      );
+      break;
+    case "lock":
+      drawing = (
+        <>
+          <Path d="M22 35V24Q40-3 58 24V35" fill="none" strokeWidth={5} />
+          <Rect x={14} y={33} width={52} height={40} rx={8} fill={GREEN} />
+          <Circle cx={40} cy={49} r={5} fill={PAPER} />
+          <Path d="M40 54V62" strokeWidth={4} />
+        </>
+      );
+      break;
+    case "storage":
+      drawing = (
+        <>
+          <Rect x={13} y={14} width={54} height={59} rx={8} fill={WATER} />
+          <Path d="M14 31H66M14 49H66" />
+          <Circle cx={57} cy={23} r={3} fill={GREEN} />
+          <Circle cx={57} cy={40} r={3} fill={GREEN} />
+          <Circle cx={57} cy={59} r={3} fill={GREEN} />
+          <Path d="M24 23H43M24 41H43M24 60H43" />
+        </>
+      );
+      break;
+    case "clock":
+      drawing = (
+        <>
+          <Circle cx={40} cy={42} r={29} fill={PAPER} />
+          <Path
+            d="M40 24V43L55 52M25 5H55M40 5V13"
+            fill="none"
+            strokeWidth={4}
+          />
+        </>
+      );
+      break;
+    case "map":
+      drawing = (
+        <>
+          <Path d="M5 18L27 9L53 20L75 10V65L53 75L27 63L5 73Z" fill={PAPER} />
+          <Path d="M27 9V63M53 20V75" stroke={GREEN} />
+          <Path
+            d="M16 49L34 33L47 47L65 30"
+            fill="none"
+            stroke={ORANGE}
+            strokeWidth={4}
+          />
+          <Circle cx={65} cy={30} r={5} fill={GREEN} />
+        </>
+      );
+      break;
+    case "door":
+      drawing = (
+        <>
+          <Rect x={14} y={7} width={51} height={66} rx={4} fill={GREEN} />
+          <Rect x={22} y={15} width={35} height={58} rx={3} fill={PAPER} />
+          <Circle cx={48} cy={44} r={3} fill={INK} />
+          <Path d="M5 74H75" strokeWidth={4} />
+        </>
+      );
+      break;
+    case "calculator":
+      drawing = (
+        <>
+          <Rect x={17} y={6} width={46} height={68} rx={7} fill={GREEN} />
+          <Rect x={24} y={14} width={32} height={15} rx={3} fill={PAPER} />
+          <Path
+            d="M26 41H31M26 52H31M26 63H31M39 41H44M39 52H44M39 63H44M51 41H55M51 52H55M51 63H55"
+            stroke={PAPER}
+            strokeWidth={4}
+          />
         </>
       );
       break;

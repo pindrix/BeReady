@@ -1,0 +1,37 @@
+{
+  "notice": "Browser fixture. Generator moves away from a stationary house; no animation of moving the building.",
+  "reports": [
+    {
+      "id": "safe-cooking",
+      "step": 3,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320
+    },
+    {
+      "id": "winter",
+      "step": 1,
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "viewport": 320
+    },
+    {
+      "id": "safe-cooking",
+      "step": 3,
+      "width": 390,
+      "errors": [],
+      "documentWidth": 390,
+      "viewport": 390
+    },
+    {
+      "id": "winter",
+      "step": 1,
+      "width": 390,
+      "errors": [],
+      "documentWidth": 390,
+      "viewport": 390
+    }
+  ]
+}

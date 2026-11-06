@@ -1,3 +1,4 @@
+import { ExplanationCard } from "../components/explanation";
 import { useState } from "react";
 import { router } from "expo-router";
 import {
@@ -135,6 +136,7 @@ export default function ShoppingScreen() {
         />
         {note ? <T>{note}</T> : null}
       </Card>
+      <ExplanationCard topic="shopping" />
       <ErrorText message={a.error} />
       <Button
         title="Pridať vlastný nákup"

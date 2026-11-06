@@ -4,8 +4,8 @@
 
 - TypeScript strict: bez chýb.
 - ESLint: bez chýb a upozornení po úprave testovacieho setupu.
-- Doménové a databázové testy: 94 úspešných, 0 preskočených.
-- React Native komponentové testy: 54 úspešných, 0 preskočených.
+- Doménové a databázové testy: 97 úspešných, 0 preskočených.
+- React Native komponentové testy: 71 úspešných, 0 preskočených.
 - Metro server: spustený, lokálny HTTP stav a Android manifest READY/SDK 58 overené. Server bol po kontrole zastavený.
 - Export Android + iOS cez Metro/Hermes: úspešný. Nie je to APK/IPA ani dôkaz spustenia na telefóne.
 - Expo kompatibilita: verzie sedia s lokálnym manifestom Expo SDK 58. Online kontrola Expo API bola blokovaná; podpora aktuálne distribuovaného Expo Go sa musí potvrdiť na telefóne.
@@ -90,3 +90,11 @@ Na telefóne ešte overiť prvý štart, zmenu krajiny pri rovnakom jazyku, čí
 148 testov: 94 doménových/databázových a 54 komponentových. Nový modelový test overuje úplnú zhodu textov a poradia civilných animácií so zdrojovými návodmi, správne odkazy a ilustračné trvanie. Dva nové renderovacie testy prechádzajú všetkých 11 scén na začiatku aj konci a overujú rozdielne kresby a skrytie dekorácií pred čítačkou obrazovky. Existujúce časové testy zahŕňajú aj tieto dva postupy.
 
 Vizuálny QA prechádza 11 scén pri šírke 320 px v tmavom režime a 390 px vo svetlom režime (22 stavov) a kontroluje blízkosť titulkov. GIF zaznamenáva skutočné prehrávanie v prehliadačovom fixture. Dôkazy sú v `docs/screenshots/v1.5`. Nenahrádza to kontrolu natívnej plynulosti ani klinickú či odbornú revíziu. Na telefóne ešte overiť nové scény, čítačku obrazovky a studený offline štart s platnou licenciou.
+
+## Rozšírenie 1.6
+
+168 testov: 97 doménových/databázových a 71 komponentových. Kontrolujú úplné animované pokrytie 20 sprievodcov, 24 jedinečných postupov a 101 krokov, zhodu textov a poradia s pôvodnými návodmi, presnú dĺžku scén každého sprievodcu a rozdielne kresby nových 54 diagramov. Nové komponentové testy overujú vedomé otvorenie vysvetlenia, počiatočné pozastavenie, ručné kroky, režim obmedzeného pohybu, zánik prehrávača po zatvorení a pauzu pri zmene kroku čítaného návodu bez zápisu do checklistu.
+
+Vizuálny QA overil 182 stavov bez chýb prehliadača a bez viditeľného horizontálneho pretečenia. Prechádza nové scény pri 320 px v tmavom a 390 px vo svetlom režime, všetky koncepčné vysvetlenia pri 320 px a prvý/posledný krok všetkých 20 čítaných návodov. Snímky a report v `docs/screenshots/v1.6` sú renderované cez adaptéry natívnych služieb v prehliadači. Nenahrádzajú skúšku telefónu ani odbornú revíziu bezpečnostných diagramov. Samostatne sa overuje vyhľadanie anglického názvu v knižnici.
+
+Na zariadení ešte preveriť plynulosť, zmenu textu pri krokoch, väčšie písmo, čítačku obrazovky, prepnutie do pozadia, RTL a offline štart s platnou podpísanou licenciou. Prehrávanie nevykonáva export, nákup, volanie ani zápis do databázy. Počas skúšky sa skutočné tiesňové hovory nevykonávajú.

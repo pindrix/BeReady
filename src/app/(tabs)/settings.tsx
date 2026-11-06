@@ -1,3 +1,4 @@
+import { ExplanationCard } from "../../components/explanation";
 import { CountryPicker } from "../../components/country-picker";
 import buildPackage from "../../../package.json";
 import { translateText as t } from "../../i18n";
@@ -126,6 +127,7 @@ export default function SettingsScreen() {
           voľby a nastavení systému.
         </T>
       </Card>
+      <ExplanationCard topic="backup" />
       <Card>
         <T large>Záloha domácnosti</T>
         <ErrorText message={a.error} />

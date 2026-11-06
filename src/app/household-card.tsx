@@ -1,3 +1,4 @@
+import { ExplanationCard } from "../components/explanation";
 import { LocalizedAlert as Alert } from "../components/localized-native";
 import { LocalizedText as Text, useLocale } from "../components/localized-text";
 import { translateText as t } from "../i18n";
@@ -266,6 +267,7 @@ export default function HouseholdCardScreen() {
         <ErrorText message={action.error} />
         {notice ? <T muted>{notice}</T> : null}
       </Card>
+      <ExplanationCard topic="plan" />
     </Screen>
   );
 }

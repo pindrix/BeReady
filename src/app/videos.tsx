@@ -1,3 +1,4 @@
+import { ExplanationCard } from "../components/explanation";
 import { LocalizedPressable as Pressable } from "../components/localized-native";
 import { LocalizedText as Text } from "../components/localized-text";
 import { useState } from "react";
@@ -192,6 +193,7 @@ export default function VideosScreen() {
           </View>
         </View>
       ))}
+      <ExplanationCard topic="offline" />
       <Callout icon="medical-outline" title="V núdzi nečakajte na video">
         <T muted>
           Pri bezprostrednom ohrození volajte 112 alebo 155. Praktické zdravotné

@@ -23,6 +23,8 @@ export function Icon({
     "arrow-back": "arrow-forward",
     "chevron-forward": "chevron-back",
     "chevron-back": "chevron-forward",
+    "play-skip-back": "play-skip-forward",
+    "play-skip-forward": "play-skip-back",
   };
   const icon = isRTL(locale) ? (mirror[name] ?? name) : name;
   return (
@@ -39,11 +41,13 @@ export function IconButton({
   label,
   onPress,
   disabled = false,
+  prominent = false,
 }: {
   name: IconName;
   label: string;
   onPress: () => void;
   disabled?: boolean;
+  prominent?: boolean;
 }) {
   const c = useTheme();
   return (
@@ -57,7 +61,7 @@ export function IconButton({
         height: 48,
         width: 48,
         borderRadius: 24,
-        backgroundColor: c.card,
+        backgroundColor: prominent ? c.primary : c.card,
         alignItems: "center",
         justifyContent: "center",
         opacity: disabled ? 0.4 : pressed ? 0.65 : 1,
@@ -65,7 +69,7 @@ export function IconButton({
         borderColor: c.border,
       })}
     >
-      <Icon name={name} />
+      <Icon name={name} color={prominent ? c.bg : c.primary} />
     </Pressable>
   );
 }

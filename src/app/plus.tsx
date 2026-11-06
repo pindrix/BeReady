@@ -1,3 +1,4 @@
+import { ExplanationCard } from "../components/explanation";
 import { LocalizedPressable as Pressable } from "../components/localized-native";
 import { LocalizedText as Text } from "../components/localized-text";
 import { useState } from "react";
@@ -152,6 +153,7 @@ export default function PlusScreen() {
         prípadné dane musí pred potvrdením zobraziť Google Play. Zobrazená suma
         nie je aktívna ponuka obchodu.
       </T>
+      <ExplanationCard topic="license" />
       <SectionTitle title="Jasné podmienky, žiadne prekvapenia" />
       <View style={{ gap: 12 }}>
         {[

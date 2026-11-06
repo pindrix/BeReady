@@ -1,3 +1,4 @@
+import { ExplanationCard } from "../components/explanation";
 import { Linking } from "react-native";
 import { router } from "expo-router";
 import {
@@ -29,6 +30,7 @@ export default function SafePlaces() {
           prístupnosť nie je zaručená.
         </T>
       </Card>
+      <ExplanationCard topic="shelters" />
       {view.empty ? (
         <Card>
           <T>

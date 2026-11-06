@@ -1,3 +1,4 @@
+import { ExplanationCard } from "../components/explanation";
 import { LocalizedPressable as Pressable } from "../components/localized-native";
 import { LocalizedText as Text } from "../components/localized-text";
 import { useState } from "react";
@@ -401,6 +402,7 @@ export default function MissionsScreen() {
         Kroky aj ich dokončenie zostávajú v zariadení a sú súčasťou JSON zálohy.
         Poradie je odporúčané, žiadny krok nie je zamknutý.
       </Text>
+      <ExplanationCard topic="missions" />
     </Screen>
   );
 }

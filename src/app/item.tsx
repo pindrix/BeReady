@@ -1,3 +1,4 @@
+import { ExplanationCard } from "../components/explanation";
 import { useState } from "react";
 import { router, useLocalSearchParams } from "expo-router";
 import {
@@ -150,6 +151,7 @@ export default function ItemScreen() {
   return (
     <Screen title={id ? "Upraviť zásobu" : "Nová zásoba"}>
       <Button title="Späť" secondary onPress={() => router.back()} />
+      <ExplanationCard topic="inventory" />
       {id && !existing ? (
         <T>Položka už neexistuje.</T>
       ) : (

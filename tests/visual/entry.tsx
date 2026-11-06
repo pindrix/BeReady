@@ -1,3 +1,9 @@
+import { ExplanationCard } from "../../src/components/explanation";
+import {
+  explanations,
+  type ExplanationTopic,
+} from "../../src/data/explanations";
+import { Screen as Frame } from "../../src/components/ui";
 import Guide from "../../src/app/guide";
 import Now from "../../src/app/now";
 import { Welcome } from "../../src/components/welcome";
@@ -17,8 +23,19 @@ import Missions from "../../src/app/missions";
 const params = new URLSearchParams(window.location.search),
   name = params.get("screen") ?? "home",
   locale = params.get("locale") ?? "sk";
+function ExplanationPreview() {
+  const topic = params.get("topic") ?? "coverage";
+  return (
+    <Frame title="READY">
+      <ExplanationCard
+        topic={(topic in explanations ? topic : "coverage") as ExplanationTopic}
+      />
+    </Frame>
+  );
+}
 const screens = {
   home: Home,
+  explain: ExplanationPreview,
   academy: Academy,
   missions: Missions,
   kit: FieldKit,

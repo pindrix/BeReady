@@ -1,3 +1,4 @@
+import { ExplanationCard } from "../components/explanation";
 import { LocalizedPressable as Pressable } from "../components/localized-native";
 import { LocalizedText as Text } from "../components/localized-text";
 import { useState } from "react";
@@ -350,6 +351,7 @@ function Player({
         Pri reálnej udalosti majú prednosť aktuálne pokyny úradov a záchranných
         zložiek. Na ďalšie rozhodnutie nemusíte dokončiť tento nácvik.
       </T>
+      <ExplanationCard topic="scenarios" />
     </Screen>
   );
 }

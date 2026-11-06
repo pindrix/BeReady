@@ -1,3 +1,4 @@
+import { instructionalScenes } from "./instruction-scenes";
 import { academyGuides } from "./academy";
 import { practicalTutorials } from "./practical-tutorials";
 
@@ -11,7 +12,8 @@ export type TutorialKind =
   | "burns"
   | "campfire"
   | "armed-conflict"
-  | "nuclear-explosion";
+  | "nuclear-explosion"
+  | "instructional";
 export type Tutorial = {
   id: string;
   guideId: string;
@@ -66,6 +68,20 @@ export const animationTutorials: Tutorial[] = [
       steps: guide.steps.map((step) => ({ ...step, durationMs: 10000 })),
     };
   }),
+  ...academyGuides
+    .filter((guide) => instructionalScenes[guide.id])
+    .map((guide) => ({
+      id: guide.id,
+      guideId: guide.id,
+      kind: "instructional" as const,
+      title: guide.title,
+      summary: guide.summary,
+      warning: guide.takeaway,
+      sourceUrl: guide.source,
+      sourceName: guide.sourceName,
+      sourceVerifiedOnline: false,
+      steps: guide.steps.map((step) => ({ ...step, durationMs: 10000 })),
+    })),
 ];
 
 export function getTutorial(id: string): Tutorial | undefined {
@@ -73,9 +89,14 @@ export function getTutorial(id: string): Tutorial | undefined {
 }
 
 export function getTutorialForGuide(guideId: string): Tutorial | undefined {
-  return animationTutorials.find((tutorial) => tutorial.guideId === guideId);
+  return (
+    getTutorial(guideId) ??
+    animationTutorials.find((tutorial) => tutorial.guideId === guideId)
+  );
 }
 
 export function getTutorialsForGuide(guideId: string): Tutorial[] {
-  return animationTutorials.filter((tutorial) => tutorial.guideId === guideId);
+  return animationTutorials
+    .filter((tutorial) => tutorial.guideId === guideId)
+    .sort((a, b) => Number(b.id === guideId) - Number(a.id === guideId));
 }

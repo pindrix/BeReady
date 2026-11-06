@@ -1,3 +1,4 @@
+import { ExplanationCard } from "../../components/explanation";
 import { civilProtectionGuides } from "../../data/civil-protection";
 import { LocalizedPressable as Pressable } from "../../components/localized-native";
 import {
@@ -349,6 +350,7 @@ export default function Home() {
           onPress={() => router.push("/scenarios")}
         />
       </View>
+      <ExplanationCard topic="coverage" />
       <SectionTitle
         title="Čo dnes pripravíme?"
         subtitle="Vaše každodenné nástroje, vždy poruke."
