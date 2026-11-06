@@ -1,8 +1,17 @@
-# READY 1.4 — Domácnosť pripravená krok za krokom
+# READY 1.5 — Domácnosť pripravená krok za krokom
 
 Mobilná aplikácia pre pripravenosť domácnosti. Expo SDK 58, React Native, striktný TypeScript, Expo Router a SQLite. Osobné údaje domácnosti zostávajú lokálne. Bez reklamného SDK a vzdialeného sledovania.
 
-## Čo je nové vo verzii 1.4
+## Čo je nové vo verzii 1.5
+
+- **Dva nové animované postupy civilnej ochrany:** vojnový konflikt (5 krokov) a jadrový výbuch/spad (6 krokov). Celkom 10 animovaných návodov a 47 krokov.
+- **Vlastné scény pre každý úkon:** rodinný plán, ukrytie, evakuácia podľa úradov, odstup od neznámych predmetov, rádio; pri jadrovom výbuchu ochrana hlavy za krytom, presun do pevnej budovy, suterén, kontaminovaný odev a umytie, pobyt vnútri, uzavreté zásoby a lieky len podľa úradov.
+- **Text priamo pod scénou**, ručné kroky, pauza, časová os a systémové obmedzenie pohybu. Bez prudkého blikania. Čas animácie nie je bezpečný čas na opustenie úkrytu.
+- Texty sa preberajú priamo z existujúcich návodov so všetkými 21 prekladmi. Scény sú pribalené pre platený offline režim; netreba sťahovať video ani nové závislosti.
+
+[Ukážka prehrávania](docs/screenshots/v1.5/nuclear-demo.gif) · [Všetkých 11 scén](docs/screenshots/v1.5/scenes.jpg). Ide o prehliadačový QA náhľad skutočných komponentov, nie záznam telefónu. Odborné overenie obsahu a hranice zdrojov platia naďalej podľa [docs/CIVIL_PROTECTION.md](docs/CIVIL_PROTECTION.md).
+
+## Základ z verzie 1.4
 
 - **Popis hneď pod animáciou:** názov a text aktuálneho kroku sú v spoločnej karte priamo pod scénou, pred časovou osou a tlačidlami. Menia sa spolu so scénou.
 - **Sviežejšie rozhranie:** modrá a mentolová paleta, svetlé povrchy a čitateľné nočné farby.

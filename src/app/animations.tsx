@@ -1,3 +1,4 @@
+import { CivilScene } from "../components/civil-scene";
 import { memo, useCallback, useRef, useState } from "react";
 import { View } from "react-native";
 import { router, useFocusEffect, useLocalSearchParams } from "expo-router";
@@ -33,6 +34,8 @@ const kinds: Record<TutorialKind, { art: AcademyArtKind; color: string }> = {
   bleeding: { art: "medical", color: "#ECDCE4" },
   burns: { art: "medical", color: "#DAECF0" },
   campfire: { art: "outdoor", color: "#F4DFBF" },
+  "armed-conflict": { art: "bag", color: "#C4D6F4" },
+  "nuclear-explosion": { art: "home", color: "#D9CDF3" },
 };
 const Scene = memo(function Scene({
   tutorial,
@@ -52,6 +55,11 @@ const Scene = memo(function Scene({
     return (
       <TutorialScene kind={tutorial.kind} step={step} progress={progress} />
     );
+  if (
+    tutorial.kind === "armed-conflict" ||
+    tutorial.kind === "nuclear-explosion"
+  )
+    return <CivilScene kind={tutorial.kind} step={step} progress={progress} />;
   return (
     <PracticalScene kind={tutorial.kind} step={step} progress={progress} />
   );
@@ -206,7 +214,12 @@ function Player({ tutorial }: { tutorial: Tutorial }) {
             />
           </Row>
           <Button title="Od začiatku" secondary onPress={player.restart} />
-          <T muted>Čas patrí animácii, nie trvaniu ošetrenia.</T>
+          <T muted>
+            {tutorial.kind === "armed-conflict" ||
+            tutorial.kind === "nuclear-explosion"
+              ? "Animácia znázorňuje postup, nie rýchlosť skutočného zásahu."
+              : "Čas patrí animácii, nie trvaniu ošetrenia."}
+          </T>
         </View>
       </Card>
       {!player.motionReady ? (

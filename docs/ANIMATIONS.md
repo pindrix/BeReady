@@ -1,6 +1,6 @@
 # Animované návody READY
 
-READY obsahuje osem lokálnych animovaných ukážok: evakuačný batoh, skladovanie pitnej vody, výpadok elektriny, rodinný komunikačný plán, resuscitáciu dospelého, silné krvácanie, popáleniny a bezpečnosť pri ohni v prírode. Nie sú to videozáznamy ani obsah z YouTube. Scény vykresľuje aplikácia z vlastných grafických prvkov, takže prehrávanie nepotrebuje stream, sťahovanie videa ani prístup k sieti.
+READY obsahuje desať lokálnych animovaných ukážok: evakuačný batoh, skladovanie pitnej vody, výpadok elektriny, rodinný komunikačný plán, resuscitáciu dospelého, silné krvácanie, popáleniny a bezpečnosť pri ohni v prírode, civilnú prípravu na vojnový konflikt a jadrový výbuch/spad. Nie sú to videozáznamy ani obsah z YouTube. Scény vykresľuje aplikácia z vlastných grafických prvkov, takže prehrávanie nepotrebuje stream, sťahovanie videa ani prístup k sieti.
 
 Texty, poradie a počet krokov prvých štyroch ukážok pochádzajú priamo z príslušných návodov v `src/data/academy.ts`. Používajú preto tie isté existujúce preklady. Aktualizácia textu pôvodného návodu sa prenesie aj do jeho animovanej ukážky. Štyri praktické ukážky majú samostatné texty a odkazy na zdroje v `src/data/practical-tutorials.ts`. Priame overenie týchto zdrojov počas tejto úpravy blokoval prístup servera; metadáta preto neuvádzajú živé overenie. Obrázok je názorná ilustrácia; nenahrádza výcvik, certifikovaný kurz, konkrétne miestne pokyny ani odporúčanie zdrojovej organizácie.
 
@@ -21,3 +21,5 @@ Model aj scény sú súčasťou balíka aplikácie. Použitie bez internetu podl
 `tests/tutorials.test.ts` kontroluje väzbu na zdrojové návody, ich kompletné texty, hranice scén, priebeh pri rôznych trvaniach aj neplatné časové údaje. Samotný model neurčuje automatické spustenie, pokračovanie krokov ani správanie pri obmedzení pohybu; tieto pravidlá zabezpečuje obrazovka prehrávača.
 
 Od verzie 1.4 je popis aktuálneho kroku bezprostredne pod scénou v spoločnej karte, pred ovládaním. Nie je potrebné hľadať zodpovedajúci text pod časovou osou a upozorneniami.
+
+Civilné animácie v `src/components/civil-scene.tsx` obsahujú 11 odlišných scén a využívajú už preložené celé návody. Každý krok trvá ilustračne 10 sekúnd; odporúčanie zostať v úkryte prvých 24 hodín z textu nie je časovač prehrávača. Rovnaké pravidlá pauzy, zmeny kroku, pozadia a obmedzenia pohybu platia aj pre tieto scény.

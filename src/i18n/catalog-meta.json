@@ -99,7 +99,7 @@
     ],
     "{0} kcal": ["src/app/(tabs)/inventory.tsx:232"],
     "{0} krok: {1}": ["src/app/missions.tsx:85"],
-    "{0} krokov · animácia": ["src/app/animations.tsx:382"],
+    "{0} krokov · animácia": ["src/app/animations.tsx:395"],
     "{0} min · offline": ["src/app/(tabs)/help.tsx:275"],
     "{0} MIN · OFFLINE": ["src/app/guide.tsx:63"],
     "{0} Návrh používa zjednodušenú šablónu, nepozná ceny a nie je nutrične kompletný. Množstvá upravte podľa obalov a potrieb domácnosti. Nákupný zoznam sa zatiaľ nezapočítava do zásob.": [
@@ -156,7 +156,7 @@
       "src/data/content.ts:108"
     ],
     "Ak ide o skutočnú núdzu, volajte 112 alebo 155 a riaďte sa operátorom.": [
-      "src/app/animations.tsx:391"
+      "src/app/animations.tsx:404"
     ],
     "Ak je budova ohrozená požiarom, povodňou alebo poškodením, riaďte sa pokynmi záchranných zložiek.": [
       "src/data/scenarios.ts:397"
@@ -215,7 +215,7 @@
       "src/data/academy.ts:628"
     ],
     "Aktuálnosť externého zdroja nebola v tomto prostredí overená. Pri konkrétnej udalosti majú prednosť miestne pokyny úradov.": [
-      "src/app/animations.tsx:273"
+      "src/app/animations.tsx:286"
     ],
     "Akú rezervu pripravujete?": ["src/data/scenarios.ts:276"],
     "Aký zdroj svetla pripravíte?": ["src/data/scenarios.ts:70"],
@@ -240,18 +240,19 @@
     ],
     "Animácia": ["src/app/guide.tsx:69"],
     "Animácia znázorňuje postup, nie rýchlosť skutočného zásahu.": [
-      "src/app/animations.tsx:222"
+      "src/app/animations.tsx:220",
+      "src/app/animations.tsx:235"
     ],
     "Animácie sa nesťahujú z internetu. Offline sú dostupné s platnou licenciou.": [
-      "src/app/animations.tsx:322"
+      "src/app/animations.tsx:335"
     ],
     "Animované postupy": [
       "src/app/(tabs)/help.tsx:146",
       "src/app/(tabs)/index.tsx:465"
     ],
     "ANIMOVANÉ POSTUPY": [
-      "src/app/animations.tsx:82",
-      "src/app/animations.tsx:309"
+      "src/app/animations.tsx:90",
+      "src/app/animations.tsx:322"
     ],
     "Áno, aby sme si to overili": ["src/data/missions.ts:180"],
     "Áno, ak hovor rýchlo ukončíme": ["src/data/missions.ts:182"],
@@ -339,7 +340,7 @@
     "Cvičenie, nie núdzová triáž": ["src/app/scenarios.tsx:446"],
     "Cyklus: {0}": ["src/domain/scenarios.ts:72"],
     "Čas patrí animácii, nie trvaniu ošetrenia.": [
-      "src/app/animations.tsx:209"
+      "src/app/animations.tsx:221"
     ],
     "Čeština": ["src/i18n/locales.ts:58"],
     "Čínština": ["src/i18n/locales.ts:34"],
@@ -377,7 +378,7 @@
       "src/data/academy.ts:79"
     ],
     "Dajte zásobám druhý pohľad": ["src/app/(tabs)/index.tsx:517"],
-    "Ďalší krok": ["src/app/animations.tsx:203", "src/app/guide.tsx:131"],
+    "Ďalší krok": ["src/app/animations.tsx:211", "src/app/guide.tsx:131"],
     "Ďalších": ["src/app/household-card.tsx:208"],
     "Ďalších {0} kontaktov nájdete v aplikácii.": [
       "src/app/household-card.tsx:207"
@@ -661,7 +662,7 @@
       "src/data/practical-tutorials.ts:56"
     ],
     "Ilustrované úkony krok za krokom. Prehrávanie spúšťate sami.": [
-      "src/app/animations.tsx:308"
+      "src/app/animations.tsx:321"
     ],
     "ilustrovaných sprievodcov. Bez registrácie, pripravené aj bez internetu.": [
       "src/app/(tabs)/help.tsx:118"
@@ -715,7 +716,7 @@
     "JEDNODUCHÝ JEDÁLNIČEK": ["src/data/academy.ts:177"],
     "Jednotka": ["src/app/item.tsx:64"],
     "Jednotka nákupu": ["src/app/shopping.tsx:48"],
-    "Jednotlivé kroky": ["src/app/animations.tsx:224"],
+    "Jednotlivé kroky": ["src/app/animations.tsx:237"],
     "jedným krokom.": ["src/app/(tabs)/help.tsx:114"],
     "JSON nie je šifrovaný. Obsahuje vaše údaje, preto zvoľte dôveryhodné miesto a zdieľajte ho iba vedome.": [
       "src/data/missions.ts:213"
@@ -807,8 +808,8 @@
     ],
     "Krok {0}": ["src/data/academy.ts:92"],
     "Krok {0} z {1}": [
-      "src/app/animations.tsx:112",
-      "src/app/animations.tsx:127",
+      "src/app/animations.tsx:120",
+      "src/app/animations.tsx:135",
       "src/app/guide.tsx:78"
     ],
     "Krok nácviku neexistuje.": ["src/domain/scenarios.ts:25"],
@@ -901,7 +902,7 @@
       "src/app/item.tsx:90"
     ],
     "Ministerstvo vnútra SR": ["src/data/academy.ts:90"],
-    "Missing tutorial guide: {0}": ["src/data/tutorials.ts:38"],
+    "Missing tutorial guide: {0}": ["src/data/tutorials.ts:40"],
     "Množstvo": ["src/app/item.tsx:58"],
     "Množstvo a potreby určujte podľa zvieraťa; výpočet vody pre ľudí nezahŕňa zvieratá.": [
       "src/data/field-kit.ts:224"
@@ -956,7 +957,7 @@
     "Nácvik: {0}": ["src/domain/scenarios.ts:57"],
     "nácvikov označených ako absolvované": ["src/app/scenarios.tsx:440"],
     "Načítavam lokálne údaje…": ["src/components/ui.tsx:421"],
-    "Načítavam nastavenie pohybu…": ["src/app/animations.tsx:213"],
+    "Načítavam nastavenie pohybu…": ["src/app/animations.tsx:226"],
     "Náhľad nižšie obsahuje názov domácnosti, miesto stretnutia a kontakty. V systémovom dialógu sami vyberiete príjemcu alebo miesto uloženia.": [
       "src/app/household-card.tsx:43"
     ],
@@ -1147,7 +1148,7 @@
     "Od ohňa neodchádzajte a držte deti, zvieratá a voľné oblečenie bezpečne mimo plameňov. Pri zmene podmienok ho uhaste; neroznášajte horiace drevo.": [
       "src/data/practical-tutorials.ts:145"
     ],
-    "Od začiatku": ["src/app/animations.tsx:208"],
+    "Od začiatku": ["src/app/animations.tsx:216"],
     "Odložiť záložku": ["src/app/(tabs)/help.tsx:280"],
     "Odošle READY uložený kontakt alebo miesto stretnutia blízkym automaticky?": [
       "src/data/missions.ts:128"
@@ -1405,7 +1406,7 @@
     ],
     "Portugalčina": ["src/i18n/locales.ts:46"],
     "Português": ["src/i18n/locales.ts:46"],
-    "Postup sa nenašiel": ["src/app/animations.tsx:296"],
+    "Postup sa nenašiel": ["src/app/animations.tsx:309"],
     "Postup závisí od prístroja a individuálneho zdravotného plánu. READY nevie posúdiť zostávajúci čas ani zdravotné riziko.": [
       "src/data/scenarios.ts:102"
     ],
@@ -1414,7 +1415,7 @@
       "src/data/civil-protection.ts:30",
       "src/data/content.ts:130"
     ],
-    "Posun prehrávania": ["src/app/animations.tsx:142"],
+    "Posun prehrávania": ["src/app/animations.tsx:150"],
     "Posvieťte si na pripravenosť": ["src/data/missions.ts:59"],
     "Pošlite stručnú informáciu": ["src/data/academy.ts:232"],
     "Potrebná voda {0} litrov": ["src/app/field-kit.tsx:399"],
@@ -1425,8 +1426,8 @@
       "src/app/(tabs)/help.tsx:72",
       "src/app/(tabs)/index.tsx:311",
       "src/app/(tabs)/index.tsx:333",
-      "src/app/animations.tsx:95",
-      "src/app/animations.tsx:394",
+      "src/app/animations.tsx:103",
+      "src/app/animations.tsx:407",
       "src/app/onboarding.tsx:28",
       "src/components/welcome.tsx:23"
     ],
@@ -1479,7 +1480,7 @@
     "Povodňovú vodu nepovažujte za pitnú. Riaďte sa informáciami o bezpečnosti miestnej vody.": [
       "src/data/content.ts:86"
     ],
-    "Pozastaviť": ["src/app/animations.tsx:196"],
+    "Pozastaviť": ["src/app/animations.tsx:204"],
     "Poznámka": ["src/app/item.tsx:105"],
     "Poznať spôsob vypnutia vetrania": ["src/data/content.ts:45"],
     "Pozrieť. Pochopiť. Vyskúšať.": ["src/app/videos.tsx:35"],
@@ -1497,7 +1498,7 @@
       "src/data/academy.ts:588"
     ],
     "POZRITE SI TO V PRAXI": ["src/app/(tabs)/index.tsx:504"],
-    "Pozrite si, ako na to.": ["src/app/animations.tsx:307"],
+    "Pozrite si, ako na to.": ["src/app/animations.tsx:320"],
     "Pozrite uzáver, stav nádoby a pokyny výrobcu. Poškodený alebo neznámy zdroj neoznačujte za pitný.": [
       "src/data/field-kit.ts:33"
     ],
@@ -1534,7 +1535,7 @@
     ],
     "Predchádzajúca otázka": ["src/app/scenarios.tsx:315"],
     "Predchádzajúci krok": [
-      "src/app/animations.tsx:190",
+      "src/app/animations.tsx:198",
       "src/app/guide.tsx:125"
     ],
     "Predstavte si výpadok elektriny doma. Najprv zhodnoťte viditeľné ohrozenie, nie stav batérie telefónu.": [
@@ -1544,7 +1545,7 @@
       "src/data/academy.ts:104"
     ],
     "Prehľadný postup aj bez internetu": ["src/app/field-kit.tsx:475"],
-    "Prehrať": ["src/app/animations.tsx:196"],
+    "Prehrať": ["src/app/animations.tsx:204"],
     "Prejdite si bezpečný odchod z domácnosti a zohľadnite osoby potrebujúce pomoc. Neblokujte únikové cesty.": [
       "src/data/missions.ts:173"
     ],
@@ -1621,7 +1622,7 @@
     "Pri zmätenosti, výraznej ospalosti, poruche vedomia alebo podozrení na otravu oxidom uhoľnatým sa dostaňte do bezpečia a volajte 112 alebo 155. Riaďte sa operátorom.": [
       "src/data/academy.ts:365"
     ],
-    "Pribalené v aplikácii": ["src/app/animations.tsx:320"],
+    "Pribalené v aplikácii": ["src/app/animations.tsx:333"],
     "Pridajte baterku, rádio, vhodné batérie, nabitú powerbanku a kábel. Jednu sadu kontaktov uložte na papier, aby ste sa nespoliehali iba na telefón.": [
       "src/data/academy.ts:124"
     ],
@@ -1724,7 +1725,7 @@
     "Profil bol uložený.": ["src/components/profile-form.tsx:78"],
     "Profil domácnosti": ["src/components/profile-form.tsx:38"],
     "Prvá pomoc": [
-      "src/app/animations.tsx:389",
+      "src/app/animations.tsx:402",
       "src/data/academy.ts:5",
       "src/data/academy.ts:244",
       "src/data/academy.ts:507"
@@ -1971,7 +1972,7 @@
       "src/data/academy.ts:37"
     ],
     "Späť": [
-      "src/app/animations.tsx:313",
+      "src/app/animations.tsx:326",
       "src/app/guide.tsx:203",
       "src/app/household-card.tsx:70",
       "src/app/item.tsx:152",
@@ -1981,8 +1982,8 @@
       "src/app/videos.tsx:39"
     ],
     "Späť do knižnice": [
-      "src/app/animations.tsx:86",
-      "src/app/animations.tsx:299",
+      "src/app/animations.tsx:94",
+      "src/app/animations.tsx:312",
       "src/app/guide.tsx:59"
     ],
     "Späť do knižnice po dočítaní": ["src/app/guide.tsx:131"],
@@ -2008,7 +2009,7 @@
     "Spoznajte svoju vodnú rezervu": ["src/data/missions.ts:32"],
     "Spoznať smerovanie READY Plus": ["src/app/(tabs)/index.tsx:569"],
     "Spustiť nácvik: {0}": ["src/app/scenarios.tsx:466"],
-    "Statická ukážka": ["src/app/animations.tsx:215"],
+    "Statická ukážka": ["src/app/animations.tsx:228"],
     "Stav adresára a zdroje": ["src/app/(tabs)/help.tsx:139"],
     "Stav licencie alebo siete sa nepodarilo načítať.": [
       "src/state/license.tsx:74",
@@ -2113,7 +2114,7 @@
       "src/data/academy.ts:439"
     ],
     "TRÉNING ROZHODOVANIA": ["src/app/scenarios.tsx:377"],
-    "Tréningová ukážka": ["src/app/animations.tsx:92"],
+    "Tréningová ukážka": ["src/app/animations.tsx:100"],
     "Trvanlivé pečivo (overte obal)": ["src/domain/readiness.ts:98"],
     "trvanlivosť": [
       "src/app/(tabs)/inventory.tsx:310",
@@ -2142,7 +2143,7 @@
       "src/data/field-kit.ts:207"
     ],
     "uk-UA": ["src/i18n/locales.ts:57"],
-    "Ukážka dokončená": ["src/app/animations.tsx:115"],
+    "Ukážka dokončená": ["src/app/animations.tsx:123"],
     "Ukladám…": ["src/app/_layout.tsx:132"],
     "Ukrajinčina": ["src/i18n/locales.ts:57"],
     "úkryt": ["src/types/model.ts:86"],
@@ -2215,7 +2216,7 @@
       "src/app/plus.tsx:212"
     ],
     "V zariadení máte zapnuté obmedzenie pohybu. Zobrazuje sa statická ukážka.": [
-      "src/app/animations.tsx:217"
+      "src/app/animations.tsx:230"
     ],
     "V Zásobách zapíšte množstvo v litroch alebo mililitroch do kategórie Pitná voda.": [
       "src/data/missions.ts:41"
@@ -2381,7 +2382,7 @@
     ],
     "Vyberte podporovaný počet dní.": ["src/domain/field-kit.ts:62"],
     "Vyberte primeranú trasu": ["src/data/academy.ts:450"],
-    "Vyberte si inú ukážku z knižnice.": ["src/app/animations.tsx:297"],
+    "Vyberte si inú ukážku z knižnice.": ["src/app/animations.tsx:310"],
     "Vyberte si priehradku": ["src/app/field-kit.tsx:262"],
     "Vyberte si smer": ["src/app/videos.tsx:98"],
     "Vyberte situáciu": ["src/app/scenarios.tsx:459"],
@@ -2559,7 +2560,7 @@
       "src/data/academy.ts:481"
     ],
     "Zdravotné potreby majú prednosť": ["src/data/scenarios.ts:101"],
-    "ZDROJ A KONTROLA": ["src/app/animations.tsx:269", "src/app/guide.tsx:174"],
+    "ZDROJ A KONTROLA": ["src/app/animations.tsx:282", "src/app/guide.tsx:174"],
     "Zdroj miesta: {0} (online)": ["src/app/safe-places.tsx:53"],
     "Zdroj musí byť HTTPS.": ["src/types/model.ts:85"],
     "zh-CN": ["src/i18n/locales.ts:34"],
@@ -2586,7 +2587,7 @@
     "Zobraziť": ["src/app/(tabs)/inventory.tsx:251"],
     "Zobraziť a zahrnúť osobné údaje": ["src/app/household-card.tsx:220"],
     "Zobraziť celý postup": [
-      "src/app/animations.tsx:277",
+      "src/app/animations.tsx:290",
       "src/app/guide.tsx:142"
     ],
     "Zobraziť licenciu — 10 USD / 12 mesiacov": [

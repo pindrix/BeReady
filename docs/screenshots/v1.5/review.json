@@ -1,0 +1,181 @@
+{
+  "notice": "Browser fixture with native-service adapters, not a physical phone. Static reduced-motion frames.",
+  "reports": [
+    {
+      "id": "armed-conflict",
+      "step": 0,
+      "width": 320,
+      "errors": [],
+      "captionGap": 12,
+      "viewport": 320
+    },
+    {
+      "id": "armed-conflict",
+      "step": 1,
+      "width": 320,
+      "errors": [],
+      "captionGap": 12,
+      "viewport": 320
+    },
+    {
+      "id": "armed-conflict",
+      "step": 2,
+      "width": 320,
+      "errors": [],
+      "captionGap": 12,
+      "viewport": 320
+    },
+    {
+      "id": "armed-conflict",
+      "step": 3,
+      "width": 320,
+      "errors": [],
+      "captionGap": 12,
+      "viewport": 320
+    },
+    {
+      "id": "armed-conflict",
+      "step": 4,
+      "width": 320,
+      "errors": [],
+      "captionGap": 12,
+      "viewport": 320
+    },
+    {
+      "id": "armed-conflict",
+      "step": 0,
+      "width": 390,
+      "errors": [],
+      "captionGap": 12,
+      "viewport": 390
+    },
+    {
+      "id": "armed-conflict",
+      "step": 1,
+      "width": 390,
+      "errors": [],
+      "captionGap": 12,
+      "viewport": 390
+    },
+    {
+      "id": "armed-conflict",
+      "step": 2,
+      "width": 390,
+      "errors": [],
+      "captionGap": 12,
+      "viewport": 390
+    },
+    {
+      "id": "armed-conflict",
+      "step": 3,
+      "width": 390,
+      "errors": [],
+      "captionGap": 12,
+      "viewport": 390
+    },
+    {
+      "id": "armed-conflict",
+      "step": 4,
+      "width": 390,
+      "errors": [],
+      "captionGap": 12,
+      "viewport": 390
+    },
+    {
+      "id": "nuclear-explosion",
+      "step": 0,
+      "width": 320,
+      "errors": [],
+      "captionGap": 12,
+      "viewport": 320
+    },
+    {
+      "id": "nuclear-explosion",
+      "step": 1,
+      "width": 320,
+      "errors": [],
+      "captionGap": 12,
+      "viewport": 320
+    },
+    {
+      "id": "nuclear-explosion",
+      "step": 2,
+      "width": 320,
+      "errors": [],
+      "captionGap": 12,
+      "viewport": 320
+    },
+    {
+      "id": "nuclear-explosion",
+      "step": 3,
+      "width": 320,
+      "errors": [],
+      "captionGap": 12,
+      "viewport": 320
+    },
+    {
+      "id": "nuclear-explosion",
+      "step": 4,
+      "width": 320,
+      "errors": [],
+      "captionGap": 12,
+      "viewport": 320
+    },
+    {
+      "id": "nuclear-explosion",
+      "step": 5,
+      "width": 320,
+      "errors": [],
+      "captionGap": 12,
+      "viewport": 320
+    },
+    {
+      "id": "nuclear-explosion",
+      "step": 0,
+      "width": 390,
+      "errors": [],
+      "captionGap": 12,
+      "viewport": 390
+    },
+    {
+      "id": "nuclear-explosion",
+      "step": 1,
+      "width": 390,
+      "errors": [],
+      "captionGap": 12,
+      "viewport": 390
+    },
+    {
+      "id": "nuclear-explosion",
+      "step": 2,
+      "width": 390,
+      "errors": [],
+      "captionGap": 12,
+      "viewport": 390
+    },
+    {
+      "id": "nuclear-explosion",
+      "step": 3,
+      "width": 390,
+      "errors": [],
+      "captionGap": 12,
+      "viewport": 390
+    },
+    {
+      "id": "nuclear-explosion",
+      "step": 4,
+      "width": 390,
+      "errors": [],
+      "captionGap": 12,
+      "viewport": 390
+    },
+    {
+      "id": "nuclear-explosion",
+      "step": 5,
+      "width": 390,
+      "errors": [],
+      "captionGap": 12,
+      "viewport": 390
+    }
+  ]
+}

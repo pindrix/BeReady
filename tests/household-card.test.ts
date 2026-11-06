@@ -1,9 +1,5 @@
-import { before } from "node:test";
+import { before, test } from "node:test";
 import { setCountryCode } from "../src/state/region";
-before(async () => {
-  await setCountryCode("SK");
-});
-import { test } from "node:test";
 import assert from "node:assert/strict";
 import {
   householdCard,
@@ -11,6 +7,9 @@ import {
   CARD_CONTACT_LIMIT,
 } from "../src/domain/household-card";
 import { defaultHousehold } from "../src/types/model";
+before(async () => {
+  await setCountryCode("SK");
+});
 const profile = {
   ...defaultHousehold,
   name: "Súkromná rodina",

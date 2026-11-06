@@ -4,8 +4,8 @@
 
 - TypeScript strict: bez chýb.
 - ESLint: bez chýb a upozornení po úprave testovacieho setupu.
-- Doménové a databázové testy: 93 úspešných, 0 preskočených.
-- React Native komponentové testy: 52 úspešných, 0 preskočených.
+- Doménové a databázové testy: 94 úspešných, 0 preskočených.
+- React Native komponentové testy: 54 úspešných, 0 preskočených.
 - Metro server: spustený, lokálny HTTP stav a Android manifest READY/SDK 58 overené. Server bol po kontrole zastavený.
 - Export Android + iOS cez Metro/Hermes: úspešný. Nie je to APK/IPA ani dôkaz spustenia na telefóne.
 - Expo kompatibilita: verzie sedia s lokálnym manifestom Expo SDK 58. Online kontrola Expo API bola blokovaná; podpora aktuálne distribuovaného Expo Go sa musí potvrdiť na telefóne.
@@ -84,3 +84,9 @@ Ručné doplnenie na telefóne — zatiaľ nevykonané:
 Prehliadačový QA: 24 renderov Domova, prehrávača, jadrového návodu a Rýchlej pomoci pri šírke 320/390 px v slovenčine, angličtine a arabčine s krajinou USA. Bez chýb prehliadača a viditeľného horizontálneho pretečenia. Geometria potvrdila popis do 20 px pod scénou. Samostatne zachytený prvotný jazykový výber. Dôkazy v `docs/screenshots/v1.4/review.json` a PNG sú z fixture s testovacími adaptérmi, nie z fyzického telefónu.
 
 Na telefóne ešte overiť prvý štart, zmenu krajiny pri rovnakom jazyku, čítačku obrazovky, krajinu po reštarte a platený offline štart. Tiesňové hovory sa v testoch nevykonávajú. Verejné vydanie vyžaduje odborné preverenie civilnej ochrany a národných kontaktov; priame aktuálne webové overenie blokoval proxy HTTP 403.
+
+## Rozšírenie 1.5
+
+148 testov: 94 doménových/databázových a 54 komponentových. Nový modelový test overuje úplnú zhodu textov a poradia civilných animácií so zdrojovými návodmi, správne odkazy a ilustračné trvanie. Dva nové renderovacie testy prechádzajú všetkých 11 scén na začiatku aj konci a overujú rozdielne kresby a skrytie dekorácií pred čítačkou obrazovky. Existujúce časové testy zahŕňajú aj tieto dva postupy.
+
+Vizuálny QA prechádza 11 scén pri šírke 320 px v tmavom režime a 390 px vo svetlom režime (22 stavov) a kontroluje blízkosť titulkov. GIF zaznamenáva skutočné prehrávanie v prehliadačovom fixture. Dôkazy sú v `docs/screenshots/v1.5`. Nenahrádza to kontrolu natívnej plynulosti ani klinickú či odbornú revíziu. Na telefóne ešte overiť nové scény, čítačku obrazovky a studený offline štart s platnou licenciou.

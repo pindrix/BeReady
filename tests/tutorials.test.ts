@@ -28,7 +28,7 @@ test("animované návody zachovávajú všetky kroky a prekladové texty pôvodn
       ["communication", "communication", 4],
     ],
   );
-  assert.equal(new Set(animationTutorials.map((item) => item.id)).size, 8);
+  assert.equal(new Set(animationTutorials.map((item) => item.id)).size, 10);
   for (const tutorial of animationTutorials.slice(0, 4)) {
     const guide = academyGuides.find((item) => item.id === tutorial.guideId);
     assert.ok(guide);
@@ -48,10 +48,10 @@ test("animované návody zachovávajú všetky kroky a prekladové texty pôvodn
 });
 
 test("praktické ukážky majú vlastné zdroje a zdieľaný návod vracia všetky súvisiace ukážky", () => {
-  assert.equal(animationTutorials.length, 8);
+  assert.equal(animationTutorials.length, 10);
   assert.deepEqual(
     animationTutorials
-      .slice(4)
+      .slice(4, 8)
       .map((tutorial) => [tutorial.id, tutorial.kind, tutorial.steps.length]),
     [
       ["adult-cpr", "adult-cpr", 5],
@@ -71,7 +71,7 @@ test("praktické ukážky majú vlastné zdroje a zdieľaný návod vracia všet
     assert.equal(getTutorial(tutorial.id), tutorial);
     assert.ok(getTutorialsForGuide(tutorial.guideId).includes(tutorial));
   }
-  for (const tutorial of animationTutorials.slice(4)) {
+  for (const tutorial of animationTutorials.slice(4, 8)) {
     assert.ok(tutorial.sourceName && tutorial.warning);
     assert.equal(new URL(tutorial.sourceUrl!).protocol, "https:");
     assert.equal(tutorial.sourceVerifiedOnline, false);
@@ -195,4 +195,23 @@ test("neplatné čísla a prázdny alebo poškodený časový model sa odmietnu"
     ],
   };
   assert.throws(() => tutorialDurationMs(unrepresentable), RangeError);
+});
+
+test("civil protection animations preserve all source steps and do not turn 24h sheltering into a timer", () => {
+  for (const [id, count] of [
+    ["armed-conflict", 5],
+    ["nuclear-explosion", 6],
+  ] as const) {
+    const tutorial = getTutorial(id)!,
+      guide = academyGuides.find((g) => g.id === id)!;
+    assert.equal(tutorial.steps.length, count);
+    assert.deepEqual(
+      tutorial.steps.map(({ title, body }) => ({ title, body })),
+      guide.steps,
+    );
+    assert.equal(tutorial.warning, guide.takeaway);
+    assert.equal(tutorial.sourceVerifiedOnline, false);
+    assert.equal(tutorialDurationMs(tutorial), count * 10000);
+    assert.ok(getTutorialsForGuide(id).includes(tutorial));
+  }
 });

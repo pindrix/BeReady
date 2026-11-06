@@ -9,7 +9,9 @@ export type TutorialKind =
   | "adult-cpr"
   | "bleeding"
   | "burns"
-  | "campfire";
+  | "campfire"
+  | "armed-conflict"
+  | "nuclear-explosion";
 export type Tutorial = {
   id: string;
   guideId: string;
@@ -49,6 +51,21 @@ const guideTutorials: Tutorial[] = tutorialSources.map(({ guideId, kind }) => {
 export const animationTutorials: Tutorial[] = [
   ...guideTutorials,
   ...practicalTutorials,
+  ...(["armed-conflict", "nuclear-explosion"] as const).map((id) => {
+    const guide = academyGuides.find((g) => g.id === id)!;
+    return {
+      id,
+      guideId: id,
+      kind: id,
+      title: guide.title,
+      summary: guide.summary,
+      warning: guide.takeaway,
+      sourceUrl: guide.source,
+      sourceName: guide.sourceName,
+      sourceVerifiedOnline: false,
+      steps: guide.steps.map((step) => ({ ...step, durationMs: 10000 })),
+    };
+  }),
 ];
 
 export function getTutorial(id: string): Tutorial | undefined {

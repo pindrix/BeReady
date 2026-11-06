@@ -1,9 +1,5 @@
-import { before } from "node:test";
+import { before, test } from "node:test";
 import { setCountryCode } from "../src/state/region";
-before(async () => {
-  await setCountryCode("SK");
-});
-import { test } from "node:test";
 import assert from "node:assert/strict";
 import {
   translateText,
@@ -15,6 +11,9 @@ import {
   formatNumber,
 } from "../src/i18n";
 import { numeric } from "../src/types/model";
+before(async () => {
+  await setCountryCode("SK");
+});
 test("21 podporovaných jazykov má vlastný názov a jednoznačný kód; arabčina používa RTL", () => {
   assert.equal(localeCodes.length, 21);
   assert.equal(languages.length, 21);
