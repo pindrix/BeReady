@@ -148,6 +148,13 @@ export default function HelpScreen() {
           onPress={() => router.push("/safe-places")}
         />
       </View>
+      <Tile
+        icon="play-circle-outline"
+        title="Animované postupy"
+        subtitle="Pozrite si jednotlivé úkony v pohybe."
+        tone="purple"
+        onPress={() => router.push("/animations")}
+      />
       <SectionTitle
         title="Vaša offline knižnica"
         subtitle="Otvorte si tému a prejdite postup krok za krokom."

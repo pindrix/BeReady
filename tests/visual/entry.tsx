@@ -1,4 +1,5 @@
 /** Screenshot fixture, not the production app entrypoint or a native-runtime test. */
+import Animations from "../../src/app/animations";
 import { setLocale } from "../../src/i18n";
 import { isLocale } from "../../src/i18n/locales";
 import FieldKit from "../../src/app/field-kit";
@@ -19,6 +20,7 @@ const screens = {
   kit: FieldKit,
   scenarios: Scenarios,
   plus: Plus,
+  animations: Animations,
 };
 const Screen = screens[name as keyof typeof screens] ?? Home;
 async function start() {

@@ -4,8 +4,8 @@
 
 - TypeScript strict: bez chýb.
 - ESLint: bez chýb a upozornení po úprave testovacieho setupu.
-- Doménové a databázové testy: 77 úspešných, 0 preskočených.
-- React Native komponentové testy: 29 úspešných, 0 preskočených.
+- Doménové a databázové testy: 88 úspešných, 0 preskočených.
+- React Native komponentové testy: 50 úspešných, 0 preskočených.
 - Metro server: spustený, lokálny HTTP stav a Android manifest READY/SDK 58 overené. Server bol po kontrole zastavený.
 - Export Android + iOS cez Metro/Hermes: úspešný. Nie je to APK/IPA ani dôkaz spustenia na telefóne.
 - Expo kompatibilita: verzie sedia s lokálnym manifestom Expo SDK 58. Online kontrola Expo API bola blokovaná; podpora aktuálne distribuovaného Expo Go sa musí potvrdiť na telefóne.
@@ -62,3 +62,17 @@ Lokalizačné kontroly sledujú21 jazykov, presné pokrytie zdrojových kľúčo
 Ručné doplnenie: na telefóne preveriť prvý štart online/offline, zmenu jazyka, RTL, balenie, scenáre, obnovenie pokroku, zamknutie bez licencie a dostupnosť exportu. Po pripojení Billingu samostatne vykonať nákup/obnovu/refundáciu a studený štart bez siete s platným podpísaným oprávnením.
 
 Finálna jazyková vizuálna kontrola vykreslila Domov vo všetkých 21 jazykoch pri 390 px a päť doplnkových kombinácií batoha/scenárov/licencie. Výsledok:26 renderov bez chyby a bez horizontálneho pretečenia. Report je `docs/screenshots/v1.2/locales-review.json`. Ide o prehliadačové testovacie dáta, nie natívne zariadenie. Texty so zalomenými riadkami sa overujú samostatným regresným testom, pretože samotná úplnosť slovníka nezaručuje správne poskladanie JSX textu.
+
+## Rozšírenie 1.3 — animované návody
+
+Celkom 138 automatických testov (88 doménových/databázových a 50 komponentových). Nové kontroly overujú osem návodov a 36 krokov, presné časové hranice, seek a neplatné vstupy, bezpečnostné podmienky praktických postupov, vykreslenie základných scén, pauzu/pokračovanie, prechod medzi krokmi, opakovanie, zmenu obmedzenia pohybu, prepnutie do pozadia, stratu fokusu a vyčistenie callbackov po ukončení. Regresia zahŕňa aj počiatočný neznámy stav AppState. Kontrola slovníkov overuje 1 336 zdrojových kľúčov vo všetkých 20 ďalších jazykoch.
+
+Prehliadačová kontrola samostatne prezrela 18 praktických scén vo svetlom režime a štyri v tmavom režime. Skutočné prehrávanie balenia bolo zachytené do GIF. Doplňujúca kontrola knižnice vo všetkých 21 jazykoch pri šírke 320 px a 12 stavov prehrávačov v slovenčine, angličtine a arabčine nenašla chyby prehliadača ani viditeľné horizontálne presahy. Dôkazy sú v `docs/screenshots/v1.3`. Ide o render skutočných komponentov cez testovacie adaptéry, nie záznam fyzického telefónu ani medicínsku certifikáciu.
+
+Ručné doplnenie na telefóne — zatiaľ nevykonané:
+
+1. V každom z ôsmich postupov overte pauzu, pokračovanie, výber kroku, posun časovej osi a návrat na začiatok. Nič sa nesmie spustiť bez vedomého stlačenia Prehrať.
+2. Počas prehrávania prepnite aplikáciu do pozadia a opäť ju otvorte; musí zostať pozastavená. Rovnako odíďte z obrazovky a vráťte sa.
+3. Zapnite systémové obmedzenie pohybu. Scény musia byť statické, texty a manuálne kroky dostupné, automatické prehrávanie vypnuté. Overte čítačku obrazovky a väčšie písmo.
+4. V samostatnom builde s platným podpísaným zaplateným oprávnením vypnite sieť, aplikáciu ukončite a spustite znova; všetkých osem postupov sa musí načítať lokálne. Bez oprávnenia má existujúca ochrana offline vstup zablokovať.
+5. Pri prvej pomoci overte trvalo dostupné upozornenie a vstup do Rýchlej pomoci bez vykonania tiesňového hovoru. Klinickú správnosť textu a ilustrácií musí pred verejným vydaním posúdiť kvalifikovaný odborník; automatické testy ju nepotvrdzujú.

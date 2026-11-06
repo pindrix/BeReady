@@ -1,5 +1,7 @@
 import { LocalizedPressable as Pressable } from "../components/localized-native";
-import { LocalizedText as Text } from "../components/localized-text";
+import { LocalizedText as Text, useLocale } from "../components/localized-text";
+import { translateText as t } from "../i18n";
+import { getTutorialsForGuide } from "../data/tutorials";
 import { useState } from "react";
 import { Linking, View } from "react-native";
 import { router, useLocalSearchParams } from "expo-router";
@@ -25,6 +27,7 @@ import { disclaimer } from "../data/content";
 import { useStore } from "../state/store";
 import { useTheme } from "../theme/theme";
 function Reader({ guide }: { guide: AcademyGuide }) {
+  useLocale();
   const c = useTheme(),
     s = useStore(),
     a = useAction(),
@@ -60,6 +63,15 @@ function Reader({ guide }: { guide: AcademyGuide }) {
         <Badge label={`${guide.minutes} MIN · OFFLINE`} />
       </Row>
       <AcademyArt kind={guide.art} color={guide.color} height={210} />
+      {getTutorialsForGuide(guide.id).map((item) => (
+        <Button
+          key={item.id}
+          title={`${t("Animácia")}: ${t(item.title)}`}
+          onPress={() =>
+            router.push({ pathname: "/animations", params: { id: item.id } })
+          }
+        />
+      ))}
       <ErrorText message={a.error} />
       <Progress
         value={((index + 1) / guide.steps.length) * 100}

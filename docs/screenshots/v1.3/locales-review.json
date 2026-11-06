@@ -1,0 +1,412 @@
+{
+  "notice": "Current real components rendered in Chromium with explicit React Native Web development fixtures and reduced motion. Not native phone screenshots or native device validation.",
+  "checkedAt": "2026-11-06T08:46:28.327Z",
+  "method": "Library in 21 locales at 320px, alternating light/dark; campfire and adult-cpr initial/final steps in ar/en/sk at 320px. Visible horizontal overflow intersects each element with clipping/scrolling ancestors before comparing with viewport. Additional Slovak 390px captures saved separately.",
+  "summary": {
+    "routes": 27,
+    "libraryLocales": 21,
+    "playerRoutes": 6,
+    "playerStatesChecked": 12,
+    "pageErrors": 0,
+    "visibleOverflowCount": 0,
+    "documentOverflowStates": 0
+  },
+  "reports": [
+    {
+      "screen": "library",
+      "locale": "sk",
+      "colorScheme": "light",
+      "width": 320,
+      "errors": [],
+      "viewport": 320,
+      "documentWidth": 320,
+      "height": 2580,
+      "bodyTextLength": 649,
+      "visibleOverflowCount": 0
+    },
+    {
+      "screen": "library",
+      "locale": "en",
+      "colorScheme": "dark",
+      "width": 320,
+      "errors": [],
+      "viewport": 320,
+      "documentWidth": 320,
+      "height": 2569,
+      "bodyTextLength": 659,
+      "visibleOverflowCount": 0
+    },
+    {
+      "screen": "library",
+      "locale": "zh",
+      "colorScheme": "light",
+      "width": 320,
+      "errors": [],
+      "viewport": 320,
+      "documentWidth": 320,
+      "height": 2497,
+      "bodyTextLength": 256,
+      "visibleOverflowCount": 0
+    },
+    {
+      "screen": "library",
+      "locale": "hi",
+      "colorScheme": "dark",
+      "width": 320,
+      "errors": [],
+      "viewport": 320,
+      "documentWidth": 320,
+      "height": 2524,
+      "bodyTextLength": 620,
+      "visibleOverflowCount": 0
+    },
+    {
+      "screen": "library",
+      "locale": "es",
+      "colorScheme": "light",
+      "width": 320,
+      "errors": [],
+      "viewport": 320,
+      "documentWidth": 320,
+      "height": 2679,
+      "bodyTextLength": 765,
+      "visibleOverflowCount": 0
+    },
+    {
+      "screen": "library",
+      "locale": "ar",
+      "colorScheme": "dark",
+      "width": 320,
+      "errors": [],
+      "viewport": 320,
+      "documentWidth": 320,
+      "height": 2673,
+      "bodyTextLength": 628,
+      "visibleOverflowCount": 0
+    },
+    {
+      "screen": "library",
+      "locale": "fr",
+      "colorScheme": "light",
+      "width": 320,
+      "errors": [],
+      "viewport": 320,
+      "documentWidth": 320,
+      "height": 2674,
+      "bodyTextLength": 769,
+      "visibleOverflowCount": 0
+    },
+    {
+      "screen": "library",
+      "locale": "bn",
+      "colorScheme": "dark",
+      "width": 320,
+      "errors": [],
+      "viewport": 320,
+      "documentWidth": 320,
+      "height": 2634,
+      "bodyTextLength": 701,
+      "visibleOverflowCount": 0
+    },
+    {
+      "screen": "library",
+      "locale": "pt",
+      "colorScheme": "light",
+      "width": 320,
+      "errors": [],
+      "viewport": 320,
+      "documentWidth": 320,
+      "height": 2569,
+      "bodyTextLength": 726,
+      "visibleOverflowCount": 0
+    },
+    {
+      "screen": "library",
+      "locale": "ru",
+      "colorScheme": "dark",
+      "width": 320,
+      "errors": [],
+      "viewport": 320,
+      "documentWidth": 320,
+      "height": 2745,
+      "bodyTextLength": 724,
+      "visibleOverflowCount": 0
+    },
+    {
+      "screen": "library",
+      "locale": "id",
+      "colorScheme": "light",
+      "width": 320,
+      "errors": [],
+      "viewport": 320,
+      "documentWidth": 320,
+      "height": 2635,
+      "bodyTextLength": 747,
+      "visibleOverflowCount": 0
+    },
+    {
+      "screen": "library",
+      "locale": "de",
+      "colorScheme": "dark",
+      "width": 320,
+      "errors": [],
+      "viewport": 320,
+      "documentWidth": 320,
+      "height": 2702,
+      "bodyTextLength": 784,
+      "visibleOverflowCount": 0
+    },
+    {
+      "screen": "library",
+      "locale": "it",
+      "colorScheme": "light",
+      "width": 320,
+      "errors": [],
+      "viewport": 320,
+      "documentWidth": 320,
+      "height": 2611,
+      "bodyTextLength": 746,
+      "visibleOverflowCount": 0
+    },
+    {
+      "screen": "library",
+      "locale": "pl",
+      "colorScheme": "dark",
+      "width": 320,
+      "errors": [],
+      "viewport": 320,
+      "documentWidth": 320,
+      "height": 2651,
+      "bodyTextLength": 719,
+      "visibleOverflowCount": 0
+    },
+    {
+      "screen": "library",
+      "locale": "uk",
+      "colorScheme": "light",
+      "width": 320,
+      "errors": [],
+      "viewport": 320,
+      "documentWidth": 320,
+      "height": 2652,
+      "bodyTextLength": 708,
+      "visibleOverflowCount": 0
+    },
+    {
+      "screen": "library",
+      "locale": "cs",
+      "colorScheme": "dark",
+      "width": 320,
+      "errors": [],
+      "viewport": 320,
+      "documentWidth": 320,
+      "height": 2562,
+      "bodyTextLength": 627,
+      "visibleOverflowCount": 0
+    },
+    {
+      "screen": "library",
+      "locale": "hu",
+      "colorScheme": "light",
+      "width": 320,
+      "errors": [],
+      "viewport": 320,
+      "documentWidth": 320,
+      "height": 2649,
+      "bodyTextLength": 690,
+      "visibleOverflowCount": 0
+    },
+    {
+      "screen": "library",
+      "locale": "nl",
+      "colorScheme": "dark",
+      "width": 320,
+      "errors": [],
+      "viewport": 320,
+      "documentWidth": 320,
+      "height": 2633,
+      "bodyTextLength": 721,
+      "visibleOverflowCount": 0
+    },
+    {
+      "screen": "library",
+      "locale": "ro",
+      "colorScheme": "light",
+      "width": 320,
+      "errors": [],
+      "viewport": 320,
+      "documentWidth": 320,
+      "height": 2604,
+      "bodyTextLength": 674,
+      "visibleOverflowCount": 0
+    },
+    {
+      "screen": "library",
+      "locale": "el",
+      "colorScheme": "dark",
+      "width": 320,
+      "errors": [],
+      "viewport": 320,
+      "documentWidth": 320,
+      "height": 2722,
+      "bodyTextLength": 890,
+      "visibleOverflowCount": 0
+    },
+    {
+      "screen": "library",
+      "locale": "sv",
+      "colorScheme": "light",
+      "width": 320,
+      "errors": [],
+      "viewport": 320,
+      "documentWidth": 320,
+      "height": 2568,
+      "bodyTextLength": 683,
+      "visibleOverflowCount": 0
+    },
+    {
+      "screen": "player",
+      "id": "campfire",
+      "locale": "ar",
+      "colorScheme": "light",
+      "width": 320,
+      "errors": [],
+      "states": {
+        "initial": {
+          "viewport": 320,
+          "documentWidth": 320,
+          "height": 2483,
+          "bodyTextLength": 1053,
+          "visibleOverflowCount": 0
+        },
+        "final": {
+          "viewport": 320,
+          "documentWidth": 320,
+          "height": 2507,
+          "bodyTextLength": 1090,
+          "visibleOverflowCount": 0
+        }
+      }
+    },
+    {
+      "screen": "player",
+      "id": "adult-cpr",
+      "locale": "ar",
+      "colorScheme": "dark",
+      "width": 320,
+      "errors": [],
+      "states": {
+        "initial": {
+          "viewport": 320,
+          "documentWidth": 320,
+          "height": 2480,
+          "bodyTextLength": 1010,
+          "visibleOverflowCount": 0
+        },
+        "final": {
+          "viewport": 320,
+          "documentWidth": 320,
+          "height": 2528,
+          "bodyTextLength": 1085,
+          "visibleOverflowCount": 0
+        }
+      }
+    },
+    {
+      "screen": "player",
+      "id": "campfire",
+      "locale": "en",
+      "colorScheme": "light",
+      "width": 320,
+      "errors": [],
+      "states": {
+        "initial": {
+          "viewport": 320,
+          "documentWidth": 320,
+          "height": 2507,
+          "bodyTextLength": 1235,
+          "visibleOverflowCount": 0
+        },
+        "final": {
+          "viewport": 320,
+          "documentWidth": 320,
+          "height": 2500,
+          "bodyTextLength": 1247,
+          "visibleOverflowCount": 0
+        }
+      }
+    },
+    {
+      "screen": "player",
+      "id": "adult-cpr",
+      "locale": "en",
+      "colorScheme": "dark",
+      "width": 320,
+      "errors": [],
+      "states": {
+        "initial": {
+          "viewport": 320,
+          "documentWidth": 320,
+          "height": 2519,
+          "bodyTextLength": 1233,
+          "visibleOverflowCount": 0
+        },
+        "final": {
+          "viewport": 320,
+          "documentWidth": 320,
+          "height": 2543,
+          "bodyTextLength": 1281,
+          "visibleOverflowCount": 0
+        }
+      }
+    },
+    {
+      "screen": "player",
+      "id": "campfire",
+      "locale": "sk",
+      "colorScheme": "light",
+      "width": 320,
+      "errors": [],
+      "states": {
+        "initial": {
+          "viewport": 320,
+          "documentWidth": 320,
+          "height": 2483,
+          "bodyTextLength": 1087,
+          "visibleOverflowCount": 0
+        },
+        "final": {
+          "viewport": 320,
+          "documentWidth": 320,
+          "height": 2531,
+          "bodyTextLength": 1142,
+          "visibleOverflowCount": 0
+        }
+      }
+    },
+    {
+      "screen": "player",
+      "id": "adult-cpr",
+      "locale": "sk",
+      "colorScheme": "dark",
+      "width": 320,
+      "errors": [],
+      "states": {
+        "initial": {
+          "viewport": 320,
+          "documentWidth": 320,
+          "height": 2457,
+          "bodyTextLength": 1072,
+          "visibleOverflowCount": 0
+        },
+        "final": {
+          "viewport": 320,
+          "documentWidth": 320,
+          "height": 2481,
+          "bodyTextLength": 1105,
+          "visibleOverflowCount": 0
+        }
+      }
+    }
+  ]
+}

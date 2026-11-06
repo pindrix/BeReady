@@ -128,6 +128,7 @@ function Gate() {
           <Stack.Screen name="shopping" />
           <Stack.Screen name="safe-places" />
           <Stack.Screen name="guide" />
+          <Stack.Screen name="animations" />
           <Stack.Screen name="videos" />
           <Stack.Screen name="missions" />
           <Stack.Screen name="plus" />

@@ -442,6 +442,13 @@ export default function Home() {
           <Icon name="arrow-forward" size={20} />
         </Pressable>
       </Card>
+      <Tile
+        icon="play-circle-outline"
+        title="Animované postupy"
+        subtitle="Pozrite si jednotlivé úkony v pohybe."
+        tone="orange"
+        onPress={() => router.push("/animations")}
+      />
       <Pressable
         accessibilityRole="button"
         accessibilityLabel="Otvoriť video akadémiu"

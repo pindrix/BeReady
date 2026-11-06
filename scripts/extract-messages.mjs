@@ -10,6 +10,11 @@ const normalize = (s) => s.replace(/\s+/g, " ").trim();
 function readable(value) {
   const s = normalize(value);
   if (
+    /^[Mm][\d\s,.-]+[MmLlQqCcVvHhZzAaSsTt\d\s,.+eE-]*$/.test(s) ||
+    /^(rotate|translate|scale)\(/.test(s)
+  )
+    return false;
+  if (
     /^[Mm][\d\s,.-]+[LlQqCcVvHhZzAaSsTt\d\s,.-]*$/.test(s) ||
     /^[a-z]+[A-Z][A-Za-z]+$/.test(s)
   )

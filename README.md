@@ -1,8 +1,18 @@
-# READY 1.2 — Domácnosť pripravená krok za krokom
+# READY 1.3 — Domácnosť pripravená krok za krokom
 
 Mobilná aplikácia pre pripravenosť domácnosti. Expo SDK 58, React Native, striktný TypeScript, Expo Router a SQLite. Osobné údaje domácnosti zostávajú lokálne. Bez reklamného SDK a vzdialeného sledovania.
 
-## Čo je nové vo verzii 1.2
+## Čo je nové vo verzii 1.3
+
+- **Osem animovaných návodov, 36 názorných krokov:** evakuačný batoh, pitná voda, blackout, rodinný komunikačný plán, resuscitácia dospelého, silné krvácanie, malé tepelné popálenie a malý oheň na povolenom vonkajšom ohnisku.
+- **Ovládané prehrávanie:** spustenie a pauza, opakovanie, posun po časovej osi a výber kroku. Pri odchode z obrazovky alebo prepnutí aplikácie do pozadia sa prehrávanie zastaví. Systémové obmedzenie pohybu zobrazí statické scény.
+- **Lokálna grafika a 21 jazykov:** scény aj preklady sú súčasťou aplikácie; platený offline prístup používa existujúcu licenčnú kontrolu. Nejde o streamované videá. Vstup je na Domove, v Akadémii a pri príslušných návodoch.
+
+[Ukážka skutočného prehrávania batoha](docs/screenshots/v1.3/bag-demo.gif) · [Praktické scény](docs/screenshots/v1.3/practical-scenes.jpg) · [Podrobnosti ovládania](docs/ANIMATIONS.md).
+
+Prvá pomoc je tréningová ilustrácia a nenahrádza kurz ani pokyny operátora tiesňovej linky. Čas klipu nie je čas ošetrenia ani tempo resuscitácie. Aktuálne stránky NHS/NPS sa v tomto prostredí nepodarilo načítať; pred verejným vydaním potrebujú postupy a ich preklady odbornú revíziu. Presný rozsah a zdroje sú v [docs/PRACTICAL_CONTENT.md](docs/PRACTICAL_CONTENT.md).
+
+## Základ z verzie 1.2
 
 - **21 jazykov rozhrania a pribaleného obsahu.** Výber v onboardingu a Nastaveniach, uložená preferencia, arabské RTL, lokálne slovníky a čísla. Pracovné preklady nie sú odbornou certifikáciou; pred verejným vydaním potrebujú jazykovú a bezpečnostnú revíziu. Podrobnosti v [docs/LOCALIZATION.md](docs/LOCALIZATION.md).
 - **Vizuálna baliaca stanica:** osem modulov evakuačného batoha, až 24 položiek, voliteľné potreby zvierat, skutočne uložený pokrok a výpočet vody podľa domácnosti. Zásoba domácnosti sa nezamieňa s hmotnosťou prenosného batoha.
@@ -51,7 +61,7 @@ npm.cmd test
 npm.cmd start -- --lan
 ```
 
-Príkazy `npm` nespúšťajte priamo v `C:\Users\matej`, ak tam nemáte súbory aplikácie. Pri klonovaní podľa vyššie uvedeného postupu má výzva vyzerať ako `PS C:\Users\matej\BeReady>`.
+Príkazy `npm` spúšťajte v priečinku projektu, nie v domovskom priečinku používateľa. Kontrola vyššie musí nájsť oba súbory projektu.
 
 4. Počítač aj telefón pripojte k rovnakej dôveryhodnej Wi-Fi.
 5. **Android:** otvorte Expo Go a použite skener QR kódu z terminálu.
@@ -62,7 +72,7 @@ Príkazy `npm` nespúšťajte priamo v `C:\Users\matej`, ak tam nemáte súbory 
 
 ### Časté problémy
 
-- **`npm ci` hlási EUSAGE alebo chýbajúci lockfile; `npm start` hlási ENOENT a `C:\Users\matej\package.json`:** príkazy bežia v nesprávnom priečinku. Prejdite cez `Set-Location` do priečinka aplikácie a overte `Get-ChildItem package*.json`. Musia sa zobraziť `package.json` aj `package-lock.json`. Nevytvárajte nový projekt cez `npm init` a nevyrábajte náhradný lockfile v domovskom priečinku.
+- **`npm ci` hlási EUSAGE alebo chýbajúci lockfile; `npm start` hlási ENOENT pre `package.json`:** príkazy bežia v nesprávnom priečinku. Prejdite cez `Set-Location` do priečinka aplikácie a overte `Get-ChildItem package*.json`. Musia sa zobraziť `package.json` aj `package-lock.json`. Nevytvárajte nový projekt cez `npm init` a nevyrábajte náhradný lockfile v domovskom priečinku.
 - **QR sa nenačíta / spojenie vyprší:** skontrolujte rovnakú sieť, izoláciu klientov na Wi-Fi a povolenie Node.js cez firewall na súkromnej sieti. Vývojový server je na vašom počítači; cloudový localhost nie je dostupná telefónna ukážka.
 - **Nesprávne SDK v Expo Go:** aktualizujte Expo Go a porovnajte podporované SDK s 58. Nerobte náhodný upgrade jednotlivých natívnych balíkov. Použite `npx.cmd expo install --check` a dokumentáciu Expo pre danú verziu. Ak distribúcia Expo Go už SDK 58 nepodporuje, potrebujete koordinovaný upgrade SDK alebo vlastný development build. Tento projekt nepridáva vlastný natívny modul, ktorý by sám vyžadoval development build.
 - **Stará Metro cache:** zastavte server cez Ctrl+C a spustite `npm.cmd start -- --clear`.
