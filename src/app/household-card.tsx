@@ -15,12 +15,15 @@ import {
   T,
   useAction,
 } from "../components/ui";
-import { emergencyNumbers } from "../data/content";
+import { numbersForCountry } from "../data/countries";
+import { useCountry } from "../components/country-picker";
 import { householdCard, householdCardText } from "../domain/household-card";
 import { useStore } from "../state/store";
 import { useTheme } from "../theme/theme";
 
 export default function HouseholdCardScreen() {
+  const country = useCountry(),
+    emergencyNumbers = numbersForCountry(country?.code);
   useLocale();
   const { data } = useStore(),
     c = useTheme(),
@@ -130,7 +133,7 @@ export default function HouseholdCardScreen() {
           <View style={{ flexDirection: "row", flexWrap: "wrap", gap: 10 }}>
             {emergencyNumbers.map((item) => (
               <View
-                key={item.number}
+                key={item.name}
                 style={{
                   flexBasis: "45%",
                   flexGrow: 1,

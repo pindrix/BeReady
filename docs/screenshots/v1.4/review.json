@@ -1,0 +1,269 @@
+{
+  "notice": "Browser fixture with mocked native services. Not physical-device validation. Country US selected independently of locale.",
+  "reports": [
+    {
+      "screen": "home",
+      "id": "",
+      "locale": "sk",
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "overflow": [],
+      "captionGap": null,
+      "has911": false
+    },
+    {
+      "screen": "animations",
+      "id": "water-storage",
+      "locale": "sk",
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "overflow": [],
+      "captionGap": 12,
+      "has911": false
+    },
+    {
+      "screen": "guide",
+      "id": "nuclear-explosion",
+      "locale": "sk",
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "overflow": [],
+      "captionGap": null,
+      "has911": false
+    },
+    {
+      "screen": "now",
+      "id": "",
+      "locale": "sk",
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "overflow": [],
+      "captionGap": null,
+      "has911": true
+    },
+    {
+      "screen": "home",
+      "id": "",
+      "locale": "en",
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "overflow": [],
+      "captionGap": null,
+      "has911": false
+    },
+    {
+      "screen": "animations",
+      "id": "water-storage",
+      "locale": "en",
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "overflow": [],
+      "captionGap": 12,
+      "has911": false
+    },
+    {
+      "screen": "guide",
+      "id": "nuclear-explosion",
+      "locale": "en",
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "overflow": [],
+      "captionGap": null,
+      "has911": false
+    },
+    {
+      "screen": "now",
+      "id": "",
+      "locale": "en",
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "overflow": [],
+      "captionGap": null,
+      "has911": true
+    },
+    {
+      "screen": "home",
+      "id": "",
+      "locale": "ar",
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "overflow": [],
+      "captionGap": null,
+      "has911": false
+    },
+    {
+      "screen": "animations",
+      "id": "water-storage",
+      "locale": "ar",
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "overflow": [],
+      "captionGap": 12,
+      "has911": false
+    },
+    {
+      "screen": "guide",
+      "id": "nuclear-explosion",
+      "locale": "ar",
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "overflow": [],
+      "captionGap": null,
+      "has911": false
+    },
+    {
+      "screen": "now",
+      "id": "",
+      "locale": "ar",
+      "width": 320,
+      "errors": [],
+      "documentWidth": 320,
+      "overflow": [],
+      "captionGap": null,
+      "has911": true
+    },
+    {
+      "screen": "home",
+      "id": "",
+      "locale": "sk",
+      "width": 390,
+      "errors": [],
+      "documentWidth": 390,
+      "overflow": [],
+      "captionGap": null,
+      "has911": false
+    },
+    {
+      "screen": "animations",
+      "id": "water-storage",
+      "locale": "sk",
+      "width": 390,
+      "errors": [],
+      "documentWidth": 390,
+      "overflow": [],
+      "captionGap": 12,
+      "has911": false
+    },
+    {
+      "screen": "guide",
+      "id": "nuclear-explosion",
+      "locale": "sk",
+      "width": 390,
+      "errors": [],
+      "documentWidth": 390,
+      "overflow": [],
+      "captionGap": null,
+      "has911": false
+    },
+    {
+      "screen": "now",
+      "id": "",
+      "locale": "sk",
+      "width": 390,
+      "errors": [],
+      "documentWidth": 390,
+      "overflow": [],
+      "captionGap": null,
+      "has911": true
+    },
+    {
+      "screen": "home",
+      "id": "",
+      "locale": "en",
+      "width": 390,
+      "errors": [],
+      "documentWidth": 390,
+      "overflow": [],
+      "captionGap": null,
+      "has911": false
+    },
+    {
+      "screen": "animations",
+      "id": "water-storage",
+      "locale": "en",
+      "width": 390,
+      "errors": [],
+      "documentWidth": 390,
+      "overflow": [],
+      "captionGap": 12,
+      "has911": false
+    },
+    {
+      "screen": "guide",
+      "id": "nuclear-explosion",
+      "locale": "en",
+      "width": 390,
+      "errors": [],
+      "documentWidth": 390,
+      "overflow": [],
+      "captionGap": null,
+      "has911": false
+    },
+    {
+      "screen": "now",
+      "id": "",
+      "locale": "en",
+      "width": 390,
+      "errors": [],
+      "documentWidth": 390,
+      "overflow": [],
+      "captionGap": null,
+      "has911": true
+    },
+    {
+      "screen": "home",
+      "id": "",
+      "locale": "ar",
+      "width": 390,
+      "errors": [],
+      "documentWidth": 390,
+      "overflow": [],
+      "captionGap": null,
+      "has911": false
+    },
+    {
+      "screen": "animations",
+      "id": "water-storage",
+      "locale": "ar",
+      "width": 390,
+      "errors": [],
+      "documentWidth": 390,
+      "overflow": [],
+      "captionGap": 12,
+      "has911": false
+    },
+    {
+      "screen": "guide",
+      "id": "nuclear-explosion",
+      "locale": "ar",
+      "width": 390,
+      "errors": [],
+      "documentWidth": 390,
+      "overflow": [],
+      "captionGap": null,
+      "has911": false
+    },
+    {
+      "screen": "now",
+      "id": "",
+      "locale": "ar",
+      "width": 390,
+      "errors": [],
+      "documentWidth": 390,
+      "overflow": [],
+      "captionGap": null,
+      "has911": true
+    }
+  ]
+}

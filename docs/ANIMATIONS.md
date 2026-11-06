@@ -19,3 +19,5 @@ Model aj scény sú súčasťou balíka aplikácie. Použitie bez internetu podl
 `src/data/tutorials.ts` mapuje stabilné identifikátory návodov na druhy scén. `src/domain/tutorials.ts` počíta čas prehrávania a presuny medzi krokmi bez sieťových volaní. Čas pred začiatkom aj za koncom sa ohraničí. Presná vnútorná hranica patrí nasledujúcemu kroku; koniec celej ukážky zostáva na poslednom kroku s dokončenou ilustráciou. Nečíselné a nekonečné hodnoty sa odmietnu.
 
 `tests/tutorials.test.ts` kontroluje väzbu na zdrojové návody, ich kompletné texty, hranice scén, priebeh pri rôznych trvaniach aj neplatné časové údaje. Samotný model neurčuje automatické spustenie, pokračovanie krokov ani správanie pri obmedzení pohybu; tieto pravidlá zabezpečuje obrazovka prehrávača.
+
+Od verzie 1.4 je popis aktuálneho kroku bezprostredne pod scénou v spoločnej karte, pred ovládaním. Nie je potrebné hľadať zodpovedajúci text pod časovou osou a upozorneniami.

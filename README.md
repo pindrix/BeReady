@@ -1,8 +1,20 @@
-# READY 1.3 — Domácnosť pripravená krok za krokom
+# READY 1.4 — Domácnosť pripravená krok za krokom
 
 Mobilná aplikácia pre pripravenosť domácnosti. Expo SDK 58, React Native, striktný TypeScript, Expo Router a SQLite. Osobné údaje domácnosti zostávajú lokálne. Bez reklamného SDK a vzdialeného sledovania.
 
-## Čo je nové vo verzii 1.3
+## Čo je nové vo verzii 1.4
+
+- **Popis hneď pod animáciou:** názov a text aktuálneho kroku sú v spoločnej karte priamo pod scénou, pred časovou osou a tlačidlami. Menia sa spolu so scénou.
+- **Sviežejšie rozhranie:** modrá a mentolová paleta, svetlé povrchy a čitateľné nočné farby.
+- **Prvé spustenie:** otvorí sa výber z 21 jazykov a následne výber krajiny pobytu. Jazyk aj krajinu možno zmeniť v Nastaveniach; krajinu aj v Rýchlej pomoci. Nepoužíva sa GPS a jazyk nepredurčuje krajinu.
+- **Tiesňové čísla pre 36 krajín:** všetky krajiny EÚ, Spojené kráľovstvo, USA, Kanada, Austrália, Nový Zéland, India, Švajčiarsko, Nórsko a Island. Používajú sa v Rýchlej pomoci, Akadémii, rodinnej karte a číselných pokynoch návodov. Pre inú alebo neurčenú krajinu sa čísla neodhadujú a tlačidlo volania sa nezobrazí. Ide o národné kontakty, nie garanciu miestneho pokrytia služby.
+- **Civilná ochrana:** dva nové pribalené návody o príprave civilistov na vojnový konflikt a o jadrovom výbuchu/spade. Celkom 20 sprievodcov. Pokrývajú rodinný plán, ukrytie, evakuáciu, nevybuchnutú muníciu, ochranu pri záblesku, spad, základnú dekontamináciu a bezpečné zásoby. Neobsahujú živé varovania ani oznámenie konca nebezpečenstva.
+
+[Nový prehrávač](docs/screenshots/v1.4/animations.png) · [Domov](docs/screenshots/v1.4/home.png) · [Jadrový výbuch](docs/screenshots/v1.4/guide.png).
+
+Zdrojové odkazy a hranice overenia sú v [docs/CIVIL_PROTECTION.md](docs/CIVIL_PROTECTION.md) a [docs/COUNTRIES.md](docs/COUNTRIES.md). Aktuálne zdroje blokovala sieťová politika; pred verejným vydaním treba údaje, bezpečnostné postupy aj preklady odborne skontrolovať.
+
+## Základ z verzie 1.3
 
 - **Osem animovaných návodov, 36 názorných krokov:** evakuačný batoh, pitná voda, blackout, rodinný komunikačný plán, resuscitácia dospelého, silné krvácanie, malé tepelné popálenie a malý oheň na povolenom vonkajšom ohnisku.
 - **Ovládané prehrávanie:** spustenie a pauza, opakovanie, posun po časovej osi a výber kroku. Pri odchode z obrazovky alebo prepnutí aplikácie do pozadia sa prehrávanie zastaví. Systémové obmedzenie pohybu zobrazí statické scény.

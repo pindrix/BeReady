@@ -104,6 +104,16 @@ function Player({ tutorial }: { tutorial: Tutorial }) {
           step={s.stepIndex}
           progress={player.progress}
         />
+        <View
+          testID="current-step-caption"
+          accessibilityLiveRegion="polite"
+          style={{ paddingHorizontal: 10, paddingVertical: 8, gap: 8 }}
+        >
+          <Badge label={`Krok ${s.stepIndex + 1} z ${tutorial.steps.length}`} />
+          <T large>{step.title}</T>
+          <T>{step.body}</T>
+          {s.isComplete ? <Badge label="Ukážka dokončená" /> : null}
+        </View>
         <View style={{ paddingHorizontal: 10, gap: 12 }}>
           <View
             style={{
@@ -211,12 +221,6 @@ function Player({ tutorial }: { tutorial: Tutorial }) {
       ) : (
         <T muted>Animácia znázorňuje postup, nie rýchlosť skutočného zásahu.</T>
       )}
-      <Card>
-        <Badge label={`Krok ${s.stepIndex + 1} z ${tutorial.steps.length}`} />
-        <T large>{step.title}</T>
-        <T>{step.body}</T>
-        {s.isComplete ? <Badge label="Ukážka dokončená" /> : null}
-      </Card>
       <SectionTitle title="Jednotlivé kroky" />
       {tutorial.steps.map((item, i) => (
         <Pressable

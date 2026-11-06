@@ -1,3 +1,4 @@
+import { CountryPicker } from "../../components/country-picker";
 import buildPackage from "../../../package.json";
 import { translateText as t } from "../../i18n";
 import { LanguagePicker } from "../../components/language-picker";
@@ -38,6 +39,9 @@ export default function SettingsScreen() {
   return (
     <Screen title="Vaše nastavenia">
       <LanguagePicker />
+      <Card>
+        <CountryPicker />
+      </Card>
       {!access ? (
         <T>
           Chránené funkcie vyžadujú pripojenie počas skúšky alebo platnú offline

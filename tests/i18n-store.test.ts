@@ -43,3 +43,26 @@ test("jazyková preferencia sa uloží a import domácnosti ju neresetuje", asyn
   await setLocale("sk");
   assert.equal(getLocale(), "sk");
 });
+
+test("country and first-run choice persist independently from language and household backup", async () => {
+  const region = await import("../src/state/region");
+  await region.initializeRegion(db);
+  assert.equal(region.getCountryCode(), null);
+  assert.equal(region.isWelcomeComplete(), false);
+  await region.setCountryCode("US");
+  await region.completeWelcome();
+  await setLocale("en", db);
+  await replaceState(db, await readState(db));
+  await region.initializeRegion(db);
+  assert.equal(region.getCountryCode(), "US");
+  assert.equal(region.isWelcomeComplete(), true);
+  assert.equal(getLocale(), "en");
+  const { translateText } = await import("../src/i18n");
+  assert.equal(translateText("150 l", "sk"), "150 l");
+  assert.equal(
+    translateText("Pri ohrození volajte 112.", "sk"),
+    "Pri ohrození volajte 911.",
+  );
+  await region.setCountryCode("SK");
+  await setLocale("sk", db);
+});

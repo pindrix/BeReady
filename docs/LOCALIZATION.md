@@ -12,7 +12,7 @@ Arabčina používa smer RTL pre rozloženie obrazoviek, texty, formuláre a spo
 
 - Slovníky `src/i18n/locales/*.json` prekladajú rozhranie, pribalené návody, scenáre a vysvetlenia. Ide o pracovné jazykové verzie vytvorené počas vývoja, nie certifikované odborné preklady. Pred verejným vydaním musí rodený hovoriaci a odborný redaktor skontrolovať najmä núdzové a zdravotné pokyny.
 - Názvy, poznámky, kontakty a miesta zadané používateľom zostávajú osobnými údajmi; na ich zobrazenie sa používa `translate={false}`. Preklad nikdy neprepisuje databázu domácnosti.
-- Tiesňové čísla zostávajú pre **Slovensko**, bez ohľadu na jazyk. Aplikácia nemá geolokalizovanú databázu tiesňových čísel pre celý svet.
+- Tiesňové čísla určuje **samostatne zvolená krajina pobytu**, bez ohľadu na jazyk. Aplikácia má 36 národných profilov, krajinu nesleduje cez GPS a nemá úplnú svetovú databázu. Pri neurčenej či nepodporovanej krajine nepredstiera číslo. Pri cestovaní treba krajinu zmeniť; podrobnosti v [COUNTRIES.md](COUNTRIES.md).
 - Odkazy vedú na pôvodné oficiálne stránky. YouTube je externá online služba; preklad rozhrania neprekladá cudzie video ani nemení dostupnosť jeho titulkov.
 - Neznámy text sa zachová v zdrojovej podobe. Takýto fallback sa nesmie započítať do úplnosti slovníka.
 
@@ -34,3 +34,5 @@ Kontrola pokrytia overuje neprázdne hodnoty, presnú zhodu kľúčov, zástupn�
 Štandardné validačné chyby Zod používajú pribalené locale balíky všetkých 21 jazykov. Explicitné aplikačné vysvetlenia používajú rovnaký slovník ako rozhranie. To nemení hodnoty vstupných polí ani serializované enumy.
 
 Viacriadkové vizuálne nadpisy majú fallback po jednotlivých riadkoch, ak zložený JSX text nemá samostatný kľúč. Osobné hodnoty v podnadpise Domova sa zostavujú oddelene od prekladaných popisov. V RTL sa číselné pomery izolujú ako LTR, aby sa význam napr.3/10 pri vykreslení neprevrátil.
+
+Prvý štart verzie 1.4 otvorí výber jazyka ešte pred formulárom domácnosti a vyžiada krajinu. Dokončenie uvítania, krajina a jazyk sú samostatné lokálne preferencie mimo zálohy domácnosti. Bezpečnostné pokyny sa prekladajú zo stabilných zdrojových textov; čísla sa pri zobrazení prispôsobujú krajine. Osobné kontakty a množstvá zásob sa tým nemenia.

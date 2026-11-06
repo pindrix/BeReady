@@ -1,3 +1,6 @@
+import { initializeRegion, isWelcomeComplete } from "../state/region";
+import { Welcome } from "../components/welcome";
+import { CountryPicker, useCountry } from "../components/country-picker";
 import { LocalizedAlert as Alert } from "../components/localized-native";
 import { useEffect } from "react";
 import { Linking, View } from "react-native";
@@ -21,6 +24,7 @@ import { StoreProvider, useStore } from "../state/store";
 import { Button, Card, ErrorText, Loading, Screen, T } from "../components/ui";
 import { useTheme } from "../theme/theme";
 export function ErrorBoundary({ error, retry }: ErrorBoundaryProps) {
+  const country = useCountry();
   return (
     <SafeAreaProvider>
       <Screen title="Údaje sa nepodarilo otvoriť">
@@ -30,30 +34,35 @@ export function ErrorBoundary({ error, retry }: ErrorBoundaryProps) {
             Existujúce údaje sa automaticky nemažú. Skúste aplikáciu načítať
             znova.
           </T>
-          <Button
-            title="Tiesňová linka 112"
-            secondary
-            onPress={() =>
-              Alert.alert(
-                "Vytočiť 112?",
-                "Otvorí sa systémové vytáčanie. Volajte pri skutočnej núdzi.",
-                [
-                  { text: "Zrušiť", style: "cancel" },
-                  {
-                    text: "Otvoriť vytáčanie",
-                    onPress: () => {
-                      void Linking.openURL("tel:112").catch(() =>
-                        Alert.alert(
-                          "Vytáčanie nie je dostupné",
-                          "Použite telefónnu aplikáciu zariadenia.",
-                        ),
-                      );
+          {country && country.code !== "ZZ" ? (
+            <Button
+              title={`Vytočiť ${country.primary}?`}
+              secondary
+              onPress={() =>
+                Alert.alert(
+                  `Vytočiť ${country.primary}?`,
+                  "Otvorí sa systémové vytáčanie. Volajte pri skutočnej núdzi.",
+                  [
+                    { text: "Zrušiť", style: "cancel" },
+                    {
+                      text: "Otvoriť vytáčanie",
+                      onPress: () => {
+                        void Linking.openURL(`tel:${country.primary}`).catch(
+                          () =>
+                            Alert.alert(
+                              "Vytáčanie nie je dostupné",
+                              "Použite telefónnu aplikáciu zariadenia.",
+                            ),
+                        );
+                      },
                     },
-                  },
-                ],
-              )
-            }
-          />
+                  ],
+                )
+              }
+            />
+          ) : (
+            <CountryPicker />
+          )}
           <Button title="Skúsiť znova" onPress={() => void retry()} />
         </Card>
       </Screen>
@@ -63,9 +72,11 @@ export function ErrorBoundary({ error, retry }: ErrorBoundaryProps) {
 async function prepare(db: Parameters<typeof initialize>[0]) {
   await initialize(db);
   await initializeLocale(db);
+  await initializeRegion(db);
   await initializeLicense(db, Date.now());
 }
 function Gate() {
+  useCountry();
   const locale = useLocale(),
     license = useLicense(),
     navigation = useRootNavigationState();
@@ -94,18 +105,21 @@ function Gate() {
   }, [navigation?.key, redirectToProfile, redirectHome]);
   // Keep the root navigator mounted while guards/loaders are visible. Overlay buttons can then navigate safely.
   const loading = (!data && !immediate) || redirectToProfile || redirectHome;
-  const overlay = loading ? (
-    error ? (
-      <Screen title="Chyba načítania">
-        <ErrorText message={error} />
-        <Button title="Skúsiť znova" onPress={() => void reload()} />
-      </Screen>
-    ) : (
-      <Loading />
-    )
-  ) : blocked ? (
-    <AccessPanel />
-  ) : null;
+  const overlay =
+    !isWelcomeComplete() && !immediate ? (
+      <Welcome />
+    ) : loading ? (
+      error ? (
+        <Screen title="Chyba načítania">
+          <ErrorText message={error} />
+          <Button title="Skúsiť znova" onPress={() => void reload()} />
+        </Screen>
+      ) : (
+        <Loading />
+      )
+    ) : blocked ? (
+      <AccessPanel />
+    ) : null;
   return (
     <View style={{ flex: 1, direction: isRTL(locale) ? "rtl" : "ltr" }}>
       <StatusBar style={c.dark ? "light" : "dark"} />

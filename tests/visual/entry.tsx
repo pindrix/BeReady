@@ -1,3 +1,7 @@
+import Guide from "../../src/app/guide";
+import Now from "../../src/app/now";
+import { Welcome } from "../../src/components/welcome";
+import { setCountryCode } from "../../src/state/region";
 /** Screenshot fixture, not the production app entrypoint or a native-runtime test. */
 import Animations from "../../src/app/animations";
 import { setLocale } from "../../src/i18n";
@@ -21,9 +25,13 @@ const screens = {
   scenarios: Scenarios,
   plus: Plus,
   animations: Animations,
+  guide: Guide,
+  welcome: Welcome,
+  now: Now,
 };
 const Screen = screens[name as keyof typeof screens] ?? Home;
 async function start() {
+  await setCountryCode(params.get("country") ?? "SK");
   if (isLocale(locale)) await setLocale(locale);
   createRoot(document.getElementById("root")!).render(
     <StoreProvider>

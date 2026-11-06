@@ -1,5 +1,6 @@
 import type { Contact, Household } from "../types/model";
-import { emergencyNumbers } from "../data/content";
+import { numbersForCountry, countryByCode } from "../data/countries";
+import { getCountryCode } from "../state/region";
 
 export const CARD_CONTACT_LIMIT = 6;
 export type HouseholdCard = {
@@ -42,8 +43,10 @@ export function householdCardText(
     translate("READY / RODINNÁ NÚDZOVÁ KARTA"),
     card.personal ? card.household : translate(card.household),
     "",
-    translate("TIESŇOVÉ LINKY NA SLOVENSKU"),
-    ...emergencyNumbers.map(
+    translate("Krajina pobytu") +
+      ": " +
+      (countryByCode(getCountryCode())?.name ?? translate("Vyberte krajinu.")),
+    ...numbersForCountry(getCountryCode()).map(
       ({ number, name }) => `${number} — ${translate(name)}`,
     ),
     "",

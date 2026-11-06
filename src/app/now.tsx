@@ -1,3 +1,6 @@
+import { translateText as t } from "../i18n";
+import { CountryPicker, useCountry } from "../components/country-picker";
+import { numbersForCountry } from "../data/countries";
 import {
   LocalizedAlert as Alert,
   LocalizedPressable as Pressable,
@@ -7,9 +10,11 @@ import { Linking, View } from "react-native";
 import { router } from "expo-router";
 import { Screen, Card, T, ErrorText, useAction } from "../components/ui";
 import { Icon, IconButton, Tile } from "../components/visual";
-import { disclaimer, emergencyNumbers } from "../data/content";
+import { disclaimer } from "../data/content";
 import { useTheme } from "../theme/theme";
 export default function Now() {
+  const country = useCountry(),
+    emergencyNumbers = numbersForCountry(country?.code);
   const c = useTheme(),
     a = useAction();
   return (
@@ -25,61 +30,67 @@ export default function Now() {
         />
       }
     >
-      <Pressable
-        accessibilityRole="button"
-        accessibilityLabel="112 — Integrovaný záchranný systém"
-        onPress={() =>
-          Alert.alert(
-            "Vytočiť 112?",
-            "Volajte pri skutočnej núdzi. Otvorí sa systémové vytáčanie.",
-            [
-              { text: "Zrušiť", style: "cancel" },
-              {
-                text: "Otvoriť vytáčanie",
-                onPress: () =>
-                  void a.run(async () => {
-                    await Linking.openURL("tel:112");
-                  }),
-              },
-            ],
-          )
-        }
-        style={{
-          padding: 26,
-          borderRadius: 28,
-          backgroundColor: c.danger,
-          flexDirection: "row",
-          alignItems: "center",
-          gap: 18,
-        }}
-      >
-        <Icon
-          name="call-outline"
-          size={36}
-          color={c.dark ? "#452321" : "white"}
-        />
-        <View style={{ flex: 1 }}>
-          <Text
-            style={{
-              fontSize: 47,
-              fontWeight: "800",
-              color: c.dark ? "#452321" : "white",
-            }}
-          >
-            112
-          </Text>
-          <Text
-            style={{
-              fontSize: 13,
-              lineHeight: 20,
-              color: c.dark ? "#452321" : "white",
-            }}
-          >
-            Tiesňová linka · otvoriť vytáčanie
-          </Text>
-        </View>
-        <Icon name="arrow-forward" color={c.dark ? "#452321" : "white"} />
-      </Pressable>
+      <CountryPicker />
+      {country?.code === "ZZ" ? (
+        <T muted>Ak krajina nie je v zozname, overte miestne tiesňové čísla.</T>
+      ) : null}
+      {country && country.code !== "ZZ" ? (
+        <Pressable
+          accessibilityRole="button"
+          accessibilityLabel={`${country.primary} — ${t(country.primaryName ?? "Integrovaný záchranný systém")}`}
+          onPress={() =>
+            Alert.alert(
+              `Vytočiť ${country.primary}?`,
+              "Volajte pri skutočnej núdzi. Otvorí sa systémové vytáčanie.",
+              [
+                { text: "Zrušiť", style: "cancel" },
+                {
+                  text: "Otvoriť vytáčanie",
+                  onPress: () =>
+                    void a.run(async () => {
+                      await Linking.openURL(`tel:${country.primary}`);
+                    }),
+                },
+              ],
+            )
+          }
+          style={{
+            padding: 26,
+            borderRadius: 28,
+            backgroundColor: c.danger,
+            flexDirection: "row",
+            alignItems: "center",
+            gap: 18,
+          }}
+        >
+          <Icon
+            name="call-outline"
+            size={36}
+            color={c.dark ? "#452321" : "white"}
+          />
+          <View style={{ flex: 1 }}>
+            <Text
+              style={{
+                fontSize: 47,
+                fontWeight: "800",
+                color: c.dark ? "#452321" : "white",
+              }}
+            >
+              {country.primary}
+            </Text>
+            <Text
+              style={{
+                fontSize: 13,
+                lineHeight: 20,
+                color: c.dark ? "#452321" : "white",
+              }}
+            >
+              Tiesňová linka · otvoriť vytáčanie
+            </Text>
+          </View>
+          <Icon name="arrow-forward" color={c.dark ? "#452321" : "white"} />
+        </Pressable>
+      ) : null}
       <Card>
         <T large>Operátorovi povedzte:</T>
         {[
@@ -140,7 +151,7 @@ export default function Now() {
       <Card>
         {emergencyNumbers.slice(1).map((n) => (
           <Pressable
-            key={n.number}
+            key={n.name}
             accessibilityRole="button"
             accessibilityLabel={`${n.number} — ${n.name}`}
             onPress={() =>

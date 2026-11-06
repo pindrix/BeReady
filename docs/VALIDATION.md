@@ -4,8 +4,8 @@
 
 - TypeScript strict: bez chýb.
 - ESLint: bez chýb a upozornení po úprave testovacieho setupu.
-- Doménové a databázové testy: 88 úspešných, 0 preskočených.
-- React Native komponentové testy: 50 úspešných, 0 preskočených.
+- Doménové a databázové testy: 93 úspešných, 0 preskočených.
+- React Native komponentové testy: 52 úspešných, 0 preskočených.
 - Metro server: spustený, lokálny HTTP stav a Android manifest READY/SDK 58 overené. Server bol po kontrole zastavený.
 - Export Android + iOS cez Metro/Hermes: úspešný. Nie je to APK/IPA ani dôkaz spustenia na telefóne.
 - Expo kompatibilita: verzie sedia s lokálnym manifestom Expo SDK 58. Online kontrola Expo API bola blokovaná; podpora aktuálne distribuovaného Expo Go sa musí potvrdiť na telefóne.
@@ -76,3 +76,11 @@ Ručné doplnenie na telefóne — zatiaľ nevykonané:
 3. Zapnite systémové obmedzenie pohybu. Scény musia byť statické, texty a manuálne kroky dostupné, automatické prehrávanie vypnuté. Overte čítačku obrazovky a väčšie písmo.
 4. V samostatnom builde s platným podpísaným zaplateným oprávnením vypnite sieť, aplikáciu ukončite a spustite znova; všetkých osem postupov sa musí načítať lokálne. Bez oprávnenia má existujúca ochrana offline vstup zablokovať.
 5. Pri prvej pomoci overte trvalo dostupné upozornenie a vstup do Rýchlej pomoci bez vykonania tiesňového hovoru. Klinickú správnosť textu a ilustrácií musí pred verejným vydaním posúdiť kvalifikovaný odborník; automatické testy ju nepotvrdzujú.
+
+## Rozšírenie 1.4
+
+145 testov: 93 doménových/databázových a 52 komponentových. Nové kontroly overujú oddelenie krajiny od jazyka, uloženie krajiny a prvého spustenia cez SQLite, nedotknuté preferencie pri importe domácnosti, zachovanie úvodných núl v 000, rôzne čísla zdravotníkov/hasičov/polície, absenciu odhadnutých čísel pri neznámej krajine, nezmenené množstvá zásob a potvrdené vytáčanie 911 pri slovenskom jazyku. Prvý štart otvára jazyk a vyžaduje explicitnú krajinu. Nové obsahové kontrakty sledujú podmienený pobyt v úkryte, oddelenie tlakovej vlny a spadu, obmedzenia jódu a varenia vody; nepotvrdzujú odbornú správnosť.
+
+Prehliadačový QA: 24 renderov Domova, prehrávača, jadrového návodu a Rýchlej pomoci pri šírke 320/390 px v slovenčine, angličtine a arabčine s krajinou USA. Bez chýb prehliadača a viditeľného horizontálneho pretečenia. Geometria potvrdila popis do 20 px pod scénou. Samostatne zachytený prvotný jazykový výber. Dôkazy v `docs/screenshots/v1.4/review.json` a PNG sú z fixture s testovacími adaptérmi, nie z fyzického telefónu.
+
+Na telefóne ešte overiť prvý štart, zmenu krajiny pri rovnakom jazyku, čítačku obrazovky, krajinu po reštarte a platený offline štart. Tiesňové hovory sa v testoch nevykonávajú. Verejné vydanie vyžaduje odborné preverenie civilnej ochrany a národných kontaktov; priame aktuálne webové overenie blokoval proxy HTTP 403.

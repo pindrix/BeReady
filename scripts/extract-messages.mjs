@@ -69,7 +69,7 @@ async function visitDir(dir) {
     const path = join(dir, ent.name);
     if (ent.isDirectory()) {
       await visitDir(path);
-    } else if (/\.tsx?$/.test(ent.name)) {
+    } else if (/\.tsx?$/.test(ent.name) && ent.name !== "countries.ts") {
       const text = await readFile(path, "utf8");
       const tree = ts.createSourceFile(
         path,

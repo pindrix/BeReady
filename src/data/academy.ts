@@ -1,3 +1,4 @@
+import { civilProtectionGuides } from "./civil-protection";
 import { guides } from "./content";
 import type { Checklist } from "../types/model";
 
@@ -93,6 +94,7 @@ const baseGuides: AcademyGuide[] = guides.map((g) => ({
 const reviewed = "2026-11-03";
 export const academyGuides: AcademyGuide[] = [
   ...baseGuides,
+  ...civilProtectionGuides,
   {
     id: "go-bag",
     title: "Batoh na prvých 72 hodín",

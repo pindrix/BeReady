@@ -1,3 +1,4 @@
+import { getRegionRevision, subscribeRegion } from "../state/region";
 import {
   Children,
   isValidElement,
@@ -7,6 +8,7 @@ import {
 import { Text as NativeText, type TextProps } from "react-native";
 import { getLocale, isRTL, subscribeLocale, translateText } from "../i18n";
 export function useLocale() {
+  useSyncExternalStore(subscribeRegion, getRegionRevision, getRegionRevision);
   return useSyncExternalStore(subscribeLocale, getLocale, getLocale);
 }
 function translateChildren(children: ReactNode, rtl: boolean): ReactNode {

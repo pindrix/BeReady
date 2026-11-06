@@ -1,3 +1,5 @@
+import { CountryPicker, useCountry } from "../../components/country-picker";
+import { numbersForCountry } from "../../data/countries";
 import {
   LocalizedAlert as Alert,
   LocalizedPressable as Pressable,
@@ -27,7 +29,7 @@ import {
   Tile,
 } from "../../components/visual";
 import { AcademyArt } from "../../components/academy-art";
-import { disclaimer, emergencyNumbers } from "../../data/content";
+import { disclaimer } from "../../data/content";
 import {
   academyCategories,
   academyGuides,
@@ -40,6 +42,8 @@ import { useStore } from "../../state/store";
 import { useTheme } from "../../theme/theme";
 
 export default function HelpScreen() {
+  const country = useCountry(),
+    emergencyNumbers = numbersForCountry(country?.code);
   useLocale();
   const c = useTheme(),
     s = useStore(),
@@ -65,19 +69,8 @@ export default function HelpScreen() {
       headerRight={
         <IconButton
           name="call-outline"
-          label="Tiesňová linka 112"
-          onPress={() =>
-            Alert.alert("Vytočiť 112?", "Integrovaný záchranný systém", [
-              { text: "Zrušiť", style: "cancel" },
-              {
-                text: "Otvoriť vytáčanie",
-                onPress: () =>
-                  void a.run(async () => {
-                    await Linking.openURL("tel:112");
-                  }),
-              },
-            ])
-          }
+          label="Potrebujem pomoc teraz"
+          onPress={() => router.push("/now")}
         />
       }
     >
@@ -316,12 +309,13 @@ export default function HelpScreen() {
       </View>
       <SectionTitle
         title="Pomoc v skutočnej núdzi"
-        subtitle="Slovenské tiesňové linky. Vytáčanie otvoríme až po potvrdení."
+        subtitle="Tiesňové čísla podľa krajiny, nie podľa jazyka. Pri cestovaní krajinu zmeňte."
       />
       <View style={{ flexDirection: "row", flexWrap: "wrap", gap: 10 }}>
+        <CountryPicker />
         {emergencyNumbers.map((x) => (
           <Pressable
-            key={x.number}
+            key={x.name}
             accessibilityRole="button"
             accessibilityLabel={`${x.number} — ${x.name}`}
             onPress={() =>

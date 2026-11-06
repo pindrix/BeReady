@@ -10,12 +10,14 @@ import { useTheme } from "../theme/theme";
 import { Ionicons } from "@expo/vector-icons";
 export function LanguagePicker({
   onSelect,
+  initiallyOpen = false,
 }: {
   onSelect?: (locale: LocaleCode) => Promise<void>;
+  initiallyOpen?: boolean;
 }) {
   const c = useTheme(),
     locale = useLocale(),
-    [open, setOpen] = useState(false),
+    [open, setOpen] = useState(initiallyOpen),
     [query, setQuery] = useState(""),
     [busy, setBusy] = useState(false),
     [error, setError] = useState("");

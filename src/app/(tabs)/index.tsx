@@ -1,3 +1,4 @@
+import { civilProtectionGuides } from "../../data/civil-protection";
 import { LocalizedPressable as Pressable } from "../../components/localized-native";
 import {
   LocalizedText as Text,
@@ -442,6 +443,23 @@ export default function Home() {
           <Icon name="arrow-forward" size={20} />
         </Pressable>
       </Card>
+      <SectionTitle title="CIVILNÁ OCHRANA" />
+      {civilProtectionGuides.map((guide) => (
+        <Tile
+          key={guide.id}
+          icon={
+            guide.id === "armed-conflict"
+              ? "shield-checkmark-outline"
+              : "home-outline"
+          }
+          title={guide.title}
+          subtitle={guide.summary}
+          tone="blue"
+          onPress={() =>
+            router.push({ pathname: "/guide", params: { id: guide.id } })
+          }
+        />
+      ))}
       <Tile
         icon="play-circle-outline"
         title="Animované postupy"

@@ -1,3 +1,5 @@
+import { getCountryCode } from "../state/region";
+import { localizeEmergencyNumbers } from "../data/countries";
 import { z } from "zod";
 import { sk } from "./sk";
 import sourceKeys from "./catalog.json";
@@ -88,10 +90,7 @@ const templatePatterns = sourceKeys
     };
   })
   .sort((a, b) => b.specificity - a.specificity);
-export function translateText(
-  text: string,
-  locale: LocaleCode = current,
-): string {
+function translateRaw(text: string, locale: LocaleCode = current): string {
   if (locale === "sk" || !text) return text;
   const normalized = normalize(text),
     dict = dictionaries[locale];
@@ -126,6 +125,16 @@ export function translateText(
   const prefix = text.match(/^\s*/)?.[0] ?? "",
     suffix = text.match(/\s*$/)?.[0] ?? "";
   return prefix + translated + suffix;
+}
+export function translateText(
+  text: string,
+  locale: LocaleCode = current,
+): string {
+  const translated = translateRaw(text, locale);
+  return /\b(112|155|150|158)\b/.test(text) &&
+    /vola|volá|tiesň|vytá|operátor|záchran|hasič|políc/i.test(text)
+    ? localizeEmergencyNumbers(translated, getCountryCode())
+    : translated;
 }
 export const t = translateText;
 export function formatNumber(value: number, maximumFractionDigits = 1): string {
