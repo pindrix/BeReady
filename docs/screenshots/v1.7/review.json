@@ -1,0 +1,305 @@
+{
+  "notice": "Browser fixture with native services replaced, not physical-device validation.",
+  "views": [
+    {
+      "appearance": "aurora",
+      "screen": "home",
+      "width": 320
+    },
+    {
+      "appearance": "aurora",
+      "screen": "academy",
+      "width": 320
+    },
+    {
+      "appearance": "aurora",
+      "screen": "kit",
+      "width": 320
+    },
+    {
+      "appearance": "aurora",
+      "screen": "scenarios",
+      "width": 320
+    },
+    {
+      "appearance": "aurora",
+      "screen": "plus",
+      "width": 320
+    },
+    {
+      "appearance": "aurora",
+      "screen": "animations",
+      "width": 320
+    },
+    {
+      "appearance": "aurora",
+      "screen": "guide",
+      "id": "nuclear-explosion",
+      "width": 320
+    },
+    {
+      "appearance": "aurora",
+      "screen": "appearance",
+      "width": 320
+    },
+    {
+      "appearance": "aurora",
+      "screen": "inventory",
+      "width": 320
+    },
+    {
+      "appearance": "aurora",
+      "screen": "plan",
+      "width": 320
+    },
+    {
+      "appearance": "aurora",
+      "screen": "now",
+      "width": 320
+    },
+    {
+      "appearance": "aurora",
+      "screen": "welcome",
+      "width": 320
+    },
+    {
+      "appearance": "aurora",
+      "screen": "home",
+      "width": 390
+    },
+    {
+      "appearance": "aurora",
+      "screen": "academy",
+      "width": 390
+    },
+    {
+      "appearance": "aurora",
+      "screen": "kit",
+      "width": 390
+    },
+    {
+      "appearance": "aurora",
+      "screen": "scenarios",
+      "width": 390
+    },
+    {
+      "appearance": "aurora",
+      "screen": "plus",
+      "width": 390
+    },
+    {
+      "appearance": "aurora",
+      "screen": "animations",
+      "width": 390
+    },
+    {
+      "appearance": "aurora",
+      "screen": "guide",
+      "id": "nuclear-explosion",
+      "width": 390
+    },
+    {
+      "appearance": "aurora",
+      "screen": "appearance",
+      "width": 390
+    },
+    {
+      "appearance": "aurora",
+      "screen": "inventory",
+      "width": 390
+    },
+    {
+      "appearance": "aurora",
+      "screen": "plan",
+      "width": 390
+    },
+    {
+      "appearance": "aurora",
+      "screen": "now",
+      "width": 390
+    },
+    {
+      "appearance": "aurora",
+      "screen": "welcome",
+      "width": 390
+    },
+    {
+      "appearance": "atlas",
+      "screen": "home",
+      "width": 320
+    },
+    {
+      "appearance": "atlas",
+      "screen": "academy",
+      "width": 320
+    },
+    {
+      "appearance": "atlas",
+      "screen": "kit",
+      "width": 320
+    },
+    {
+      "appearance": "atlas",
+      "screen": "scenarios",
+      "width": 320
+    },
+    {
+      "appearance": "atlas",
+      "screen": "plus",
+      "width": 320
+    },
+    {
+      "appearance": "atlas",
+      "screen": "animations",
+      "width": 320
+    },
+    {
+      "appearance": "atlas",
+      "screen": "guide",
+      "id": "nuclear-explosion",
+      "width": 320
+    },
+    {
+      "appearance": "atlas",
+      "screen": "appearance",
+      "width": 320
+    },
+    {
+      "appearance": "atlas",
+      "screen": "inventory",
+      "width": 320
+    },
+    {
+      "appearance": "atlas",
+      "screen": "plan",
+      "width": 320
+    },
+    {
+      "appearance": "atlas",
+      "screen": "now",
+      "width": 320
+    },
+    {
+      "appearance": "atlas",
+      "screen": "welcome",
+      "width": 320
+    },
+    {
+      "appearance": "atlas",
+      "screen": "home",
+      "width": 390
+    },
+    {
+      "appearance": "atlas",
+      "screen": "academy",
+      "width": 390
+    },
+    {
+      "appearance": "atlas",
+      "screen": "kit",
+      "width": 390
+    },
+    {
+      "appearance": "atlas",
+      "screen": "scenarios",
+      "width": 390
+    },
+    {
+      "appearance": "atlas",
+      "screen": "plus",
+      "width": 390
+    },
+    {
+      "appearance": "atlas",
+      "screen": "animations",
+      "width": 390
+    },
+    {
+      "appearance": "atlas",
+      "screen": "guide",
+      "id": "nuclear-explosion",
+      "width": 390
+    },
+    {
+      "appearance": "atlas",
+      "screen": "appearance",
+      "width": 390
+    },
+    {
+      "appearance": "atlas",
+      "screen": "inventory",
+      "width": 390
+    },
+    {
+      "appearance": "atlas",
+      "screen": "plan",
+      "width": 390
+    },
+    {
+      "appearance": "atlas",
+      "screen": "now",
+      "width": 390
+    },
+    {
+      "appearance": "atlas",
+      "screen": "welcome",
+      "width": 390
+    },
+    {
+      "appearance": "aurora",
+      "screen": "home",
+      "locale": "ar",
+      "width": 320
+    },
+    {
+      "appearance": "aurora",
+      "screen": "appearance",
+      "locale": "ar",
+      "width": 320
+    },
+    {
+      "appearance": "aurora",
+      "screen": "guide",
+      "locale": "ar",
+      "width": 320
+    },
+    {
+      "appearance": "aurora",
+      "screen": "inventory",
+      "locale": "ar",
+      "width": 320
+    },
+    {
+      "appearance": "atlas",
+      "screen": "home",
+      "locale": "ar",
+      "width": 320
+    },
+    {
+      "appearance": "atlas",
+      "screen": "appearance",
+      "locale": "ar",
+      "width": 320
+    },
+    {
+      "appearance": "atlas",
+      "screen": "guide",
+      "locale": "ar",
+      "width": 320
+    },
+    {
+      "appearance": "atlas",
+      "screen": "inventory",
+      "locale": "ar",
+      "width": 320
+    }
+  ],
+  "interactions": [
+    "water hotspot and filter",
+    "food hotspot and filter",
+    "change routed category",
+    "family hotspot opens plan",
+    "live appearance switching"
+  ],
+  "pageErrors": []
+}

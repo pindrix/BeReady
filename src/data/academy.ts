@@ -60,7 +60,7 @@ const legacy: Record<
     summary: "Kde hľadať pokyny, keď počujete sirénu alebo dostanete výstrahu.",
     art: "radio",
     color: "#B4ADEA",
-    takeaway: "READY neposiela živé výstrahy. Rozhodujú pokyny úradov.",
+    takeaway: "BE READY neposiela živé výstrahy. Rozhodujú pokyny úradov.",
   },
   chemical: {
     category: "Doma",
@@ -218,7 +218,7 @@ export const academyGuides: AcademyGuide[] = [
     sourceName: "Ready.gov / FEMA",
     reviewed,
     takeaway:
-      "READY vaše kontakty automaticky nekontaktuje a nezdieľa vašu polohu.",
+      "BE READY vaše kontakty automaticky nekontaktuje a nezdieľa vašu polohu.",
     steps: [
       {
         title: "Dohodnite kontaktnú osobu",
@@ -411,7 +411,7 @@ export const academyGuides: AcademyGuide[] = [
     source: "https://www.ready.gov/financial-preparedness",
     sourceName: "Ready.gov / FEMA",
     reviewed,
-    takeaway: "Záloha READY nie je šifrovaná. Chráňte ju ako osobné údaje.",
+    takeaway: "Záloha BE READY nie je šifrovaná. Chráňte ju ako osobné údaje.",
     steps: [
       {
         title: "Vyberte dôležité informácie",
@@ -426,7 +426,7 @@ export const academyGuides: AcademyGuide[] = [
         body: "Najdôležitejšie kontakty vytlačte alebo napíšte. Telefón sa môže vybiť, poškodiť alebo stratiť. Do rodinného plánu pridajte dohodnuté miesto stretnutia.",
       },
       {
-        title: "Zálohujte READY",
+        title: "Zálohujte BE READY",
         body: "V Nastaveniach vytvorte JSON zálohu. Obsahuje aj kontakty a miesto stretnutia, preto ju uložte bezpečne. Po zmene údajov zálohu obnovte novým exportom.",
       },
     ],

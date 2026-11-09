@@ -1,6 +1,6 @@
 import type { Checklist } from "../types/model";
 export const disclaimer =
-  "READY nie je oficiálna výstražná služba. V kríze sa riaď pokynmi záchranných zložiek a úradov.";
+  "BE READY nie je oficiálna výstražná služba. V kríze sa riaď pokynmi záchranných zložiek a úradov.";
 export const nutritionNote =
   "Kalórie nie sú zárukou vyváženej výživy. Ide o orientačný výpočet, nie zdravotné odporúčanie. Neznáme energetické hodnoty sa nezapočítavajú; odhad môže byť podhodnotený.";
 export const catalog = [

@@ -1,3 +1,4 @@
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { translateText as t, messages } from "../../i18n";
 import { useLocale } from "../../components/localized-text";
 import { Tabs } from "expo-router";
@@ -5,7 +6,8 @@ import { Ionicons } from "@expo/vector-icons";
 import { useTheme } from "../../theme/theme";
 export default function Layout() {
   useLocale();
-  const c = useTheme();
+  const c = useTheme(),
+    insets = useSafeAreaInsets();
   return (
     <Tabs
       screenOptions={{
@@ -15,7 +17,10 @@ export default function Layout() {
         tabBarStyle: {
           backgroundColor: c.card,
           borderTopColor: c.border,
-          paddingTop: 8,
+          paddingTop: 10,
+          paddingBottom: Math.max(insets.bottom, 10),
+          height: 64 + Math.max(insets.bottom, 10),
+          borderTopWidth: 1,
         },
         tabBarLabelStyle: { fontSize: 11, fontWeight: "700", marginTop: 3 },
       }}
@@ -26,7 +31,7 @@ export default function Layout() {
           title: t(messages.tabs.home),
           tabBarIcon: ({ focused, size }) => (
             <Ionicons
-              name="home-outline"
+              name={focused ? "home" : "home-outline"}
               color={focused ? c.primary : c.muted}
               size={size}
             />
@@ -39,7 +44,7 @@ export default function Layout() {
           title: t(messages.tabs.inventory),
           tabBarIcon: ({ focused, size }) => (
             <Ionicons
-              name="cube-outline"
+              name={focused ? "cube" : "cube-outline"}
               color={focused ? c.primary : c.muted}
               size={size}
             />
@@ -52,7 +57,7 @@ export default function Layout() {
           title: t(messages.tabs.plan),
           tabBarIcon: ({ focused, size }) => (
             <Ionicons
-              name="checkbox-outline"
+              name={focused ? "checkbox" : "checkbox-outline"}
               color={focused ? c.primary : c.muted}
               size={size}
             />

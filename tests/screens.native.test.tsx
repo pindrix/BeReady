@@ -5,6 +5,7 @@ import {
   waitFor,
 } from "@testing-library/react-native";
 import { router } from "expo-router";
+import * as ExpoRouter from "expo-router";
 import { Alert } from "react-native";
 import { ProfileForm } from "../src/components/profile-form";
 import Home from "../src/app/(tabs)/index";
@@ -185,4 +186,30 @@ test("núdzové volanie potrebuje výslovné potvrdenie a návod je dostupný be
     params: { id: "blackout" },
   });
   alert.mockRestore();
+});
+
+test("house water link selects its inventory filter and the user can change it", async () => {
+  const params: { category?: string } = { category: "voda" };
+  const query = jest
+    .mocked(ExpoRouter.useLocalSearchParams)
+    .mockReturnValue(params);
+  const update = jest.spyOn(router, "setParams").mockImplementation(() => {
+    delete params.category;
+  });
+  try {
+    await render(<InventoryScreen />);
+    expect(
+      screen.getByRole("radio", { name: "Pitná voda" }).props.accessibilityState
+        .checked,
+    ).toBe(true);
+    await fireEvent.press(screen.getByRole("radio", { name: "Jedlo" }));
+    expect(update).toHaveBeenCalledWith({ category: undefined });
+    expect(
+      screen.getByRole("radio", { name: "Jedlo" }).props.accessibilityState
+        .checked,
+    ).toBe(true);
+  } finally {
+    query.mockReturnValue({});
+    update.mockRestore();
+  }
 });

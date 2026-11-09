@@ -22,8 +22,8 @@ export default function Onboarding() {
       />
       <Badge label="OFFLINE · BEZ ÚČTU · VO VAŠICH RUKÁCH" />
       <T>
-        READY funguje bez účtu. Vaše zásoby, kontakty a plán sa ukladajú iba v
-        tomto zariadení.
+        BE READY funguje bez účtu. Vaše zásoby, kontakty a plán sa ukladajú iba
+        v tomto zariadení.
       </T>
       <Button
         title="Potrebujem pomoc teraz"

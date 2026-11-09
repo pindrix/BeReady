@@ -32,7 +32,7 @@ export default function PlusScreen() {
     <Screen
       title="Jeden plán. Celý rok."
       subtitle="14 dní online skúšania. Potom jednorazová licencia na 12 mesiacov — bez automatického obnovenia."
-      eyebrow="READY · ROČNÁ LICENCIA"
+      eyebrow="BE READY · ROČNÁ LICENCIA"
       headerRight={
         <IconButton
           name="close-outline"
@@ -62,7 +62,7 @@ export default function PlusScreen() {
               color: "#D1EB9A",
             }}
           >
-            READY / VÁŠ ROK PRÍPRAVY
+            BE READY / VÁŠ ROK PRÍPRAVY
           </Text>
           <Icon name="shield-checkmark-outline" size={30} color="#D1EB9A" />
         </View>

@@ -3,7 +3,7 @@ import { LocalizedPressable as Pressable } from "../../components/localized-nati
 import { LocalizedText as Text } from "../../components/localized-text";
 import { useState } from "react";
 import { ScrollView, View } from "react-native";
-import { router } from "expo-router";
+import { router, useLocalSearchParams } from "expo-router";
 import { Button, Card, Field, Screen, T, confirm } from "../../components/ui";
 import {
   Badge,
@@ -24,11 +24,22 @@ const icons: Record<(typeof categories)[number], IconName> = {
   ostatné: "cube-outline",
 };
 export default function InventoryScreen() {
+  const params = useLocalSearchParams<{ category?: string }>();
+  const requested = categories.includes(
+    params.category as (typeof categories)[number],
+  )
+    ? params.category
+    : undefined;
   const s = useStore(),
     c = useTheme(),
     [query, setQuery] = useState(""),
-    [category, setCategory] = useState<string>("všetko"),
+    [localCategory, setLocalCategory] = useState<string>("všetko"),
     [expanded, setExpanded] = useState<string | null>(null);
+  const category = requested ?? localCategory;
+  function setCategory(value: string) {
+    setLocalCategory(value);
+    if (requested) router.setParams({ category: undefined });
+  }
   const all = s.data?.inventory ?? [],
     items = all.filter(
       (x) =>
@@ -108,6 +119,7 @@ export default function InventoryScreen() {
             key={x}
             accessibilityRole="radio"
             accessibilityState={{ checked: category === x }}
+            aria-checked={category === x}
             accessibilityLabel={
               x === "všetko"
                 ? "Všetko"

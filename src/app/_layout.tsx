@@ -1,3 +1,4 @@
+import { initializeAppearance } from "../state/appearance";
 import { initializeRegion, isWelcomeComplete } from "../state/region";
 import { Welcome } from "../components/welcome";
 import { CountryPicker, useCountry } from "../components/country-picker";
@@ -73,6 +74,7 @@ async function prepare(db: Parameters<typeof initialize>[0]) {
   await initialize(db);
   await initializeLocale(db);
   await initializeRegion(db);
+  await initializeAppearance(db);
   await initializeLicense(db, Date.now());
 }
 function Gate() {

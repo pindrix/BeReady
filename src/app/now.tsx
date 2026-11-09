@@ -20,7 +20,7 @@ export default function Now() {
   return (
     <Screen
       title="Potrebujem pomoc."
-      subtitle="Pri bezprostrednom ohrození volajte tiesňovú linku. READY nesleduje aktuálne výstrahy."
+      subtitle="Pri bezprostrednom ohrození volajte tiesňovú linku. BE READY nesleduje aktuálne výstrahy."
       eyebrow="RÝCHLA POMOC"
       headerRight={
         <IconButton

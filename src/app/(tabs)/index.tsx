@@ -1,3 +1,5 @@
+import { HomeScene } from "../../components/home-scene";
+import { HomeMetrics } from "../../components/home-metrics";
 import { ExplanationCard } from "../../components/explanation";
 import { civilProtectionGuides } from "../../data/civil-protection";
 import { LocalizedPressable as Pressable } from "../../components/localized-native";
@@ -5,31 +7,20 @@ import {
   LocalizedText as Text,
   useLocale,
 } from "../../components/localized-text";
-import { View, useWindowDimensions } from "react-native";
-import { Image } from "expo-image";
+import { View } from "react-native";
 import { router } from "expo-router";
-import { LinearGradient } from "expo-linear-gradient";
 import { Card, Screen, T } from "../../components/ui";
-import {
-  Badge,
-  Icon,
-  IconButton,
-  Ring,
-  SectionTitle,
-  Tile,
-} from "../../components/visual";
+import { Icon, IconButton, SectionTitle, Tile } from "../../components/visual";
 import { coverage, expiryStatus } from "../../domain/readiness";
 import { useStore } from "../../state/store";
 import { nutritionNote } from "../../data/content";
-import { formatNumber as fmt, translateText as t, isRTL } from "../../i18n";
+import { formatNumber as fmt, translateText as t } from "../../i18n";
 import { missionProgress } from "../../domain/missions";
 import { useTheme } from "../../theme/theme";
 export default function Home() {
-  const locale = useLocale(),
-    rtl = isRTL(locale);
+  useLocale();
   const { data } = useStore(),
-    theme = useTheme(),
-    compact = useWindowDimensions().width < 350;
+    theme = useTheme();
   if (!data?.household) return null;
   const p = data.household,
     c = coverage(p, data.inventory),
@@ -61,194 +52,47 @@ export default function Home() {
         />
       }
     >
-      <View
+      <HomeScene />
+      <Pressable
+        accessibilityRole="button"
+        accessibilityLabel="Potrebujem pomoc teraz"
+        onPress={() => router.push("/now")}
         style={{
-          borderRadius: 28,
-          overflow: "hidden",
-          backgroundColor: "#F1F1E8",
-          minHeight: 242,
+          flexDirection: "row",
+          alignItems: "center",
+          gap: 10,
+          padding: 15,
+          borderRadius: 18,
+          borderColor: theme.danger,
+          borderWidth: 1,
+          backgroundColor: theme.danger,
         }}
       >
-        <Image
-          source={require("../../../assets/images/ready-world.webp")}
+        <Icon name="medical-outline" color={theme.onPrimary} />
+        <Text
           style={{
-            position: "absolute",
-            width: "100%",
-            height: "100%",
-            transform: [{ scaleX: rtl ? -1 : 1 }],
-          }}
-          contentFit="cover"
-          accessible={false}
-        />
-        <LinearGradient
-          colors={["rgba(245,245,235,.95)", "rgba(245,245,235,0)"]}
-          start={{ x: rtl ? 1 : 0, y: 0.5 }}
-          end={{ x: rtl ? 0 : 1, y: 0.5 }}
-          style={{
-            padding: 23,
-            minHeight: 242,
-            justifyContent: "space-between",
-            gap: 22,
+            flex: 1,
+            color: theme.onPrimary,
+            fontWeight: "700",
+            fontSize: 14,
           }}
         >
-          <View style={{ gap: 10, width: compact ? "78%" : "62%" }}>
-            <Badge
-              label={compact ? "VÁŠ DOMÁCI PLÁN" : "MENEJ OBÁV. VIAC PLÁNU."}
-            />
-            <Text
-              style={{
-                fontSize: compact ? 26 : 31,
-                lineHeight: compact ? 30 : 35,
-                fontWeight: "800",
-                letterSpacing: -1.3,
-                color: "#183D34",
-              }}
-            >
-              Malé kroky.{`\n`}Veľký pokoj.
-            </Text>
-            <Text
-              style={{
-                fontSize: compact ? 12 : 13,
-                lineHeight: 19,
-                color: "#4E6659",
-              }}
-            >
-              Pripravte si domov na dni,{`\n`}ktoré sa nedajú naplánovať.
-            </Text>
-          </View>
-          <Pressable
-            accessibilityRole="button"
-            accessibilityLabel="Začať 7 krokov prípravy"
-            onPress={() => router.push("/missions")}
-            style={{
-              alignSelf: "flex-start",
-              paddingHorizontal: 17,
-              paddingVertical: 13,
-              backgroundColor: "#244F40",
-              borderRadius: 17,
-              flexDirection: "row",
-              alignItems: "center",
-              gap: 12,
-            }}
-          >
-            <Text style={{ fontWeight: "700", fontSize: 14, color: "white" }}>
-              Môj prvý krok
-            </Text>
-            <Icon name="arrow-forward" color="white" size={18} />
-          </Pressable>
-        </LinearGradient>
-      </View>
+          Potrebujem pomoc teraz
+        </Text>
+        <Icon name="chevron-forward" color={theme.onPrimary} size={17} />
+      </Pressable>
       <SectionTitle
         title="Váš domov v číslach"
         action="Profil"
         onPress={() => router.push("/settings")}
       />
-      <LinearGradient
-        colors={["#234D41", "#142F2E"]}
-        style={{ borderRadius: 28, padding: 23, gap: 22 }}
-      >
-        <View
-          style={{
-            flexDirection: "row",
-            alignItems: "center",
-            justifyContent: "space-between",
-            gap: 10,
-          }}
-        >
-          <Text
-            style={{
-              fontSize: 11,
-              letterSpacing: 1.6,
-              fontWeight: "700",
-              color: "#B4CEC0",
-            }}
-          >
-            ZÁSOBY A PRÍPRAVA
-          </Text>
-          <View style={{ flexDirection: "row", alignItems: "center", gap: 6 }}>
-            <Icon name="cloud-offline-outline" size={15} color="#D1EB9A" />
-            <Text style={{ fontSize: 11, color: "#D1EB9A" }}>LOKÁLNE</Text>
-          </View>
-        </View>
-        <View
-          style={{
-            flexDirection: "row",
-            alignItems: "center",
-            justifyContent: "space-around",
-            gap: 16,
-            flexWrap: "wrap",
-          }}
-        >
-          <Ring
-            values={[
-              c.foodDays / p.goal,
-              c.waterDays / p.goal,
-              tasks.length ? completed / tasks.length : 0,
-            ]}
-            goal={p.goal}
-          />
-          <View style={{ gap: 21, flexGrow: 1, minWidth: 110 }}>
-            {[
-              {
-                text: `${fmt(c.foodDays)} dní jedla`,
-                caption: "Energetické zásoby",
-                color: "#A8D8B3",
-                icon: "nutrition-outline" as const,
-              },
-              {
-                text: `${fmt(c.waterDays)} dní pitnej vody`,
-                caption: "Pitná voda",
-                color: "#F6C58C",
-                icon: "water-outline" as const,
-              },
-              {
-                text: `${completed} / ${tasks.length} úloh`,
-                caption: "Evakuačný batoh",
-                color: "#88C6D8",
-                icon: "bag-handle-outline" as const,
-              },
-            ].map((v) => (
-              <View
-                key={v.caption}
-                style={{ flexDirection: "row", gap: 11, alignItems: "center" }}
-              >
-                <View
-                  style={{
-                    width: 34,
-                    height: 34,
-                    borderRadius: 12,
-                    backgroundColor: "#335849",
-                    alignItems: "center",
-                    justifyContent: "center",
-                  }}
-                >
-                  <Icon name={v.icon} color={v.color} size={20} />
-                </View>
-                <View style={{ flexShrink: 1 }}>
-                  <Text
-                    style={{
-                      fontSize: 16,
-                      fontWeight: "800",
-                      color: "#FCFAEE",
-                    }}
-                  >
-                    {v.text}
-                  </Text>
-                  <Text
-                    style={{ fontSize: 11, color: "#BCD0C4", marginTop: 3 }}
-                  >
-                    {v.caption}
-                  </Text>
-                </View>
-              </View>
-            ))}
-          </View>
-        </View>
-        <Text style={{ fontSize: 11, lineHeight: 17, color: "#B8CFC2" }}>
-          Kruhy porovnávajú evidované zásoby s vaším cieľom. Nie sú skóre
-          bezpečnosti ani zárukou pripravenosti.
-        </Text>
-      </LinearGradient>
+      <HomeMetrics
+        foodDays={c.foodDays}
+        waterDays={c.waterDays}
+        goal={p.goal}
+        done={completed}
+        total={tasks.length}
+      />
       <Pressable
         accessibilityRole="button"
         accessibilityLabel={
@@ -307,34 +151,7 @@ export default function Home() {
         </View>
         <Icon name="arrow-forward" size={20} />
       </Pressable>
-      <Pressable
-        accessibilityRole="button"
-        accessibilityLabel="Potrebujem pomoc teraz"
-        onPress={() => router.push("/now")}
-        style={{
-          flexDirection: "row",
-          alignItems: "center",
-          gap: 10,
-          padding: 15,
-          borderRadius: 18,
-          borderColor: theme.border,
-          borderWidth: 1,
-          backgroundColor: theme.card,
-        }}
-      >
-        <Icon name="medical-outline" color={theme.danger} />
-        <Text
-          style={{
-            flex: 1,
-            color: theme.text,
-            fontWeight: "700",
-            fontSize: 14,
-          }}
-        >
-          Potrebujem pomoc teraz
-        </Text>
-        <Icon name="chevron-forward" size={17} />
-      </Pressable>
+
       <View style={{ flexDirection: "row", flexWrap: "wrap", gap: 12 }}>
         <Tile
           icon="bag-handle-outline"
@@ -378,7 +195,7 @@ export default function Home() {
         />
         <Tile
           icon="compass-outline"
-          title="Akadémia READY"
+          title="Akadémia BE READY"
           subtitle="Praktické návody krok za krokom"
           tone="purple"
           onPress={() => router.push("/help")}
@@ -448,6 +265,7 @@ export default function Home() {
       <SectionTitle title="CIVILNÁ OCHRANA" />
       {civilProtectionGuides.map((guide) => (
         <Tile
+          fullWidth
           key={guide.id}
           icon={
             guide.id === "armed-conflict"
@@ -463,6 +281,7 @@ export default function Home() {
         />
       ))}
       <Tile
+        fullWidth
         icon="play-circle-outline"
         title="Animované postupy"
         subtitle="Pozrite si jednotlivé úkony v pohybe."
@@ -568,7 +387,7 @@ export default function Home() {
       ) : null}
       <Pressable
         accessibilityRole="button"
-        accessibilityLabel="Spoznať smerovanie READY Plus"
+        accessibilityLabel="Spoznať smerovanie BE READY Plus"
         onPress={() => router.push("/plus")}
         style={{
           flexDirection: "row",
@@ -580,7 +399,7 @@ export default function Home() {
         <Icon name="sparkles-outline" />
         <View style={{ flex: 1 }}>
           <Text style={{ fontSize: 15, fontWeight: "800", color: theme.text }}>
-            Priestor pre viac. READY Plus.
+            Priestor pre viac. BE READY Plus.
           </Text>
           <Text style={{ fontSize: 12, color: theme.muted, marginTop: 4 }}>
             Pozrite si plán rozšírení. Offline režim s ročnou licenciou.

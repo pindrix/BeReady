@@ -38,7 +38,7 @@ function readable(value) {
   if (/^[a-z][a-z\d_.-]*$/.test(s)) return false;
   if (/^[\w.-]+\.(tsx?|m?js|json|webp|png|ttf)$/.test(s)) return false;
   if (
-    /^(React Native|Expo Router|SQLite|READY|YouTube|SDK 58|public\.json|application\/json|text\/plain)$/.test(
+    /^(React Native|Expo Router|SQLite|BE READY|READY|Aurora Command|Field Atlas|YouTube|SDK 58|public\.json|application\/json|text\/plain)$/.test(
       s,
     )
   )

@@ -21,7 +21,7 @@ export default function SafePlaces() {
       <Card>
         <T large>Overené údaje zatiaľ nie sú dostupné.</T>
         <T>
-          READY neobsahuje vstavaný adresár ani mapu krytov. Informácie o
+          BE READY neobsahuje vstavaný adresár ani mapu krytov. Informácie o
           dostupných miestach a aktuálnych pokynoch získajte od obce a
           príslušných úradov.
         </T>

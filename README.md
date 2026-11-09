@@ -1,8 +1,18 @@
-# READY 1.6 — Domácnosť pripravená krok za krokom
+# BE READY 1.7 — Domácnosť pripravená krok za krokom
 
 Mobilná aplikácia pre pripravenosť domácnosti. Expo SDK 58, React Native, striktný TypeScript, Expo Router a SQLite. Osobné údaje domácnosti zostávajú lokálne. Bez reklamného SDK a vzdialeného sledovania.
 
-## Čo je nové vo verzii 1.6
+## Čo je nové vo verzii 1.7
+
+- **Dva voliteľné vzhľady:** predvolený Aurora Command (tmavá modrá, mätové akcenty) a Field Atlas (svetlá piesková, grafit a jantár). Vyberajú sa v **Nastavenia → Vzhľad aplikácie**. Zmena je okamžitá a voľba sa uloží lokálne aj po reštarte.
+- **Nová značka BE READY** v rozhraní, 21 jazykových verziách, názve aplikácie a ikonách. Technické identifikátory zostávajú kompatibilné s existujúcou inštaláciou a zálohami.
+- **Interaktívny domov:** dve lokálne ilustrácie domu s aktívnymi bodmi. Voda a jedlo otvoria príslušný filter skutočných zásob; rodina otvorí Plán. Ide o ilustráciu s navigáciou, nie otočný 3D model.
+- **Prehľadné údaje:** samostatné krytie jedla a pitnej vody, pokrok úloh a výrazná pomoc teraz. Výpočty vychádzajú zo skutočne evidovaných údajov. Vzhľad sa prenáša aj do návodov, formulárov a animovaných scén.
+- Nové ilustrácie majú spolu približne 265 KiB a načítavajú sa lokálne. Závislosti sa nemenia. Pravidlá licencie a plateného offline prístupu zostávajú zachované.
+
+[**Aurora Command**](docs/screenshots/v1.7/aurora-preview.png) · [**Field Atlas**](docs/screenshots/v1.7/atlas-preview.png) · [Prepínač vzhľadu](docs/screenshots/v1.7/atlas-appearance.png). Snímky sú zo skutočných komponentov s testovacími údajmi v prehliadačovom QA prostredí. Podrobnosti: [docs/APPEARANCE.md](docs/APPEARANCE.md).
+
+## Základ z verzie 1.6
 
 - **Animácia v každom z 20 sprievodcov:** priamo pri aktuálnom kroku, s popisom tesne pod scénou. Pri zmene kroku sa ukážka zastaví a pripraví nový obrázok. Rozšírená knižnica obsahuje 24 postupov so 101 krokmi vrátane špecializovanej prvej pomoci, ohňa a civilnej ochrany.
 - **54 nových názorných diagramov:** povodeň, požiar, výstrahy, chemický únik, evakuácia, jedlo bez varenia, prvé minúty pri úraze, horúčava, búrka, zima, zvieratá, digitálne doklady, turistika a pomoc ľuďom so špecifickými potrebami. Pohyb znázorňuje presun do úkrytu, odchod od rizika, kontrolu informácií alebo pridanie predmetu do výbavy. Nie je to navigácia po skutočnej bezpečnej trase.
@@ -54,7 +64,7 @@ Prvá pomoc je tréningová ilustrácia a nenahrádza kurz ani pokyny operátora
 
 **Skutočné platby zatiaľ nie sú pripojené.** Používateľ má Google Play Console, ale repozitár zatiaľ nemá produkčný Play Billing bridge, prepojený produkt, dôveryhodnú podpisovú službu ani produkčný verejný kľúč. Nákupné tlačidlá sú preto neaktívne. Vývojový online náhľad zostáva dostupný aj po uplynutí skúšky; **offline prístup sa tým neodomkne**. Aplikácia nič neúčtuje a nevydáva falošnú licenciu. Presné kroky na dokončenie v [docs/BILLING.md](docs/BILLING.md).
 
-Dizajn vychádza z aktuálnych oficiálnych materiálov M3 Expressive a zásad prístupnosti React Native; dôkazy a hranice overenia sú v [docs/DESIGN_RESEARCH.md](docs/DESIGN_RESEARCH.md). Ilustrácia domácnosti je vygenerovaná pre READY a pribalená lokálne (55 kB WebP), nejde o externý obrázok s požiadavkou na sieť. Ukážky [Domov](docs/screenshots/home.png), [Akadémia](docs/screenshots/academy.png) a [Misie](docs/screenshots/missions.png) sú renderované skutočnými komponentmi s označenými testovacími údajmi v prehliadačovom QA prostredí, nie snímky fyzického telefónu.
+Dizajn vychádza z aktuálnych oficiálnych materiálov M3 Expressive a zásad prístupnosti React Native; dôkazy a hranice overenia sú v [docs/DESIGN_RESEARCH.md](docs/DESIGN_RESEARCH.md). Ilustrácie domácnosti sú vygenerované pre BE READY a pribalené lokálne ako WebP; nevyžadujú sťahovanie zo siete. Ukážky [Domov](docs/screenshots/home.png), [Akadémia](docs/screenshots/academy.png) a [Misie](docs/screenshots/missions.png) sú renderované skutočnými komponentmi s označenými testovacími údajmi v prehliadačovom QA prostredí, nie snímky fyzického telefónu.
 
 Ak už máte klon predchádzajúcej verzie, v jeho priečinku spustite:
 
@@ -116,7 +126,7 @@ Oficiálne návody: [Expo Go](https://docs.expo.dev/get-started/start-developing
 ## Implementované funkcie
 
 - Onboarding a perzistentný profil: 1–10 osôb, cieľ 3/7/14/30/90 dní, kcal, pitná voda a možnosť varenia.
-- Päť záložiek: Domov, Zásoby, Plán, Pomoc, Nastavenia; svetlý/tmavý režim podľa systému.
+- Päť záložiek: Domov, Zásoby, Plán, Pomoc, Nastavenia; dva voliteľné vzhľady Aurora Command a Field Atlas.
 - Zásoby: pridanie, úprava, vymazanie s potvrdením, kategórie, filtre, vyhľadávanie, poznámky, dátumy a kcal na zvolenú jednotku. Návrhy potravín nepridávajú vymyslené kcal.
 - Oddelené krytie jedla a pitnej vody, upozornenia na dátumy a transparentné deficity.
 - Editovateľné tematické checklisty, vlastné úlohy, kontakty a miesto stretnutia.
@@ -158,7 +168,7 @@ Množstvo = deficit × podiel / hustota, zaokrúhlené nahor na 0,01 kg. Voda sa
 - `src/types/model.ts`: striktné Zod schémy a odvodené TS typy.
 - `src/domain`: čisté výpočty, zálohy a prezentácia importovaných miest.
 - `src/data/content.ts`: offline návody, katalóg názvov a počiatočné úlohy.
-- `src/theme`: systémový svetlý/tmavý vzhľad.
+- `src/theme`: palety Aurora Command a Field Atlas; preferencia v `src/state/appearance.ts`.
 - `src/i18n`:21 pribalených jazykov, formátovanie, preferencia a RTL. Osobné údaje sa neprekladajú ani neposielajú prekladovej službe.
 - `tests`: doménové, skutočné SQLite integračné a React Native komponentové testy.
 
@@ -209,4 +219,4 @@ Výsledky a presný ručný scenár sú v [docs/VALIDATION.md](docs/VALIDATION.m
 
 Oficiálne stránky zdrojov boli v cloudovom prostredí blokované HTTP politikou. Dátum 2026-11-03 označuje redakčnú kontrolu pribaleného všeobecného textu, nie overenie aktuálneho obsahu webov. Pred verejným používaním treba obsah a odkazy porovnať s aktuálnymi pokynmi slovenských úradov.
 
-**READY nie je oficiálna výstražná služba. V kríze sa riaď pokynmi záchranných zložiek a úradov.**
+**BE READY nie je oficiálna výstražná služba. V kríze sa riaď pokynmi záchranných zložiek a úradov.**

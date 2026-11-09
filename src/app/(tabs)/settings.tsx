@@ -1,3 +1,4 @@
+import { AppearancePicker } from "../../components/appearance-picker";
 import { ExplanationCard } from "../../components/explanation";
 import { CountryPicker } from "../../components/country-picker";
 import buildPackage from "../../../package.json";
@@ -39,6 +40,7 @@ export default function SettingsScreen() {
   if (!s.data?.household) return null;
   return (
     <Screen title="Vaše nastavenia">
+      <AppearancePicker />
       <LanguagePicker />
       <Card>
         <CountryPicker />
@@ -107,7 +109,7 @@ export default function SettingsScreen() {
         />
         <Tile
           icon="sparkles-outline"
-          title="READY Plus"
+          title="BE READY Plus"
           subtitle="Kam sa môže aplikácia posunúť"
           tone="purple"
           onPress={() => router.push("/plus")}
@@ -151,7 +153,7 @@ export default function SettingsScreen() {
                 await Sharing.shareAsync(file.uri, {
                   mimeType: "application/json",
                   UTI: "public.json",
-                  dialogTitle: "Uložiť zálohu READY",
+                  dialogTitle: "Uložiť zálohu BE READY",
                 });
                 setNote(
                   "Dialóg zdieľania bol zatvorený. Skontrolujte, či ste súbor uložili na zvolené miesto.",
@@ -200,9 +202,10 @@ export default function SettingsScreen() {
         </T>
       </Card>
       <T muted translate={false}>
-        {t(
-          "READY 1.0 · Rozhranie sa prispôsobuje svetlému a tmavému režimu zariadenia.",
-        ).replace("1.0", buildPackage.version)}
+        {t("BE READY 1.0 · Vzhľad sa uloží v zariadení.").replace(
+          "1.0",
+          buildPackage.version,
+        )}
       </T>
     </Screen>
   );

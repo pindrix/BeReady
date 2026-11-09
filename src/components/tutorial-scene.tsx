@@ -1336,7 +1336,11 @@ export function TutorialScene({ kind, step, progress }: Props) {
       onLayout={onLayout}
       style={[
         styles.frame,
-        { height: (width * 220) / 320, backgroundColor: background },
+        {
+          height: (width * 220) / 320,
+          backgroundColor: c.appearance === "atlas" ? c.sceneBg : background,
+          borderRadius: c.radius,
+        },
       ]}
     >
       <View style={[styles.canvas, { transform: [{ scale: width / 320 }] }]}>

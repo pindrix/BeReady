@@ -138,7 +138,7 @@ export const explanations: Record<
     steps: [
       row(
         "Moje uložené údaje",
-        "READY funguje bez účtu. Vaše zásoby, kontakty a plán sa ukladajú iba v tomto zariadení.",
+        "BE READY funguje bez účtu. Vaše zásoby, kontakty a plán sa ukladajú iba v tomto zariadení.",
         "person",
         "storage",
       ),
@@ -150,7 +150,7 @@ export const explanations: Record<
       ),
       row(
         "Záloha domácnosti",
-        "Záloha READY nie je šifrovaná. Chráňte ju ako osobné údaje.",
+        "Záloha BE READY nie je šifrovaná. Chráňte ju ako osobné údaje.",
         "documents",
         "guidance",
         "inspect",
@@ -240,7 +240,7 @@ export const explanations: Record<
     steps: [
       row(
         "Overené údaje zatiaľ nie sú dostupné.",
-        "READY neobsahuje vstavaný adresár ani mapu krytov. Informácie o dostupných miestach a aktuálnych pokynoch získajte od obce a príslušných úradov.",
+        "BE READY neobsahuje vstavaný adresár ani mapu krytov. Informácie o dostupných miestach a aktuálnych pokynoch získajte od obce a príslušných úradov.",
         "pin",
         "guidance",
         "inspect",

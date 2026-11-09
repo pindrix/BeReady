@@ -56,7 +56,7 @@ test("reduced-motion explanations remain readable without starting motion", asyn
   await fireEvent.press(screen.getByRole("button", { name: "Ďalší krok" }));
   expect(
     screen.getByText(
-      "Záloha READY nie je šifrovaná. Chráňte ju ako osobné údaje.",
+      "Záloha BE READY nie je šifrovaná. Chráňte ju ako osobné údaje.",
     ),
   ).toBeTruthy();
 });

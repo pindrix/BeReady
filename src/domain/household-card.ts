@@ -40,7 +40,7 @@ export function householdCardText(
   translate: (value: string) => string = (value) => value,
 ): string {
   const lines = [
-    translate("READY / RODINNÁ NÚDZOVÁ KARTA"),
+    translate("BE READY / RODINNÁ NÚDZOVÁ KARTA"),
     card.personal ? card.household : translate(card.household),
     "",
     translate("Krajina pobytu") +
@@ -74,7 +74,7 @@ export function householdCardText(
       "Pri núdzovom volaní povedzte, čo sa stalo, kde ste a kto potrebuje pomoc. Riaďte sa operátorom.",
     ),
     translate(
-      "READY nie je oficiálna výstražná služba. Riaďte sa pokynmi záchranných zložiek a úradov.",
+      "BE READY nie je oficiálna výstražná služba. Riaďte sa pokynmi záchranných zložiek a úradov.",
     ),
   );
   return lines.join("\n");

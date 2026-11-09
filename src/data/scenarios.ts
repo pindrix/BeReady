@@ -99,7 +99,7 @@ export const scenarios: Scenario[] = [
       medical: {
         kind: "outcome",
         title: "Zdravotné potreby majú prednosť",
-        body: "Postup závisí od prístroja a individuálneho zdravotného plánu. READY nevie posúdiť zostávajúci čas ani zdravotné riziko.",
+        body: "Postup závisí od prístroja a individuálneho zdravotného plánu. BE READY nevie posúdiť zostávajúci čas ani zdravotné riziko.",
         actions: [
           "Použite vopred dohodnutý záložný plán a pokyny k prístroju.",
           "Ak môže byť zdravie bezprostredne ohrozené, volajte 155 alebo 112. Pri pochybnostiach konzultujte zdravotnícku pomoc.",
@@ -202,7 +202,7 @@ export const scenarios: Scenario[] = [
       danger: {
         kind: "outcome",
         title: "Bezpečný odchod má prednosť",
-        body: "READY nedokáže na diaľku rozhodnúť, či je trasa priechodná. Pri ohrození postupujte podľa záchranných zložiek.",
+        body: "BE READY nedokáže na diaľku rozhodnúť, či je trasa priechodná. Pri ohrození postupujte podľa záchranných zložiek.",
         actions: [
           "Ak je to bezpečné, vzdiaľte sa z ohrozeného miesta. Nezdržiavajte sa balením.",
           "Z bezpečného miesta volajte 112 a popíšte situáciu aj presnú polohu.",
@@ -293,7 +293,7 @@ export const scenarios: Scenario[] = [
       official: {
         kind: "outcome",
         title: "Rozhoduje konkrétne upozornenie",
-        body: "Univerzálna rada o prevarení nemusí riešiť dané znečistenie. READY neurčuje kvalitu miestnej vody.",
+        body: "Univerzálna rada o prevarení nemusí riešiť dané znečistenie. BE READY neurčuje kvalitu miestnej vody.",
         actions: [
           "Dodržte presné pokyny dodávateľa a úradu verejného zdravotníctva vrátane obmedzení použitia.",
           "Používajte nimi odporúčaný bezpečný zdroj alebo náhradné zásobovanie.",
@@ -414,7 +414,7 @@ export const scenarios: Scenario[] = [
       limited: {
         kind: "outcome",
         title: "Táto možnosť neposkytuje spoľahlivé ukrytie",
-        body: "READY nedokáže z vašej polohy určiť bezpečnú trasu. Nejde o navigáciu v búrke.",
+        body: "BE READY nedokáže z vašej polohy určiť bezpečnú trasu. Nejde o navigáciu v búrke.",
         actions: [
           "Osamelý strom, stan a otvorený prístrešok nepovažujte za bezpečný úkryt pred bleskom.",
           "Hľadajte vhodné ukrytie podľa situácie bez vstupu do vody alebo iného ohrozeného priestoru.",
@@ -438,7 +438,7 @@ export const scenarios: Scenario[] = [
       start: {
         kind: "question",
         title: "Je niekto vážne ohrozený alebo si nie ste istí?",
-        body: "READY nie je zdravotnícka triáž. Pri pochybnostiach volajte odbornú pomoc a riaďte sa operátorom.",
+        body: "BE READY nie je zdravotnícka triáž. Pri pochybnostiach volajte odbornú pomoc a riaďte sa operátorom.",
         choices: [
           {
             id: "serious",

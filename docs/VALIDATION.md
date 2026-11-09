@@ -1,11 +1,11 @@
-# Overenie READY
+# Overenie BE READY
 
 ## Automatické overenie v cloude
 
 - TypeScript strict: bez chýb.
 - ESLint: bez chýb a upozornení po úprave testovacieho setupu.
-- Doménové a databázové testy: 97 úspešných, 0 preskočených.
-- React Native komponentové testy: 71 úspešných, 0 preskočených.
+- Doménové a databázové testy: 98 úspešných, 0 preskočených.
+- React Native komponentové testy: 74 úspešných, 0 preskočených.
 - Metro server: spustený, lokálny HTTP stav a Android manifest READY/SDK 58 overené. Server bol po kontrole zastavený.
 - Export Android + iOS cez Metro/Hermes: úspešný. Nie je to APK/IPA ani dôkaz spustenia na telefóne.
 - Expo kompatibilita: verzie sedia s lokálnym manifestom Expo SDK 58. Online kontrola Expo API bola blokovaná; podpora aktuálne distribuovaného Expo Go sa musí potvrdiť na telefóne.
@@ -34,7 +34,7 @@ Vizuálny QA harness vykreslil skutočné komponenty Home, Academy a Missions s 
 10. Otvorte pôvodné scenáre aj nové návody Akadémie, prejdite kroky dopredu/dozadu, uložte záložku a overte ju po reštarte. Sekcia krytov musí byť prázdna. Pri 112 iba overte zobrazenie potvrdzovacieho dialógu a zrušte ho; netestujte tiesňové volanie.
 11. Exportujte JSON do súborov. Zmeňte údaje, importujte zálohu a najprv zrušte potvrdenie — nič sa nesmie zmeniť. Import zopakujte a potvrďte — obnoví sa pôvodný stav. Overte aj po reštarte.
 12. Skúste chybný JSON, neplatnú verziu a duplicitné ID. Import musí zlyhať bez poškodenia aktuálnych údajov. Skúste zrušenie výberu súboru a zdieľania.
-13. Zapnite tmavý režim a väčšie systémové písmo, skontrolujte malý displej, klávesnicu, rolovanie a čítačku obrazovky.
+13. Prepnite Aurora Command a Field Atlas v Nastaveniach, reštartujte aplikáciu a zväčšite systémové písmo, skontrolujte malý displej, klávesnicu, rolovanie a čítačku obrazovky.
 
 ## Offline test — rozdiel medzi Expo Go a inštalovaným buildom
 
@@ -98,3 +98,11 @@ Vizuálny QA prechádza 11 scén pri šírke 320 px v tmavom režime a 390 px vo
 Vizuálny QA overil 182 stavov bez chýb prehliadača a bez viditeľného horizontálneho pretečenia. Prechádza nové scény pri 320 px v tmavom a 390 px vo svetlom režime, všetky koncepčné vysvetlenia pri 320 px a prvý/posledný krok všetkých 20 čítaných návodov. Snímky a report v `docs/screenshots/v1.6` sú renderované cez adaptéry natívnych služieb v prehliadači. Nenahrádzajú skúšku telefónu ani odbornú revíziu bezpečnostných diagramov. Samostatne sa overuje vyhľadanie anglického názvu v knižnici.
 
 Na zariadení ešte preveriť plynulosť, zmenu textu pri krokoch, väčšie písmo, čítačku obrazovky, prepnutie do pozadia, RTL a offline štart s platnou podpísanou licenciou. Prehrávanie nevykonáva export, nákup, volanie ani zápis do databázy. Počas skúšky sa skutočné tiesňové hovory nevykonávajú.
+
+## Rozšírenie 1.7
+
+172 testov: 98 doménových/databázových a 74 komponentových. Nové overenia kontrolujú SQLite preferenciu vzhľadu, jej zachovanie po importe domácnosti, náhradný vzhľad pri poškodenej hodnote, okamžité prepnutie oboch paliet, tri navigačné body domu, filter z odkazu a následnú ručnú zmenu kategórie.
+
+Typecheck, ESLint, preklady všetkých 21 jazykov a Android/iOS export cez Metro/Hermes sú kontrolované pre verziu 1.7. Nové palety a značka nemenia databázové identifikátory, zálohy, výpočty, krajiny ani licenčné oprávnenia. Produkčný Play Billing a test fyzického telefónu zostávajú samostatnými nedokončenými krokmi.
+
+Vizuálna kontrola 1.7: 56 zobrazení pri šírkach 320/390 bodov, oba vzhľady, arabské RTL; bez chyby JavaScriptu a horizontálneho pretečenia stránky. Skontrolované boli aj filtre po kliknutí na vodu/jedlo, zmena filtra, rodinný plán a živé prepnutie vzhľadu. Samostatné karty môžu narásť podľa dlhého textu. Snímky sú v `docs/screenshots/v1.7`; pri týchto kontrolách sú natívne služby nahradené adaptérmi.

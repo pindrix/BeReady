@@ -172,12 +172,14 @@ export function Tile({
   subtitle,
   onPress,
   tone = "green",
+  fullWidth = false,
 }: {
   icon: IconName;
   title: string;
   subtitle: string;
   onPress: () => void;
   tone?: "green" | "orange" | "blue" | "purple";
+  fullWidth?: boolean;
 }) {
   const c = useTheme(),
     bg =
@@ -194,10 +196,10 @@ export function Tile({
       accessibilityLabel={title}
       onPress={onPress}
       style={({ pressed }) => ({
-        flexGrow: 1,
-        flexBasis: 140,
+        flexGrow: fullWidth ? 0 : 1,
+        flexBasis: fullWidth ? "auto" : 140,
         minWidth: 130,
-        borderRadius: 23,
+        borderRadius: c.radius,
         padding: 18,
         backgroundColor: bg,
         minHeight: 148,

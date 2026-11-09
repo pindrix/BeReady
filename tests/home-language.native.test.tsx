@@ -20,18 +20,18 @@ jest.mock("../src/state/store", () => ({
 afterEach(async () => {
   await act(() => setLocale("sk"));
 });
-test("viacriadkové vizuálne nadpisy sú celé arabské a názov domácnosti zostáva osobný", async () => {
+test("vizuálne nadpisy a navigačné body sú arabské a názov domácnosti zostáva osobný", async () => {
   await setLocale("ar");
   await render(<Home />);
   expect(screen.queryByText(/Malé kroky/)).toBeNull();
   expect(screen.queryByText(/Menej čítania/)).toBeNull();
   expect(
-    screen.getByText(
-      translateText("Malé kroky.", "ar") +
-        "\n" +
-        translateText("Veľký pokoj.", "ar"),
-    ),
-  ).toBeTruthy();
+    screen.getAllByText(translateText("VÁŠ DOMÁCI PLÁN", "ar")).length,
+  ).toBeGreaterThan(0);
+  expect(screen.queryByText("Rodinný plán")).toBeNull();
+  expect(
+    screen.getAllByText(translateText("Rodinný plán", "ar")).length,
+  ).toBeGreaterThan(0);
   expect(screen.getByText(/Súkromný názov/)).toBeTruthy();
   expect(screen.queryByText(/osoby/)).toBeNull();
 });

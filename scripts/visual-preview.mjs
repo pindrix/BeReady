@@ -68,7 +68,7 @@ await copyFile(
 );
 await writeFile(
   join(output, "index.html"),
-  `<!doctype html><html lang="sk"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>READY — visual fixture</title><style>@font-face{font-family:Ionicons;src:url('/Ionicons.ttf')}html,body{margin:0;padding:0;background:#F6F7F2}#root{display:flex;flex-direction:column;min-height:100vh;}@media(prefers-color-scheme:dark){html,body{background:#101D20}}</style></head><body><div id="root"></div><script src="/app.js"></script></body></html>`,
+  `<!doctype html><html lang="sk"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>BE READY — visual fixture</title><style>@font-face{font-family:Ionicons;src:url('/Ionicons.ttf')}html,body{margin:0;padding:0;background:#F6F7F2}#root{display:flex;flex-direction:column;min-height:100vh;}@media(prefers-color-scheme:dark){html,body{background:#101D20}}</style></head><body><div id="root"></div><script src="/app.js"></script></body></html>`,
 );
 const types = {
   ".html": "text/html",

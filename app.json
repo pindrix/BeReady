@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "READY",
+    "name": "BE READY",
     "slug": "beready",
-    "version": "1.6.0",
+    "version": "1.7.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "beready",
@@ -13,7 +13,7 @@
     },
     "android": {
       "adaptiveIcon": {
-        "backgroundColor": "#14283B",
+        "backgroundColor": "#080F1F",
         "foregroundImage": "./assets/images/android-icon-foreground.png",
         "monochromeImage": "./assets/images/android-icon-monochrome.png"
       },
@@ -29,7 +29,7 @@
       [
         "expo-splash-screen",
         {
-          "backgroundColor": "#14283B",
+          "backgroundColor": "#080F1F",
           "image": "./assets/images/splash-icon.png",
           "imageWidth": 76
         }

@@ -65,7 +65,7 @@ export default function HelpScreen() {
     <Screen
       title="Vedieť znamená viac."
       subtitle="Malé zručnosti. Väčší pokoj."
-      eyebrow="READY AKADÉMIA"
+      eyebrow="BE READY AKADÉMIA"
       headerRight={
         <IconButton
           name="call-outline"
@@ -142,6 +142,7 @@ export default function HelpScreen() {
         />
       </View>
       <Tile
+        fullWidth
         icon="play-circle-outline"
         title="Animované postupy"
         subtitle="Pozrite si jednotlivé úkony v pohybe."

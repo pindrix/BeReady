@@ -1,3 +1,7 @@
+import { AppearancePicker } from "../../src/components/appearance-picker";
+import { setAppearance } from "../../src/state/appearance";
+import Inventory from "../../src/app/(tabs)/inventory";
+import Plan from "../../src/app/(tabs)/plan";
 import { ExplanationCard } from "../../src/components/explanation";
 import {
   explanations,
@@ -26,14 +30,24 @@ const params = new URLSearchParams(window.location.search),
 function ExplanationPreview() {
   const topic = params.get("topic") ?? "coverage";
   return (
-    <Frame title="READY">
+    <Frame title="BE READY">
       <ExplanationCard
         topic={(topic in explanations ? topic : "coverage") as ExplanationTopic}
       />
     </Frame>
   );
 }
+function AppearancePreview() {
+  return (
+    <Frame title="BE READY">
+      <AppearancePicker />
+    </Frame>
+  );
+}
 const screens = {
+  appearance: AppearancePreview,
+  inventory: Inventory,
+  plan: Plan,
   home: Home,
   explain: ExplanationPreview,
   academy: Academy,
@@ -48,6 +62,9 @@ const screens = {
 };
 const Screen = screens[name as keyof typeof screens] ?? Home;
 async function start() {
+  await setAppearance(
+    params.get("appearance") === "atlas" ? "atlas" : "aurora",
+  );
   await setCountryCode(params.get("country") ?? "SK");
   if (isLocale(locale)) await setLocale(locale);
   createRoot(document.getElementById("root")!).render(

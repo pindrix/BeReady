@@ -1,3 +1,4 @@
+import { useTheme } from "../theme/theme";
 import { useState, type ReactNode } from "react";
 import {
   Animated,
@@ -844,6 +845,7 @@ function Supplies({ progress }: { progress: Animated.Value }) {
 }
 
 export function CivilScene({ kind, step, progress }: Props) {
+  const theme = useTheme();
   const [width, setWidth] = useState(320),
     height = (width * 220) / 320;
   let scene: ReactNode;
@@ -887,7 +889,10 @@ export function CivilScene({ kind, step, progress }: Props) {
         if (measured > 0 && Math.abs(measured - width) > 0.5)
           setWidth(measured);
       }}
-      style={styles.frame}
+      style={[
+        styles.frame,
+        { backgroundColor: theme.sceneBg, borderRadius: theme.radius },
+      ]}
     >
       <View
         style={{

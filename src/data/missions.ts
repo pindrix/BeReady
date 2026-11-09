@@ -51,7 +51,7 @@ export const missions: Mission[] = [
       ],
       correct: 1,
       explanation:
-        "READY počíta iba evidovanú pitnú vodu v l/ml. Vodu v jedle, technickú vodu ani neznáme tekutiny automaticky nepripočítava.",
+        "BE READY počíta iba evidovanú pitnú vodu v l/ml. Vodu v jedle, technickú vodu ani neznáme tekutiny automaticky nepripočítava.",
     },
   },
   {
@@ -125,7 +125,7 @@ export const missions: Mission[] = [
     action: { label: "Doplniť kontakty a miesto", route: "/plan" },
     quiz: {
       question:
-        "Odošle READY uložený kontakt alebo miesto stretnutia blízkym automaticky?",
+        "Odošle BE READY uložený kontakt alebo miesto stretnutia blízkym automaticky?",
       options: [
         "Áno, vždy",
         "Nie, údaje zostávajú lokálne",
@@ -133,7 +133,7 @@ export const missions: Mission[] = [
       ],
       correct: 1,
       explanation:
-        "READY údaje automaticky neposiela. Dohodu treba odkomunikovať; zdieľanie karty otvoríte iba vlastným krokom.",
+        "BE READY údaje automaticky neposiela. Dohodu treba odkomunikovať; zdieľanie karty otvoríte iba vlastným krokom.",
     },
   },
   {
@@ -202,7 +202,7 @@ export const missions: Mission[] = [
     ],
     action: { label: "Otvoriť zálohy v Nastaveniach", route: "/settings" },
     quiz: {
-      question: "Čo platí pre JSON zálohu READY?",
+      question: "Čo platí pre JSON zálohu BE READY?",
       options: [
         "Je vždy automaticky bezpečne zašifrovaná",
         "Obsahuje lokálne údaje a treba ju uložiť dôveryhodne",

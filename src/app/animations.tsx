@@ -240,7 +240,7 @@ function Player({ tutorial }: { tutorial: Tutorial }) {
         </Pressable>
       ))}
       <Callout icon="book-outline" title="ZDROJ A KONTROLA">
-        <T>{tutorial.sourceName ?? source?.sourceName ?? "READY"}</T>
+        <T>{tutorial.sourceName ?? source?.sourceName ?? "BE READY"}</T>
         <T muted>{tutorial.sourceUrl ?? source?.source ?? ""}</T>
         <T muted>
           Aktuálnosť externého zdroja nebola v tomto prostredí overená. Pri

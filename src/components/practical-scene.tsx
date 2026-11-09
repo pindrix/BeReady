@@ -1,3 +1,4 @@
+import { useTheme } from "../theme/theme";
 import { useState, type ReactNode } from "react";
 import {
   Animated,
@@ -959,6 +960,7 @@ function CampfireScene({ step, progress }: Omit<Props, "kind">) {
 
 /** Local storyboard art; the player supplies progress and accessible instructions. */
 export function PracticalScene({ kind, step, progress }: Props) {
+  const theme = useTheme();
   const [width, setWidth] = useState(320);
   const height = (width * 220) / 320;
   return (
@@ -974,7 +976,15 @@ export function PracticalScene({ kind, step, progress }: Props) {
       }}
       style={[
         styles.frame,
-        { backgroundColor: kind === "campfire" ? "#EAF0DD" : "#E5EFED" },
+        {
+          backgroundColor:
+            theme.appearance === "atlas"
+              ? theme.sceneBg
+              : kind === "campfire"
+                ? "#EAF0DD"
+                : "#E5EFED",
+          borderRadius: theme.radius,
+        },
       ]}
     >
       <View

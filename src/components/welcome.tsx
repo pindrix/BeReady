@@ -7,7 +7,7 @@ export function Welcome() {
   const country = useCountry(),
     a = useAction();
   return (
-    <Screen title="READY" subtitle="Vyberte jazyk a krajinu.">
+    <Screen title="BE READY" subtitle="Vyberte jazyk a krajinu.">
       <Card>
         <LanguagePicker initiallyOpen />
         <CountryPicker />

@@ -49,7 +49,9 @@ export async function initialize(db: Database): Promise<void> {
       "SELECT MAX(version) AS version FROM schema_migrations",
     );
     if (latest?.version && latest.version > 1)
-      throw new Error("Databáza je novšia než aplikácia. Aktualizujte READY.");
+      throw new Error(
+        "Databáza je novšia než aplikácia. Aktualizujte BE READY.",
+      );
     if (!latest?.version) {
       for (const table of allTables)
         await tx.execAsync(

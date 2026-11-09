@@ -5,7 +5,7 @@ export function safePlacesView(places: SafePlace[]) {
     places: places.map((place) => ({
       ...place,
       label:
-        "Údaj z importovanej zálohy — READY negarantuje aktuálnosť ani prístupnosť.",
+        "Údaj z importovanej zálohy — BE READY negarantuje aktuálnosť ani prístupnosť.",
     })),
   };
 }

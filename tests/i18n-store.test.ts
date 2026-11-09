@@ -66,3 +66,26 @@ test("country and first-run choice persist independently from language and house
   await region.setCountryCode("SK");
   await setLocale("sk", db);
 });
+
+test("appearance persists independently of household import and invalid saved values fall back safely", async () => {
+  const appearance = await import("../src/state/appearance");
+  await appearance.initializeAppearance(db);
+  assert.equal(appearance.getAppearance(), "aurora");
+  await appearance.setAppearance("atlas");
+  await replaceState(db, await readState(db));
+  await appearance.initializeAppearance(db);
+  assert.equal(appearance.getAppearance(), "atlas");
+  await db.runAsync(
+    "UPDATE ready_preferences SET value = ? WHERE key = ?",
+    "invalid",
+    "appearance",
+  );
+  await appearance.initializeAppearance(db);
+  assert.equal(appearance.getAppearance(), "aurora");
+  await assert.rejects(
+    appearance.setAppearance(
+      "invalid" as Parameters<typeof appearance.setAppearance>[0],
+    ),
+  );
+  await appearance.setAppearance("aurora");
+});

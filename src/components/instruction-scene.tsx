@@ -1,3 +1,4 @@
+import { useTheme } from "../theme/theme";
 import { memo, useState } from "react";
 import { Animated, View } from "react-native";
 import Svg, { Circle, Path, Rect } from "react-native-svg";
@@ -11,6 +12,7 @@ export const InstructionScene = memo(function InstructionScene({
   spec: DiagramStep;
   progress: Animated.Value;
 }) {
+  const theme = useTheme();
   const [width, setWidth] = useState(320),
     height = (width * 200) / 320;
   const move = spec.mode === "move",
@@ -44,9 +46,9 @@ export const InstructionScene = memo(function InstructionScene({
       style={{
         width: "100%",
         aspectRatio: 320 / 200,
-        borderRadius: 22,
+        borderRadius: theme.radius,
         overflow: "hidden",
-        backgroundColor: "#E5EDF4",
+        backgroundColor: theme.sceneBg,
       }}
     >
       <View

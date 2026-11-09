@@ -1,3 +1,5 @@
+import { LinearGradient } from "expo-linear-gradient";
+import { BrandMark } from "./brand-mark";
 import {
   LocalizedAlert as Alert,
   LocalizedPressable as Pressable,
@@ -61,10 +63,10 @@ export function Card({
         backgroundColor: c.card,
         borderColor: c.border,
         borderWidth: 1,
-        borderRadius: 25,
+        borderRadius: c.radius,
         padding: 20,
         gap: 14,
-        boxShadow: c.dark ? undefined : "0px 4px 22px rgba(34, 62, 48, 0.035)",
+        boxShadow: c.cardShadow,
         ...StyleSheet.flatten(style),
       }}
     >
@@ -112,7 +114,7 @@ export function Button({
         minHeight: 48,
         paddingVertical: 15,
         paddingHorizontal: 16,
-        borderRadius: 18,
+        borderRadius: c.buttonRadius,
         backgroundColor: secondary ? c.card : color,
         borderColor: color,
         borderWidth: 1,
@@ -124,7 +126,7 @@ export function Button({
         style={{
           fontSize: 16,
           fontWeight: "700",
-          color: secondary ? color : c.dark ? "#10202C" : "#FFFFFF",
+          color: secondary ? color : c.onPrimary,
           textAlign: "center",
           flexShrink: 1,
         }}
@@ -160,6 +162,11 @@ export function Screen({
         direction: isRTL(locale) ? "rtl" : "ltr",
       }}
     >
+      <LinearGradient
+        pointerEvents="none"
+        colors={c.dark ? ["#17213D", c.bg, c.bg] : [c.bg, c.bg, c.card]}
+        style={StyleSheet.absoluteFill}
+      />
       <KeyboardAvoidingView
         behavior={Platform.OS === "ios" ? "padding" : undefined}
         style={{ flex: 1 }}
@@ -184,16 +191,22 @@ export function Screen({
             }}
           >
             <View style={{ gap: 5 }}>
-              <Text
-                style={{
-                  fontSize: 21,
-                  fontWeight: "900",
-                  letterSpacing: 3,
-                  color: c.primary,
-                }}
+              <View
+                style={{ flexDirection: "row", alignItems: "center", gap: 8 }}
               >
-                READY<Text style={{ color: c.warning }}>·</Text>
-              </Text>
+                <BrandMark />
+                <Text
+                  translate={false}
+                  style={{
+                    fontSize: 21,
+                    fontWeight: "900",
+                    letterSpacing: 3,
+                    color: c.primary,
+                  }}
+                >
+                  BE READY
+                </Text>
+              </View>
               <Text
                 style={{
                   fontSize: 9,

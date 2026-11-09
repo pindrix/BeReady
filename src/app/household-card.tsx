@@ -101,7 +101,7 @@ export default function HouseholdCardScreen() {
               fontWeight: "800",
             }}
           >
-            READY / VŽDY PORUKE
+            BE READY / VŽDY PORUKE
           </Text>
         </Row>
         <Text
@@ -227,8 +227,8 @@ export default function HouseholdCardScreen() {
         />
         <T muted>
           Osobné údaje sú predvolene skryté. Zapnutím zahrniete aj názov
-          domácnosti, miesto stretnutia a najviac 6 kontaktov. READY ich nikam
-          automaticky neodosiela.
+          domácnosti, miesto stretnutia a najviac 6 kontaktov. BE READY ich
+          nikam automaticky neodosiela.
         </T>
         <Button
           title="Upraviť miesto a kontakty v Pláne"

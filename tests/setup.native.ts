@@ -6,7 +6,7 @@ beforeEach(async () => {
 });
 jest.mock("react-native-safe-area-context", () => mockSafeAreaContext);
 jest.mock("expo-router", () => ({
-  router: { push: jest.fn(), back: jest.fn() },
+  router: { push: jest.fn(), back: jest.fn(), setParams: jest.fn() },
   useFocusEffect: jest.fn(),
-  useLocalSearchParams: () => ({}),
+  useLocalSearchParams: jest.fn(() => ({})),
 }));
