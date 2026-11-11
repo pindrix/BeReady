@@ -48,7 +48,7 @@ afterEach(() => {
 });
 test("prehrávač začína pozastavený a prepína skutočný krok aj ovládanie pauzy", async () => {
   await render(<Animations />);
-  expect(screen.getByTestId("scene-water-0")).toBeTruthy();
+  expect(screen.getByTestId("simulation-water-storage-0")).toBeTruthy();
   await waitFor(() =>
     expect(
       screen.getByRole("button", { name: "Prehrať" }).props.accessibilityState
@@ -60,7 +60,7 @@ test("prehrávač začína pozastavený a prepína skutočný krok aj ovládanie
   await fireEvent.press(screen.getByRole("button", { name: "Pozastaviť" }));
   expect(screen.getByRole("button", { name: "Prehrať" })).toBeTruthy();
   await fireEvent.press(screen.getByRole("button", { name: "Ďalší krok" }));
-  expect(screen.getByTestId("scene-water-1")).toBeTruthy();
+  expect(screen.getByTestId("simulation-water-storage-1")).toBeTruthy();
   expect(screen.getAllByText("Vyberte správne nádoby")).toHaveLength(2);
 });
 test("režim obmedzeného pohybu zablokuje prehrávanie a ponechá ručný postup", async () => {
@@ -72,7 +72,7 @@ test("režim obmedzeného pohybu zablokuje prehrávanie a ponechá ručný postu
       .disabled,
   ).toBe(true);
   await fireEvent.press(screen.getByRole("button", { name: "Ďalší krok" }));
-  expect(screen.getByTestId("scene-water-1")).toBeTruthy();
+  expect(screen.getByTestId("simulation-water-storage-1")).toBeTruthy();
 });
 test("CPR má trvalo zobrazené vekové a časové upozornenie; zdroj nepredstiera živé overenie", async () => {
   params.mockReturnValue({ id: "adult-cpr" });

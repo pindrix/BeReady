@@ -1,0 +1,856 @@
+{
+  "notice": "Actual component render in browser with native-service fixtures; not physical-device validation.",
+  "views": [
+    {
+      "id": "go-bag",
+      "step": 0,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "go-bag",
+      "step": 1,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "go-bag",
+      "step": 2,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "go-bag",
+      "step": 3,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "go-bag",
+      "step": 4,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "water-storage",
+      "step": 0,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "water-storage",
+      "step": 1,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "water-storage",
+      "step": 2,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "water-storage",
+      "step": 3,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "water-storage",
+      "step": 4,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "blackout",
+      "step": 0,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "blackout",
+      "step": 1,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "blackout",
+      "step": 2,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "blackout",
+      "step": 3,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "communication",
+      "step": 0,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "communication",
+      "step": 1,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "communication",
+      "step": 2,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "communication",
+      "step": 3,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "adult-cpr",
+      "step": 0,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "adult-cpr",
+      "step": 1,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "adult-cpr",
+      "step": 2,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "adult-cpr",
+      "step": 3,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "adult-cpr",
+      "step": 4,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "bleeding",
+      "step": 0,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "bleeding",
+      "step": 1,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "bleeding",
+      "step": 2,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "bleeding",
+      "step": 3,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "burns",
+      "step": 0,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "burns",
+      "step": 1,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "burns",
+      "step": 2,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "burns",
+      "step": 3,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "campfire",
+      "step": 0,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "campfire",
+      "step": 1,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "campfire",
+      "step": 2,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "campfire",
+      "step": 3,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "campfire",
+      "step": 4,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "armed-conflict",
+      "step": 0,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "armed-conflict",
+      "step": 1,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "armed-conflict",
+      "step": 2,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "armed-conflict",
+      "step": 3,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "armed-conflict",
+      "step": 4,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "nuclear-explosion",
+      "step": 0,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "nuclear-explosion",
+      "step": 1,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "nuclear-explosion",
+      "step": 2,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "nuclear-explosion",
+      "step": 3,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "nuclear-explosion",
+      "step": 4,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "nuclear-explosion",
+      "step": 5,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "flood",
+      "step": 0,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "flood",
+      "step": 1,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "flood",
+      "step": 2,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "flood",
+      "step": 3,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "fire",
+      "step": 0,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "fire",
+      "step": 1,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "fire",
+      "step": 2,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "fire",
+      "step": 3,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "alert",
+      "step": 0,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "alert",
+      "step": 1,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "alert",
+      "step": 2,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "chemical",
+      "step": 0,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "chemical",
+      "step": 1,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "chemical",
+      "step": 2,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "chemical",
+      "step": 3,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "evacuation",
+      "step": 0,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "evacuation",
+      "step": 1,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "evacuation",
+      "step": 2,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "evacuation",
+      "step": 3,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "safe-cooking",
+      "step": 0,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "safe-cooking",
+      "step": 1,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "safe-cooking",
+      "step": 2,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "safe-cooking",
+      "step": 3,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "first-aid",
+      "step": 0,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "first-aid",
+      "step": 1,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "first-aid",
+      "step": 2,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "first-aid",
+      "step": 3,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "heat",
+      "step": 0,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "heat",
+      "step": 1,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "heat",
+      "step": 2,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "heat",
+      "step": 3,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "storm",
+      "step": 0,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "storm",
+      "step": 1,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "storm",
+      "step": 2,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "winter",
+      "step": 0,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "winter",
+      "step": 1,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "winter",
+      "step": 2,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "winter",
+      "step": 3,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "pets",
+      "step": 0,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "pets",
+      "step": 1,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "pets",
+      "step": 2,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "pets",
+      "step": 3,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "digital-kit",
+      "step": 0,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "digital-kit",
+      "step": 1,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "digital-kit",
+      "step": 2,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "digital-kit",
+      "step": 3,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "hiking",
+      "step": 0,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "hiking",
+      "step": 1,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "hiking",
+      "step": 2,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "hiking",
+      "step": 3,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "support-needs",
+      "step": 0,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "support-needs",
+      "step": 1,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "support-needs",
+      "step": 2,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "support-needs",
+      "step": 3,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "topic": "coverage",
+      "step": 0,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "topic": "coverage",
+      "step": 1,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "topic": "coverage",
+      "step": 2,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "topic": "inventory",
+      "step": 0,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "topic": "inventory",
+      "step": 1,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "topic": "inventory",
+      "step": 2,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "topic": "shopping",
+      "step": 0,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "topic": "shopping",
+      "step": 1,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "topic": "shopping",
+      "step": 2,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "topic": "packing",
+      "step": 0,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "topic": "packing",
+      "step": 1,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "topic": "packing",
+      "step": 2,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "topic": "plan",
+      "step": 0,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "topic": "plan",
+      "step": 1,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "topic": "plan",
+      "step": 2,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "topic": "backup",
+      "step": 0,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "topic": "backup",
+      "step": 1,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "topic": "backup",
+      "step": 2,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "topic": "license",
+      "step": 0,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "topic": "license",
+      "step": 1,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "topic": "license",
+      "step": 2,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "topic": "scenarios",
+      "step": 0,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "topic": "scenarios",
+      "step": 1,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "topic": "scenarios",
+      "step": 2,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "topic": "missions",
+      "step": 0,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "topic": "missions",
+      "step": 1,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "topic": "missions",
+      "step": 2,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "topic": "shelters",
+      "step": 0,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "topic": "shelters",
+      "step": 1,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "topic": "profile",
+      "step": 0,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "topic": "profile",
+      "step": 1,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "topic": "profile",
+      "step": 2,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "topic": "offline",
+      "step": 0,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "topic": "offline",
+      "step": 1,
+      "appearance": "aurora",
+      "width": 390
+    },
+    {
+      "id": "adult-cpr",
+      "step": "2",
+      "appearance": "atlas",
+      "width": 320
+    },
+    {
+      "id": "campfire",
+      "step": "2",
+      "appearance": "atlas",
+      "width": 320
+    },
+    {
+      "id": "nuclear-explosion",
+      "step": "1",
+      "appearance": "atlas",
+      "width": 320
+    },
+    {
+      "topic": "coverage",
+      "step": "1",
+      "appearance": "atlas",
+      "width": 320
+    },
+    {
+      "id": "nuclear-explosion",
+      "step": 2,
+      "locale": "ar",
+      "width": 320
+    }
+  ],
+  "interactions": [
+    "orbit",
+    "zoom",
+    "reset",
+    "2D fallback",
+    "3D return at paused phase",
+    "live playback",
+    "pause",
+    "manual step and matching caption"
+  ],
+  "pageErrors": []
+}

@@ -6,7 +6,7 @@ import type { Tutorial } from "../data/tutorials";
 import { explanations, type ExplanationTopic } from "../data/explanations";
 import { AnimationScene } from "./animation-scene";
 import { InstructionScene } from "./instruction-scene";
-import { Glyph } from "./tutorial-scene";
+import { SceneViewer, SimulationPreview } from "./simulation-scene";
 import { Button, Card, Row, T } from "./ui";
 import { Badge, IconButton } from "./visual";
 function useFocusedPlayer(tutorial: Tutorial) {
@@ -62,6 +62,7 @@ export function AnimatedStep({
         tutorial={tutorial}
         step={index}
         progress={player.progress}
+        phase={player.reducedMotion ? 1 : player.snapshot.stepProgress}
       />
       <View accessibilityLiveRegion="polite" style={{ gap: 12 }}>
         {children}
@@ -89,7 +90,19 @@ function ActiveExplanation({ topic }: { topic: ExplanationTopic }) {
     step = config.steps[i];
   return (
     <View style={{ gap: 12 }}>
-      <InstructionScene spec={step.scene} progress={player.progress} />
+      <SceneViewer
+        scene={{
+          id: "explanation-" + topic,
+          kind: "explanation",
+          step: i,
+          spec: step.scene,
+        }}
+        progress={player.progress}
+        phase={player.reducedMotion ? 1 : player.snapshot.stepProgress}
+        fallback={
+          <InstructionScene spec={step.scene} progress={player.progress} />
+        }
+      />
       <View accessibilityLiveRegion="polite" style={{ gap: 7 }}>
         <Badge label={`Krok ${i + 1} z ${config.steps.length}`} />
         <T large>{step.title}</T>
@@ -146,24 +159,14 @@ export function ExplanationCard({ topic }: { topic: ExplanationTopic }) {
       {open ? (
         <ActiveExplanation topic={topic} />
       ) : (
-        <View
-          accessible={false}
-          accessibilityElementsHidden
-          importantForAccessibility="no-hide-descendants"
-          style={{
-            flexDirection: "row",
-            justifyContent: "space-around",
-            alignItems: "center",
-            paddingVertical: 6,
+        <SimulationPreview
+          scene={{
+            id: "explanation-" + topic,
+            kind: "explanation",
+            step: 0,
+            spec: config.steps[0].scene,
           }}
-        >
-          <Glyph name={config.steps[0].scene.left} size={56} />
-          <Glyph name={config.steps[0].scene.right} size={56} />
-          <Glyph
-            name={config.steps[config.steps.length - 1].scene.right}
-            size={56}
-          />
-        </View>
+        />
       )}
     </Card>
   );

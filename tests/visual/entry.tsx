@@ -1,3 +1,4 @@
+import SimulationFixture from "./simulation";
 import { AppearancePicker } from "../../src/components/appearance-picker";
 import { setAppearance } from "../../src/state/appearance";
 import Inventory from "../../src/app/(tabs)/inventory";
@@ -45,6 +46,7 @@ function AppearancePreview() {
   );
 }
 const screens = {
+  simulation: SimulationFixture,
   appearance: AppearancePreview,
   inventory: Inventory,
   plan: Plan,

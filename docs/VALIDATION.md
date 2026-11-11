@@ -4,8 +4,8 @@
 
 - TypeScript strict: bez chýb.
 - ESLint: bez chýb a upozornení po úprave testovacieho setupu.
-- Doménové a databázové testy: 98 úspešných, 0 preskočených.
-- React Native komponentové testy: 74 úspešných, 0 preskočených.
+- Doménové a databázové testy: 102 úspešných, 0 preskočených.
+- React Native komponentové testy: 78 úspešných, 0 preskočených.
 - Metro server: spustený, lokálny HTTP stav a Android manifest READY/SDK 58 overené. Server bol po kontrole zastavený.
 - Export Android + iOS cez Metro/Hermes: úspešný. Nie je to APK/IPA ani dôkaz spustenia na telefóne.
 - Expo kompatibilita: verzie sedia s lokálnym manifestom Expo SDK 58. Online kontrola Expo API bola blokovaná; podpora aktuálne distribuovaného Expo Go sa musí potvrdiť na telefóne.
@@ -106,3 +106,11 @@ Na zariadení ešte preveriť plynulosť, zmenu textu pri krokoch, väčšie pí
 Typecheck, ESLint, preklady všetkých 21 jazykov a Android/iOS export cez Metro/Hermes sú kontrolované pre verziu 1.7. Nové palety a značka nemenia databázové identifikátory, zálohy, výpočty, krajiny ani licenčné oprávnenia. Produkčný Play Billing a test fyzického telefónu zostávajú samostatnými nedokončenými krokmi.
 
 Vizuálna kontrola 1.7: 56 zobrazení pri šírkach 320/390 bodov, oba vzhľady, arabské RTL; bez chyby JavaScriptu a horizontálneho pretečenia stránky. Skontrolované boli aj filtre po kliknutí na vodu/jedlo, zmena filtra, rodinný plán a živé prepnutie vzhľadu. Samostatné karty môžu narásť podľa dlhého textu. Snímky sú v `docs/screenshots/v1.7`; pri týchto kontrolách sú natívne služby nahradené adaptérmi.
+
+## Rozšírenie 1.8
+
+180 testov: 102 doménových/databázových a 78 komponentových. Nové testy overujú lokálne 3D modely všetkých 101 krokov v troch fázach a oboch vzhľadoch, 34 krokov vysvetlení, konečné súradnice, obmedzený počet plôch, perspektívu a vrstvenie. Komponentové testy kontrolujú kameru, priblíženie a reset, prehrávanie cez pôvodný ovládač, odstránenie odberu pri prepnutí na 2D a odpojení, statický náhľad a automatický návrat na 2D pri chybe kreslenia.
+
+3D používa existujúce SVG bez nových natívnych závislostí. Typecheck, lint, preklady a Android/iOS export sa overujú pre verziu 1.8. Skúška Expo Go a výkonu na fyzickom telefóne ani odborná revízia nových polôh postavičiek v cloude neprebehli. Podrobnosti a hranice: `docs/SIMULATIONS_3D.md`.
+
+Prehliadačový QA 1.8 overil 140 zobrazení: všetkých 135 krokov pri 390 bodoch a ďalšie scény pri 320 bodoch vo Field Atlas a arabčine. Bez chyby JavaScriptu a horizontálneho pretečenia stránky. Interakcie overili otočenie, priblíženie a reset kamery, prepnutie 3D/2D a návrat k pozastavenej fáze, skutočný pohyb počas prehrávania, zastavenie pri pauze a zhodu nového kroku s popisom. Záznam balenia a snímky sú v `docs/screenshots/v1.8`.

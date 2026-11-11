@@ -72,6 +72,7 @@ function Player({ tutorial }: { tutorial: Tutorial }) {
           tutorial={tutorial}
           step={s.stepIndex}
           progress={player.progress}
+          phase={player.reducedMotion ? 1 : player.snapshot.stepProgress}
         />
         <View
           testID="current-step-caption"

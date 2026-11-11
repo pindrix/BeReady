@@ -1,8 +1,19 @@
-# BE READY 1.7 — Domácnosť pripravená krok za krokom
+# BE READY 1.8 — Domácnosť pripravená krok za krokom
 
 Mobilná aplikácia pre pripravenosť domácnosti. Expo SDK 58, React Native, striktný TypeScript, Expo Router a SQLite. Osobné údaje domácnosti zostávajú lokálne. Bez reklamného SDK a vzdialeného sledovania.
 
-## Čo je nové vo verzii 1.7
+## Čo je nové vo verzii 1.8
+
+- **3D postavičky a prostredia naprieč návodmi:** 24 postupov so 101 krokmi a všetkých 34 krokov vysvetlení funkcií. Lokálna geometria zobrazuje ľudí, miestnosti, nábytok a predmety podľa konkrétneho úkonu.
+- **Otočenie a priblíženie kamery**, návrat k základnému pohľadu, prepínanie 3D/2D a automatický návrat na pôvodnú schému pri chybe. Text zostáva priamo pod scénou.
+- **Pôvodné ovládanie a prístupnosť:** vedomé spustenie, pauza, ručné kroky, zastavenie na pozadí a statické scény pri obmedzenom pohybe. Nové ovládanie má 21 jazykových verzií.
+- Bez nových závislostí alebo sťahovania modelov. Štylizované softvérové 3D je kompatibilné s existujúcim spôsobom zostavenia cez Expo; výkon na fyzickom telefóne ešte treba overiť.
+
+[3D balenie v pohybe](docs/screenshots/v1.8/packing-demo.gif) · [Ukážka 3D miestnosti](docs/screenshots/v1.8/go-bag.png) · [Field Atlas](docs/screenshots/v1.8/atlas-campfire.png). Ide o prehliadačový QA záznam skutočných komponentov.
+
+Rozsah, implementácia a hranice: [docs/SIMULATIONS_3D.md](docs/SIMULATIONS_3D.md). Ide o tréningové ilustrácie; odborná revízia bezpečnostných postupov zostáva potrebná.
+
+## Základ z verzie 1.7
 
 - **Dva voliteľné vzhľady:** predvolený Aurora Command (tmavá modrá, mätové akcenty) a Field Atlas (svetlá piesková, grafit a jantár). Vyberajú sa v **Nastavenia → Vzhľad aplikácie**. Zmena je okamžitá a voľba sa uloží lokálne aj po reštarte.
 - **Nová značka BE READY** v rozhraní, 21 jazykových verziách, názve aplikácie a ikonách. Technické identifikátory zostávajú kompatibilné s existujúcou inštaláciou a zálohami.

@@ -1,4 +1,6 @@
-import { memo } from "react";
+import { memo, useMemo } from "react";
+import { SceneViewer } from "./simulation-scene";
+import { tutorialScene3D } from "../simulation/scenes";
 import { Animated } from "react-native";
 import { CivilScene } from "./civil-scene";
 import { TutorialScene } from "./tutorial-scene";
@@ -23,7 +25,7 @@ export const animationKindArt: Record<
   "armed-conflict": { art: "bag", color: "#C4D6F4" },
   "nuclear-explosion": { art: "home", color: "#D9CDF3" },
 };
-export const AnimationScene = memo(function AnimationScene({
+function DiagramScene({
   tutorial,
   step,
   progress,
@@ -55,5 +57,32 @@ export const AnimationScene = memo(function AnimationScene({
     return <CivilScene kind={tutorial.kind} step={step} progress={progress} />;
   return (
     <PracticalScene kind={tutorial.kind} step={step} progress={progress} />
+  );
+}
+
+export const AnimationScene = memo(function AnimationScene({
+  tutorial,
+  step,
+  progress,
+  phase = 0,
+}: {
+  tutorial: Tutorial;
+  step: number;
+  progress: Animated.Value;
+  phase?: number;
+}) {
+  const scene = useMemo(
+    () => tutorialScene3D(tutorial, step),
+    [tutorial, step],
+  );
+  return (
+    <SceneViewer
+      scene={scene}
+      progress={progress}
+      phase={phase}
+      fallback={
+        <DiagramScene tutorial={tutorial} step={step} progress={progress} />
+      }
+    />
   );
 });
