@@ -15,7 +15,7 @@ import {
 } from "../src/simulation/geometry";
 function valid(faces: Face[]) {
   assert.ok(
-    faces.length > 30 && faces.length <= 1000,
+    faces.length > 30 && faces.length <= 1800,
     `bounded face count: ${faces.length}`,
   );
   for (const f of faces) {

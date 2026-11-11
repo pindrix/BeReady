@@ -50,7 +50,15 @@ export function person(
     f.push(...rod(a, b, r, color));
   if (pose === "lying") {
     f.push(
-      ...ellipsoid([0, 0.23, -0.78], [0.15, 0.15, 0.19], skin),
+      ...ellipsoid(
+        [0, 0.23, -0.78],
+        [0.115, 0.12, 0.145],
+        skin,
+        12,
+        6,
+        "head-lying",
+      ),
+      ...rod([0, 0.2, -0.55], [0, 0.22, -0.7], 0.052, skin),
       ...ellipsoid([0, 0.18, -0.22], [0.24, 0.14, 0.34], shirt),
       ...box([0, 0.14, 0.17], [0.34, 0.24, 0.23], colors.trousers),
     );
@@ -111,26 +119,43 @@ export function person(
       [0, hip + 0.26 - compression, lean],
       [0.23, 0.32, 0.145],
       shirt,
+      12,
+      6,
+      "torso",
     ),
     ...box([0, hip, 0], [0.32, 0.19, 0.22], colors.trousers),
   );
   f.push(
-    ...ellipsoid([0, headY, lean + 0.02], [0.15, 0.185, 0.145], skin),
     ...ellipsoid(
-      [0, headY + 0.105, lean - 0.017],
-      [0.154, 0.103, 0.145],
+      [0, headY, lean + 0.02],
+      [0.115, 0.145, 0.11],
+      skin,
+      12,
+      6,
+      "head",
+    ),
+    ...rod(
+      [0, shoulder + 0.03, lean],
+      [0, headY - 0.1, lean + 0.02],
+      0.052,
+      skin,
+    ),
+    ...ellipsoid(
+      [0, headY + 0.08, lean - 0.009],
+      [0.12, 0.087, 0.114],
       colors.hair,
-      8,
-      3,
+      12,
+      5,
+      "hair",
     ),
   );
   // Nose, ears and eyes keep the direction of attention legible in an orbiting view.
-  f.push(...box([0, headY - 0.005, lean + 0.164], [0.045, 0.055, 0.04], skin));
+  f.push(...box([0, headY - 0.01, lean + 0.122], [0.028, 0.045, 0.035], skin));
   for (const side of [-1, 1]) {
     f.push(
       ...box(
-        [side * 0.058, headY + 0.02, lean + 0.144],
-        [0.022, 0.024, 0.013],
+        [side * 0.042, headY + 0.02, lean + 0.108],
+        [0.014, 0.017, 0.012],
         colors.hair,
       ),
     );
@@ -178,7 +203,7 @@ export function person(
     }
     limb(shoulderAt, elbow, 0.067, shirt);
     limb(elbow, hand, 0.052, skin);
-    f.push(...ellipsoid(hand, [0.058, 0.052, 0.066], skin, 6, 3));
+    f.push(...ellipsoid(hand, [0.05, 0.04, 0.06], skin, 8, 4, "hand"));
     if (pose === "phone" && side === 1)
       f.push(
         ...box(
@@ -398,7 +423,16 @@ export function object(
         [0.16, 0.02],
         [0, 0.1],
       ])
-        e([x, 0.3, z], [0.13, 0.34, 0.13], colors.orange);
+        f.push(
+          ...ellipsoid(
+            [x, 0.3, z],
+            [0.13, 0.34, 0.13],
+            colors.orange,
+            8,
+            3,
+            "flame",
+          ),
+        );
       for (const x of [-0.24, 0.24])
         f.push(...rod([x, 0.06, -0.25], [-x, 0.06, 0.25], 0.06, colors.wood));
       break;

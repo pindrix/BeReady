@@ -1,8 +1,19 @@
-# BE READY 1.8 — Domácnosť pripravená krok za krokom
+# BE READY 1.9 — Domácnosť pripravená krok za krokom
 
 Mobilná aplikácia pre pripravenosť domácnosti. Expo SDK 58, React Native, striktný TypeScript, Expo Router a SQLite. Osobné údaje domácnosti zostávajú lokálne. Bez reklamného SDK a vzdialeného sledovania.
 
-## Čo je nové vo verzii 1.8
+## Čo je nové vo verzii 1.9
+
+- **Kvalitnejšie GPU 3D:** hladké modely, jemnejšie proporcie postáv, tváre a detaily oblečenia, materiál dreva, svetlo a mäkké tiene. Väčší záber úkonu a shader ohňa riadený prehrávačom.
+- **Rýchle náhľady kariet:** 24 pribalených WebP obrázkov zo skutočného rendereru. Zatvorené vysvetlenia nespúšťajú GPU ani animáciu.
+- **Náhradné zobrazenie:** pri nedostupnom WebGL zostáva miestne softvérové 3D; pôvodné 2D je stále na výber. Odchod z natívnej obrazovky uvoľňuje GPU kontext.
+- Vykresľovací kód aj materiály sú pribalené, bez CDN a sieťových modelov. Detaily a hranice v [docs/GPU_GRAPHICS.md](docs/GPU_GRAPHICS.md).
+
+**Aktualizácia vyžaduje `npm.cmd ci`**, pretože pribudol balík WebView kompatibilný s SDK 58. Potom pre tunel znovu nainštalujte `npm.cmd install --no-save "@expo/ngrok@^4.1.0"` a spustite `npx.cmd expo start --go --clear --tunnel`.
+
+[Nové 3D v pohybe](docs/screenshots/v1.9/packing-demo.gif) · [Skutočná 3D scéna](docs/screenshots/v1.9/aurora-go-bag-1.png) · [Oheň](docs/screenshots/v1.9/aurora-campfire-2.png). [Návrhový obrázok](docs/design/graphics-target-concept.png) je cieľ umeleckého smerovania, nie fotografia či záznam aplikácie. Súčasné modely zostávajú štylizované.
+
+## Základ z verzie 1.8
 
 - **3D postavičky a prostredia naprieč návodmi:** 24 postupov so 101 krokmi a všetkých 34 krokov vysvetlení funkcií. Lokálna geometria zobrazuje ľudí, miestnosti, nábytok a predmety podľa konkrétneho úkonu.
 - **Otočenie a priblíženie kamery**, návrat k základnému pohľadu, prepínanie 3D/2D a automatický návrat na pôvodnú schému pri chybe. Text zostáva priamo pod scénou.

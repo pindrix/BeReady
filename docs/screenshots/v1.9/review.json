@@ -1,0 +1,597 @@
+{
+  "notice": "Actual WebGL rendering in Chromium/SwiftShader with native adapters; not a physical-phone test.",
+  "baseGpuViews": [
+    {
+      "id": "go-bag",
+      "step": 0
+    },
+    {
+      "id": "go-bag",
+      "step": 1
+    },
+    {
+      "id": "go-bag",
+      "step": 2
+    },
+    {
+      "id": "go-bag",
+      "step": 3
+    },
+    {
+      "id": "go-bag",
+      "step": 4
+    },
+    {
+      "id": "water-storage",
+      "step": 0
+    },
+    {
+      "id": "water-storage",
+      "step": 1
+    },
+    {
+      "id": "water-storage",
+      "step": 2
+    },
+    {
+      "id": "water-storage",
+      "step": 3
+    },
+    {
+      "id": "water-storage",
+      "step": 4
+    },
+    {
+      "id": "blackout",
+      "step": 0
+    },
+    {
+      "id": "blackout",
+      "step": 1
+    },
+    {
+      "id": "blackout",
+      "step": 2
+    },
+    {
+      "id": "blackout",
+      "step": 3
+    },
+    {
+      "id": "communication",
+      "step": 0
+    },
+    {
+      "id": "communication",
+      "step": 1
+    },
+    {
+      "id": "communication",
+      "step": 2
+    },
+    {
+      "id": "communication",
+      "step": 3
+    },
+    {
+      "id": "adult-cpr",
+      "step": 0
+    },
+    {
+      "id": "adult-cpr",
+      "step": 1
+    },
+    {
+      "id": "adult-cpr",
+      "step": 2
+    },
+    {
+      "id": "adult-cpr",
+      "step": 3
+    },
+    {
+      "id": "adult-cpr",
+      "step": 4
+    },
+    {
+      "id": "bleeding",
+      "step": 0
+    },
+    {
+      "id": "bleeding",
+      "step": 1
+    },
+    {
+      "id": "bleeding",
+      "step": 2
+    },
+    {
+      "id": "bleeding",
+      "step": 3
+    },
+    {
+      "id": "burns",
+      "step": 0
+    },
+    {
+      "id": "burns",
+      "step": 1
+    },
+    {
+      "id": "burns",
+      "step": 2
+    },
+    {
+      "id": "burns",
+      "step": 3
+    },
+    {
+      "id": "campfire",
+      "step": 0
+    },
+    {
+      "id": "campfire",
+      "step": 1
+    },
+    {
+      "id": "campfire",
+      "step": 2
+    },
+    {
+      "id": "campfire",
+      "step": 3
+    },
+    {
+      "id": "campfire",
+      "step": 4
+    },
+    {
+      "id": "armed-conflict",
+      "step": 0
+    },
+    {
+      "id": "armed-conflict",
+      "step": 1
+    },
+    {
+      "id": "armed-conflict",
+      "step": 2
+    },
+    {
+      "id": "armed-conflict",
+      "step": 3
+    },
+    {
+      "id": "armed-conflict",
+      "step": 4
+    },
+    {
+      "id": "nuclear-explosion",
+      "step": 0
+    },
+    {
+      "id": "nuclear-explosion",
+      "step": 1
+    },
+    {
+      "id": "nuclear-explosion",
+      "step": 2
+    },
+    {
+      "id": "nuclear-explosion",
+      "step": 3
+    },
+    {
+      "id": "nuclear-explosion",
+      "step": 4
+    },
+    {
+      "id": "nuclear-explosion",
+      "step": 5
+    },
+    {
+      "id": "flood",
+      "step": 0
+    },
+    {
+      "id": "flood",
+      "step": 1
+    },
+    {
+      "id": "flood",
+      "step": 2
+    },
+    {
+      "id": "flood",
+      "step": 3
+    },
+    {
+      "id": "fire",
+      "step": 0
+    },
+    {
+      "id": "fire",
+      "step": 1
+    },
+    {
+      "id": "fire",
+      "step": 2
+    },
+    {
+      "id": "fire",
+      "step": 3
+    },
+    {
+      "id": "alert",
+      "step": 0
+    },
+    {
+      "id": "alert",
+      "step": 1
+    },
+    {
+      "id": "alert",
+      "step": 2
+    },
+    {
+      "id": "chemical",
+      "step": 0
+    },
+    {
+      "id": "chemical",
+      "step": 1
+    },
+    {
+      "id": "chemical",
+      "step": 2
+    },
+    {
+      "id": "chemical",
+      "step": 3
+    },
+    {
+      "id": "evacuation",
+      "step": 0
+    },
+    {
+      "id": "evacuation",
+      "step": 1
+    },
+    {
+      "id": "evacuation",
+      "step": 2
+    },
+    {
+      "id": "evacuation",
+      "step": 3
+    },
+    {
+      "id": "safe-cooking",
+      "step": 0
+    },
+    {
+      "id": "safe-cooking",
+      "step": 1
+    },
+    {
+      "id": "safe-cooking",
+      "step": 2
+    },
+    {
+      "id": "safe-cooking",
+      "step": 3
+    },
+    {
+      "id": "first-aid",
+      "step": 0
+    },
+    {
+      "id": "first-aid",
+      "step": 1
+    },
+    {
+      "id": "first-aid",
+      "step": 2
+    },
+    {
+      "id": "first-aid",
+      "step": 3
+    },
+    {
+      "id": "heat",
+      "step": 0
+    },
+    {
+      "id": "heat",
+      "step": 1
+    },
+    {
+      "id": "heat",
+      "step": 2
+    },
+    {
+      "id": "heat",
+      "step": 3
+    },
+    {
+      "id": "storm",
+      "step": 0
+    },
+    {
+      "id": "storm",
+      "step": 1
+    },
+    {
+      "id": "storm",
+      "step": 2
+    },
+    {
+      "id": "winter",
+      "step": 0
+    },
+    {
+      "id": "winter",
+      "step": 1
+    },
+    {
+      "id": "winter",
+      "step": 2
+    },
+    {
+      "id": "winter",
+      "step": 3
+    },
+    {
+      "id": "pets",
+      "step": 0
+    },
+    {
+      "id": "pets",
+      "step": 1
+    },
+    {
+      "id": "pets",
+      "step": 2
+    },
+    {
+      "id": "pets",
+      "step": 3
+    },
+    {
+      "id": "digital-kit",
+      "step": 0
+    },
+    {
+      "id": "digital-kit",
+      "step": 1
+    },
+    {
+      "id": "digital-kit",
+      "step": 2
+    },
+    {
+      "id": "digital-kit",
+      "step": 3
+    },
+    {
+      "id": "hiking",
+      "step": 0
+    },
+    {
+      "id": "hiking",
+      "step": 1
+    },
+    {
+      "id": "hiking",
+      "step": 2
+    },
+    {
+      "id": "hiking",
+      "step": 3
+    },
+    {
+      "id": "support-needs",
+      "step": 0
+    },
+    {
+      "id": "support-needs",
+      "step": 1
+    },
+    {
+      "id": "support-needs",
+      "step": 2
+    },
+    {
+      "id": "support-needs",
+      "step": 3
+    },
+    {
+      "topic": "coverage",
+      "step": 0
+    },
+    {
+      "topic": "coverage",
+      "step": 1
+    },
+    {
+      "topic": "coverage",
+      "step": 2
+    },
+    {
+      "topic": "inventory",
+      "step": 0
+    },
+    {
+      "topic": "inventory",
+      "step": 1
+    },
+    {
+      "topic": "inventory",
+      "step": 2
+    },
+    {
+      "topic": "shopping",
+      "step": 0
+    },
+    {
+      "topic": "shopping",
+      "step": 1
+    },
+    {
+      "topic": "shopping",
+      "step": 2
+    },
+    {
+      "topic": "packing",
+      "step": 0
+    },
+    {
+      "topic": "packing",
+      "step": 1
+    },
+    {
+      "topic": "packing",
+      "step": 2
+    },
+    {
+      "topic": "plan",
+      "step": 0
+    },
+    {
+      "topic": "plan",
+      "step": 1
+    },
+    {
+      "topic": "plan",
+      "step": 2
+    },
+    {
+      "topic": "backup",
+      "step": 0
+    },
+    {
+      "topic": "backup",
+      "step": 1
+    },
+    {
+      "topic": "backup",
+      "step": 2
+    },
+    {
+      "topic": "license",
+      "step": 0
+    },
+    {
+      "topic": "license",
+      "step": 1
+    },
+    {
+      "topic": "license",
+      "step": 2
+    },
+    {
+      "topic": "scenarios",
+      "step": 0
+    },
+    {
+      "topic": "scenarios",
+      "step": 1
+    },
+    {
+      "topic": "scenarios",
+      "step": 2
+    },
+    {
+      "topic": "missions",
+      "step": 0
+    },
+    {
+      "topic": "missions",
+      "step": 1
+    },
+    {
+      "topic": "missions",
+      "step": 2
+    },
+    {
+      "topic": "shelters",
+      "step": 0
+    },
+    {
+      "topic": "shelters",
+      "step": 1
+    },
+    {
+      "topic": "profile",
+      "step": 0
+    },
+    {
+      "topic": "profile",
+      "step": 1
+    },
+    {
+      "topic": "profile",
+      "step": 2
+    },
+    {
+      "topic": "offline",
+      "step": 0
+    },
+    {
+      "topic": "offline",
+      "step": 1
+    }
+  ],
+  "additionalBaseViews": 4,
+  "localGpuPosters": 24,
+  "finalTargetedViews": [
+    {
+      "id": "go-bag",
+      "step": "1"
+    },
+    {
+      "id": "campfire",
+      "step": "2"
+    },
+    {
+      "id": "campfire",
+      "step": "3"
+    },
+    {
+      "id": "burns",
+      "step": "0"
+    },
+    {
+      "id": "adult-cpr",
+      "step": "2"
+    },
+    {
+      "id": "nuclear-explosion",
+      "step": "2"
+    },
+    {
+      "id": "campfire",
+      "step": "2",
+      "appearance": "atlas"
+    },
+    {
+      "id": "go-bag",
+      "step": "1",
+      "locale": "ar"
+    }
+  ],
+  "interactions": [
+    "GPU orbit, reset and zoom checked in base pass",
+    "2D releases GPU and returning creates GPU",
+    "GPU phase advances during playback",
+    "GPU phase remains fixed after pause",
+    "context loss switches to local software 3D"
+  ],
+  "pageErrors": [],
+  "externalRequests": [],
+  "finalColdStartCheck": {
+    "firstRenderedFrameVisible": true,
+    "homePostersWithoutGpu": true,
+    "missingPosterImages": 0
+  }
+}

@@ -1249,7 +1249,7 @@
     "Obmedziť otváranie chladničky": ["src/data/content.ts:32"],
     "Obmieňajte a zapisujte": ["src/data/academy.ts:164"],
     "Obnoviť overený nákup": ["src/app/plus.tsx:146"],
-    "Obnoviť pohľad": ["src/components/simulation-scene.tsx:173"],
+    "Obnoviť pohľad": ["src/components/simulation-scene.tsx:192"],
     "Obsah a ilustrácie sú súčasťou aplikácie. Na túto baliacu stanicu ani jej výpočty sa nevolá sieť. V konkrétnej udalosti majú prednosť pokyny záchranných zložiek a úradov.": [
       "src/app/field-kit.tsx:491"
     ],
@@ -1264,7 +1264,7 @@
       "src/components/explanation.tsx:35",
       "src/components/explanation.tsx:133"
     ],
-    "Oddialiť": ["src/components/simulation-scene.tsx:162"],
+    "Oddialiť": ["src/components/simulation-scene.tsx:181"],
     "Odložiť záložku": ["src/app/(tabs)/help.tsx:281"],
     "Odošle BE READY uložený kontakt alebo miesto stretnutia blízkym automaticky?": [
       "src/data/missions.ts:128"
@@ -1309,7 +1309,7 @@
       "src/components/ui.tsx:450",
       "src/simulation/scenes.ts:357",
       "src/simulation/scenes.ts:461",
-      "src/simulation/world.ts:494",
+      "src/simulation/world.ts:528",
       "src/state/appearance.ts:29"
     ],
     "Operácia sa nepodarila. Skúste to znova.": ["src/types/model.ts:176"],
@@ -1340,8 +1340,8 @@
     "Otázky pomáhajú s prípravou. Pri skutočnom ohrození nečakajte na výsledok aplikácie.": [
       "src/app/scenarios.tsx:451"
     ],
-    "Otočiť pohľad doľava": ["src/components/simulation-scene.tsx:168"],
-    "Otočiť pohľad doprava": ["src/components/simulation-scene.tsx:181"],
+    "Otočiť pohľad doľava": ["src/components/simulation-scene.tsx:187"],
+    "Otočiť pohľad doprava": ["src/components/simulation-scene.tsx:200"],
     "Otvorený oheň zvyšuje riziko požiaru. Zariaďte domácnosti dostupné svetlo bez plameňa.": [
       "src/data/scenarios.ts:129"
     ],
@@ -1788,7 +1788,7 @@
       "src/app/animations.tsx:306",
       "src/data/explanations.ts:278"
     ],
-    "Priblížiť": ["src/components/simulation-scene.tsx:186"],
+    "Priblížiť": ["src/components/simulation-scene.tsx:205"],
     "Pridajte baterku, rádio, vhodné batérie, nabitú powerbanku a kábel. Jednu sadu kontaktov uložte na papier, aby ste sa nespoliehali iba na telefón.": [
       "src/data/academy.ts:124"
     ],

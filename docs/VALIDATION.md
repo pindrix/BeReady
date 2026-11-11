@@ -4,8 +4,8 @@
 
 - TypeScript strict: bez chýb.
 - ESLint: bez chýb a upozornení po úprave testovacieho setupu.
-- Doménové a databázové testy: 102 úspešných, 0 preskočených.
-- React Native komponentové testy: 78 úspešných, 0 preskočených.
+- Doménové a databázové testy: 104 úspešných, 0 preskočených.
+- React Native komponentové testy: 81 úspešných, 0 preskočených.
 - Metro server: spustený, lokálny HTTP stav a Android manifest READY/SDK 58 overené. Server bol po kontrole zastavený.
 - Export Android + iOS cez Metro/Hermes: úspešný. Nie je to APK/IPA ani dôkaz spustenia na telefóne.
 - Expo kompatibilita: verzie sedia s lokálnym manifestom Expo SDK 58. Online kontrola Expo API bola blokovaná; podpora aktuálne distribuovaného Expo Go sa musí potvrdiť na telefóne.
@@ -114,3 +114,11 @@ Vizuálna kontrola 1.7: 56 zobrazení pri šírkach 320/390 bodov, oba vzhľady,
 3D používa existujúce SVG bez nových natívnych závislostí. Typecheck, lint, preklady a Android/iOS export sa overujú pre verziu 1.8. Skúška Expo Go a výkonu na fyzickom telefóne ani odborná revízia nových polôh postavičiek v cloude neprebehli. Podrobnosti a hranice: `docs/SIMULATIONS_3D.md`.
 
 Prehliadačový QA 1.8 overil 140 zobrazení: všetkých 135 krokov pri 390 bodoch a ďalšie scény pri 320 bodoch vo Field Atlas a arabčine. Bez chyby JavaScriptu a horizontálneho pretečenia stránky. Interakcie overili otočenie, priblíženie a reset kamery, prepnutie 3D/2D a návrat k pozastavenej fáze, skutočný pohyb počas prehrávania, zastavenie pri pauze a zhodu nového kroku s popisom. Záznam balenia a snímky sú v `docs/screenshots/v1.8`.
+
+## Rozšírenie 1.9
+
+185 testov: 104 doménových/databázových a 81 komponentových. Navyše kontrolujú protokol GPU rendereru, obmedzenie kamery a fázy, odmietnutie cudzích správ, zdieľanie primitív, pripravenosť natívneho WebView, blokovanie navigácie, chybu grafiky, časový limit a odpojenie kontextu pri opustení obrazovky. Existujúce testy ovládania 3D používajú explicitnú miestnu softvérovú náhradu; samostatný test overuje natívny most cez mock WebView.
+
+Manifest nainštalovaného Expo SDK 58 zodpovedá WebView 14.0.1. Fyzické Expo Go, mobilný GPU ovládač, výkon a batéria zostávajú neoverené. GPU náhľad v prehliadači je samostatný dôkaz kreslenia, nie náhrada týchto skúšok. Podrobnosti: `docs/GPU_GRAPHICS.md`.
+
+Prehliadačový GPU QA 1.9 prešiel 139 základných zobrazení (všetkých 135 krokov a ďalšie zobrazenia Field Atlas/arabčina), vytvoril 24 miestnych náhľadov a po záverečných úpravách preveril ďalších 8 cielených zobrazení vrátane shaderu ohňa. Overil kameru, priblíženie, prepnutie 2D/3D, postupujúcu fázu pri skutočnom prehrávaní, nemennú fázu po pauze a návrat na softvérové 3D po strate WebGL kontextu. Bez chyby JavaScriptu a bez externých sieťových požiadaviek. Použil Chromium/SwiftShader, nie fyzický telefón. Presný rozsah a snímky sú v `docs/screenshots/v1.9/review.json`.

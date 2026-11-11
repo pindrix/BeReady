@@ -19,6 +19,7 @@ function readable(value) {
     /^[a-z]+[A-Z][A-Za-z]+$/.test(s)
   )
     return false;
+  if (/^(?:<!doctype|<\\?\/script|about:)/i.test(s)) return false;
   if (!s || s.length < 2 || !/[\p{L}]/u.test(s)) return false;
   if (
     /^\/?[a-z0-9_-]+(?:\/[a-z0-9_-]+)*$/.test(s) ||
@@ -69,7 +70,12 @@ async function visitDir(dir) {
     const path = join(dir, ent.name);
     if (ent.isDirectory()) {
       await visitDir(path);
-    } else if (/\.tsx?$/.test(ent.name) && ent.name !== "countries.ts") {
+    } else if (
+      /\.tsx?$/.test(ent.name) &&
+      !["countries.ts", "gpu-runtime.ts", "graphics-document.ts"].includes(
+        ent.name,
+      )
+    ) {
       const text = await readFile(path, "utf8");
       const tree = ts.createSourceFile(
         path,

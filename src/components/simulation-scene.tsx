@@ -1,3 +1,7 @@
+import { Image } from "expo-image";
+import { simulationPoster } from "../simulation/posters";
+import { GpuScene } from "./gpu-scene";
+import { graphicsFrame } from "../simulation/graphics-protocol";
 import {
   Component,
   memo,
@@ -76,7 +80,8 @@ export const SimulationPreview = memo(function SimulationPreview({
 }: {
   scene: Scene3D;
 }) {
-  const c = useTheme();
+  const c = useTheme(),
+    poster = simulationPoster(scene.id, c.appearance);
   return (
     <View
       accessible={false}
@@ -89,7 +94,16 @@ export const SimulationPreview = memo(function SimulationPreview({
         overflow: "hidden",
       }}
     >
-      <Geometry scene={scene} frame={0.5} yaw={defaultCamera.yaw} />
+      {poster ? (
+        <Image
+          source={poster}
+          contentFit="cover"
+          style={{ width: "100%", height: "100%" }}
+          accessible={false}
+        />
+      ) : (
+        <Geometry scene={scene} frame={0.5} yaw={defaultCamera.yaw} />
+      )}
     </View>
   );
 });
@@ -141,12 +155,17 @@ function LiveSimulation({
         importantForAccessibility="no-hide-descendants"
         style={{
           width: "100%",
-          aspectRatio: 5 / 3,
+          aspectRatio: 1.25,
           backgroundColor: c.sceneBg,
           overflow: "hidden",
         }}
       >
-        <Geometry scene={scene} frame={frame} yaw={yaw} zoom={zoom} />
+        <GpuScene
+          data={graphicsFrame(scene, frame, yaw, zoom, c.appearance)}
+          fallback={
+            <Geometry scene={scene} frame={frame} yaw={yaw} zoom={zoom} />
+          }
+        />
       </View>
       <View
         style={{

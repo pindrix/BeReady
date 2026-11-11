@@ -1,6 +1,6 @@
 {
   "name": "beready",
-  "version": "1.8.0",
+  "version": "1.9.0",
   "main": "expo-router/entry",
   "dependencies": {
     "@expo/ui": "~58.0.27",
@@ -34,6 +34,7 @@
     "react-native-screens": "~4.30.1",
     "react-native-svg": "15.16.0",
     "react-native-web": "~0.21.4",
+    "react-native-webview": "14.0.1",
     "react-native-worklets": "0.13.0",
     "zod": "^4.6.7"
   },
@@ -43,6 +44,7 @@
     "@types/node": "^24.19.2",
     "@types/react": "~19.3.0",
     "@types/react-dom": "^19.3.0",
+    "@types/three": "0.185.0",
     "esbuild": "^0.28.2",
     "eslint": "^9.39.5",
     "eslint-config-expo": "^58.0.4",
@@ -50,6 +52,7 @@
     "jest-expo": "~58.0.14",
     "playwright": "^1.64.1",
     "prettier": "^3.9.10",
+    "three": "0.187.0",
     "tsx": "^4.23.15",
     "typescript": "~6.0.3"
   },
@@ -68,7 +71,8 @@
     "visual:preview": "node scripts/visual-preview.mjs",
     "visual:capture": "node scripts/visual-preview.mjs --capture",
     "i18n:check": "node scripts/check-translations.mjs",
-    "i18n:extract": "node scripts/extract-messages.mjs"
+    "i18n:extract": "node scripts/extract-messages.mjs",
+    "graphics:build": "node scripts/build-graphics.mjs"
   },
   "private": true,
   "engines": {

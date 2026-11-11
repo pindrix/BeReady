@@ -1,0 +1,3 @@
+import runtime from "./graphics-runtime.json";
+/** Closed offline document: the embedded renderer has no URL loader or network capability. */
+export const graphicsDocument = `<!doctype html><html><head><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data: blob:; connect-src 'none';"><style>html,body,canvas{margin:0;width:100%;height:100%;overflow:hidden;background:#CBDCD8;display:block}canvas{touch-action:none}</style></head><body><canvas></canvas><script>/* ${runtime.license.replace(/\*\//g, "* /")} */\n${runtime.script.replace(/<\/script/gi, "<\\/script")}</script></body></html>`;

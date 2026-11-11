@@ -1,4 +1,6 @@
-# BE READY 1.8 — štýlizované 3D postupy
+# BE READY — štýlizované 3D postupy
+
+Od verzie 1.9 je predvolený GPU renderer, opísaný v [GPU_GRAPHICS.md](GPU_GRAPHICS.md). Nižšie je základ zavedený vo verzii 1.8, ktorý zostáva dostupný ako softvérová náhrada.
 
 Všetkých 24 animovaných návodov (101 krokov) a 12 vysvetlení funkcií (34 krokov) má predvolený 3D pohľad. Postavičky, otvorené miestnosti, nábytok a predmety sú vytvorené z lokálnej geometrie. Súčasťou sú balenie batoha, voda, blackout, komunikácia, prvá pomoc, oheň a civilná ochrana vrátane jadrového výbuchu. Názvy a popisy krokov sa naďalej preberajú z pôvodných textov, hneď pod scénou.
 

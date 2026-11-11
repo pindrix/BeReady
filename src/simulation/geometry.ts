@@ -2,8 +2,13 @@
  * SVG is the final drawing surface; there are no network textures or native GL requirements.
  */
 export type Vec3 = readonly [number, number, number];
+export type Primitive = (
+  | { kind: "box" | "sphere"; center: Vec3; size: Vec3; yaw: number }
+  | { kind: "rod"; a: Vec3; b: Vec3; radius: number }
+) & { part?: "head" | "head-lying" | "hand" | "torso" | "hair" | "flame" };
 export type Face = {
   points: Vec3[];
+  primitive?: Primitive;
   color: string;
   opacity?: number;
   unlit?: boolean;
@@ -56,12 +61,36 @@ export function transform(
   angle = 0,
   scale = 1,
 ): Face[] {
-  return faces.map((f) => ({
-    ...f,
-    points: f.points.map((p) => add(rotate(mul(p, scale), angle), position)),
-  }));
+  const transformed = new Map<Primitive, Primitive>();
+  const point = (p: Vec3) => add(rotate(mul(p, scale), angle), position);
+  return faces.map((f) => {
+    let primitive = f.primitive;
+    if (primitive) {
+      let copy = transformed.get(primitive);
+      if (!copy) {
+        copy =
+          primitive.kind === "rod"
+            ? {
+                kind: "rod",
+                a: point(primitive.a),
+                b: point(primitive.b),
+                radius: primitive.radius * scale,
+              }
+            : {
+                ...primitive,
+                center: point(primitive.center),
+                size: mul(primitive.size, scale),
+                yaw: primitive.yaw + angle,
+              };
+        transformed.set(primitive, copy);
+      }
+      primitive = copy;
+    }
+    return { ...f, points: f.points.map(point), primitive };
+  });
 }
 export function box(center: Vec3, size: Vec3, color: string): Face[] {
+  const primitive: Primitive = { kind: "box", center, size, yaw: 0 };
   const v: Vec3[] = [];
   for (const y of [-1, 1])
     for (const z of [-1, 1])
@@ -79,6 +108,7 @@ export function box(center: Vec3, size: Vec3, color: string): Face[] {
     [0, 4, 6, 2],
     [1, 3, 7, 5],
   ].map((ids) => ({
+    primitive,
     points: ids
       .slice()
       .reverse()
@@ -92,7 +122,9 @@ export function ellipsoid(
   color: string,
   segments = 8,
   rings = 4,
+  part?: Primitive["part"],
 ): Face[] {
+  const primitive: Primitive = { kind: "sphere", center, size, yaw: 0, part };
   const faces: Face[] = [];
   const at = (i: number, j: number): Vec3 => {
     const latitude = -Math.PI / 2 + (Math.PI * i) / rings,
@@ -106,6 +138,7 @@ export function ellipsoid(
   for (let i = 0; i < rings; i++)
     for (let j = 0; j < segments; j++)
       faces.push({
+        primitive,
         points: [at(i, j), at(i + 1, j), at(i + 1, j + 1), at(i, j + 1)],
         color,
       });
@@ -142,7 +175,8 @@ export function rod(
     },
     { points: Array.from({ length: segments }, (_, j) => ring(b, j)), color },
   );
-  return faces;
+  const primitive: Primitive = { kind: "rod", a, b, radius };
+  return faces.map((face) => ({ ...face, primitive }));
 }
 export function shadow(center: Vec3, x: number, z: number): Face[] {
   return [1, 0.8, 0.55].map((scale, i) => ({

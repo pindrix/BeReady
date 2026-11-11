@@ -10,3 +10,8 @@ jest.mock("expo-router", () => ({
   useFocusEffect: jest.fn(),
   useLocalSearchParams: jest.fn(() => ({})),
 }));
+
+// Scene controls are exercised against the software fallback; the native GPU bridge has dedicated tests.
+jest.mock("../src/components/gpu-scene", () => ({
+  GpuScene: ({ fallback }: { fallback: unknown }) => fallback,
+}));

@@ -3,3 +3,6 @@ dist/
 .expo/
 assets/
 package-lock.json
+
+# Generated offline WebGL bundle
+src/simulation/graphics-runtime.json
