@@ -13,7 +13,7 @@ Mobilná aplikácia pre pripravenosť domácnosti. Expo SDK 58, React Native, st
 
 **Samostatný APK zatiaľ nie je dostupný.** Natívne zostavenie v cloude blokuje pravidlo siete pre oficiálny zdroj `repo.reactnative.dev`; návrh jeho povolenia čaká na uplatnenie v nastaveniach prostredia. Pripravený postup a skript sú v [docs/ANDROID_PREVIEW_BUILD.md](docs/ANDROID_PREVIEW_BUILD.md). ZIP obsahuje zdrojový projekt, nie inštalovateľnú aplikáciu.
 
-Pri aktualizácii projektu spustite v jeho priečinku `git pull --ff-only` a `npm.cmd ci`. Pre tunel potom `npm.cmd install --no-save "@expo/ngrok@^4.1.0"` a `npx.cmd expo start --go --clear --tunnel`. Expo Go musí podporovať SDK 58; vývojový server musí zostať zapnutý.
+Pri aktualizácii Git klonu spustite v jeho priečinku `git pull --ff-only` a `npm.cmd ci`. Potom použite `npx.cmd expo start --go --clear --lan --port 8082` a nový QR kód. Mobil aj počítač musia byť na rovnakej sieti. Expo Go musí podporovať SDK 58; vývojový server musí zostať zapnutý. Tento postup nepotrebuje ngrok a zachováva verzie z lockfilu.
 
 ## Základ z verzie 1.9
 
@@ -104,7 +104,7 @@ Ak už máte klon predchádzajúcej verzie, v jeho priečinku spustite:
 ```powershell
 git pull --ff-only
 npm.cmd ci
-npm.cmd start -- --lan
+npx.cmd expo start --go --lan --port 8082
 ```
 
 ## Spustenie na Windows (PowerShell)
@@ -132,7 +132,7 @@ npm.cmd ci
 npm.cmd run typecheck
 npm.cmd run lint
 npm.cmd test
-npm.cmd start -- --lan
+npx.cmd expo start --go --clear --lan --port 8082
 ```
 
 Príkazy `npm` spúšťajte v priečinku projektu, nie v domovskom priečinku používateľa. Kontrola vyššie musí nájsť oba súbory projektu.
@@ -148,6 +148,8 @@ Príkazy `npm` spúšťajte v priečinku projektu, nie v domovskom priečinku po
 
 - **`npm ci` hlási EUSAGE alebo chýbajúci lockfile; `npm start` hlási ENOENT pre `package.json`:** príkazy bežia v nesprávnom priečinku. Prejdite cez `Set-Location` do priečinka aplikácie a overte `Get-ChildItem package*.json`. Musia sa zobraziť `package.json` aj `package-lock.json`. Nevytvárajte nový projekt cez `npm init` a nevyrábajte náhradný lockfile v domovskom priečinku.
 - **QR sa nenačíta / spojenie vyprší:** skontrolujte rovnakú sieť, izoláciu klientov na Wi-Fi a povolenie Node.js cez firewall na súkromnej sieti. Vývojový server je na vašom počítači; cloudový localhost nie je dostupná telefónna ukážka.
+- **`Failed to download remote update`:** Expo Go nedokončilo stiahnutie projektu. Skontrolujte, či skenujete QR práve bežiaceho servera. Pre LAN používajte novú adresu z terminálu, vrátane skutočného portu. Riadok `Android Bundled` po skenovaní potvrdzuje požiadavku na Android balík; prípadná nasledujúca chyba už potrebuje samostatnú diagnostiku.
+- **`Cannot find native module 'ExpoSQLite'` po `Android Bundled`:** načítanie zlyháva pri vyhľadaní natívneho modulu. Ak ste po `npm ci` inštalovali ngrok cez `npm install --no-save`, mohli sa prepočítať aj ostatné závislosti. Zastavte server, obnovte `npm.cmd ci` a spustite vyššie uvedený LAN príkaz bez ďalšej inštalácie ngroku. Lockfile tejto verzie obsahuje Expo `58.0.23`, SQLite `58.0.15` a jadro `58.0.30`. Obnovenie verzií je diagnostický krok, nie dôkaz opravy natívneho modulu. Ak chyba zostane, zaznamenajte verziu Expo Go, výstup `npm.cmd ls expo expo-sqlite expo-modules-core react-native --depth=1` a prvú chybu. Súvisiace varovania Routera o chýbajúcom `default export` môžu byť následkom zlyhaného importu; samotné dopĺňanie exportov túto chybu neopravuje.
 - **Nesprávne SDK v Expo Go:** aktualizujte Expo Go a porovnajte podporované SDK s 58. Nerobte náhodný upgrade jednotlivých natívnych balíkov. Použite `npx.cmd expo install --check` a dokumentáciu Expo pre danú verziu. Ak distribúcia Expo Go už SDK 58 nepodporuje, potrebujete koordinovaný upgrade SDK alebo vlastný development build. Tento projekt nepridáva vlastný natívny modul, ktorý by sám vyžadoval development build.
 - **Stará Metro cache:** zastavte server cez Ctrl+C a spustite `npm.cmd start -- --clear`.
 - **Chýbajúce balíky:** použite `npm.cmd ci`, nie ručné úpravy lockfilu.
