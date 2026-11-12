@@ -36,6 +36,16 @@ export type Pose =
   | "crouch"
   | "cover"
   | "phone";
+let descriptorDepth = 0;
+/** Synchronous GPU-only mode: preserve semantic actors without allocating the SVG fallback meshes. */
+export function actorDescriptorsOnly<T>(build: () => T): T {
+  descriptorDepth++;
+  try {
+    return build();
+  } finally {
+    descriptorDepth--;
+  }
+}
 export function person(
   position: Vec3,
   pose: Pose = "stand",
@@ -45,6 +55,9 @@ export function person(
   skin = colors.skin,
   scale = 1,
 ): Face[] {
+  const actor = { position, pose, phase: t, yaw, shirt, skin, scale };
+  if (descriptorDepth > 0) return [{ points: [], color: skin, actor }];
+  const tag = (faces: Face[]) => faces.map((face) => ({ ...face, actor }));
   const f: Face[] = [];
   const limb = (a: Vec3, b: Vec3, r: number, color: string) =>
     f.push(...rod(a, b, r, color));
@@ -89,10 +102,10 @@ export function person(
       );
     }
     // A neutral, uninjured training figure; no gore or diagnostic skin colours.
-    return [
+    return tag([
       ...shadow(position, 0.55 * scale, 1.3 * scale),
       ...transform(f, position, yaw, scale),
-    ];
+    ]);
   }
   const kneeling = [
     "kneel",
@@ -180,12 +193,14 @@ export function person(
     if (reach) {
       hand = [
         side * (pose === "cpr" || pose === "pressure" ? 0.027 : 0.14),
-        pose === "cpr" || pose === "pressure"
-          ? 0.36 - compression
-          : kneeling
-            ? 0.59
-            : 1.04,
-        pose === "cpr" || pose === "pressure" ? 0.69 : 0.48 + t * 0.05,
+        pose === "pressure"
+          ? 0.28
+          : pose === "cpr"
+            ? 0.36 - compression
+            : kneeling
+              ? 0.59
+              : 1.04,
+        pose === "pressure" ? 0.6 : pose === "cpr" ? 0.69 : 0.48 + t * 0.05,
       ];
       elbow = [
         (shoulderAt[0] + hand[0]) / 2,
@@ -213,10 +228,10 @@ export function person(
         ),
       );
   }
-  return [
+  return tag([
     ...shadow(position, 0.45 * scale, 0.48 * scale),
     ...transform(f, position, yaw, scale),
-  ];
+  ]);
 }
 export function room(theme: "aurora" | "atlas", outdoor = false): Face[] {
   const floor = theme === "atlas" ? "#D9CDB4" : "#B9CBC5";

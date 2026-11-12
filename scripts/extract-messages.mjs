@@ -72,9 +72,13 @@ async function visitDir(dir) {
       await visitDir(path);
     } else if (
       /\.tsx?$/.test(ent.name) &&
-      !["countries.ts", "gpu-runtime.ts", "graphics-document.ts"].includes(
-        ent.name,
-      )
+      ![
+        "countries.ts",
+        "gpu-runtime.ts",
+        "graphics-document.ts",
+        "human-renderer.ts",
+        "set-dressing.ts",
+      ].includes(ent.name)
     ) {
       const text = await readFile(path, "utf8");
       const tree = ts.createSourceFile(

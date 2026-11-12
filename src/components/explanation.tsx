@@ -63,6 +63,10 @@ export function AnimatedStep({
         step={index}
         progress={player.progress}
         phase={player.reducedMotion ? 1 : player.snapshot.stepProgress}
+        motion={{
+          playing: player.playing && !player.reducedMotion,
+          durationMs: player.snapshot.stepDurationMs,
+        }}
       />
       <View accessibilityLiveRegion="polite" style={{ gap: 12 }}>
         {children}
@@ -99,6 +103,10 @@ function ActiveExplanation({ topic }: { topic: ExplanationTopic }) {
         }}
         progress={player.progress}
         phase={player.reducedMotion ? 1 : player.snapshot.stepProgress}
+        motion={{
+          playing: player.playing && !player.reducedMotion,
+          durationMs: player.snapshot.stepDurationMs,
+        }}
         fallback={
           <InstructionScene spec={step.scene} progress={player.progress} />
         }

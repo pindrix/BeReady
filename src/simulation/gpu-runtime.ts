@@ -1,3 +1,11 @@
+import { actorDescriptorsOnly } from "./world";
+import { MotionClock } from "./motion-clock";
+import {
+  loadHumanAsset,
+  type HumanPool,
+  type ActorDescriptor,
+} from "./human-renderer";
+import { createSetDressing } from "./set-dressing";
 /** Embedded, network-free WebGL renderer. Built with scripts/build-graphics.mjs. */
 import * as THREE from "three";
 import { RoundedBoxGeometry } from "three/addons/geometries/RoundedBoxGeometry.js";
@@ -7,6 +15,7 @@ import { graphicsFrame, type GraphicsFrame } from "./graphics-protocol";
 import type { Face, Primitive } from "./geometry";
 declare global {
   interface Window {
+    BE_READY_MODEL?: string;
     ReactNativeWebView?: { postMessage: (data: string) => void };
     beReadyGraphics?: {
       render: (data: GraphicsFrame) => void;
@@ -22,6 +31,11 @@ const emit = (type: "ready" | "rendered" | "error") => {
 try {
   const canvas = document.querySelector("canvas")!;
   let painted = false;
+  let renderCount = 0;
+  let lastShadowAt = 0,
+    lastQuality = -1;
+  let people: HumanPool | undefined;
+  const motionClock = new MotionClock();
   const renderer = new THREE.WebGLRenderer({
     canvas,
     antialias: true,
@@ -31,6 +45,7 @@ try {
   renderer.setPixelRatio(Math.min(devicePixelRatio || 1, 2));
   renderer.debug.onShaderError = () => emit("error");
   renderer.shadowMap.enabled = true;
+  renderer.shadowMap.autoUpdate = false;
   renderer.shadowMap.type = THREE.PCFShadowMap;
   renderer.outputColorSpace = THREE.SRGBColorSpace;
   renderer.toneMapping = THREE.ACESFilmicToneMapping;
@@ -197,132 +212,34 @@ try {
       mesh.scale.set(...p.size);
     }
   }
-  function plant() {
-    decor.clear();
-    const pot = new THREE.Mesh(potGeometry, material("#B78C69", 1));
-    pot.position.set(-1.85, 0.125, -1.22);
-    pot.castShadow = true;
-    pot.receiveShadow = true;
-    decor.add(pot);
-    for (let i = 0; i < 9; i++) {
-      const angle = (i * Math.PI * 2) / 9,
-        leaf = new THREE.Mesh(
-          geometries.sphere,
-          material(i % 2 ? "#5B8870" : "#3F755D", 1),
-        );
-      leaf.scale.set(0.065, 0.26, 0.1);
-      leaf.position.set(
-        -1.85 + Math.cos(angle) * 0.12,
-        0.43 + Math.sin(i * 2) * 0.06,
-        -1.22 + Math.sin(angle) * 0.12,
-      );
-      leaf.rotation.set(Math.sin(angle) * 0.5, angle, Math.cos(angle) * 0.5);
-      leaf.castShadow = true;
-      decor.add(leaf);
-    }
-  }
-  function details(mesh: THREE.Mesh, p: Primitive, color: string) {
-    const part = p.part ?? "",
-      old = mesh.userData.part;
-    if (old === part) return;
-    mesh.clear();
-    mesh.userData.part = part;
-    const add = (
-      g: THREE.BufferGeometry,
-      c: string,
-      position: number[],
-      scale: number[],
-    ) => {
-      const m = new THREE.Mesh(g, material(c, 1));
-      m.position.set(position[0], position[1], position[2]);
-      m.scale.set(scale[0], scale[1], scale[2]);
-      mesh.add(m);
-      return m;
-    };
-    if (part === "head" || part === "head-lying") {
-      const face = new THREE.Group();
-      mesh.add(face);
-      if (part === "head-lying") face.rotation.x = -Math.PI / 2;
-      const feature = (c: string, at: number[], scale: number[]) => {
-        const m = add(geometries.sphere, c, at, scale);
-        mesh.remove(m);
-        face.add(m);
-        return m;
-      };
-      for (const side of [-1, 1]) {
-        feature("#FFF9EF", [side * 0.38, 0.12, 0.93], [0.17, 0.105, 0.06]);
-        feature("#49392F", [side * 0.38, 0.12, 0.986], [0.075, 0.079, 0.028]);
-        feature("#2D2926", [side * 0.38, 0.12, 1.013], [0.037, 0.047, 0.013]);
-        feature("#6B5143", [side * 0.39, 0.3, 0.91], [0.2, 0.033, 0.025]);
-        feature(color, [side * 0.99, -0.02, 0], [0.13, 0.21, 0.2]);
-      }
-      const mouth = new THREE.Mesh(mouthGeometry, material("#A27261", 1));
-      face.add(mouth);
-    }
-    if (part === "torso") {
-      add(zipGeometry, "#28534F", [0, 0, 0], [1, 1, 1]);
-      for (const side of [-1, 1]) {
-        add(
-          geometries.box,
-          color,
-          [side * 0.55, -0.23, 0.82],
-          [0.48, 0.29, 0.08],
-        );
-        add(
-          geometries.box,
-          "#497F79",
-          [side * 0.55, -0.12, 0.87],
-          [0.47, 0.025, 0.025],
-        );
-        const collar = add(
-          geometries.box,
-          color,
-          [side * 0.27, 0.78, 0.54],
-          [0.45, 0.27, 0.11],
-        );
-        collar.rotation.z = side * 0.45;
-      }
-    }
-    if (part === "hand") {
-      add(geometries.sphere, color, [0.8, -0.1, 0.2], [0.5, 0.55, 0.55]);
-      for (const x of [-0.56, -0.19, 0.19, 0.56])
-        add(geometries.sphere, color, [x, 0, 0.78], [0.19, 0.73, 0.48]);
-    }
-  }
-  function forest() {
-    decor.clear();
-    const ground = new THREE.Mesh(geometries.box, material("#A2AD91", 1));
-    ground.scale.set(30, 0.12, 30);
-    ground.position.y = -0.18;
-    ground.receiveShadow = true;
-    decor.add(ground);
-    for (const [i, x] of [-3.5, -2.7, 0.1, 2.9, 4].entries()) {
-      const z = -2.7 - (i % 2) * 0.8,
-        trunk = new THREE.Mesh(geometries.rod, material("#8B7054", 1));
-      trunk.scale.set(0.09, 1.5, 0.09);
-      trunk.position.set(x, 0.65, z);
-      decor.add(trunk);
-      for (let j = 0; j < 4; j++) {
-        const crown = new THREE.Mesh(
-          geometries.sphere,
-          material(j % 2 ? "#5C805D" : "#74946B", 1),
-        );
-        crown.scale.set(0.56, 0.63, 0.55);
-        crown.position.set(
-          x + Math.cos(j * 1.6) * 0.28,
-          1.65 + Math.sin(j * 2) * 0.18,
-          z + Math.sin(j * 1.6) * 0.24,
-        );
-        decor.add(crown);
-      }
-    }
-  }
+  let dressing: ReturnType<typeof createSetDressing> | undefined;
   function update(data: GraphicsFrame) {
     last = data;
-    const faces = buildScene(data.scene, data.frame, data.appearance),
+    const faces = people
+        ? actorDescriptorsOnly(() =>
+            buildScene(data.scene, data.frame, data.appearance),
+          )
+        : buildScene(data.scene, data.frame, data.appearance),
       items: { p: Primitive; face: Face }[] = [],
       seen = new Set<Primitive>();
+    const actors: ActorDescriptor[] = [],
+      actorSet = new Set<ActorDescriptor>();
+    const outdoor = !faces.some(
+      (face) =>
+        face.layer === -2 &&
+        face.primitive?.kind === "box" &&
+        face.primitive.center[1] > 0.6 &&
+        face.primitive.size[1] > 1,
+    );
     for (const face of faces) {
+      if (outdoor && face.layer === -2) continue;
+      if (face.actor) {
+        if (!actorSet.has(face.actor)) {
+          actorSet.add(face.actor);
+          actors.push(face.actor);
+        }
+        if (people) continue;
+      }
       if (face.primitive && !seen.has(face.primitive)) {
         if (
           face.primitive.kind === "box" &&
@@ -334,18 +251,15 @@ try {
         items.push({ p: face.primitive, face });
       }
     }
-    const themeKey =
-      data.scene.id + "-" + data.scene.step + "-" + data.appearance;
+    people?.update(actors);
+    const themeKey = (outdoor ? "outdoor" : "indoor") + data.appearance;
     if (themeKey !== lastScene) {
-      const outdoor = !faces.some(
-        (face) =>
-          face.layer === -2 &&
-          face.primitive?.kind === "box" &&
-          face.primitive.center[1] > 0.6 &&
-          face.primitive.size[1] > 1,
-      );
-      if (outdoor) forest();
-      else plant();
+      if (dressing) {
+        world.remove(dressing.group);
+        dressing.dispose();
+      }
+      dressing = createSetDressing(outdoor, data.appearance);
+      world.add(dressing.group);
       lastScene = themeKey;
     }
     const atlas = data.appearance === "atlas";
@@ -366,7 +280,6 @@ try {
         p.kind === "box" && p.size[0] > 4 && p.size[1] < 0.3 && p.size[2] > 3;
       const wood =
         (isFloor && face.color !== "#B5C3A4") || face.color === "#B68D64";
-      details(mesh, p, face.color);
       mesh.material =
         p.part === "flame"
           ? flameMaterial
@@ -387,11 +300,16 @@ try {
     }
     for (let i = items.length; i < nodes.length; i++) nodes[i].visible = false;
     const clinical = ["adult-cpr", "bleeding"].includes(data.scene.kind),
-      pitch = clinical ? 0.68 : 0.42,
-      distance = (clinical ? 6.3 : 6.6) / data.zoom,
+      closeWork =
+        !outdoor &&
+        !clinical &&
+        data.scene.kind !== "armed-conflict" &&
+        data.scene.kind !== "nuclear-explosion",
+      pitch = clinical ? 0.68 : closeWork ? 0.2 : 0.3,
+      distance = (clinical ? 6.3 : closeWork ? 3.8 : 4.9) / data.zoom,
       target = new THREE.Vector3(
-        clinical ? 0.1 : 0.1,
-        clinical ? 0.54 : 0.85,
+        clinical ? 0.1 : 0.25,
+        clinical ? 0.54 : closeWork ? 1.12 : 0.8,
         clinical ? 0.14 : 0.05,
       );
     camera.position.set(
@@ -403,6 +321,17 @@ try {
     flameMaterial.uniforms.phase.value = data.frame;
     for (const node of nodes)
       if (node.userData.flame) node.quaternion.copy(camera.quaternion);
+    const now = performance.now(),
+      moving = data.motion?.playing === true;
+    const quality = Math.min(devicePixelRatio || 1, moving ? 1 : 2);
+    if (quality !== lastQuality) {
+      lastQuality = quality;
+      renderer.setPixelRatio(quality);
+      renderer.setSize(innerWidth || 300, innerHeight || 240, false);
+    }
+    // Expensive light-map updates are budgeted separately from fluid character poses.
+    renderer.shadowMap.needsUpdate = !moving || now - lastShadowAt > 100;
+    if (renderer.shadowMap.needsUpdate) lastShadowAt = now;
     renderer.render(world, camera);
     if (!painted) {
       painted = true;
@@ -411,6 +340,7 @@ try {
         if (!disposed) emit("rendered");
       });
     }
+    canvas.dataset.renders = String(++renderCount);
     canvas.dataset.phase = String(data.frame);
     canvas.dataset.step = String(data.scene.step);
     canvas.dataset.scene = data.scene.id;
@@ -424,6 +354,19 @@ try {
     camera.updateProjectionMatrix();
     if (last) update(last);
   }
+  function schedule() {
+    if (!queued && !disposed) queued = requestAnimationFrame(tick);
+  }
+  function tick(now: number) {
+    queued = 0;
+    if (disposed || !last) return;
+    try {
+      update({ ...last, frame: motionClock.sample(now) });
+      if (motionClock.needsFrame(now)) schedule();
+    } catch {
+      emit("error");
+    }
+  }
   function receive(event: MessageEvent) {
     if (!window.ReactNativeWebView && event.source !== parent) return;
     try {
@@ -431,32 +374,35 @@ try {
         typeof event.data === "string" ? JSON.parse(event.data) : event.data;
       if (data?.channel !== "be-ready-graphics" || data.type !== "frame")
         return;
-      const next = graphicsFrame(
+      last = graphicsFrame(
         data.scene,
         data.frame,
         data.yaw,
         data.zoom,
         data.appearance === "atlas" ? "atlas" : "aurora",
+        data.motion,
       );
-      last = next;
-      if (!queued)
-        queued = requestAnimationFrame(() => {
-          queued = 0;
-          if (!disposed && last)
-            try {
-              update(last);
-            } catch {
-              emit("error");
-            }
-        });
+      motionClock.accept(last, performance.now());
+      schedule();
     } catch {
       emit("error");
+    }
+  }
+  function visibility() {
+    motionClock.setVisible(!document.hidden, performance.now());
+    if (document.hidden) {
+      cancelAnimationFrame(queued);
+      queued = 0;
     }
   }
   function dispose() {
     if (disposed) return;
     disposed = true;
     cancelAnimationFrame(queued);
+    motionClock.stop(performance.now());
+    people?.dispose();
+    dressing?.dispose();
+    document.removeEventListener("visibilitychange", visibility);
     removeEventListener("resize", resize);
     removeEventListener("message", receive);
     document.removeEventListener("message", receive as EventListener);
@@ -477,13 +423,28 @@ try {
     dispose();
     emit("error");
   });
+  document.addEventListener("visibilitychange", visibility);
   addEventListener("resize", resize);
   addEventListener("message", receive);
   document.addEventListener("message", receive as EventListener);
   addEventListener("pagehide", dispose, { once: true });
   resize();
   window.beReadyGraphics = { render: update, dispose };
-  emit("ready");
+  if (window.BE_READY_MODEL)
+    loadHumanAsset(window.BE_READY_MODEL)
+      .then((pool) => {
+        if (disposed) {
+          pool.dispose();
+          return;
+        }
+        people = pool;
+        world.add(pool.group);
+        canvas.dataset.character = "anatomical";
+        emit("ready");
+        if (last) schedule();
+      })
+      .catch(() => emit("error"));
+  else emit("error");
 } catch {
   emit("error");
 }

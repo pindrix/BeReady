@@ -1,7 +1,10 @@
 import { Image } from "expo-image";
 import { simulationPoster } from "../simulation/posters";
 import { GpuScene } from "./gpu-scene";
-import { graphicsFrame } from "../simulation/graphics-protocol";
+import {
+  graphicsFrame,
+  type GraphicsMotion,
+} from "../simulation/graphics-protocol";
 import {
   Component,
   memo,
@@ -111,10 +114,12 @@ function LiveSimulation({
   scene,
   progress,
   initialProgress,
+  motion,
 }: {
   scene: Scene3D;
   progress: Animated.Value;
   initialProgress: number;
+  motion?: GraphicsMotion;
 }) {
   const c = useTheme(),
     [frame, setFrame] = useState(() => clamp(initialProgress)),
@@ -143,6 +148,15 @@ function LiveSimulation({
     return () => progress.removeListener(id);
     // The mount seed comes from the controller; subsequent frames belong to Animated.Value.
   }, [progress]);
+  // GPU interpolation follows the controller snapshot, not bridge-throttled native samples.
+  // This also makes pause/seek/reduced-motion exact even if a native listener update was skipped.
+  const gpuFrame = motion ? clamp(initialProgress) : frame;
+  const fallbackFrame = motion && !motion.playing ? gpuFrame : frame;
+  const data = useMemo(
+    () => graphicsFrame(scene, gpuFrame, yaw, zoom, c.appearance, motion),
+    [scene, gpuFrame, yaw, zoom, c.appearance, motion],
+  );
+
   return (
     <View
       testID={["simulation", scene.id, scene.step].join("-")}
@@ -161,9 +175,14 @@ function LiveSimulation({
         }}
       >
         <GpuScene
-          data={graphicsFrame(scene, frame, yaw, zoom, c.appearance)}
+          data={data}
           fallback={
-            <Geometry scene={scene} frame={frame} yaw={yaw} zoom={zoom} />
+            <Geometry
+              scene={scene}
+              frame={fallbackFrame}
+              yaw={yaw}
+              zoom={zoom}
+            />
           }
         />
       </View>
@@ -231,11 +250,13 @@ export const SceneViewer = memo(function SceneViewer({
   scene,
   progress,
   phase = 0,
+  motion,
   fallback,
 }: {
   scene: Scene3D;
   progress: Animated.Value;
   phase?: number;
+  motion?: GraphicsMotion;
   fallback: ReactNode;
 }) {
   const c = useTheme(),
@@ -296,10 +317,11 @@ export const SceneViewer = memo(function SceneViewer({
       {mode === "3D" ? (
         <SimulationBoundary fallback={fallback} onFailure={() => setMode("2D")}>
           <LiveSimulation
-            key={`${scene.id}-${scene.step}`}
+            key={scene.id}
             scene={scene}
             progress={progress}
             initialProgress={phase}
+            motion={motion}
           />
         </SimulationBoundary>
       ) : (

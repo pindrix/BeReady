@@ -93,6 +93,15 @@ test("controlled motion is deterministic, bounded and changes the CPR training p
   assert.deepEqual(buildScene(cpr, -2), buildScene(cpr, 0));
   assert.deepEqual(buildScene(cpr, 4), buildScene(cpr, 1));
   assert.deepEqual(buildScene(cpr, NaN), buildScene(cpr, 0));
-  assert.deepEqual(buildScene(aed, 0), buildScene(aed, 0.5));
+  assert.deepEqual(
+    buildScene(aed, 0).map((f) => ({ ...f, actor: undefined })),
+    buildScene(aed, 0.5).map((f) => ({ ...f, actor: undefined })),
+  );
+  assert.ok(
+    buildScene(aed, 0.5).every(
+      (f) => !f.actor || ["stand", "lying"].includes(f.actor.pose),
+    ),
+    "AED phase is hands-off",
+  );
   assert.deepEqual(buildScene(cpr, 0.25), buildScene(cpr, 0.25));
 });

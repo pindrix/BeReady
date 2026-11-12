@@ -4,10 +4,10 @@
 
 - TypeScript strict: bez chýb.
 - ESLint: bez chýb a upozornení po úprave testovacieho setupu.
-- Doménové a databázové testy: 104 úspešných, 0 preskočených.
+- Doménové a databázové testy: 114 úspešných, 0 preskočených pri kontrole verzie 1.10.
 - React Native komponentové testy: 81 úspešných, 0 preskočených.
 - Metro server: spustený, lokálny HTTP stav a Android manifest READY/SDK 58 overené. Server bol po kontrole zastavený.
-- Export Android + iOS cez Metro/Hermes: úspešný. Nie je to APK/IPA ani dôkaz spustenia na telefóne.
+- Export Android + iOS cez Metro/Hermes: úspešný pre verziu 1.10. Nie je to APK/IPA ani dôkaz spustenia na telefóne.
 - Expo kompatibilita: verzie sedia s lokálnym manifestom Expo SDK 58. Online kontrola Expo API bola blokovaná; podpora aktuálne distribuovaného Expo Go sa musí potvrdiť na telefóne.
 
 Databázové testy používajú **skutočnú SQLite** z Node 24 a rovnaké SQL/repozitárové funkcie ako aplikácia. Kontrolujú CRUD, seed iba raz, trvanie všetkých dát po zatvorení/otvorení súboru, export/import, zamietnutie chybných údajov a rollback po SQL chybe uprostred importu. Nie sú náhradou za overenie natívneho `expo-sqlite` na zariadení.
@@ -122,3 +122,13 @@ Prehliadačový QA 1.8 overil 140 zobrazení: všetkých 135 krokov pri 390 bodo
 Manifest nainštalovaného Expo SDK 58 zodpovedá WebView 14.0.1. Fyzické Expo Go, mobilný GPU ovládač, výkon a batéria zostávajú neoverené. GPU náhľad v prehliadači je samostatný dôkaz kreslenia, nie náhrada týchto skúšok. Podrobnosti: `docs/GPU_GRAPHICS.md`.
 
 Prehliadačový GPU QA 1.9 prešiel 139 základných zobrazení (všetkých 135 krokov a ďalšie zobrazenia Field Atlas/arabčina), vytvoril 24 miestnych náhľadov a po záverečných úpravách preveril ďalších 8 cielených zobrazení vrátane shaderu ohňa. Overil kameru, priblíženie, prepnutie 2D/3D, postupujúcu fázu pri skutočnom prehrávaní, nemennú fázu po pauze a návrat na softvérové 3D po strate WebGL kontextu. Bez chyby JavaScriptu a bez externých sieťových požiadaviek. Použil Chromium/SwiftShader, nie fyzický telefón. Presný rozsah a snímky sú v `docs/screenshots/v1.9/review.json`.
+
+## Rozšírenie 1.10
+
+195 testov: 114 jednotkových/doménových/databázových a 81 komponentových. Nové testy overujú GLB so 163 kosťami, oblečenie, pribalené textúry bez vzdialených URI, normalizované váhy a platné indexy kĺbov. Kontrolujú aj úsporný opis postavy pre GPU a obnovenie bežnej cesty po chybe. Dva testy načítajú skutočnú kostru GLB a overia dosah dlaní na krytie pri krvácaní a polohu ruky aj podopierajúcich prstov v prúde vody pri popálení. Časové testy kontrolujú dopočítanie fázy medzi správami, koniec kroku bez samovoľného postupu, presnú pauzu a seek, zmeny trvania, statický režim, pozadie a neplatné časové vstupy. Testovanie výpočtu 60 vzoriek za sekundu nie je meranie výkonu vykreslenia.
+
+Prehliadačový QA 1.10 vykreslil všetkých 135 krokov s anatomickým modelom a obnovil 24 WebP náhľadov. Overil lokálny pohyb medzi správami prehrávača, nemennú polohu po pauze, zachovanie toho istého GPU kontextu pri zmene kroku a arabské RTL na malom displeji. Bez chýb JavaScriptu a externých HTTP požiadaviek. [Report a rozsah](screenshots/v1.10/review.json) uvádza Chromium/SwiftShader a približne **6,67 záberu za sekundu** pri softvérovom vykresľovaní v cloude. Tento výsledok nie je plynulý ani meraním mobilného GPU; výkon na fyzickom telefóne zostáva neoverený.
+
+Natívne zostavenie pripravilo Android SDK/NDK, CMake, JDK a Gradle. Stiahnuť oficiálny `react-android-0.88.1-release.aar` sa nepodarilo: presmerovanie na `repo.reactnative.dev` skončilo odmietnutím HTTP CONNECT 403. Návrh povolenia domény je uložený pre nastavenia prostredia, ale ešte nebol uplatnený. Overený APK preto zatiaľ neexistuje. [Skript a požiadavky na preview build](ANDROID_PREVIEW_BUILD.md) sú pripravené; úspešný JS export alebo ZIP zdrojov sa za APK nepovažuje.
+
+Na telefóne ešte treba preveriť čas prvého načítania modelu, natívny návrat na softvérové 3D pri zlyhaní WebGL, plynulosť a zahrievanie, pauzu pri odchode a návrate, prístupnosť, RTL a studený offline štart s platným podpísaným oprávnením. Reálne Play platby a odborná kontrola prvej pomoci/civilnej ochrany ostávajú nedokončené. Zmena grafiky nemení 14-dňovú online skúšku ani požiadavku zaplatenej ročnej licencie pre offline funkcie.

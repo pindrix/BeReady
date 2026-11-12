@@ -1,17 +1,28 @@
-# BE READY 1.9 — Domácnosť pripravená krok za krokom
+# BE READY 1.10 — Domácnosť pripravená krok za krokom
 
 Mobilná aplikácia pre pripravenosť domácnosti. Expo SDK 58, React Native, striktný TypeScript, Expo Router a SQLite. Osobné údaje domácnosti zostávajú lokálne. Bez reklamného SDK a vzdialeného sledovania.
 
-## Čo je nové vo verzii 1.9
+## Čo je nové vo verzii 1.10
+
+- **Detailná 3D postava:** anatomický model s kostrou, textúrou pokožky, vlasmi, civilným oblečením a obuvou. Ruky sa pri úkonoch smerujú k predmetom; postavy nahrádzajú pôvodné telá z geometrických primitív.
+- **Bohatšie prostredia:** závesy, rastliny, obrazy a drobné vybavenie v interiéroch; vetvy, lístie, kamene a súvislý terén vonku. Záber kamery sa približuje k úkonu.
+- **Pohyb medzi správami prehrávača:** GPU renderer dopočítava fázu vo vlastnom vykresľovacom cykle a pri zmene kroku zachováva načítaný model aj kontext. Pauza, ručné kroky a obmedzený pohyb zostávajú zachované. Plynulosť na fyzickom telefóne ešte nebola zmeraná.
+- **Obnovených 24 náhľadov** zo skutočného rendereru. Model aj materiály sú pribalené; text aktuálneho kroku zostáva priamo pod scénou. Rozsah a hranice sú v [docs/GPU_GRAPHICS.md](docs/GPU_GRAPHICS.md).
+
+[Balenie batoha](docs/screenshots/v1.10/go-bag.png) · [Prvá pomoc](docs/screenshots/v1.10/adult-cpr.png) · [Oheň](docs/screenshots/v1.10/campfire.png) · [Field Atlas a arabčina](docs/screenshots/v1.10/arabic-atlas.png). Ide o skutočné komponenty vykreslené v prehliadačovom QA prostredí, nie fotografie telefónu. [Návrhový obrázok](docs/design/graphics-target-concept.png) zostáva umeleckým cieľom; jeho kvalita sa týmto nevyhlasuje za dosiahnutú.
+
+**Samostatný APK zatiaľ nie je dostupný.** Natívne zostavenie v cloude blokuje pravidlo siete pre oficiálny zdroj `repo.reactnative.dev`; návrh jeho povolenia čaká na uplatnenie v nastaveniach prostredia. Pripravený postup a skript sú v [docs/ANDROID_PREVIEW_BUILD.md](docs/ANDROID_PREVIEW_BUILD.md). ZIP obsahuje zdrojový projekt, nie inštalovateľnú aplikáciu.
+
+Pri aktualizácii projektu spustite v jeho priečinku `git pull --ff-only` a `npm.cmd ci`. Pre tunel potom `npm.cmd install --no-save "@expo/ngrok@^4.1.0"` a `npx.cmd expo start --go --clear --tunnel`. Expo Go musí podporovať SDK 58; vývojový server musí zostať zapnutý.
+
+## Základ z verzie 1.9
 
 - **Kvalitnejšie GPU 3D:** hladké modely, jemnejšie proporcie postáv, tváre a detaily oblečenia, materiál dreva, svetlo a mäkké tiene. Väčší záber úkonu a shader ohňa riadený prehrávačom.
 - **Rýchle náhľady kariet:** 24 pribalených WebP obrázkov zo skutočného rendereru. Zatvorené vysvetlenia nespúšťajú GPU ani animáciu.
 - **Náhradné zobrazenie:** pri nedostupnom WebGL zostáva miestne softvérové 3D; pôvodné 2D je stále na výber. Odchod z natívnej obrazovky uvoľňuje GPU kontext.
 - Vykresľovací kód aj materiály sú pribalené, bez CDN a sieťových modelov. Detaily a hranice v [docs/GPU_GRAPHICS.md](docs/GPU_GRAPHICS.md).
 
-**Aktualizácia vyžaduje `npm.cmd ci`**, pretože pribudol balík WebView kompatibilný s SDK 58. Potom pre tunel znovu nainštalujte `npm.cmd install --no-save "@expo/ngrok@^4.1.0"` a spustite `npx.cmd expo start --go --clear --tunnel`.
-
-[Nové 3D v pohybe](docs/screenshots/v1.9/packing-demo.gif) · [Skutočná 3D scéna](docs/screenshots/v1.9/aurora-go-bag-1.png) · [Oheň](docs/screenshots/v1.9/aurora-campfire-2.png). [Návrhový obrázok](docs/design/graphics-target-concept.png) je cieľ umeleckého smerovania, nie fotografia či záznam aplikácie. Súčasné modely zostávajú štylizované.
+[Záznam verzie 1.9](docs/screenshots/v1.9/packing-demo.gif) · [Scéna verzie 1.9](docs/screenshots/v1.9/aurora-go-bag-1.png). Tieto staršie ukážky zachytávajú pôvodné štylizované modely.
 
 ## Základ z verzie 1.8
 

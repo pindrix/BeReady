@@ -1,3 +1,4 @@
+import type { GraphicsMotion } from "../simulation/graphics-protocol";
 import { memo, useMemo } from "react";
 import { SceneViewer } from "./simulation-scene";
 import { tutorialScene3D } from "../simulation/scenes";
@@ -65,11 +66,13 @@ export const AnimationScene = memo(function AnimationScene({
   step,
   progress,
   phase = 0,
+  motion,
 }: {
   tutorial: Tutorial;
   step: number;
   progress: Animated.Value;
   phase?: number;
+  motion?: GraphicsMotion;
 }) {
   const scene = useMemo(
     () => tutorialScene3D(tutorial, step),
@@ -80,6 +83,7 @@ export const AnimationScene = memo(function AnimationScene({
       scene={scene}
       progress={progress}
       phase={phase}
+      motion={motion}
       fallback={
         <DiagramScene tutorial={tutorial} step={step} progress={progress} />
       }

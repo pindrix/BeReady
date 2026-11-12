@@ -37,7 +37,7 @@ test("offline GPU bridge sends only state after readiness and refuses external n
     ),
     view = screen.getByTestId("mock-webview");
   expect(mockPost).not.toHaveBeenCalled();
-  expect(view.props.source.html).toContain("connect-src 'none'");
+  expect(view.props.source.html).toContain("connect-src blob:");
   expect(view.props.onShouldStartLoadWithRequest({ url: "about:blank" })).toBe(
     true,
   );

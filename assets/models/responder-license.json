@@ -1,0 +1,69 @@
+{
+  "license": "CC0-1.0",
+  "sources": [
+    {
+      "asset": "base mesh, skeleton, skin weights",
+      "url": "https://github.com/makehumancommunity/makehuman/tree/master/makehuman/data",
+      "licenseEvidence": "Each asset header and LICENSE.ASSETS.md explicitly release data as CC0."
+    },
+    {
+      "asset": "skin, casual outfit, hair, eyes",
+      "url": "https://github.com/Makehuman-2/MH2_Asset_Repository_CCO/releases/tag/CC0",
+      "licenseEvidence": "Official CC0 system archive; authored mesh/material headers explicitly CC0 September 2020."
+    }
+  ],
+  "adaptations": "Original authored topology/UV/texture and skeleton; fitted via asset barycentric mappings; covered body regions excluded, civilian footwear generated; textures resized to 1024. No MakeHuman program code bundled.",
+  "triangles": {
+    "Body": 15780,
+    "Clothing": 4120,
+    "Hair": 1050,
+    "Eyes": 2040,
+    "Shoe_L": 140,
+    "Shoe_R": 140
+  },
+  "bytes": 3340548,
+  "inputs": {
+    "mh-base.obj": {
+      "sha256": "8e761e6624b8f54536409135d1636da63b32486a90d4897f84e121d144f6fb4c"
+    },
+    "default.mhskel": {
+      "sha256": "99f179bce0aa850b45d4191a1d0d234c5851f881c057439470ded3bddf729a24"
+    },
+    "default_weights.mhw": {
+      "sha256": "0f3641d651ae3d00ad6b4ccee43142edb109d3bd909d27d9e4139ef1beed8625"
+    },
+    "mh-system/clothes/male_casualsuit02/male_casualsuit02.obj": {
+      "sha256": "e07cbd1a43d21bd700e6598f01f74341a9dd66eac4e035c8be8de2650eac380f"
+    },
+    "mh-system/clothes/male_casualsuit02/male_casualsuit02.mhclo": {
+      "sha256": "f9e6821704a1508a02d5e416b2360785b705cfe5a130c359021a4b4570dcc43a"
+    },
+    "mh-system/clothes/male_casualsuit02/male_casualsuit02_diffuse.png": {
+      "sha256": "8e1e63c471a8eb6ea8be48f2d540c15c81d2e7744ff80c8fdac86a6e6fde3179"
+    },
+    "mh-system/clothes/male_casualsuit02/male_casualsuit02_normal.png": {
+      "sha256": "1c31a7a5fbbef1ee40176114295038703f370d163a3cf040f55b60c85369d12c"
+    },
+    "mh-system/hair/short04/short04.obj": {
+      "sha256": "676964a133ee35ffcea1195382bf75542da7a298931e4001bc7b0d7b707225de"
+    },
+    "mh-system/hair/short04/short04.mhclo": {
+      "sha256": "d60640aa4c4ffce1aa269647ba436b6ee0bb21bb948f927b84e27a48d2107157"
+    },
+    "mh-system/hair/short04/short04_diffuse.png": {
+      "sha256": "0bef7fc0e403db5a40fabb2111ebfa6f7e8158e204c6e56b8da98e9ef527846e"
+    },
+    "mh-eyes.obj": {
+      "sha256": "da2493215b708a344c33dc72f2a9a5b8fa985dcc5a70ad3b208995cf871da8e1"
+    },
+    "mh-eyes.mhclo": {
+      "sha256": "b183cfe37120ab726f9b3f2ea6cd3a64c44ce7b4bd91a77c841cf70c04f83a0d"
+    },
+    "mh-brown-eye.png": {
+      "sha256": "4659691c7295ad6206c78b003e5fd0e5f91dcd53032fa914a229bb48cabe424b"
+    },
+    "mh-system/skins/young_caucasian_male/young_lightskinned_male_diffuse.png": {
+      "sha256": "862a26e335e958b70534cb5f0d7c47ef30ab148a56c42b3e9da969cf76f12963"
+    }
+  }
+}

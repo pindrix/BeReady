@@ -14,6 +14,7 @@ const result = await build({
 await writeFile(
   "src/simulation/graphics-runtime.json",
   JSON.stringify({
+    model: (await readFile("assets/models/responder.glb")).toString("base64"),
     license: (
       await Promise.all(
         [

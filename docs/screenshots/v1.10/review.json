@@ -1,0 +1,41 @@
+{
+  "notice": "Actual Three.js rig rendering in Chromium/SwiftShader, not physical phone performance.",
+  "stages": 135,
+  "posters": 24,
+  "shots": [
+    ["go-bag", "1"],
+    ["campfire", "2"],
+    ["adult-cpr", "2"],
+    ["bleeding", "1"],
+    ["burns", "1"],
+    ["nuclear-explosion", "2"]
+  ],
+  "observedSoftwareFps": 6.666666666666667,
+  "checks": [
+    "all authored stages render",
+    "textured skinned human loaded",
+    "renderer-local frames between bridge samples",
+    "pause freezes pose",
+    "GPU context survives step change",
+    "RTL small-screen",
+    "bleeding palms contact dressing after real-rig reach correction",
+    "burns wrist and supporting fingers intersect the water stream"
+  ],
+  "errors": [],
+  "external": [],
+  "contactReview": {
+    "bleeding": {
+      "actualWristY": [0.255, 0.28],
+      "dressingTopY": 0.24,
+      "actualScreenshot": "bleeding.png",
+      "test": "tests/human-contact.test.ts"
+    },
+    "cpr": "existing heel-on-sternum screenshot checked; CPR pose unchanged",
+    "burns": {
+      "actualRightWrist": [0.82, 1.1, -0.08],
+      "actualSupportingFinger": [0.82, 1.08, -0.084],
+      "actualScreenshot": "burns.png",
+      "test": "tests/human-contact.test.ts"
+    }
+  }
+}

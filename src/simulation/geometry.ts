@@ -7,6 +7,7 @@ export type Primitive = (
   | { kind: "rod"; a: Vec3; b: Vec3; radius: number }
 ) & { part?: "head" | "head-lying" | "hand" | "torso" | "hair" | "flame" };
 export type Face = {
+  actor?: import("./human-renderer").ActorDescriptor;
   points: Vec3[];
   primitive?: Primitive;
   color: string;

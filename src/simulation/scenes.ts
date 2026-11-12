@@ -82,6 +82,12 @@ function deskScene(
     const hand = mix([-0.15, 1.04, 0.2], [0.65, 1.04, 0.45], ease(t));
     const p =
       t < 0.8 ? hand : mix(hand, [0.85, 1.1, 0.3], ease((t - 0.8) / 0.2));
+    const body = f.find((face) => face.actor)?.actor;
+    if (body)
+      body.hands = {
+        left: [p[0] - 0.09, p[1] + 0.14, p[2]],
+        right: [p[0] + 0.09, p[1] + 0.14, p[2]],
+      };
     f.push(
       ...object(items[0], p, 0.52).map((face) => ({
         ...face,
@@ -122,7 +128,20 @@ function medical(scene: Scene3D, t: number, theme: "aurora" | "atlas"): Face[] {
       ...rod([0.82, 0.94, -0.38], [0.82, 1.25, -0.38], 0.025, colors.metal),
       ...rod([0.82, 1.25, -0.38], [0.82, 1.25, -0.08], 0.025, colors.metal),
     );
-    f.push(...person([-0.45, 0, 0.15], step === 3 ? "phone" : "reach", t, 1.1));
+    f.push(
+      ...person(
+        step === 1 ? [0.4, 0, 0.16] : [-0.45, 0, 0.15],
+        step === 3 ? "phone" : "reach",
+        t,
+        step === 1 ? 2.25 : 1.1,
+      ),
+    );
+    const responder = f.find((face) => face.actor)?.actor;
+    if (step === 1 && responder)
+      responder.hands = {
+        left: [0.74, 1.08, -0.02],
+        right: [0.82, 1.1, -0.08],
+      };
     if (step === 1) {
       // The illustrative stream is not a 20-minute timer.
       for (let i = 0; i < 3; i++)
@@ -135,7 +154,9 @@ function medical(scene: Scene3D, t: number, theme: "aurora" | "atlas"): Face[] {
           ),
         );
       f.push(
-        ...rod([0.45, 1.03, 0.06], [0.85, 1.03, -0.04], 0.055, colors.skin),
+        ...rod([0.45, 1.03, 0.06], [0.85, 1.03, -0.04], 0.055, colors.skin).map(
+          (face) => ({ ...face, actor: responder }),
+        ),
       );
     }
     if (step === 0) f.push(...object("flame", [1.9, 0.95, -0.3], 0.38));
@@ -161,12 +182,17 @@ function medical(scene: Scene3D, t: number, theme: "aurora" | "atlas"): Face[] {
   if (!bleeding && (step === 2 || step === 3)) pose = "cpr";
   if (bleeding && (step === 1 || step === 2)) pose = "pressure";
   if (!bleeding && step === 4) pose = "stand";
-  const at: Vec3 = bleeding ? [-1.03, 0, 0.04] : [-0.45, 0, 0.05];
+  const at: Vec3 = bleeding ? [-0.7, 0, 0.08] : [-0.45, 0, -0.08];
   f.push(...person(at, pose, t, Math.PI / 2));
+  if (bleeding && (step === 1 || step === 2)) {
+    const helper = f.find((face) => face.actor?.pose === "pressure")?.actor;
+    if (helper)
+      helper.hands = { left: [-0.1, 0.255, 0.08], right: [-0.1, 0.28, 0.08] };
+  }
   if (bleeding && step > 0) {
     f.push(
       ...box(
-        [-0.38, 0.25, 0.04],
+        [-0.09, 0.22, 0.08],
         [0.19, step === 2 ? 0.07 : 0.04, 0.16],
         colors.paper,
       ),
